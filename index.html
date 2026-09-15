@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A clean, responsive Todo List app with local persistence." />
+  <title>Todo List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="todo-card" aria-labelledby="page-title">
+      <header class="todo-header">
+        <div>
+          <p class="eyebrow">Stay focused</p>
+          <h1 id="page-title">Todo List</h1>
+          <p class="subtitle">把今天最重要的事情，一件件完成。</p>
+        </div>
+        <div class="progress-badge" aria-live="polite">
+          <strong id="progressValue">0%</strong>
+          <span>完成率</span>
+        </div>
+      </header>
+
+      <form id="todoForm" class="todo-form" autocomplete="off">
+        <label class="sr-only" for="todoInput">添加新任务</label>
+        <input
+          id="todoInput"
+          type="text"
+          maxlength="120"
+          placeholder="例如：整理今天的实验数据…"
+          required
+        />
+        <button type="submit" class="primary-button">添加任务</button>
+      </form>
+
+      <div class="toolbar">
+        <div class="filters" role="group" aria-label="任务筛选">
+          <button class="filter-button active" data-filter="all" type="button">全部</button>
+          <button class="filter-button" data-filter="active" type="button">进行中</button>
+          <button class="filter-button" data-filter="completed" type="button">已完成</button>
+        </div>
+        <button id="clearCompleted" class="text-button" type="button">清除已完成</button>
+      </div>
+
+      <div id="emptyState" class="empty-state">
+        <div class="empty-icon">✓</div>
+        <h2>还没有任务</h2>
+        <p>从添加第一件待办开始吧。</p>
+      </div>
+
+      <ul id="todoList" class="todo-list" aria-live="polite"></ul>
+
+      <footer class="todo-footer">
+        <span id="taskCount">0 个待完成任务</span>
+        <span class="storage-note">自动保存在此浏览器</span>
+      </footer>
+    </section>
+  </main>
+
+  <template id="todoItemTemplate">
+    <li class="todo-item">
+      <label class="check-wrap">
+        <input class="todo-checkbox" type="checkbox" />
+        <span class="custom-checkbox" aria-hidden="true"></span>
+      </label>
+      <span class="todo-text"></span>
+      <button class="delete-button" type="button" aria-label="删除任务">×</button>
+    </li>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
