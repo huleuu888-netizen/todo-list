@@ -108,12 +108,12 @@ h1 {
 
 .todo-form {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) auto auto;
   gap: 12px;
   margin-bottom: 22px;
 }
 
-.todo-form input {
+.todo-name-input {
   width: 100%;
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -124,9 +124,40 @@ h1 {
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.todo-form input:focus {
+.todo-name-input:focus {
   border-color: rgba(92, 108, 255, 0.7);
   box-shadow: 0 0 0 4px rgba(92, 108, 255, 0.1);
+}
+
+.date-field {
+  min-width: 156px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  padding: 7px 12px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.date-field:focus-within {
+  border-color: rgba(92, 108, 255, 0.7);
+  box-shadow: 0 0 0 4px rgba(92, 108, 255, 0.1);
+}
+
+.date-field span {
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+
+.date-field input,
+.todo-due-date {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text);
 }
 
 .primary-button {
@@ -256,13 +287,66 @@ h1 {
 }
 
 .todo-text {
+  display: block;
   overflow-wrap: anywhere;
   line-height: 1.45;
+}
+
+.todo-content {
+  min-width: 0;
+}
+
+.todo-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.item-date-field {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 8px;
+  background: #f7f8fb;
+  padding: 3px 7px;
+}
+
+.todo-due-date {
+  width: 116px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  cursor: pointer;
+}
+
+.due-status {
+  border-radius: 999px;
+  padding: 4px 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.due-status.upcoming {
+  background: #eef7ff;
+  color: #3975a7;
+}
+
+.due-status.due-today {
+  background: #fff5dd;
+  color: #a46a00;
+}
+
+.due-status.overdue {
+  background: #fff0f2;
+  color: var(--danger);
 }
 
 .todo-item.completed .todo-text {
   color: #a6aebb;
   text-decoration: line-through;
+}
+
+.todo-item.completed .todo-meta {
+  opacity: 0.62;
 }
 
 .delete-button {
@@ -356,12 +440,21 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  .date-field {
+    min-height: 54px;
+  }
+
   .primary-button {
     min-height: 48px;
   }
 
   .toolbar,
   .todo-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .todo-meta {
     align-items: flex-start;
     flex-direction: column;
   }

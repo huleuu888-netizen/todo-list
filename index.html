@@ -25,12 +25,17 @@
       <form id="todoForm" class="todo-form" autocomplete="off">
         <label class="sr-only" for="todoInput">添加新任务</label>
         <input
+          class="todo-name-input"
           id="todoInput"
           type="text"
           maxlength="120"
           placeholder="例如：整理今天的实验数据…"
           required
         />
+        <label class="date-field" for="dueDateInput">
+          <span>截止日期</span>
+          <input id="dueDateInput" type="date" />
+        </label>
         <button type="submit" class="primary-button">添加任务</button>
       </form>
 
@@ -64,7 +69,16 @@
         <input class="todo-checkbox" type="checkbox" />
         <span class="custom-checkbox" aria-hidden="true"></span>
       </label>
-      <span class="todo-text"></span>
+      <div class="todo-content">
+        <span class="todo-text"></span>
+        <div class="todo-meta">
+          <label class="item-date-field">
+            <span class="sr-only">修改截止日期</span>
+            <input class="todo-due-date" type="date" />
+          </label>
+          <span class="due-status" hidden></span>
+        </div>
+      </div>
       <button class="delete-button" type="button" aria-label="删除任务">×</button>
     </li>
   </template>

@@ -2,6 +2,7 @@ const STORAGE_KEY = "todo-list.items.v1";
 
 const form = document.getElementById("todoForm");
 const input = document.getElementById("todoInput");
+const dueDateInput = document.getElementById("dueDateInput");
 const list = document.getElementById("todoList");
 const emptyState = document.getElementById("emptyState");
 const taskCount = document.getElementById("taskCount");
@@ -26,13 +27,46 @@ function saveTodos() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
 }
 
-function createTodo(text) {
+function createTodo(text, dueDate = "") {
   return {
     id: crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random()}`,
     text,
+    dueDate,
     completed: false,
     createdAt: Date.now(),
   };
+}
+
+function getLocalDateString(date = new Date()) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function formatDueDate(dueDate) {
+  const [year, month, day] = dueDate.split("-").map(Number);
+  const date = new Date(year, month - 1, day);
+  return new Intl.DateTimeFormat("zh-CN", {
+    month: "long",
+    day: "numeric",
+  }).format(date);
+}
+
+function getDueState(todo) {
+  if (!todo.dueDate || todo.completed) return null;
+
+  const today = getLocalDateString();
+
+  if (todo.dueDate < today) {
+    return { label: `已逾期 · ${formatDueDate(todo.dueDate)}`, className: "overdue" };
+  }
+
+  if (todo.dueDate === today) {
+    return { label: "今天截止", className: "due-today" };
+  }
+
+  return { label: `${formatDueDate(todo.dueDate)}截止`, className: "upcoming" };
 }
 
 function getVisibleTodos() {
@@ -57,6 +91,8 @@ function render() {
     const item = fragment.querySelector(".todo-item");
     const checkbox = fragment.querySelector(".todo-checkbox");
     const text = fragment.querySelector(".todo-text");
+    const dueDate = fragment.querySelector(".todo-due-date");
+    const dueStatus = fragment.querySelector(".due-status");
     const deleteButton = fragment.querySelector(".delete-button");
 
     item.dataset.id = todo.id;
@@ -64,8 +100,18 @@ function render() {
     checkbox.checked = todo.completed;
     checkbox.setAttribute("aria-label", todo.completed ? `标记“${todo.text}”为未完成` : `标记“${todo.text}”为已完成`);
     text.textContent = todo.text;
+    dueDate.value = todo.dueDate || "";
+    dueDate.setAttribute("aria-label", `修改“${todo.text}”的截止日期`);
+
+    const dueState = getDueState(todo);
+    if (dueState) {
+      dueStatus.hidden = false;
+      dueStatus.textContent = dueState.label;
+      dueStatus.classList.add(dueState.className);
+    }
 
     checkbox.addEventListener("change", () => toggleTodo(todo.id));
+    dueDate.addEventListener("change", () => updateDueDate(todo.id, dueDate.value));
     deleteButton.addEventListener("click", () => deleteTodo(todo.id));
 
     list.appendChild(fragment);
@@ -99,8 +145,8 @@ function render() {
   }
 }
 
-function addTodo(text) {
-  todos.unshift(createTodo(text));
+function addTodo(text, dueDate) {
+  todos.unshift(createTodo(text, dueDate));
   saveTodos();
   render();
 }
@@ -119,14 +165,23 @@ function deleteTodo(id) {
   render();
 }
 
+function updateDueDate(id, dueDate) {
+  todos = todos.map((todo) =>
+    todo.id === id ? { ...todo, dueDate } : todo
+  );
+  saveTodos();
+  render();
+}
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const text = input.value.trim();
 
   if (!text) return;
 
-  addTodo(text);
+  addTodo(text, dueDateInput.value);
   input.value = "";
+  dueDateInput.value = "";
   input.focus();
 });
 
