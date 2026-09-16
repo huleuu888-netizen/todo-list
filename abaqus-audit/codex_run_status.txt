@@ -1,0 +1,52 @@
+Abaqus model audit run status
+=============================
+
+Result: SUCCEEDED
+Run date: 2026-09-16 (Asia/Shanghai)
+Abaqus version: Abaqus 2022
+Abaqus internal version: 2021_09_16-01.57.30 176069
+Launcher used: C:\SIMULIA\Commands\abaqus.bat
+Installed product location reported by Abaqus: E:\SIMULIA\EstProducts\2022
+
+Exact successful command:
+abaqus cae noGUI=abaqus_model_audit.py -- doub_part25_2d_seepage_plastic_v1.cae
+
+Successful command working directory:
+C:\Users\ADMINI~1\AppData\Local\Temp\codex-abaqus-audit-issue1
+
+Input handling and original-file protection:
+- The task branch did not contain abaqus-audit/doub_part25_2d_seepage_plastic_v1.cae.
+- An exact-name input was found in the existing workspace at:
+  D:\Backup\Documents\ChatGPT\多步水电站\Codex生成模型\outputs\doub_part25_2d_seepage_plastic_v1.cae
+- The source was copied to the ASCII-only temporary working directory above because
+  Abaqus 2022 could not transcode the Chinese characters in the repository path.
+- The original source CAE was never opened by Abaqus and was not modified.
+- Original source SHA-256 before and after the run:
+  E3FCFC71322137A00A678CA46FD1B307A8B3D1C3E7ECD6407CD2111C75775A84
+
+Initial required-command attempt from abaqus-audit:
+abaqus cae noGUI=abaqus_model_audit.py -- doub_part25_2d_seepage_plastic_v1.cae
+
+Initial attempt result: FAILED before opening a model. The branch did not contain the
+named CAE file, and Abaqus also displayed the Chinese parent directory as mojibake.
+The printed error was:
+****ERROR: Transcoding Error: IOError: D:\Backup\Documents\ChatGPT\<mojibake>\todo-list\abaqus-audit\doub_part25_2d_seepage_plastic_v1.cae: No such file or directory
+Abaqus Error: cae exited with an error.
+
+Successful-run license output:
+Abaqus License Manager checked out the following license:
+"cae" from Flexnet server localhost
+<9997 out of 9999 licenses remain available>.
+
+Warnings recorded in the Abaqus replay output:
+- Warning: the assembly is empty; therefore, Model-1 cannot be used for analysis.
+- Warning: no history output was requested in step GRAVITY_INITIALIZATION.
+
+Successful-run errors: none.
+
+Generated outputs copied to abaqus-audit:
+- abaqus_model_audit.txt
+- Model-1_keywords_no_mesh.txt
+- Part25_2D_Seepage_Plastic_keywords_no_mesh.txt
+
+The audit script did not change model parameters.

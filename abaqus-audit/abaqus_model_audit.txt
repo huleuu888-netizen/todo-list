@@ -1,0 +1,1044 @@
+CAE = C:\Users\Administrator\AppData\Local\Temp\codex-abaqus-audit-issue1\doub_part25_2d_seepage_plastic_v1.cae
+MODELS = ['Model-1', 'Part25_2D_Seepage_Plastic']
+JOBS = []
+
+==============================================================================
+[MODEL] Model-1
+==============================================================================
+
+PARTS = []
+MATERIALS = []
+SECTIONS = []
+STEPS = ['Initial']
+BCS = []
+LOADS = []
+PREDEFINED FIELDS = []
+INTERACTIONS = []
+
+--- MATERIAL DETAILS ---
+
+--- STEP DETAILS ---
+[STEP] Initial | class=InitialStep
+  nlgeom = OFF
+
+--- LOAD DETAILS ---
+
+--- BOUNDARY CONDITION DETAILS ---
+
+--- PREDEFINED FIELD DETAILS ---
+
+--- MESH / ELEMENT TYPE SUMMARY ---
+
+KEYWORD DUMP = C:\Users\Administrator\AppData\Local\Temp\codex-abaqus-audit-issue1\Model-1_keywords_no_mesh.txt
+
+==============================================================================
+[MODEL] Part25_2D_Seepage_Plastic
+==============================================================================
+
+PARTS = ['PART25_2D']
+MATERIALS = ['MAT_BAKESHALI', 'MAT_BAKESHALI_NUM_ELASTIC', 'MAT_BIQILIAO', 'MAT_FANGSHENQIANG', 'MAT_FANLVCENG', 'MAT_FANLVCENG_NUM_ELASTIC', 'MAT_PAISHUI', 'MAT_Q2', 'MAT_Q2_NUM_ELASTIC', 'MAT_Q6', 'MAT_Q7', 'MAT_Q8', 'MAT_Q9', 'MAT_Q10', 'MAT_Q11', 'MAT_Q12', 'MAT_WEIYANJITI', 'MAT_WEIYANSHALI']
+SECTIONS = ['Section-1-SEC_BAKESHALI', 'Section-2-SEC_BIQILIAO', 'Section-3-SEC_FANGSHENQIANG', 'Section-4-SEC_FANLVCENG', 'Section-5-SEC_PAISHUI', 'Section-6-SEC_Q10', 'Section-7-SEC_Q11', 'Section-8-SEC_Q12', 'Section-9-SEC_Q2', 'Section-10-SEC_Q6', 'Section-11-SEC_Q7', 'Section-12-SEC_Q8', 'Section-13-SEC_Q9', 'Section-14-SEC_WEIYANJITI', 'Section-15-SEC_WEIYANSHALI', 'Section-16-NUM_ELASTIC_BAKESHALI', 'Section-17-NUM_ELASTIC_FANLVCENG', 'Section-18-NUM_ELASTIC_Q2']
+STEPS = ['Initial', 'GRAVITY_INITIALIZATION', 'GRAVITY_AND_STEADY_SEEPAGE']
+BCS = ['BC_BOTTOM_FIXED', 'BC_DOWNSTREAM_H135_NODE_22', 'BC_DOWNSTREAM_H135_NODE_23', 'BC_DOWNSTREAM_H135_NODE_25', 'BC_DOWNSTREAM_H135_NODE_29', 'BC_DOWNSTREAM_H135_NODE_30', 'BC_DOWNSTREAM_H135_NODE_32', 'BC_DOWNSTREAM_H135_NODE_34', 'BC_DOWNSTREAM_H135_NODE_37', 'BC_DOWNSTREAM_H135_NODE_63', 'BC_DOWNSTREAM_H135_NODE_64', 'BC_DOWNSTREAM_H135_NODE_241', 'BC_DOWNSTREAM_H135_NODE_242', 'BC_DOWNSTREAM_H135_NODE_243', 'BC_DOWNSTREAM_H135_NODE_244', 'BC_DOWNSTREAM_H135_NODE_245', 'BC_DOWNSTREAM_H135_NODE_246', 'BC_DOWNSTREAM_H135_NODE_410', 'BC_DOWNSTREAM_H135_NODE_411', 'BC_DOWNSTREAM_H135_NODE_553', 'BC_DOWNSTREAM_H135_NODE_554', 'BC_DOWNSTREAM_H135_NODE_755', 'BC_DOWNSTREAM_H135_NODE_756', 'BC_DOWNSTREAM_H135_NODE_757', 'BC_DOWNSTREAM_H135_NODE_758', 'BC_DOWNSTREAM_H135_NODE_759', 'BC_DOWNSTREAM_H135_NODE_760', 'BC_DOWNSTREAM_H135_NODE_867', 'BC_DOWNSTREAM_H135_NODE_868', 'BC_DOWNSTREAM_H135_NODE_869', 'BC_DOWNSTREAM_H135_NODE_870', 'BC_DOWNSTREAM_H135_NODE_871', 'BC_DOWNSTREAM_H135_NODE_872', 'BC_DOWNSTREAM_H135_NODE_873', 'BC_DOWNSTREAM_H135_NODE_980', 'BC_DOWNSTREAM_H135_NODE_981', 'BC_DOWNSTREAM_H135_NODE_982', 'BC_DOWNSTREAM_H135_NODE_983', 'BC_DOWNSTREAM_H135_NODE_984', 'BC_DOWNSTREAM_H135_NODE_985', 'BC_DOWNSTREAM_H135_NODE_986', 'BC_DOWNSTREAM_H135_NODE_987', 'BC_DOWNSTREAM_H135_NODE_1088', 'BC_DOWNSTREAM_H135_NODE_1089', 'BC_DOWNSTREAM_H135_NODE_1090', 'BC_DOWNSTREAM_H135_NODE_1091', 'BC_DOWNSTREAM_H135_NODE_1092', 'BC_DOWNSTREAM_H135_NODE_1093', 'BC_DOWNSTREAM_H135_NODE_1094', 'BC_DOWNSTREAM_H135_NODE_1095', 'BC_DOWNSTREAM_H135_NODE_1096', 'BC_DOWNSTREAM_H135_NODE_1097', 'BC_DOWNSTREAM_H135_NODE_1098', 'BC_DOWNSTREAM_H135_NODE_1099', 'BC_DOWNSTREAM_H135_NODE_1100', 'BC_DOWNSTREAM_H135_NODE_1101', 'BC_DOWNSTREAM_H135_NODE_1102', 'BC_DOWNSTREAM_H135_NODE_1103', 'BC_DOWNSTREAM_H135_NODE_1104', 'BC_DOWNSTREAM_H135_NODE_1105', 'BC_DOWNSTREAM_H135_NODE_1106', 'BC_DOWNSTREAM_H135_NODE_1107', 'BC_DOWNSTREAM_H135_NODE_1108', 'BC_DOWNSTREAM_H135_NODE_1109', 'BC_DOWNSTREAM_H135_NODE_1110', 'BC_DOWNSTREAM_H135_NODE_1111', 'BC_DOWNSTREAM_H135_NODE_1112', 'BC_DOWNSTREAM_H135_NODE_1113', 'BC_DOWNSTREAM_H135_NODE_1114', 'BC_DOWNSTREAM_H135_NODE_1115', 'BC_DOWNSTREAM_H135_NODE_1116', 'BC_DOWNSTREAM_H135_NODE_1117', 'BC_DOWNSTREAM_H135_NODE_1118', 'BC_DOWNSTREAM_H135_NODE_1119', 'BC_DOWNSTREAM_H135_NODE_1120', 'BC_DOWNSTREAM_H135_NODE_1121', 'BC_DOWNSTREAM_H135_NODE_1122', 'BC_DOWNSTREAM_H135_NODE_1189', 'BC_DOWNSTREAM_H135_NODE_1190', 'BC_INITIAL_DRAINED_PORE', 'BC_LEFT_ROLLER', 'BC_RIGHT_ROLLER', 'BC_UPSTREAM_H158_5_NODE_1', 'BC_UPSTREAM_H158_5_NODE_14', 'BC_UPSTREAM_H158_5_NODE_15', 'BC_UPSTREAM_H158_5_NODE_16', 'BC_UPSTREAM_H158_5_NODE_17', 'BC_UPSTREAM_H158_5_NODE_21', 'BC_UPSTREAM_H158_5_NODE_24', 'BC_UPSTREAM_H158_5_NODE_26', 'BC_UPSTREAM_H158_5_NODE_27', 'BC_UPSTREAM_H158_5_NODE_28', 'BC_UPSTREAM_H158_5_NODE_31', 'BC_UPSTREAM_H158_5_NODE_33', 'BC_UPSTREAM_H158_5_NODE_35', 'BC_UPSTREAM_H158_5_NODE_72', 'BC_UPSTREAM_H158_5_NODE_79', 'BC_UPSTREAM_H158_5_NODE_80', 'BC_UPSTREAM_H158_5_NODE_81', 'BC_UPSTREAM_H158_5_NODE_147', 'BC_UPSTREAM_H158_5_NODE_148', 'BC_UPSTREAM_H158_5_NODE_149', 'BC_UPSTREAM_H158_5_NODE_150', 'BC_UPSTREAM_H158_5_NODE_151', 'BC_UPSTREAM_H158_5_NODE_152', 'BC_UPSTREAM_H158_5_NODE_153', 'BC_UPSTREAM_H158_5_NODE_154', 'BC_UPSTREAM_H158_5_NODE_155', 'BC_UPSTREAM_H158_5_NODE_156', 'BC_UPSTREAM_H158_5_NODE_157', 'BC_UPSTREAM_H158_5_NODE_158', 'BC_UPSTREAM_H158_5_NODE_159', 'BC_UPSTREAM_H158_5_NODE_160', 'BC_UPSTREAM_H158_5_NODE_161', 'BC_UPSTREAM_H158_5_NODE_162', 'BC_UPSTREAM_H158_5_NODE_163', 'BC_UPSTREAM_H158_5_NODE_164', 'BC_UPSTREAM_H158_5_NODE_179', 'BC_UPSTREAM_H158_5_NODE_180', 'BC_UPSTREAM_H158_5_NODE_307', 'BC_UPSTREAM_H158_5_NODE_308', 'BC_UPSTREAM_H158_5_NODE_309', 'BC_UPSTREAM_H158_5_NODE_310', 'BC_UPSTREAM_H158_5_NODE_311', 'BC_UPSTREAM_H158_5_NODE_312', 'BC_UPSTREAM_H158_5_NODE_449', 'BC_UPSTREAM_H158_5_NODE_450', 'BC_UPSTREAM_H158_5_NODE_451', 'BC_UPSTREAM_H158_5_NODE_452', 'BC_UPSTREAM_H158_5_NODE_761', 'BC_UPSTREAM_H158_5_NODE_762', 'BC_UPSTREAM_H158_5_NODE_763', 'BC_UPSTREAM_H158_5_NODE_764', 'BC_UPSTREAM_H158_5_NODE_765', 'BC_UPSTREAM_H158_5_NODE_766', 'BC_UPSTREAM_H158_5_NODE_874', 'BC_UPSTREAM_H158_5_NODE_875', 'BC_UPSTREAM_H158_5_NODE_876', 'BC_UPSTREAM_H158_5_NODE_877', 'BC_UPSTREAM_H158_5_NODE_878', 'BC_UPSTREAM_H158_5_NODE_879', 'BC_UPSTREAM_H158_5_NODE_880', 'BC_UPSTREAM_H158_5_NODE_988', 'BC_UPSTREAM_H158_5_NODE_989', 'BC_UPSTREAM_H158_5_NODE_990', 'BC_UPSTREAM_H158_5_NODE_991', 'BC_UPSTREAM_H158_5_NODE_992', 'BC_UPSTREAM_H158_5_NODE_993', 'BC_UPSTREAM_H158_5_NODE_994', 'BC_UPSTREAM_H158_5_NODE_995', 'BC_UPSTREAM_H158_5_NODE_1147', 'BC_UPSTREAM_H158_5_NODE_1148', 'BC_UPSTREAM_H158_5_NODE_1149', 'BC_UPSTREAM_H158_5_NODE_1150', 'BC_UPSTREAM_H158_5_NODE_1151', 'BC_UPSTREAM_H158_5_NODE_1174', 'BC_UPSTREAM_H158_5_NODE_1175', 'BC_UPSTREAM_H158_5_NODE_1176', 'BC_UPSTREAM_H158_5_NODE_1177', 'BC_UPSTREAM_H158_5_NODE_1178', 'BC_UPSTREAM_H158_5_NODE_1179', 'BC_UPSTREAM_H158_5_NODE_1180', 'BC_UPSTREAM_H158_5_NODE_1181', 'BC_UPSTREAM_H158_5_NODE_1182', 'BC_UPSTREAM_H158_5_NODE_1183', 'BC_UPSTREAM_H158_5_NODE_1184', 'BC_UPSTREAM_H158_5_NODE_1185', 'BC_UPSTREAM_H158_5_NODE_1186', 'BC_UPSTREAM_H158_5_NODE_1187', 'BC_UPSTREAM_H158_5_NODE_1188', 'BC_UPSTREAM_H158_5_NODE_1191', 'BC_UPSTREAM_H158_5_NODE_1192']
+LOADS = ['GRAVITY']
+PREDEFINED FIELDS = ['INITIAL_GEOSTATIC_STRESS', 'INITIAL_PORE_PRESSURE', 'INITIAL_VOID_RATIO_001', 'INITIAL_VOID_RATIO_002', 'INITIAL_VOID_RATIO_003', 'INITIAL_VOID_RATIO_004', 'INITIAL_VOID_RATIO_005', 'INITIAL_VOID_RATIO_006', 'INITIAL_VOID_RATIO_007', 'INITIAL_VOID_RATIO_008', 'INITIAL_VOID_RATIO_009', 'INITIAL_VOID_RATIO_010', 'INITIAL_VOID_RATIO_011', 'INITIAL_VOID_RATIO_012', 'INITIAL_VOID_RATIO_013', 'INITIAL_VOID_RATIO_014', 'INITIAL_VOID_RATIO_015', 'INITIAL_VOID_RATIO_016', 'INITIAL_VOID_RATIO_017', 'INITIAL_VOID_RATIO_018', 'INITIAL_VOID_RATIO_019', 'INITIAL_VOID_RATIO_020', 'INITIAL_VOID_RATIO_021', 'INITIAL_VOID_RATIO_022', 'INITIAL_VOID_RATIO_023', 'INITIAL_VOID_RATIO_024', 'INITIAL_VOID_RATIO_025', 'INITIAL_VOID_RATIO_026', 'INITIAL_VOID_RATIO_027', 'INITIAL_VOID_RATIO_028', 'INITIAL_VOID_RATIO_029', 'INITIAL_VOID_RATIO_030', 'INITIAL_VOID_RATIO_031', 'INITIAL_VOID_RATIO_032', 'INITIAL_VOID_RATIO_033', 'INITIAL_VOID_RATIO_034', 'INITIAL_VOID_RATIO_035', 'INITIAL_VOID_RATIO_036', 'INITIAL_VOID_RATIO_037', 'INITIAL_VOID_RATIO_038', 'INITIAL_VOID_RATIO_039', 'INITIAL_VOID_RATIO_040', 'INITIAL_VOID_RATIO_041', 'INITIAL_VOID_RATIO_042', 'INITIAL_VOID_RATIO_043', 'INITIAL_VOID_RATIO_044', 'INITIAL_VOID_RATIO_045', 'INITIAL_VOID_RATIO_046', 'INITIAL_VOID_RATIO_047', 'INITIAL_VOID_RATIO_048', 'INITIAL_VOID_RATIO_049', 'INITIAL_VOID_RATIO_050', 'INITIAL_VOID_RATIO_051', 'INITIAL_VOID_RATIO_052', 'INITIAL_VOID_RATIO_053', 'INITIAL_VOID_RATIO_054', 'INITIAL_VOID_RATIO_055', 'INITIAL_VOID_RATIO_056', 'INITIAL_VOID_RATIO_057']
+INTERACTIONS = []
+
+--- MATERIAL DETAILS ---
+
+[MATERIAL] MAT_BAKESHALI
+  Density:
+    table = ((2405.70846075,),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Elastic:
+    table = ((70000000.0, 0.25),)
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+  Mohr-Coulomb:
+    table = ((36.3, 0.1),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Permeability:
+    table = ((0.000295, 0.26),)
+    specificWeight = 9810.0
+    inertialDragCoefficient = 0.142887
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+
+[MATERIAL] MAT_BAKESHALI_NUM_ELASTIC
+  Density:
+    table = ((2405.70846075,),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Elastic:
+    table = ((70000000.0, 0.25),)
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+  Permeability:
+    table = ((0.000295, 0.26),)
+    specificWeight = 9810.0
+    inertialDragCoefficient = 0.142887
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+
+[MATERIAL] MAT_BIQILIAO
+  Density:
+    table = ((1957.18654434,),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Elastic:
+    table = ((20000000.0, 0.32),)
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+  Mohr-Coulomb:
+    table = ((22.1, 0.1),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Permeability:
+    table = ((5.1e-07, 0.88),)
+    specificWeight = 9810.0
+    inertialDragCoefficient = 0.142887
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+
+[MATERIAL] MAT_FANGSHENQIANG
+  Density:
+    table = ((2440.0,),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Elastic:
+    table = ((300000000.0, 0.2),)
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+  Permeability:
+    table = ((1e-08, 0.005),)
+    specificWeight = 9810.0
+    inertialDragCoefficient = 0.142887
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+
+[MATERIAL] MAT_FANLVCENG
+  Density:
+    table = ((2375.127421,),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Elastic:
+    table = ((150000000.0, 0.25),)
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+  Mohr-Coulomb:
+    table = ((36.3, 0.1),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Permeability:
+    table = ((4.47e-05, 0.21),)
+    specificWeight = 9810.0
+    inertialDragCoefficient = 0.142887
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+
+[MATERIAL] MAT_FANLVCENG_NUM_ELASTIC
+  Density:
+    table = ((2375.127421,),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Elastic:
+    table = ((150000000.0, 0.25),)
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+  Permeability:
+    table = ((4.47e-05, 0.21),)
+    specificWeight = 9810.0
+    inertialDragCoefficient = 0.142887
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+
+[MATERIAL] MAT_PAISHUI
+  Density:
+    table = ((2283.38430173,),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Elastic:
+    table = ((50000000.0, 0.27),)
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+  Mohr-Coulomb:
+    table = ((37.2, 0.1),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Permeability:
+    table = ((0.0225, 0.38),)
+    specificWeight = 9810.0
+    inertialDragCoefficient = 0.142887
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+
+[MATERIAL] MAT_Q2
+  Density:
+    table = ((2375.127421,),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Elastic:
+    table = ((120000000.0, 0.24),)
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+  Mohr-Coulomb:
+    table = ((36.1, 0.1),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Permeability:
+    table = ((0.000233, 0.36),)
+    specificWeight = 9810.0
+    inertialDragCoefficient = 0.142887
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+
+[MATERIAL] MAT_Q2_NUM_ELASTIC
+  Density:
+    table = ((2375.127421,),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Elastic:
+    table = ((120000000.0, 0.24),)
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+  Permeability:
+    table = ((0.000233, 0.36),)
+    specificWeight = 9810.0
+    inertialDragCoefficient = 0.142887
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+
+[MATERIAL] MAT_Q6
+  Density:
+    table = ((2436.28950051,),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Elastic:
+    table = ((75000000.0, 0.31),)
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+  Mohr-Coulomb:
+    table = ((28.8, 0.1),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Permeability:
+    table = ((5.48e-06, 0.5),)
+    specificWeight = 9810.0
+    inertialDragCoefficient = 0.142887
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+
+[MATERIAL] MAT_Q7
+  Density:
+    table = ((2069.31702345,),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Elastic:
+    table = ((200000000.0, 0.27),)
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+  Mohr-Coulomb:
+    table = ((21.8, 0.1),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Permeability:
+    table = ((8.49e-05, 0.45),)
+    specificWeight = 9810.0
+    inertialDragCoefficient = 0.142887
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+
+[MATERIAL] MAT_Q8
+  Density:
+    table = ((2089.70438328,),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Elastic:
+    table = ((66000000.0, 0.31),)
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+  Mohr-Coulomb:
+    table = ((30.9, 0.1),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Permeability:
+    table = ((5.89e-07, 0.55),)
+    specificWeight = 9810.0
+    inertialDragCoefficient = 0.142887
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+
+[MATERIAL] MAT_Q9
+  Density:
+    table = ((2130.47910296,),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Elastic:
+    table = ((150000000.0, 0.27),)
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+  Mohr-Coulomb:
+    table = ((19.8, 0.1),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Permeability:
+    table = ((1.14e-05, 0.35),)
+    specificWeight = 9810.0
+    inertialDragCoefficient = 0.142887
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+
+[MATERIAL] MAT_Q10
+  Density:
+    table = ((2436.28950051,),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Elastic:
+    table = ((165000000.0, 0.27),)
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+  Mohr-Coulomb:
+    table = ((30.9, 0.1),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Permeability:
+    table = ((1.14e-05, 0.33),)
+    specificWeight = 9810.0
+    inertialDragCoefficient = 0.142887
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+
+[MATERIAL] MAT_Q11
+  Density:
+    table = ((2426.09582059,),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Elastic:
+    table = ((180000000.0, 0.27),)
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+  Mohr-Coulomb:
+    table = ((30.9, 0.1),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Permeability:
+    table = ((1.7e-06, 0.33),)
+    specificWeight = 9810.0
+    inertialDragCoefficient = 0.142887
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+
+[MATERIAL] MAT_Q12
+  Density:
+    table = ((2426.09582059,),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Elastic:
+    table = ((75000000.0, 0.31),)
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+  Mohr-Coulomb:
+    table = ((31.8, 0.1),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Permeability:
+    table = ((3.26e-07, 0.45),)
+    specificWeight = 9810.0
+    inertialDragCoefficient = 0.142887
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+
+[MATERIAL] MAT_WEIYANJITI
+  Density:
+    table = ((2283.38430173,),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Elastic:
+    table = ((40000000.0, 0.28),)
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+  Mohr-Coulomb:
+    table = ((28.1, 0.1),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Permeability:
+    table = ((0.00051, 0.489),)
+    specificWeight = 9810.0
+    inertialDragCoefficient = 0.142887
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+
+[MATERIAL] MAT_WEIYANSHALI
+  Density:
+    table = ((2375.127421,),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Elastic:
+    table = ((60000000.0, 0.26),)
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+  Mohr-Coulomb:
+    table = ((36.1, 0.1),)
+    temperatureDependency = OFF
+    dependencies = 0
+  Permeability:
+    table = ((0.000295, 0.5),)
+    specificWeight = 9810.0
+    inertialDragCoefficient = 0.142887
+    type = ISOTROPIC
+    temperatureDependency = OFF
+    dependencies = 0
+
+--- STEP DETAILS ---
+[STEP] Initial | class=InitialStep
+  nlgeom = OFF
+[STEP] GRAVITY_INITIALIZATION | class=StaticStep
+  timePeriod = 1.0
+  initialInc = 0.0001
+  minInc = 1e-10
+  maxInc = 0.05
+  maxNumInc = 2000
+  nlgeom = OFF
+[STEP] GRAVITY_AND_STEADY_SEEPAGE | class=SoilsStep
+  timePeriod = 100.0
+  initialInc = 0.0001
+  minInc = 1e-10
+  maxInc = 10.0
+  maxNumInc = 10000
+  nlgeom = OFF
+  utol = 1000.0
+  cetol = 0.0
+  end = 1.79769313486e+308
+
+--- LOAD DETAILS ---
+[LOAD] GRAVITY | class=Gravity
+  distributionType = UNIFORM
+  field = 
+
+--- BOUNDARY CONDITION DETAILS ---
+[BC] BC_BOTTOM_FIXED | class=DisplacementBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_22 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_23 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_25 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_29 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_30 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_32 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_34 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_37 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_63 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_64 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_241 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_242 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_243 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_244 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_245 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_246 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_410 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_411 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_553 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_554 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_755 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_756 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_757 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_758 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_759 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_760 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_867 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_868 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_869 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_870 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_871 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_872 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_873 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_980 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_981 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_982 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_983 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_984 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_985 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_986 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_987 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1088 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1089 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1090 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1091 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1092 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1093 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1094 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1095 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1096 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1097 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1098 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1099 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1100 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1101 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1102 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1103 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1104 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1105 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1106 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1107 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1108 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1109 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1110 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1111 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1112 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1113 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1114 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1115 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1116 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1117 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1118 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1119 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1120 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1121 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1122 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1189 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_DOWNSTREAM_H135_NODE_1190 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_INITIAL_DRAINED_PORE | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_LEFT_ROLLER | class=DisplacementBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_RIGHT_ROLLER | class=DisplacementBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_1 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_14 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_15 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_16 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_17 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_21 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_24 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_26 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_27 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_28 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_31 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_33 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_35 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_72 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_79 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_80 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_81 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_147 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_148 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_149 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_150 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_151 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_152 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_153 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_154 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_155 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_156 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_157 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_158 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_159 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_160 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_161 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_162 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_163 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_164 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_179 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_180 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_307 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_308 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_309 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_310 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_311 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_312 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_449 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_450 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_451 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_452 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_761 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_762 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_763 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_764 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_765 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_766 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_874 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_875 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_876 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_877 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_878 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_879 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_880 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_988 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_989 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_990 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_991 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_992 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_993 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_994 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_995 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_1147 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_1148 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_1149 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_1150 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_1151 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_1174 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_1175 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_1176 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_1177 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_1178 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_1179 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_1180 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_1181 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_1182 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_1183 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_1184 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_1185 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_1186 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_1187 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_1188 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_1191 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+[BC] BC_UPSTREAM_H158_5_NODE_1192 | class=PorePressureBC
+  distributionType = UNIFORM
+  fieldName = 
+
+--- PREDEFINED FIELD DETAILS ---
+[FIELD] INITIAL_GEOSTATIC_STRESS | class=AbaqusObject
+  stressMag1 = -1000.0
+  stressMag2 = -3390870.0
+  lateralCoeff1 = 1.0
+  lateralCoeff2 = 1.0
+[FIELD] INITIAL_PORE_PRESSURE | class=AbaqusObject
+  porePressure1 = 0.0
+  porePressure2 = 0.0
+[FIELD] INITIAL_VOID_RATIO_001 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_002 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_003 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_004 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_005 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_006 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_007 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_008 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_009 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_010 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_011 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_012 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_013 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_014 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_015 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_016 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_017 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_018 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_019 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_020 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_021 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_022 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_023 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_024 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_025 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_026 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_027 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_028 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_029 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_030 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_031 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_032 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_033 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_034 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_035 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_036 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_037 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_038 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_039 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_040 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_041 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_042 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_043 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_044 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_045 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_046 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_047 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_048 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_049 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_050 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_051 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_052 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_053 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_054 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_055 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_056 | class=AbaqusObject
+[FIELD] INITIAL_VOID_RATIO_057 | class=AbaqusObject
+
+--- MESH / ELEMENT TYPE SUMMARY ---
+[PART] PART25_2D | nodes=4868 elements=4733
+  element types = {CPE3: 41, CPE4P: 4692}
+
+KEYWORD DUMP = C:\Users\Administrator\AppData\Local\Temp\codex-abaqus-audit-issue1\Part25_2D_Seepage_Plastic_keywords_no_mesh.txt
