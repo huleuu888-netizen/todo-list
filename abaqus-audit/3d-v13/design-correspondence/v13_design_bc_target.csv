@@ -1,0 +1,5 @@
+step,upstream_head_m,downstream_head_m,basis
+S03_NORMAL_RESERVOIR_3076M,3076.000000,3053.500000,normal stability case
+S04_DESIGN_FLOOD_3580CMS,3076.000000,3060.260000,explicit design-flood stability case; upstream source text is internally inconsistent elsewhere
+S05_CHECK_FLOOD_AND_SEISMIC,3077.350000,3061.380000,check-flood stability case
+S06_DRAWDOWN_TO_3074M,3074.000000,3053.500000,dead-water/drawdown stability case

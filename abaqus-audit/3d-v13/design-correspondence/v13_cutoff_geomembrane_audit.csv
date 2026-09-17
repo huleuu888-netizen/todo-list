@@ -1,0 +1,7 @@
+item,unit,design,model_measured,difference,status,basis
+cutoff_min_bottom,m,3021.000000,3021.000000,0.000000,PASS,global minimum Z
+cutoff_thickness,m,1.000000,1.000000,0.000000,PASS,median station x-span
+cutoff_max_depth,m,49.100000,52.511470,3.411470,FAIL,"station-by-station max(top-bottom), not global extrema subtraction"
+cutoff_top_global_max,m,VARIABLE; follows concrete plinth/base underside,3073.511470,,UNRESOLVED,must compare to station-specific design plinth underside; 3070.10 is not imposed automatically
+geomembrane_z_range,m,upstream face to cutoff/plinth connection,3055.000000..3073.511470,,MODEL_EQUIVALENT,1.0 m equivalent C3D8P layer; not literal membrane thickness
+geomembrane_cutoff_top_alignment,m,connected to cutoff top,0.000000,,PASS,difference of maximum global Z values

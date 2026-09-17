@@ -1,0 +1,14 @@
+item,unit,design,model_measured,difference,status,basis
+dam_length,m,295.000000,295.000000,0.000000,PASS,global Y extent of active dam-fill mesh
+crest_elevation,m,3079.000000,3079.500000,0.500000,FAIL,maximum global Z of active dam-fill mesh
+foundation_elevation,m,3052.000000,3055.000000,3.000000,FAIL,minimum global Z of active dam-fill mesh; cutoff excluded
+maximum_dam_height,m,27.000000,24.500000,-2.500000,FAIL,crest minus minimum active dam-fill elevation
+
+slope_segment,z_min,z_max,design_H_to_V,model_H_to_V,R2,max_residual_m,status,basis
+upstream_lower,3055.000000,3059.000000,2.500000,14.894261,0.244310,66.315478,FAIL,30 elevation levels
+upstream_middle,3059.000000,3070.100000,1.750000,0.949858,0.007311,68.241033,FAIL,101 elevation levels
+upstream_upper,3070.100000,3079.000000,2.500000,2.484064,0.082948,36.132863,FAIL,30 elevation levels
+downstream_lower,3055.000000,3064.950000,2.000000,2.489248,0.029508,63.765093,FAIL,96 elevation levels
+downstream_upper,3065.050000,3079.000000,2.000000,2.362832,0.101353,52.965284,FAIL,65 elevation levels
+
+upstream_side_identification,MIN_X,geomembrane is closer to min-x dam envelope (9.88e+03 vs 1.13e+04 cumulative m)

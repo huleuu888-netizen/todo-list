@@ -1,0 +1,13 @@
+feature,target_width_m,z_m,x0_m,x1_m,span_m,abs_error_m,interpretation
+3065_berm,3.0,3064.922000,-19.817210,-17.817210,2.000000,1.000000,node-level candidate; verify outer boundary in CAE if not unique
+3065_berm,3.0,3064.922000,-20.815060,-19.817210,0.997850,2.002150,node-level candidate; verify outer boundary in CAE if not unique
+downstream_pressure_platform,10.0,3060.785000,-87.166660,-76.875000,10.291660,0.291660,node-level candidate; verify outer boundary in CAE if not unique
+downstream_pressure_platform,10.0,3063.389000,-72.341900,-67.739600,4.602300,5.397700,node-level candidate; verify outer boundary in CAE if not unique
+downstream_pressure_platform,10.0,3063.389000,-67.739600,-63.137300,4.602300,5.397700,node-level candidate; verify outer boundary in CAE if not unique
+downstream_pressure_platform,10.0,3073.511000,-30.166670,-25.833330,4.333340,5.666660,node-level candidate; verify outer boundary in CAE if not unique
+downstream_pressure_platform,10.0,3077.649000,-2.166670,2.166670,4.333340,5.666660,node-level candidate; verify outer boundary in CAE if not unique
+downstream_pressure_platform,10.0,3079.500000,-2.166670,2.166670,4.333340,5.666660,node-level candidate; verify outer boundary in CAE if not unique
+downstream_pressure_platform,10.0,3073.511000,-34.500000,-30.166670,4.333330,5.666670,node-level candidate; verify outer boundary in CAE if not unique
+downstream_pressure_platform,10.0,3073.511000,-25.833330,-21.500000,4.333330,5.666670,node-level candidate; verify outer boundary in CAE if not unique
+downstream_pressure_platform,10.0,3077.649000,-6.500000,-2.166670,4.333330,5.666670,node-level candidate; verify outer boundary in CAE if not unique
+downstream_pressure_platform,10.0,3077.649000,2.166670,6.500000,4.333330,5.666670,node-level candidate; verify outer boundary in CAE if not unique
