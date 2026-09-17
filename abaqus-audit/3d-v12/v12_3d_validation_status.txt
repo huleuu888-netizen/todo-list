@@ -1,0 +1,19 @@
+V12 3-D validation status (Abaqus 2022 audit)
+==============================================
+source_sha256=52C39E6A713F423D4BC4F29742B323D6FDA3CBB80CE2C47A82C2F5124A742A27
+corrected_inp=D:\Backup\Documents\ChatGPT\多步水电站\todo-list\abaqus-audit\3d-v12\doub_hydropower_part25_geometric_solids_v12_hydro_corrected.inp
+exact_interface_groups=40
+aggregate_interface_groups=3
+aggregate_mechanical_ties=2
+mechanical_ties=44
+hydraulic_equation_groups=0
+upstream_head_nodes=1200
+downstream_head_nodes=75
+CAE_IMPORT=PASS (Abaqus 2022 noGUI import; CAE saved)
+DATA_CHECK=PASS (Abaqus/Standard datacheck; 1118 dat warnings and 1 msg warning)
+GEOSTATIC=NOT_CONVERGED (v12_3d_fullrun stopped in S01 increment 1 after severe numerical singularities/divergence)
+NORMAL_SEEPAGE=NOT_REACHED
+POR_CONTINUITY=NOT_VERIFIED
+HYDRAULIC_MASS_BALANCE=NOT_VERIFIED
+ODB=v12_3d_fullrun.odb partial; S01 has 1 frame at time 0.0 and S02-S06 have 0 frames
+UNRESOLVED=design-flood level, flood tailwater variation, geostatic numerical singularity, nonconformal hydraulic ODB check, staged activation, source-complete plastic dilation

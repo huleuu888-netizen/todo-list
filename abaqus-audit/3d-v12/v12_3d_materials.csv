@@ -1,0 +1,36 @@
+material,density_t_per_m3,density_basis,permeability_m_per_s,permeability_basis,E_kPa,nu
+CONCRETE,2.4,existing mass-density value retained,,UNRESOLVED,28000000,0.2
+DAM_CREST_PAVEMENT,2.3,existing mass-density value retained,,UNRESOLVED,5000000,0.22
+DAM_DRAINAGE,2.18,existing mass-density value retained,,UNRESOLVED,90000,0.25
+DAM_FILTER,2.1,existing mass-density value retained,,UNRESOLVED,60000,0.27
+DAM_RIPRAP,2.3,existing mass-density value retained,,UNRESOLVED,150000,0.24
+DAM_ROCKFILL,2.2,existing mass-density value retained,,UNRESOLVED,80000,0.26
+DAM_SAND_GRAVEL,2.13,existing mass-density value retained,,UNRESOLVED,45000,0.28
+DEFORMATION_BODY,2.05,existing mass-density value retained,,UNRESOLVED,180000,0.32
+FRESH_GRANITE,2.68,existing mass-density value retained,,UNRESOLVED,15000000,0.22
+GEOMEMBRANE,0.95,existing mass-density value retained,4.5e-11,"task value; isotropic, specific weight 9.81",800000,0.45
+P2_QUARTZITE,2.67,existing mass-density value retained,,UNRESOLVED,12000000,0.22
+P25_BAKESHALI,2.201834862,report unit weight kN/m3 converted rho=gamma/9.81,0.000295,"task value; isotropic, specific weight 9.81",70000,0.25
+P25_BIQILIAO,1.488277268,report unit weight kN/m3 converted rho=gamma/9.81,5.1e-07,"task value; isotropic, specific weight 9.81",20000,0.32
+P25_FANGSHENQIANG,2.44,2.44 retained; source unit not explicit,1e-08,"task value; isotropic, specific weight 9.81",300000,0.2
+P25_FANLV,2.201834862,report unit weight kN/m3 converted rho=gamma/9.81,4.47e-05,"task value; isotropic, specific weight 9.81",150000,0.25
+P25_PAISHUITI,2.008154944,report unit weight kN/m3 converted rho=gamma/9.81,0.0225,"task value; isotropic, specific weight 9.81",50000,0.27
+P25_WEIYANJITI,1.957186544,report unit weight kN/m3 converted rho=gamma/9.81,0.00051,"task value; isotropic, specific weight 9.81",40000,0.28
+P25_WEIYANSHALI,2.201834862,report unit weight kN/m3 converted rho=gamma/9.81,0.000295,"task value; isotropic, specific weight 9.81",60000,0.26
+Q2FGL_I,2.17,source dry density g/cm3 = t/m3 in m-kN-s-tonne,2.5e-07,report value cm/s divided by 100,42500,0.28
+Q2FGL_II,2.15,source dry density g/cm3 = t/m3 in m-kN-s-tonne,8.35e-07,report value cm/s divided by 100,67500,0.26
+Q2FGL_III,1.76,source dry density g/cm3 = t/m3 in m-kN-s-tonne,3.26e-07,report value cm/s divided by 100,27500,0.31
+Q2FGL_IV,2.13,source dry density g/cm3 = t/m3 in m-kN-s-tonne,1.7e-06,report value cm/s divided by 100,62500,0.26
+Q2FGL_V,2.13,source dry density g/cm3 = t/m3 in m-kN-s-tonne,1.14e-05,report value cm/s divided by 100,57500,0.27
+Q3AL_I,2.13,source dry density g/cm3 = t/m3 in m-kN-s-tonne,1.14e-05,report value cm/s divided by 100,57500,0.27
+Q3AL_II,1.74,source dry density g/cm3 = t/m3 in m-kN-s-tonne,5.89e-07,report value cm/s divided by 100,23500,0.32
+Q3AL_III,2.13,source dry density g/cm3 = t/m3 in m-kN-s-tonne,8.49e-05,report value cm/s divided by 100,52500,0.27
+Q3AL_IV1,1.7,source dry density g/cm3 = t/m3 in m-kN-s-tonne,5.48e-06,report value cm/s divided by 100,27500,0.31
+Q3AL_IV2,1.65,source dry density g/cm3 = t/m3 in m-kN-s-tonne,2.35e-06,report value cm/s divided by 100,22500,0.32
+Q3AL_V,1.8,source dry density g/cm3 = t/m3 in m-kN-s-tonne,4.46e-06,report value cm/s divided by 100,32500,0.3
+Q4AL_SGR1,2.14,source dry density g/cm3 = t/m3 in m-kN-s-tonne,5.8e-05,report value cm/s divided by 100,44500,0.28
+Q4AL_SGR2,2.13,source dry density g/cm3 = t/m3 in m-kN-s-tonne,0.000233,report value cm/s divided by 100,42500,0.28
+Q4DEL,1.8,source dry density g/cm3 = t/m3 in m-kN-s-tonne,2.33e-05,report value cm/s divided by 100,30000,0.3
+ROCK_DEEP_UNLOADED,2.62,existing mass-density value retained,,UNRESOLVED,4580000,0.25
+ROCK_STRONG_UNLOADED,2.45,existing mass-density value retained,,UNRESOLVED,800000,0.29
+ROCK_WEAK_UNLOADED,2.55,existing mass-density value retained,,UNRESOLVED,2000000,0.27

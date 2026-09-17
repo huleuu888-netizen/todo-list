@@ -1,0 +1,46 @@
+id,kind,master,secondary,matched_faces,tie_tolerance_m,hydraulic_equation_nodes,status
+V12_TIE_000,exact,LEFT_FOUNDATION_GRANITE_I,LEFT_L14_Q2FGL_I_I,320,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_001,exact,LEFT_L01_Q4DEL_I,LEFT_L03_Q4AL_SGR1_I,271,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_002,exact,LEFT_L03_Q4AL_SGR1_I,LEFT_L05_Q3AL_IV2_I,294,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_003,exact,LEFT_L05_Q3AL_IV2_I,LEFT_L06_Q3AL_IV1_I,294,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_004,exact,LEFT_L06_Q3AL_IV1_I,LEFT_L07_Q3AL_III_I,320,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_005,exact,LEFT_L07_Q3AL_III_I,LEFT_L08_Q3AL_II_I,320,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_006,exact,LEFT_L08_Q3AL_II_I,LEFT_L09_Q3AL_I_I,320,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_007,exact,LEFT_L09_Q3AL_I_I,LEFT_L10_Q2FGL_V_I,320,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_008,exact,LEFT_L10_Q2FGL_V_I,LEFT_L11_Q2FGL_IV_I,320,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_009,exact,LEFT_L11_Q2FGL_IV_I,LEFT_L12_Q2FGL_III_I,320,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_010,exact,LEFT_L12_Q2FGL_III_I,LEFT_L13_Q2FGL_II_I,320,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_011,exact,LEFT_L13_Q2FGL_II_I,LEFT_L14_Q2FGL_I_I,320,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_012,exact,RIVER_R02_Q4AL_SGR2_I,RIVER_R05_Q3AL_IV2_I,160,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_013,exact,RIVER_R05_Q3AL_IV2_I,RIVER_R06_Q3AL_IV1_I,160,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_014,exact,RIVER_R06_Q3AL_IV1_I,RIVER_R07_Q3AL_III_I,160,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_015,exact,RIVER_R07_Q3AL_III_I,RIVER_R08_Q3AL_II_I,160,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_016,exact,RIVER_R08_Q3AL_II_I,RIVER_R09_Q3AL_I_I,160,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_017,exact,RIVER_R09_Q3AL_I_I,RIVER_R10_Q2FGL_V_I,160,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_018,exact,RIVER_R10_Q2FGL_V_I,RIVER_R11_Q2FGL_IV_I,160,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_019,exact,RIVER_R11_Q2FGL_IV_I,RIVER_R12_Q2FGL_III_I,160,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_020,exact,RIVER_R12_Q2FGL_III_I,RIVER_R13_Q2FGL_II_I,160,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_021,exact,RIVER_R13_Q2FGL_II_I,RIVER_R14_Q2FGL_I_I,160,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_022,exact,RIVER_R14_Q2FGL_I_I,RIVER_ROCK_STRONG_UNLOADED_I,160,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_023,exact,RIVER_ROCK_STRONG_UNLOADED_I,RIVER_ROCK_WEAK_UNLOADED_I,160,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_024,exact,RIVER_ROCK_WEAK_UNLOADED_I,RIVER_ROCK_DEEP_UNLOADED_I,160,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_025,exact,RIVER_ROCK_DEEP_UNLOADED_I,RIVER_FRESH_GRANITE_I,160,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_026,exact,RIGHT_Q4_COLLUVIAL_I,RIGHT_R04_Q3AL_V_I,140,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_027,exact,RIGHT_Q4_COLLUVIAL_I,RIGHT_HIGH_TERRACE_COVER_I,40,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_028,exact,RIGHT_R04_Q3AL_V_I,RIGHT_ROCK_STRONG_UNLOADED_I,140,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_029,exact,RIGHT_ROCK_STRONG_UNLOADED_I,RIGHT_ROCK_WEAK_UNLOADED_I,140,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_030,exact,RIGHT_ROCK_WEAK_UNLOADED_I,RIGHT_ROCK_DEEP_UNLOADED_I,140,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_031,exact,RIGHT_ROCK_DEEP_UNLOADED_I,RIGHT_FRESH_GRANITE_I,140,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_032,exact,P25_SOLID_DRAINAGE_BODY_F00-1,P25_SOLID_DAM_SHELL_GRAVEL_F08-1,296,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_033,exact,P25_SOLID_FILTER_LAYER_F01-1,P25_SOLID_DAM_SHELL_GRAVEL_F02-1,296,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_034,exact,P25_SOLID_FILTER_LAYER_F01-1,P25_SOLID_DRAINAGE_BODY_F03-1,1184,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_035,exact,P25_SOLID_DAM_SHELL_GRAVEL_F02-1,P25_SOLID_DRAINAGE_BODY_F03-1,1184,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_036,exact,P25_SOLID_DAM_SHELL_GRAVEL_F02-1,P25_SOLID_DAM_SHELL_GRAVEL_F08-1,1036,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_037,exact,P25_SOLID_MAIN_ROCKFILL_F09-1,P25_SOLID_UPSTREAM_GRAVEL_FILL_F10-1,370,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_038,exact,P25_SOLID_MAIN_ROCKFILL_F09-1,P25_SOLID_IMPERMEABLE_FILL_F12-1,444,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_039,exact,P25_SOLID_MAIN_ROCKFILL_F11-1,P25_SOLID_IMPERMEABLE_FILL_F12-1,370,0.05,0,TIED; hydraulic P equations where coincident nodes exist
+V12_TIE_040,aggregate,LEFT_RIVER_GEOLOGY_NONCONFORMAL,LEFT_RIVER_GEOLOGY_NONCONFORMAL,NONCONFORMAL,2.0,0,MECHANICAL TIE; hydraulic continuity requires solver check
+V12_TIE_041,aggregate,RIVER_RIGHT_GEOLOGY_NONCONFORMAL,RIVER_RIGHT_GEOLOGY_NONCONFORMAL,NONCONFORMAL,2.0,0,SKIPPED_NO_NONOVERLAP_SURFACE; no aggregate Tie emitted
+V12_TIE_042,aggregate,DAM_RIVER_FOUNDATION_NONCONFORMAL,DAM_RIVER_FOUNDATION_NONCONFORMAL,NONCONFORMAL,6.0,0,MECHANICAL TIE; hydraulic continuity requires solver check
+V12_TIE_GEOMEMBRANE_FILL,geomembrane,V12_UPSTREAM_SURFACE,V12_GEOMEMBRANE_FACE,NONCONFORMAL,2.0,0,TIED; pore continuity requires solver check
+V12_TIE_GEOMEMBRANE_CUTOFF,geomembrane,V12_CUTOFF_TOP_SURFACE,V12_GEOMEMBRANE_TOP,NONCONFORMAL,1.5,0,TIED; connected at z=3073.51147 m
