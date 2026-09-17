@@ -1,0 +1,57 @@
+station_global_y_m,side,segment,design_H_to_V,measured_H_to_V,elevation_interval_m,fit_quality_R2,max_residual_m,status,notes
+150.000000,BOTH,crest_profile,3079.00..3079.50,3079.500000,end 3079.00; middle 3079.50,,,PASS,crest is a longitudinal range; maximum 3079.50 is not a failure; slice distance 0.0000 m
+150.000000,UPSTREAM,upstream_lower,2.500000,0.997652,3055.00..3065.80,0.006209,68.178621,UNRESOLVED,105 envelope levels; cross-section outer-boundary fit; no coordinate edits
+150.000000,UPSTREAM,upstream_middle,1.750000,2.149346,3065.80..3070.10,0.005374,50.466642,UNRESOLVED,26 envelope levels; cross-section outer-boundary fit; no coordinate edits
+150.000000,UPSTREAM,upstream_upper,2.500000,2.170420,3070.10..3079.50,0.077624,36.716259,UNRESOLVED,31 envelope levels; cross-section outer-boundary fit; no coordinate edits
+150.000000,DOWNSTREAM,downstream_lower,2.000000,2.489248,3055.00..3065.00,0.029508,63.765093,UNRESOLVED,96 envelope levels; cross-section outer-boundary fit; no coordinate edits
+150.000000,DOWNSTREAM,downstream_upper,2.000000,2.365102,3065.00..3079.50,0.111503,52.973366,UNRESOLVED,66 envelope levels; cross-section outer-boundary fit; no coordinate edits
+150.000000,DOWNSTREAM,berm_width_at_3065,width=3.00 m,,,,,UNRESOLVED,outer berm boundary not unique in node cloud
+150.000000,DOWNSTREAM,pressure_platform_width,width=10.00 m,,,,,UNRESOLVED,outer pressure platform not unique in node cloud
+199.166667,BOTH,crest_profile,3079.00..3079.50,3079.500000,end 3079.00; middle 3079.50,,,PASS,crest is a longitudinal range; maximum 3079.50 is not a failure; slice distance 1.3288 m
+199.166667,UPSTREAM,upstream_lower,2.500000,0.997652,3055.00..3065.80,0.006209,68.178621,UNRESOLVED,105 envelope levels; cross-section outer-boundary fit; no coordinate edits
+199.166667,UPSTREAM,upstream_middle,1.750000,2.149346,3065.80..3070.10,0.005374,50.466642,UNRESOLVED,26 envelope levels; cross-section outer-boundary fit; no coordinate edits
+199.166667,UPSTREAM,upstream_upper,2.500000,2.170420,3070.10..3079.50,0.077624,36.716259,UNRESOLVED,31 envelope levels; cross-section outer-boundary fit; no coordinate edits
+199.166667,DOWNSTREAM,downstream_lower,2.000000,2.489248,3055.00..3065.00,0.029508,63.765093,UNRESOLVED,96 envelope levels; cross-section outer-boundary fit; no coordinate edits
+199.166667,DOWNSTREAM,downstream_upper,2.000000,2.365102,3065.00..3079.50,0.111503,52.973366,UNRESOLVED,66 envelope levels; cross-section outer-boundary fit; no coordinate edits
+199.166667,DOWNSTREAM,berm_width_at_3065,width=3.00 m,,,,,UNRESOLVED,outer berm boundary not unique in node cloud
+199.166667,DOWNSTREAM,pressure_platform_width,width=10.00 m,,,,,UNRESOLVED,outer pressure platform not unique in node cloud
+248.333333,BOTH,crest_profile,3079.00..3079.50,3079.500000,end 3079.00; middle 3079.50,,,PASS,crest is a longitudinal range; maximum 3079.50 is not a failure; slice distance 1.3288 m
+248.333333,UPSTREAM,upstream_lower,2.500000,0.997652,3055.00..3065.80,0.006209,68.178621,UNRESOLVED,105 envelope levels; cross-section outer-boundary fit; no coordinate edits
+248.333333,UPSTREAM,upstream_middle,1.750000,2.149346,3065.80..3070.10,0.005374,50.466642,UNRESOLVED,26 envelope levels; cross-section outer-boundary fit; no coordinate edits
+248.333333,UPSTREAM,upstream_upper,2.500000,2.170420,3070.10..3079.50,0.077624,36.716259,UNRESOLVED,31 envelope levels; cross-section outer-boundary fit; no coordinate edits
+248.333333,DOWNSTREAM,downstream_lower,2.000000,2.489248,3055.00..3065.00,0.029508,63.765093,UNRESOLVED,96 envelope levels; cross-section outer-boundary fit; no coordinate edits
+248.333333,DOWNSTREAM,downstream_upper,2.000000,2.365102,3065.00..3079.50,0.111503,52.973366,UNRESOLVED,66 envelope levels; cross-section outer-boundary fit; no coordinate edits
+248.333333,DOWNSTREAM,berm_width_at_3065,width=3.00 m,,,,,UNRESOLVED,outer berm boundary not unique in node cloud
+248.333333,DOWNSTREAM,pressure_platform_width,width=10.00 m,,,,,UNRESOLVED,outer pressure platform not unique in node cloud
+297.500000,BOTH,crest_profile,3079.00..3079.50,3079.500000,end 3079.00; middle 3079.50,,,PASS,crest is a longitudinal range; maximum 3079.50 is not a failure; slice distance 0.0000 m
+297.500000,UPSTREAM,upstream_lower,2.500000,0.997652,3055.00..3065.80,0.006209,68.178621,UNRESOLVED,105 envelope levels; cross-section outer-boundary fit; no coordinate edits
+297.500000,UPSTREAM,upstream_middle,1.750000,2.149346,3065.80..3070.10,0.005374,50.466642,UNRESOLVED,26 envelope levels; cross-section outer-boundary fit; no coordinate edits
+297.500000,UPSTREAM,upstream_upper,2.500000,2.170420,3070.10..3079.50,0.077624,36.716259,UNRESOLVED,31 envelope levels; cross-section outer-boundary fit; no coordinate edits
+297.500000,DOWNSTREAM,downstream_lower,2.000000,2.489248,3055.00..3065.00,0.029508,63.765093,UNRESOLVED,96 envelope levels; cross-section outer-boundary fit; no coordinate edits
+297.500000,DOWNSTREAM,downstream_upper,2.000000,2.365102,3065.00..3079.50,0.111503,52.973366,UNRESOLVED,66 envelope levels; cross-section outer-boundary fit; no coordinate edits
+297.500000,DOWNSTREAM,berm_width_at_3065,width=3.00 m,,,,,UNRESOLVED,outer berm boundary not unique in node cloud
+297.500000,DOWNSTREAM,pressure_platform_width,width=10.00 m,,,,,UNRESOLVED,outer pressure platform not unique in node cloud
+346.666667,BOTH,crest_profile,3079.00..3079.50,3079.500000,end 3079.00; middle 3079.50,,,PASS,crest is a longitudinal range; maximum 3079.50 is not a failure; slice distance 1.3288 m
+346.666667,UPSTREAM,upstream_lower,2.500000,0.997652,3055.00..3065.80,0.006209,68.178621,UNRESOLVED,105 envelope levels; cross-section outer-boundary fit; no coordinate edits
+346.666667,UPSTREAM,upstream_middle,1.750000,2.149346,3065.80..3070.10,0.005374,50.466642,UNRESOLVED,26 envelope levels; cross-section outer-boundary fit; no coordinate edits
+346.666667,UPSTREAM,upstream_upper,2.500000,2.170420,3070.10..3079.50,0.077624,36.716259,UNRESOLVED,31 envelope levels; cross-section outer-boundary fit; no coordinate edits
+346.666667,DOWNSTREAM,downstream_lower,2.000000,2.489248,3055.00..3065.00,0.029508,63.765093,UNRESOLVED,96 envelope levels; cross-section outer-boundary fit; no coordinate edits
+346.666667,DOWNSTREAM,downstream_upper,2.000000,2.365102,3065.00..3079.50,0.111503,52.973366,UNRESOLVED,66 envelope levels; cross-section outer-boundary fit; no coordinate edits
+346.666667,DOWNSTREAM,berm_width_at_3065,width=3.00 m,,,,,UNRESOLVED,outer berm boundary not unique in node cloud
+346.666667,DOWNSTREAM,pressure_platform_width,width=10.00 m,,,,,UNRESOLVED,outer pressure platform not unique in node cloud
+395.833333,BOTH,crest_profile,3079.00..3079.50,3079.500000,end 3079.00; middle 3079.50,,,PASS,crest is a longitudinal range; maximum 3079.50 is not a failure; slice distance 1.3288 m
+395.833333,UPSTREAM,upstream_lower,2.500000,0.997652,3055.00..3065.80,0.006209,68.178621,UNRESOLVED,105 envelope levels; cross-section outer-boundary fit; no coordinate edits
+395.833333,UPSTREAM,upstream_middle,1.750000,2.149346,3065.80..3070.10,0.005374,50.466642,UNRESOLVED,26 envelope levels; cross-section outer-boundary fit; no coordinate edits
+395.833333,UPSTREAM,upstream_upper,2.500000,2.170420,3070.10..3079.50,0.077624,36.716259,UNRESOLVED,31 envelope levels; cross-section outer-boundary fit; no coordinate edits
+395.833333,DOWNSTREAM,downstream_lower,2.000000,2.489248,3055.00..3065.00,0.029508,63.765093,UNRESOLVED,96 envelope levels; cross-section outer-boundary fit; no coordinate edits
+395.833333,DOWNSTREAM,downstream_upper,2.000000,2.365102,3065.00..3079.50,0.111503,52.973366,UNRESOLVED,66 envelope levels; cross-section outer-boundary fit; no coordinate edits
+395.833333,DOWNSTREAM,berm_width_at_3065,width=3.00 m,,,,,UNRESOLVED,outer berm boundary not unique in node cloud
+395.833333,DOWNSTREAM,pressure_platform_width,width=10.00 m,,,,,UNRESOLVED,outer pressure platform not unique in node cloud
+445.000000,BOTH,crest_profile,3079.00..3079.50,3079.500000,end 3079.00; middle 3079.50,,,PASS,crest is a longitudinal range; maximum 3079.50 is not a failure; slice distance 0.0000 m
+445.000000,UPSTREAM,upstream_lower,2.500000,0.997652,3055.00..3065.80,0.006209,68.178621,UNRESOLVED,105 envelope levels; cross-section outer-boundary fit; no coordinate edits
+445.000000,UPSTREAM,upstream_middle,1.750000,2.149346,3065.80..3070.10,0.005374,50.466642,UNRESOLVED,26 envelope levels; cross-section outer-boundary fit; no coordinate edits
+445.000000,UPSTREAM,upstream_upper,2.500000,2.170420,3070.10..3079.50,0.077624,36.716259,UNRESOLVED,31 envelope levels; cross-section outer-boundary fit; no coordinate edits
+445.000000,DOWNSTREAM,downstream_lower,2.000000,2.489248,3055.00..3065.00,0.029508,63.765093,UNRESOLVED,96 envelope levels; cross-section outer-boundary fit; no coordinate edits
+445.000000,DOWNSTREAM,downstream_upper,2.000000,2.365102,3065.00..3079.50,0.111503,52.973366,UNRESOLVED,66 envelope levels; cross-section outer-boundary fit; no coordinate edits
+445.000000,DOWNSTREAM,berm_width_at_3065,width=3.00 m,,,,,UNRESOLVED,outer berm boundary not unique in node cloud
+445.000000,DOWNSTREAM,pressure_platform_width,width=10.00 m,,,,,UNRESOLVED,outer pressure platform not unique in node cloud

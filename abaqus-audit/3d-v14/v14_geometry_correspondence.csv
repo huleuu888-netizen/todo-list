@@ -1,0 +1,15 @@
+audit_item,design_basis,model_before,model_after,delta,status,classification,geometry_change,notes
+dam_longitudinal_length,295.00 m,295.000000,295.000000,0,PASS,confirmed design match,NONE,global Y extent
+crest_elevation_range,ends 3079.00 m; middle 3079.50 m,3079.000000..3079.500000,3079.500000,not scalar criterion,PASS,confirmed design match,NONE,3079.50 m maximum is not a failure; longitudinal transition needs profile evidence
+dam_foundation_control,3052.00 m; maximum height 27.00 m,zmin=3055.000000; height=24.500000,unchanged,,UNRESOLVED,unresolved because design evidence is insufficient,NONE,no continuous 3052.00 m dam-bottom surface proved; no downward translation
+upstream_slope_zoning,2.5:1 above 3070.10; 1.75:1 from 3065.80-3070.10; 2.5:1 below 3065.80,station fits,unchanged,,UNRESOLVED,unresolved because design evidence is insufficient,NONE,outer-boundary fits are not uniquely supported for coordinate edits
+downstream_geometry,2.0:1; berm 3065.00/3.00 m; platform 10.00 m,station fits/candidates,unchanged,,UNRESOLVED,unresolved because design evidence is insufficient,NONE,node-cloud outer boundary interpretation is ambiguous
+main_cutoff_bottom_thickness,bottom 3021.00 m; thickness 1.00 m,bottom=3021.000000; thickness=1.000000,unchanged,0,PASS,confirmed design match,NONE,station audit confirms measured values
+main_cutoff_top_plinth_relation,49.10 m maximum depth; top follows plinth/connection,top=3073.511470; depth=52.511470,unchanged,+3.411470 m vs maximum-depth scalar,UNRESOLVED,unresolved because design evidence is insufficient,NONE,3070.10 m not imposed; plinth underside not recoverable
+geomembrane_equivalent_layer,1.00 m equivalent porous layer; preserve t/k,z=3055.000000..3073.511470,unchanged,0,PASS,modeling equivalence,NONE,existing V13 equivalent layer and ties retained
+S03_NORMAL_RESERVOIR hydraulic heads,normal reservoir,v13 case,H=3076.00/D=3053.50,see v14_hydraulic_bc_audit.csv,PASS,confirmed mismatch and corrected,NONE,"POR=9.81*max(H-z,0)"
+S04_DESIGN_FLOOD hydraulic heads,design flood stability pair,v13 case,H=3076.00/D=3060.26,see v14_hydraulic_bc_audit.csv,PASS,confirmed mismatch and corrected,NONE,"POR=9.81*max(H-z,0)"
+S05_CHECK_FLOOD hydraulic heads,check flood only,v13 case,H=3077.35/D=3061.38,see v14_hydraulic_bc_audit.csv,PASS,confirmed mismatch and corrected,NONE,"POR=9.81*max(H-z,0)"
+S06_DRAWDOWN_DEADWATER hydraulic heads,drawdown/dead water,v13 case,H=3074.00/D=3053.50,see v14_hydraulic_bc_audit.csv,PASS,confirmed mismatch and corrected,NONE,"POR=9.81*max(H-z,0)"
+S07_NORMAL_RESERVOIR_SEISMIC_0P206G hydraulic heads,normal reservoir with 0.206 g horizontal equivalent gravity,v13 case,H=3076.00/D=3053.50,see v14_hydraulic_bc_audit.csv,PASS,confirmed mismatch and corrected,NONE,"POR=9.81*max(H-z,0)"
+geometry_coordinate_edits,only evidence-supported edits permitted,367ff63a36f2cfda2c97318618c5c903e364cff68d9d21673f7fd51455f32889,65f283e45de68770b8cac628f049efb33702f03efe619c9f20c74cc9ec086966,hydraulic/step keywords only,PASS,unresolved because design evidence is insufficient,NONE,P25 dam/foundation/cutoff/geomembrane node coordinates unchanged

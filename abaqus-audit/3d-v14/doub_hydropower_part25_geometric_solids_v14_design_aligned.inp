@@ -1,5 +1,5 @@
-** V14 DESIGN ALIGNMENT: v13 geometry/mechanics preserved.
-** Tailwater heads corrected from project stability-condition table; v13 is not overwritten.
+** V14 DESIGN ALIGNMENT BUILT FROM V13; NO GEOMETRY NODES MODIFIED
+** Hydraulic cases are source-supported design targets; see audit CSVs.
 *Heading
 **
 ** V13 diagnostic variant: core
@@ -98,7 +98,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=ECO_RELEASE_01
 *Node
       1, -35, -15, 3050
@@ -166,7 +166,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=ECO_RELEASE_02
 *Node
       1, -35, 1, 3050
@@ -234,7 +234,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=FISHWAY_SEGMENT_01
 *Node
       1, 80, -440, 3054
@@ -262,7 +262,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=FISHWAY_SEGMENT_02
 *Node
       1, 170, -470, 3058
@@ -290,7 +290,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=FISHWAY_SEGMENT_03
 *Node
       1, 270, -510, 3061
@@ -318,7 +318,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=FISHWAY_SEGMENT_04
 *Node
       1, 380, -550, 3065
@@ -346,7 +346,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=FISHWAY_SEGMENT_05
 *Node
       1, 500, -590, 3069
@@ -374,7 +374,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=FISHWAY_SEGMENT_06
 *Node
       1, 620, -620, 3072
@@ -402,7 +402,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=LEFT_FOUNDATION_GRANITE
 *Node
       1, -600, -700, 2600
@@ -2804,7 +2804,7 @@
 *Solid Section, elset=ALL, material=FRESH_GRANITE
 ,
 *End Part
-**  
+**
 *Part, name=LEFT_L01_Q4DEL
 *Node
       1, -600, -700, 3091.47632
@@ -4464,7 +4464,7 @@
 *Solid Section, elset=ALL, material=Q4DEL
 ,
 *End Part
-**  
+**
 *Part, name=LEFT_L03_Q4AL_SGR1
 *Node
       1, -600, -700, 3080.69849
@@ -5504,7 +5504,7 @@
 *Solid Section, elset=ALL, material=Q4AL_SGR1
 ,
 *End Part
-**  
+**
 *Part, name=LEFT_L05_Q3AL_IV2
 *Node
       1, -600, -700, 3071.54175
@@ -6544,7 +6544,7 @@
 *Solid Section, elset=ALL, material=Q3AL_IV2
 ,
 *End Part
-**  
+**
 *Part, name=LEFT_L06_Q3AL_IV1
 *Node
       1, -600, -700, 3048.52271
@@ -8291,7 +8291,7 @@
 *Solid Section, elset=ALL, material=Q3AL_IV1
 ,
 *End Part
-**  
+**
 *Part, name=LEFT_L07_Q3AL_III
 *Node
       1, -600, -700, 3035.14453
@@ -9339,7 +9339,7 @@
 *Solid Section, elset=ALL, material=Q3AL_III
 ,
 *End Part
-**  
+**
 *Part, name=LEFT_L08_Q3AL_II
 *Node
       1, -600, -700, 3018.65747
@@ -10387,7 +10387,7 @@
 *Solid Section, elset=ALL, material=Q3AL_II
 ,
 *End Part
-**  
+**
 *Part, name=LEFT_L09_Q3AL_I
 *Node
       1, -600, -700, 3008.93213
@@ -11435,7 +11435,7 @@
 *Solid Section, elset=ALL, material=Q3AL_I
 ,
 *End Part
-**  
+**
 *Part, name=LEFT_L10_Q2FGL_V
 *Node
       1, -600, -700, 2983.40942
@@ -13160,7 +13160,7 @@
 *Solid Section, elset=ALL, material=Q2FGL_V
 ,
 *End Part
-**  
+**
 *Part, name=LEFT_L11_Q2FGL_IV
 *Node
       1, -600, -700, 2953.4231
@@ -14885,7 +14885,7 @@
 *Solid Section, elset=ALL, material=Q2FGL_IV
 ,
 *End Part
-**  
+**
 *Part, name=LEFT_L12_Q2FGL_III
 *Node
       1, -600, -700, 2910.1189
@@ -16610,7 +16610,7 @@
 *Solid Section, elset=ALL, material=Q2FGL_III
 ,
 *End Part
-**  
+**
 *Part, name=LEFT_L13_Q2FGL_II
 *Node
       1, -600, -700, 2878.20923
@@ -18335,7 +18335,7 @@
 *Solid Section, elset=ALL, material=Q2FGL_II
 ,
 *End Part
-**  
+**
 *Part, name=LEFT_L14_Q2FGL_I
 *Node
       1, -600, -700, 2751.19995
@@ -21414,7 +21414,7 @@
 *Solid Section, elset=ALL, material=Q2FGL_I
 ,
 *End Part
-**  
+**
 *Part, name=LEFT_P2_QUARTZ_SANDSTONE
 *Node
       1, -600, -1000, 2600
@@ -22232,7 +22232,7 @@
 *Solid Section, elset=ALL, material=P2_QUARTZITE
 ,
 *End Part
-**  
+**
 *Part, name=LEFT_SUBDAM
 *Node
       1, -55, -340, 3059
@@ -22524,7 +22524,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=P25_SOLID_CUTOFF_WALL_F13
 *Node
       1, -35, 3073.51147, 295
@@ -25822,7 +25822,7 @@
 *Solid Section, elset=ALL_CELLS, material=P25_FANGSHENQIANG
 ,
 *End Part
-**  
+**
 *Part, name=P25_SOLID_DAM_SHELL_GRAVEL_F02
 *Node
       1, 25.2946472, 3065.13379, 0
@@ -35977,7 +35977,7 @@
 *Solid Section, elset=ALL_CELLS, material=P25_BAKESHALI
 ,
 *End Part
-**  
+**
 *Part, name=P25_SOLID_DAM_SHELL_GRAVEL_F06
 *Node
       1, -34.5, 3071.6604, 0
@@ -40092,7 +40092,7 @@
 *Solid Section, elset=ALL_CELLS, material=P25_BAKESHALI
 ,
 *End Part
-**  
+**
 *Part, name=P25_SOLID_DAM_SHELL_GRAVEL_F08
 *Node
       1, 44.4864006, 3055, 0
@@ -45108,7 +45108,7 @@
 *Solid Section, elset=ALL_CELLS, material=P25_BAKESHALI
 ,
 *End Part
-**  
+**
 *Part, name=P25_SOLID_DRAINAGE_BODY_F00
 *Node
       1, 29.9373093, 3062.03638, 0
@@ -46613,7 +46613,7 @@
 *Solid Section, elset=ALL_CELLS, material=P25_PAISHUITI
 ,
 *End Part
-**  
+**
 *Part, name=P25_SOLID_DRAINAGE_BODY_F03
 *Node
       1, -9.49720669, 3055.92505, 0
@@ -50359,7 +50359,7 @@
 *Solid Section, elset=ALL_CELLS, material=P25_PAISHUITI
 ,
 *End Part
-**  
+**
 *Part, name=P25_SOLID_FILTER_LAYER_F01
 *Node
       1, -9.49720669, 3055.92505, 0
@@ -54477,7 +54477,7 @@
 *Solid Section, elset=ALL_CELLS, material=P25_FANLV
 ,
 *End Part
-**  
+**
 *Part, name=P25_SOLID_IMPERMEABLE_FILL_F12
 *Node
       1, -36.5, 3073.51147, 0
@@ -57925,7 +57925,7 @@
 *Solid Section, elset=ALL_CELLS, material=P25_BIQILIAO
 ,
 *End Part
-**  
+**
 *Part, name=P25_SOLID_MAIN_ROCKFILL_F09
 *Node
       1, -66, 3067.03247, 0
@@ -62711,7 +62711,7 @@
 *Solid Section, elset=ALL_CELLS, material=P25_WEIYANJITI
 ,
 *End Part
-**  
+**
 *Part, name=P25_SOLID_MAIN_ROCKFILL_F11
 *Node
       1, -80.5, 3058.70239, 0
@@ -64068,7 +64068,7 @@
 *Solid Section, elset=ALL_CELLS, material=P25_WEIYANJITI
 ,
 *End Part
-**  
+**
 *Part, name=P25_SOLID_UPSTREAM_GRAVEL_FILL_F10
 *Node
       1, -80.5, 3058.70239, 0
@@ -66692,7 +66692,7 @@
 *Solid Section, elset=ALL_CELLS, material=P25_WEIYANSHALI
 ,
 *End Part
-**  
+**
 *Part, name=POWERHOUSE_INSTALLATION_BAY
 *Node
       1, -64, -122, 3062
@@ -66769,7 +66769,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=POWERHOUSE_UNIT_01
 *Node
       1, -30, -122, 3029.69995
@@ -66938,7 +66938,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=POWERHOUSE_UNIT_02
 *Node
       1, -30, -95.3499985, 3029.69995
@@ -67107,7 +67107,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=POWERHOUSE_UNIT_03
 *Node
       1, -30, -68.6999969, 3029.69995
@@ -67276,7 +67276,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=POWERHOUSE_UNIT_04
 *Node
       1, -30, -42.0499992, 3029.69995
@@ -67445,7 +67445,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=RIGHT_BX01
 *Node
       1, 120, 500, 2992.486192
@@ -67481,7 +67481,7 @@
 *Solid Section, elset=ALL, material=DEFORMATION_BODY
 ,
 *End Part
-**  
+**
 *Part, name=RIGHT_BX02
 *Node
       1, -120, 610, 3007.348771
@@ -67517,7 +67517,7 @@
 *Solid Section, elset=ALL, material=DEFORMATION_BODY
 ,
 *End Part
-**  
+**
 *Part, name=RIGHT_BX03
 *Node
       1, 360, 730, 3042.189777
@@ -67553,7 +67553,7 @@
 *Solid Section, elset=ALL, material=DEFORMATION_BODY
 ,
 *End Part
-**  
+**
 *Part, name=RIGHT_CURTAIN_GROUTING_ZONE
 *Node
       1, -9, 445, 2980
@@ -67681,7 +67681,7 @@
 *Solid Section, elset=ALL, material=ROCK_WEAK_UNLOADED
 ,
 *End Part
-**  
+**
 *Part, name=RIGHT_FRESH_GRANITE
 *Node
       1, -600, 445, 2600
@@ -69403,7 +69403,7 @@
 *Solid Section, elset=ALL, material=FRESH_GRANITE
 ,
 *End Part
-**  
+**
 *Part, name=RIGHT_HIGH_TERRACE_COVER
 *Node
       1, -600, 615, 3277.7334
@@ -69645,7 +69645,7 @@
 *Solid Section, elset=ALL, material=Q3AL_V
 ,
 *End Part
-**  
+**
 *Part, name=RIGHT_Q4_COLLUVIAL
 *Node
       1, -600, 445, 3080.8999
@@ -70135,7 +70135,7 @@
 *Solid Section, elset=ALL, material=Q4DEL
 ,
 *End Part
-**  
+**
 *Part, name=RIGHT_R04_Q3AL_V
 *Node
       1, -600, 445, 3065.3999
@@ -70933,7 +70933,7 @@
 *Solid Section, elset=ALL, material=Q3AL_V
 ,
 *End Part
-**  
+**
 *Part, name=RIGHT_ROCK_DEEP_UNLOADED
 *Node
       1, -600, 445, 2890.3999
@@ -72347,7 +72347,7 @@
 *Solid Section, elset=ALL, material=ROCK_DEEP_UNLOADED
 ,
 *End Part
-**  
+**
 *Part, name=RIGHT_ROCK_STRONG_UNLOADED
 *Node
       1, -600, 445, 3035.3999
@@ -73145,7 +73145,7 @@
 *Solid Section, elset=ALL, material=ROCK_STRONG_UNLOADED
 ,
 *End Part
-**  
+**
 *Part, name=RIGHT_ROCK_WEAK_UNLOADED
 *Node
       1, -600, 445, 3020.3999
@@ -73635,7 +73635,7 @@
 *Solid Section, elset=ALL, material=ROCK_WEAK_UNLOADED
 ,
 *End Part
-**  
+**
 *Part, name=RIVER_FRESH_GRANITE
 *Node
       1, -600, 150, 2600
@@ -74536,7 +74536,7 @@
 *Solid Section, elset=ALL, material=FRESH_GRANITE
 ,
 *End Part
-**  
+**
 *Part, name=RIVER_R02_Q4AL_SGR2
 *Node
       1, -600, 150, 3056.69922
@@ -75088,7 +75088,7 @@
 *Solid Section, elset=ALL, material=Q4AL_SGR2
 ,
 *End Part
-**  
+**
 *Part, name=RIVER_R05_Q3AL_IV2
 *Node
       1, -600, 150, 3054.78833
@@ -75640,7 +75640,7 @@
 *Solid Section, elset=ALL, material=Q3AL_IV2
 ,
 *End Part
-**  
+**
 *Part, name=RIVER_R06_Q3AL_IV1
 *Node
       1, -600, 150, 3049.98413
@@ -76541,7 +76541,7 @@
 *Solid Section, elset=ALL, material=Q3AL_IV1
 ,
 *End Part
-**  
+**
 *Part, name=RIVER_R07_Q3AL_III
 *Node
       1, -600, 150, 3047.19189
@@ -77093,7 +77093,7 @@
 *Solid Section, elset=ALL, material=Q3AL_III
 ,
 *End Part
-**  
+**
 *Part, name=RIVER_R08_Q3AL_II
 *Node
       1, -600, 150, 3043.75122
@@ -77645,7 +77645,7 @@
 *Solid Section, elset=ALL, material=Q3AL_II
 ,
 *End Part
-**  
+**
 *Part, name=RIVER_R09_Q3AL_I
 *Node
       1, -600, 150, 3041.72144
@@ -78197,7 +78197,7 @@
 *Solid Section, elset=ALL, material=Q3AL_I
 ,
 *End Part
-**  
+**
 *Part, name=RIVER_R10_Q2FGL_V
 *Node
       1, -600, 150, 3036.39478
@@ -79098,7 +79098,7 @@
 *Solid Section, elset=ALL, material=Q2FGL_V
 ,
 *End Part
-**  
+**
 *Part, name=RIVER_R11_Q2FGL_IV
 *Node
       1, -600, 150, 3030.13647
@@ -79999,7 +79999,7 @@
 *Solid Section, elset=ALL, material=Q2FGL_IV
 ,
 *End Part
-**  
+**
 *Part, name=RIVER_R12_Q2FGL_III
 *Node
       1, -600, 150, 3021.09863
@@ -80900,7 +80900,7 @@
 *Solid Section, elset=ALL, material=Q2FGL_III
 ,
 *End Part
-**  
+**
 *Part, name=RIVER_R13_Q2FGL_II
 *Node
       1, -600, 150, 3014.43921
@@ -81801,7 +81801,7 @@
 *Solid Section, elset=ALL, material=Q2FGL_II
 ,
 *End Part
-**  
+**
 *Part, name=RIVER_R14_Q2FGL_I
 *Node
       1, -600, 150, 2998.03491
@@ -83051,7 +83051,7 @@
 *Solid Section, elset=ALL, material=Q2FGL_I
 ,
 *End Part
-**  
+**
 *Part, name=RIVER_ROCK_DEEP_UNLOADED
 *Node
       1, -600, 150, 2823.03491
@@ -83952,7 +83952,7 @@
 *Solid Section, elset=ALL, material=ROCK_DEEP_UNLOADED
 ,
 *End Part
-**  
+**
 *Part, name=RIVER_ROCK_STRONG_UNLOADED
 *Node
       1, -600, 150, 2968.03491
@@ -84853,7 +84853,7 @@
 *Solid Section, elset=ALL, material=ROCK_STRONG_UNLOADED
 ,
 *End Part
-**  
+**
 *Part, name=RIVER_ROCK_WEAK_UNLOADED
 *Node
       1, -600, 150, 2953.03491
@@ -85754,7 +85754,7 @@
 *Solid Section, elset=ALL, material=ROCK_WEAK_UNLOADED
 ,
 *End Part
-**  
+**
 *Part, name=SPILLWAY_BAY_01
 *Node
       1, -35, 20, 3047.5
@@ -85822,7 +85822,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=SPILLWAY_BAY_02
 *Node
       1, -35, 33.8125, 3047.5
@@ -85890,7 +85890,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=SPILLWAY_BAY_03
 *Node
       1, -35, 47.625, 3047.5
@@ -85958,7 +85958,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=SPILLWAY_BAY_04
 *Node
       1, -35, 61.4375, 3047.5
@@ -86026,7 +86026,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=SPILLWAY_BAY_05
 *Node
       1, -35, 75.25, 3047.5
@@ -86094,7 +86094,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=SPILLWAY_BAY_06
 *Node
       1, -35, 89.0625, 3047.5
@@ -86162,7 +86162,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=SPILLWAY_BAY_07
 *Node
       1, -35, 102.875, 3047.5
@@ -86230,7 +86230,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=SPILLWAY_BAY_08
 *Node
       1, -35, 116.6875, 3047.5
@@ -86298,7 +86298,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=SPILLWAY_LEFT_WALL
 *Node
       1, 38, 16, 3047.5
@@ -86350,7 +86350,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=SPILLWAY_RIGHT_WALL
 *Node
       1, 38, 129, 3047.5
@@ -86402,7 +86402,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=SPILLWAY_STILLING_BASIN
 *Node
       1, 38, 20, 3047.5
@@ -86513,7 +86513,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 *Part, name=TAILWATER_CHANNEL
 *Node
       1, 70, -126, 3036.8999
@@ -86641,7 +86641,7 @@
 *Solid Section, elset=ALL, material=CONCRETE
 ,
 *End Part
-**  
+**
 **
 ** ASSEMBLY
 **
@@ -86936,201 +86936,201 @@
 *End Part
 **
 *Assembly, name=Assembly
-**  
+**
 *Instance, name=LEFT_P2_QUARTZ_SANDSTONE_I, part=LEFT_P2_QUARTZ_SANDSTONE
 *End Instance
-**  
+**
 *Instance, name=LEFT_FOUNDATION_GRANITE_I, part=LEFT_FOUNDATION_GRANITE
 *End Instance
-**  
+**
 *Instance, name=LEFT_L01_Q4DEL_I, part=LEFT_L01_Q4DEL
 *End Instance
-**  
+**
 *Instance, name=LEFT_L03_Q4AL_SGR1_I, part=LEFT_L03_Q4AL_SGR1
 *End Instance
-**  
+**
 *Instance, name=LEFT_L05_Q3AL_IV2_I, part=LEFT_L05_Q3AL_IV2
 *End Instance
-**  
+**
 *Instance, name=LEFT_L06_Q3AL_IV1_I, part=LEFT_L06_Q3AL_IV1
 *End Instance
-**  
+**
 *Instance, name=LEFT_L07_Q3AL_III_I, part=LEFT_L07_Q3AL_III
 *End Instance
-**  
+**
 *Instance, name=LEFT_L08_Q3AL_II_I, part=LEFT_L08_Q3AL_II
 *End Instance
-**  
+**
 *Instance, name=LEFT_L09_Q3AL_I_I, part=LEFT_L09_Q3AL_I
 *End Instance
-**  
+**
 *Instance, name=LEFT_L10_Q2FGL_V_I, part=LEFT_L10_Q2FGL_V
 *End Instance
-**  
+**
 *Instance, name=LEFT_L11_Q2FGL_IV_I, part=LEFT_L11_Q2FGL_IV
 *End Instance
-**  
+**
 *Instance, name=LEFT_L12_Q2FGL_III_I, part=LEFT_L12_Q2FGL_III
 *End Instance
-**  
+**
 *Instance, name=LEFT_L13_Q2FGL_II_I, part=LEFT_L13_Q2FGL_II
 *End Instance
-**  
+**
 *Instance, name=LEFT_L14_Q2FGL_I_I, part=LEFT_L14_Q2FGL_I
 *End Instance
-**  
+**
 *Instance, name=RIVER_R02_Q4AL_SGR2_I, part=RIVER_R02_Q4AL_SGR2
 *End Instance
-**  
+**
 *Instance, name=RIVER_R05_Q3AL_IV2_I, part=RIVER_R05_Q3AL_IV2
 *End Instance
-**  
+**
 *Instance, name=RIVER_R06_Q3AL_IV1_I, part=RIVER_R06_Q3AL_IV1
 *End Instance
-**  
+**
 *Instance, name=RIVER_R07_Q3AL_III_I, part=RIVER_R07_Q3AL_III
 *End Instance
-**  
+**
 *Instance, name=RIVER_R08_Q3AL_II_I, part=RIVER_R08_Q3AL_II
 *End Instance
-**  
+**
 *Instance, name=RIVER_R09_Q3AL_I_I, part=RIVER_R09_Q3AL_I
 *End Instance
-**  
+**
 *Instance, name=RIVER_R10_Q2FGL_V_I, part=RIVER_R10_Q2FGL_V
 *End Instance
-**  
+**
 *Instance, name=RIVER_R11_Q2FGL_IV_I, part=RIVER_R11_Q2FGL_IV
 *End Instance
-**  
+**
 *Instance, name=RIVER_R12_Q2FGL_III_I, part=RIVER_R12_Q2FGL_III
 *End Instance
-**  
+**
 *Instance, name=RIVER_R13_Q2FGL_II_I, part=RIVER_R13_Q2FGL_II
 *End Instance
-**  
+**
 *Instance, name=RIVER_R14_Q2FGL_I_I, part=RIVER_R14_Q2FGL_I
 *End Instance
-**  
+**
 *Instance, name=RIVER_ROCK_STRONG_UNLOADED_I, part=RIVER_ROCK_STRONG_UNLOADED
 *End Instance
-**  
+**
 *Instance, name=RIVER_ROCK_WEAK_UNLOADED_I, part=RIVER_ROCK_WEAK_UNLOADED
 *End Instance
-**  
+**
 *Instance, name=RIVER_ROCK_DEEP_UNLOADED_I, part=RIVER_ROCK_DEEP_UNLOADED
 *End Instance
-**  
+**
 *Instance, name=RIVER_FRESH_GRANITE_I, part=RIVER_FRESH_GRANITE
 *End Instance
-**  
+**
 *Instance, name=RIGHT_Q4_COLLUVIAL_I, part=RIGHT_Q4_COLLUVIAL
 *End Instance
-**  
+**
 *Instance, name=RIGHT_R04_Q3AL_V_I, part=RIGHT_R04_Q3AL_V
 *End Instance
-**  
+**
 *Instance, name=RIGHT_HIGH_TERRACE_COVER_I, part=RIGHT_HIGH_TERRACE_COVER
 *End Instance
-**  
+**
 *Instance, name=RIGHT_ROCK_STRONG_UNLOADED_I, part=RIGHT_ROCK_STRONG_UNLOADED
 *End Instance
-**  
+**
 *Instance, name=RIGHT_ROCK_WEAK_UNLOADED_I, part=RIGHT_ROCK_WEAK_UNLOADED
 *End Instance
-**  
+**
 *Instance, name=RIGHT_ROCK_DEEP_UNLOADED_I, part=RIGHT_ROCK_DEEP_UNLOADED
 *End Instance
-**  
+**
 *Instance, name=RIGHT_FRESH_GRANITE_I, part=RIGHT_FRESH_GRANITE
 *End Instance
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
-**  
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
 *Instance, name=P25_SOLID_DRAINAGE_BODY_F00-1, part=P25_SOLID_DRAINAGE_BODY_F00
           0.,         445.,           0.
           0.,         445.,           0., 1.00000001268805,         445.,           0., 89.9999992730282
 *End Instance
-**  
+**
 *Instance, name=P25_SOLID_FILTER_LAYER_F01-1, part=P25_SOLID_FILTER_LAYER_F01
           0.,         445.,           0.
           0.,         445.,           0., 1.00000001268805,         445.,           0., 89.9999992730282
 *End Instance
-**  
+**
 *Instance, name=P25_SOLID_DAM_SHELL_GRAVEL_F02-1, part=P25_SOLID_DAM_SHELL_GRAVEL_F02
           0.,         445.,           0.
           0.,         445.,           0., 1.00000001268805,         445.,           0., 89.9999992730282
 *End Instance
-**  
+**
 *Instance, name=P25_SOLID_DRAINAGE_BODY_F03-1, part=P25_SOLID_DRAINAGE_BODY_F03
           0.,         445.,           0.
           0.,         445.,           0., 1.00000001268805,         445.,           0., 89.9999992730282
 *End Instance
-**  
+**
 *Instance, name=P25_SOLID_DAM_SHELL_GRAVEL_F06-1, part=P25_SOLID_DAM_SHELL_GRAVEL_F06
           0.,         445.,           0.
           0.,         445.,           0., 1.00000001268805,         445.,           0., 89.9999992730282
 *End Instance
-**  
+**
 *Instance, name=P25_SOLID_DAM_SHELL_GRAVEL_F08-1, part=P25_SOLID_DAM_SHELL_GRAVEL_F08
           0.,         445.,           0.
           0.,         445.,           0., 1.00000001268805,         445.,           0., 89.9999992730282
 *End Instance
-**  
+**
 *Instance, name=P25_SOLID_MAIN_ROCKFILL_F09-1, part=P25_SOLID_MAIN_ROCKFILL_F09
           0.,         445.,           0.
           0.,         445.,           0., 1.00000001268805,         445.,           0., 89.9999992730282
 *End Instance
-**  
+**
 *Instance, name=P25_SOLID_UPSTREAM_GRAVEL_FILL_F10-1, part=P25_SOLID_UPSTREAM_GRAVEL_FILL_F10
           0.,         445.,           0.
           0.,         445.,           0., 1.00000001268805,         445.,           0., 89.9999992730282
 *End Instance
-**  
+**
 *Instance, name=P25_SOLID_MAIN_ROCKFILL_F11-1, part=P25_SOLID_MAIN_ROCKFILL_F11
           0.,         445.,           0.
           0.,         445.,           0., 1.00000001268805,         445.,           0., 89.9999992730282
 *End Instance
-**  
+**
 *Instance, name=P25_SOLID_IMPERMEABLE_FILL_F12-1, part=P25_SOLID_IMPERMEABLE_FILL_F12
           0.,         445.,           0.
           0.,         445.,           0., 1.00000001268805,         445.,           0., 89.9999992730282
 *End Instance
-**  
+**
 *Instance, name=P25_SOLID_CUTOFF_WALL_F13-1, part=P25_SOLID_CUTOFF_WALL_F13
           0.,         445.,           0.
           0.,         445.,           0., 1.00000001268805,         445.,           0., 89.9999992730282
 *End Instance
-**  
+**
 *Elset, elset=ALL_GEOLOGY, instance=LEFT_P2_QUARTZ_SANDSTONE_I, generate
    1,  300,    1
 *Elset, elset=ALL_GEOLOGY, instance=LEFT_FOUNDATION_GRANITE_I, generate
@@ -95126,9 +95126,9 @@ P25_UPSTREAM_PRESSURE, V12_GEOMEMBRANE_FACE
 *Tie, name=V12_TIE_GEOMEMBRANE_CUTOFF, position tolerance=1.5, adjust=NO
 V12_CUTOFF_TOP_SURFACE, V12_GEOMEMBRANE_TOP
 *End Assembly
-** 
+**
 ** MATERIALS
-** 
+**
 *Material, name=CONCRETE
 *Density
  2.4,
@@ -95348,9 +95348,9 @@ V12_CUTOFF_TOP_SURFACE, V12_GEOMEMBRANE_TOP
  2.55,
 *Elastic
  2e+06, 0.27
-** 
+**
 ** BOUNDARY CONDITIONS
-** 
+**
 ** Name: BC_BASE Type: λ��/ת��
 *Boundary
 BASE_FIX, 1, 1
@@ -95394,9 +95394,9 @@ V12_P_REF_0034, 8, 8, 0.
 V12_P_REF_0035, 8, 8, 0.
 V12_P_REF_0036, 8, 8, 0.
 ** ----------------------------------------------------------------
-** 
+**
 ** STEP: S01_GEOLOGICAL_INITIAL_STRESS
-** 
+**
 ** V12 neutral initial void ratio for coupled porous elements
 *Initial Conditions, type=RATIO
 V12_RATIO_GEOMEMBRANE, 0.5
@@ -95440,69 +95440,69 @@ V12_RATIO_0036, 0.5
 *Step, name=S01_GEOLOGICAL_INITIAL_STRESS, nlgeom=NO
 *Geostatic, utol=0.01
 1., 1., 1e-05, 1.
-** 
+**
 ** LOADS
-** 
+**
 ** Name: GRAVITY   Type: Gravity
 *Dload, op=NEW
 ALL_GEOLOGY, GRAV, 9.81, 0., 0., -1.
-** 
+**
 ** OUTPUT REQUESTS
-** 
+**
 *Restart, write, frequency=0
-** 
+**
 ** FIELD OUTPUT: F-Output-1
-** 
+**
 *Output, field, variable=PRESELECT
-** 
+**
 ** HISTORY OUTPUT: H-Output-1
-** 
+**
 *Output, history, variable=PRESELECT
 *End Step
 ** ----------------------------------------------------------------
-** 
+**
 ** STEP: S02_CONSTRUCTION_AND_CLOSURE
-** 
+**
 *Step, name=S02_CONSTRUCTION_AND_CLOSURE, nlgeom=NO
 *Geostatic, utol=0.01
 1., 1., 1e-05, 1.
-** 
+**
 ** LOADS
-** 
+**
 ** Name: GRAVITY   Type: Gravity
 *Dload, op=NEW
 , GRAV, 9.81, 0., 0., -1.
-** 
+**
 ** OUTPUT REQUESTS
-** 
+**
 *Restart, write, frequency=0
-** 
+**
 ** FIELD OUTPUT: F-Output-1
-** 
+**
 *Output, field, variable=PRESELECT
-** 
+**
 ** HISTORY OUTPUT: H-Output-1
-** 
+**
 *Output, history, variable=PRESELECT
 *End Step
 ** ----------------------------------------------------------------
-** 
+**
 ** STEP: S03_NORMAL_RESERVOIR_3076M
-** 
-*Step, name=S03_NORMAL_RESERVOIR_3076M, nlgeom=NO
+**
+*Step, name=S03_NORMAL_RESERVOIR, nlgeom=NO
 *Soils, consolidation, end=SS, utol=1000.0
 1.0e-4, 1.0e9, 1.0e-10, 1.0e7, 1.0e-6
-** 
+**
 ** LOADS
-** 
+**
 ** Name: GRAVITY   Type: Gravity
 *Dload, op=NEW
 , GRAV, 9.81, 0., 0., -1.
 ** Name: P25_RESERVOIR_PRESSURE   Type: Pressure
 ** V12 legacy constant face pressure removed; see V12 pore-pressure BCs.
-** 
+**
 ** OUTPUT REQUESTS
-** 
+**
 *Boundary
 V12_U_00000, 8, 8, 24.4124793
 V12_U_00001, 8, 8, 165.1509576
@@ -96781,37 +96781,37 @@ V12_D_00073, 8, 8, 0
 V12_D_00074, 8, 8, 0
 ** V12 head boundary: p=9.81*max(H-z,0), pressure in kPa.
 *Restart, write, frequency=0
-** 
+**
 ** FIELD OUTPUT: F-Output-1
-** 
+**
 *Output, field, variable=PRESELECT
 *Node Output
 POR, RF, U
 *Element Output, directions=YES
 FLVEL, POR, S
-** 
+**
 ** HISTORY OUTPUT: H-Output-1
-** 
+**
 *Output, history, variable=PRESELECT
 *End Step
 ** ----------------------------------------------------------------
-** 
+**
 ** STEP: S04_DESIGN_FLOOD_3580CMS
-** 
-*Step, name=S04_DESIGN_FLOOD_3580CMS, nlgeom=NO
+**
+*Step, name=S04_DESIGN_FLOOD, nlgeom=NO
 *Soils, consolidation, end=SS, utol=1000.0
 1.0e-4, 1.0e9, 1.0e-10, 1.0e7, 1.0e-6
-** 
+**
 ** LOADS
-** 
+**
 ** Name: GRAVITY   Type: Gravity
 *Dload, op=NEW
 , GRAV, 9.81, 0., 0., -1.
 ** Name: P25_RESERVOIR_PRESSURE   Type: Pressure
 ** V12 legacy constant face pressure removed; see V12 pore-pressure BCs.
-** 
+**
 ** OUTPUT REQUESTS
-** 
+**
 *Boundary, op=MOD
 V12_U_00000, 8, 8, 24.4124793
 V12_U_00001, 8, 8, 165.1509576
@@ -98090,40 +98090,37 @@ V12_D_00073, 8, 8, 51.6006
 V12_D_00074, 8, 8, 51.6006
 ** V12 head boundary: p=9.81*max(H-z,0), pressure in kPa.
 *Restart, write, frequency=0
-** 
+**
 ** FIELD OUTPUT: F-Output-1
-** 
+**
 *Output, field, variable=PRESELECT
 *Node Output
 POR, RF, U
 *Element Output, directions=YES
 FLVEL, POR, S
-** 
+**
 ** HISTORY OUTPUT: H-Output-1
-** 
+**
 *Output, history, variable=PRESELECT
 *End Step
 ** ----------------------------------------------------------------
-** 
+**
 ** STEP: S05_CHECK_FLOOD_AND_SEISMIC
-** 
-*Step, name=S05_CHECK_FLOOD_AND_SEISMIC, nlgeom=NO
+**
+*Step, name=S05_CHECK_FLOOD, nlgeom=NO
 *Soils, consolidation, end=SS, utol=1000.0
 1.0e-4, 1.0e9, 1.0e-10, 1.0e7, 1.0e-6
-** 
+**
 ** LOADS
-** 
+**
 ** Name: GRAVITY   Type: Gravity
 *Dload, op=NEW
 , GRAV, 9.81, 0., 0., -1.
 ** Name: P25_RESERVOIR_PRESSURE   Type: Pressure
 ** V12 legacy constant face pressure removed; see V12 pore-pressure BCs.
-** Name: SEISMIC_EQUIVALENT_0_206G   Type: Gravity
-*Dload, op=NEW
-, GRAV, 2.02086, 1., 0., 0.
-** 
+**
 ** OUTPUT REQUESTS
-** 
+**
 *Boundary, op=MOD
 V12_U_00000, 8, 8, 37.6559793
 V12_U_00001, 8, 8, 178.3944576
@@ -99402,39 +99399,37 @@ V12_D_00073, 8, 8, 62.5878
 V12_D_00074, 8, 8, 62.5878
 ** V12 head boundary: p=9.81*max(H-z,0), pressure in kPa.
 *Restart, write, frequency=0
-** 
+**
 ** FIELD OUTPUT: F-Output-1
-** 
+**
 *Output, field, variable=PRESELECT
 *Node Output
 POR, RF, U
 *Element Output, directions=YES
 FLVEL, POR, S
-** 
+**
 ** HISTORY OUTPUT: H-Output-1
-** 
+**
 *Output, history, variable=PRESELECT
 *End Step
 ** ----------------------------------------------------------------
-** 
+**
 ** STEP: S06_DRAWDOWN_TO_3074M
-** 
-*Step, name=S06_DRAWDOWN_TO_3074M, nlgeom=NO
+**
+*Step, name=S06_DRAWDOWN_DEADWATER, nlgeom=NO
 *Soils, consolidation, end=SS, utol=1000.0
 1.0e-4, 1.0e9, 1.0e-10, 1.0e7, 1.0e-6
-** 
+**
 ** LOADS
-** 
+**
 ** Name: GRAVITY   Type: Gravity
 *Dload, op=NEW
 , GRAV, 9.81, 0., 0., -1.
 ** Name: P25_RESERVOIR_PRESSURE   Type: Pressure
 ** V12 legacy constant face pressure removed; see V12 pore-pressure BCs.
-** Name: SEISMIC_EQUIVALENT_0_206G   Type: Gravity
-*Dload, op=NEW
-** 
+**
 ** OUTPUT REQUESTS
-** 
+**
 *Boundary, op=MOD
 V12_U_00000, 8, 8, 4.7924793
 V12_U_00001, 8, 8, 145.5309576
@@ -100713,16 +100708,1326 @@ V12_D_00073, 8, 8, 0
 V12_D_00074, 8, 8, 0
 ** V12 head boundary: p=9.81*max(H-z,0), pressure in kPa.
 *Restart, write, frequency=0
-** 
+**
 ** FIELD OUTPUT: F-Output-1
-** 
+**
 *Output, field, variable=PRESELECT
 *Node Output
 POR, RF, U
 *Element Output, directions=YES
 FLVEL, POR, S
-** 
+**
 ** HISTORY OUTPUT: H-Output-1
-** 
+**
+*Output, history, variable=PRESELECT
+*End Step
+** ----------------------------------------------------------------
+** STEP: S07_NORMAL_RESERVOIR_SEISMIC_0P206G
+** V14: seismic is separate from check flood; normal reservoir heads retained.
+*Step, name=S07_NORMAL_RESERVOIR_SEISMIC_0P206G, nlgeom=NO
+*Soils, consolidation, end=SS, utol=1000.0
+1.0e-4, 1.0e9, 1.0e-10, 1.0e7, 1.0e-6
+**
+** LOADS
+**
+** Name: GRAVITY   Type: Gravity
+*Dload, op=NEW
+, GRAV, 9.81, 0., 0., -1.
+** Name: SEISMIC_EQUIVALENT_0_206G
+, GRAV, 2.02086, 1., 0., 0.
+** Name: P25_RESERVOIR_PRESSURE   Type: Pressure
+** V12 legacy constant face pressure removed; see V12 pore-pressure BCs.
+**
+** OUTPUT REQUESTS
+**
+*Boundary
+V12_U_00000, 8, 8, 24.4124793
+V12_U_00001, 8, 8, 165.1509576
+V12_U_00002, 8, 8, 69.8124726
+V12_U_00003, 8, 8, 69.8124726
+V12_U_00004, 8, 8, 24.4124793
+V12_U_00005, 8, 8, 149.2600329
+V12_U_00006, 8, 8, 133.3714626
+V12_U_00007, 8, 8, 117.4805379
+V12_U_00008, 8, 8, 101.5919676
+V12_U_00009, 8, 8, 85.7009448
+V12_U_00010, 8, 8, 69.8124726
+V12_U_00011, 8, 8, 69.8124726
+V12_U_00012, 8, 8, 54.6782913
+V12_U_00013, 8, 8, 39.5442081
+V12_U_00014, 8, 8, 24.4124793
+V12_U_00015, 8, 8, 24.4124793
+V12_U_00016, 8, 8, 24.4124793
+V12_U_00017, 8, 8, 165.1509576
+V12_U_00018, 8, 8, 69.8124726
+V12_U_00019, 8, 8, 69.8124726
+V12_U_00020, 8, 8, 24.4124793
+V12_U_00021, 8, 8, 149.2600329
+V12_U_00022, 8, 8, 133.3714626
+V12_U_00023, 8, 8, 117.4805379
+V12_U_00024, 8, 8, 101.5919676
+V12_U_00025, 8, 8, 85.7009448
+V12_U_00026, 8, 8, 69.8124726
+V12_U_00027, 8, 8, 69.8124726
+V12_U_00028, 8, 8, 54.6782913
+V12_U_00029, 8, 8, 39.5442081
+V12_U_00030, 8, 8, 24.4124793
+V12_U_00031, 8, 8, 24.4124793
+V12_U_00032, 8, 8, 24.4124793
+V12_U_00033, 8, 8, 165.1509576
+V12_U_00034, 8, 8, 69.8124726
+V12_U_00035, 8, 8, 69.8124726
+V12_U_00036, 8, 8, 24.4124793
+V12_U_00037, 8, 8, 149.2600329
+V12_U_00038, 8, 8, 133.3714626
+V12_U_00039, 8, 8, 117.4805379
+V12_U_00040, 8, 8, 101.5919676
+V12_U_00041, 8, 8, 85.7009448
+V12_U_00042, 8, 8, 69.8124726
+V12_U_00043, 8, 8, 69.8124726
+V12_U_00044, 8, 8, 54.6782913
+V12_U_00045, 8, 8, 39.5442081
+V12_U_00046, 8, 8, 24.4124793
+V12_U_00047, 8, 8, 24.4124793
+V12_U_00048, 8, 8, 24.4124793
+V12_U_00049, 8, 8, 165.1509576
+V12_U_00050, 8, 8, 69.8124726
+V12_U_00051, 8, 8, 69.8124726
+V12_U_00052, 8, 8, 24.4124793
+V12_U_00053, 8, 8, 149.2600329
+V12_U_00054, 8, 8, 133.3714626
+V12_U_00055, 8, 8, 117.4805379
+V12_U_00056, 8, 8, 101.5919676
+V12_U_00057, 8, 8, 85.7009448
+V12_U_00058, 8, 8, 69.8124726
+V12_U_00059, 8, 8, 69.8124726
+V12_U_00060, 8, 8, 54.6782913
+V12_U_00061, 8, 8, 39.5442081
+V12_U_00062, 8, 8, 24.4124793
+V12_U_00063, 8, 8, 24.4124793
+V12_U_00064, 8, 8, 24.4124793
+V12_U_00065, 8, 8, 165.1509576
+V12_U_00066, 8, 8, 69.8124726
+V12_U_00067, 8, 8, 69.8124726
+V12_U_00068, 8, 8, 24.4124793
+V12_U_00069, 8, 8, 149.2600329
+V12_U_00070, 8, 8, 133.3714626
+V12_U_00071, 8, 8, 117.4805379
+V12_U_00072, 8, 8, 101.5919676
+V12_U_00073, 8, 8, 85.7009448
+V12_U_00074, 8, 8, 69.8124726
+V12_U_00075, 8, 8, 69.8124726
+V12_U_00076, 8, 8, 54.6782913
+V12_U_00077, 8, 8, 39.5442081
+V12_U_00078, 8, 8, 24.4124793
+V12_U_00079, 8, 8, 24.4124793
+V12_U_00080, 8, 8, 24.4124793
+V12_U_00081, 8, 8, 165.1509576
+V12_U_00082, 8, 8, 69.8124726
+V12_U_00083, 8, 8, 69.8124726
+V12_U_00084, 8, 8, 24.4124793
+V12_U_00085, 8, 8, 149.2600329
+V12_U_00086, 8, 8, 133.3714626
+V12_U_00087, 8, 8, 117.4805379
+V12_U_00088, 8, 8, 101.5919676
+V12_U_00089, 8, 8, 85.7009448
+V12_U_00090, 8, 8, 69.8124726
+V12_U_00091, 8, 8, 69.8124726
+V12_U_00092, 8, 8, 54.6782913
+V12_U_00093, 8, 8, 39.5442081
+V12_U_00094, 8, 8, 24.4124793
+V12_U_00095, 8, 8, 24.4124793
+V12_U_00096, 8, 8, 24.4124793
+V12_U_00097, 8, 8, 165.1509576
+V12_U_00098, 8, 8, 69.8124726
+V12_U_00099, 8, 8, 69.8124726
+V12_U_00100, 8, 8, 24.4124793
+V12_U_00101, 8, 8, 149.2600329
+V12_U_00102, 8, 8, 133.3714626
+V12_U_00103, 8, 8, 117.4805379
+V12_U_00104, 8, 8, 101.5919676
+V12_U_00105, 8, 8, 85.7009448
+V12_U_00106, 8, 8, 69.8124726
+V12_U_00107, 8, 8, 69.8124726
+V12_U_00108, 8, 8, 54.6782913
+V12_U_00109, 8, 8, 39.5442081
+V12_U_00110, 8, 8, 24.4124793
+V12_U_00111, 8, 8, 24.4124793
+V12_U_00112, 8, 8, 24.4124793
+V12_U_00113, 8, 8, 165.1509576
+V12_U_00114, 8, 8, 69.8124726
+V12_U_00115, 8, 8, 69.8124726
+V12_U_00116, 8, 8, 24.4124793
+V12_U_00117, 8, 8, 149.2600329
+V12_U_00118, 8, 8, 133.3714626
+V12_U_00119, 8, 8, 117.4805379
+V12_U_00120, 8, 8, 101.5919676
+V12_U_00121, 8, 8, 85.7009448
+V12_U_00122, 8, 8, 69.8124726
+V12_U_00123, 8, 8, 69.8124726
+V12_U_00124, 8, 8, 54.6782913
+V12_U_00125, 8, 8, 39.5442081
+V12_U_00126, 8, 8, 24.4124793
+V12_U_00127, 8, 8, 24.4124793
+V12_U_00128, 8, 8, 24.4124793
+V12_U_00129, 8, 8, 165.1509576
+V12_U_00130, 8, 8, 69.8124726
+V12_U_00131, 8, 8, 69.8124726
+V12_U_00132, 8, 8, 24.4124793
+V12_U_00133, 8, 8, 149.2600329
+V12_U_00134, 8, 8, 133.3714626
+V12_U_00135, 8, 8, 117.4805379
+V12_U_00136, 8, 8, 101.5919676
+V12_U_00137, 8, 8, 85.7009448
+V12_U_00138, 8, 8, 69.8124726
+V12_U_00139, 8, 8, 69.8124726
+V12_U_00140, 8, 8, 54.6782913
+V12_U_00141, 8, 8, 39.5442081
+V12_U_00142, 8, 8, 24.4124793
+V12_U_00143, 8, 8, 24.4124793
+V12_U_00144, 8, 8, 24.4124793
+V12_U_00145, 8, 8, 165.1509576
+V12_U_00146, 8, 8, 69.8124726
+V12_U_00147, 8, 8, 69.8124726
+V12_U_00148, 8, 8, 24.4124793
+V12_U_00149, 8, 8, 149.2600329
+V12_U_00150, 8, 8, 133.3714626
+V12_U_00151, 8, 8, 117.4805379
+V12_U_00152, 8, 8, 101.5919676
+V12_U_00153, 8, 8, 85.7009448
+V12_U_00154, 8, 8, 69.8124726
+V12_U_00155, 8, 8, 69.8124726
+V12_U_00156, 8, 8, 54.6782913
+V12_U_00157, 8, 8, 39.5442081
+V12_U_00158, 8, 8, 24.4124793
+V12_U_00159, 8, 8, 24.4124793
+V12_U_00160, 8, 8, 24.4124793
+V12_U_00161, 8, 8, 165.1509576
+V12_U_00162, 8, 8, 69.8124726
+V12_U_00163, 8, 8, 69.8124726
+V12_U_00164, 8, 8, 24.4124793
+V12_U_00165, 8, 8, 149.2600329
+V12_U_00166, 8, 8, 133.3714626
+V12_U_00167, 8, 8, 117.4805379
+V12_U_00168, 8, 8, 101.5919676
+V12_U_00169, 8, 8, 85.7009448
+V12_U_00170, 8, 8, 69.8124726
+V12_U_00171, 8, 8, 69.8124726
+V12_U_00172, 8, 8, 54.6782913
+V12_U_00173, 8, 8, 39.5442081
+V12_U_00174, 8, 8, 24.4124793
+V12_U_00175, 8, 8, 24.4124793
+V12_U_00176, 8, 8, 24.4124793
+V12_U_00177, 8, 8, 165.1509576
+V12_U_00178, 8, 8, 69.8124726
+V12_U_00179, 8, 8, 69.8124726
+V12_U_00180, 8, 8, 24.4124793
+V12_U_00181, 8, 8, 149.2600329
+V12_U_00182, 8, 8, 133.3714626
+V12_U_00183, 8, 8, 117.4805379
+V12_U_00184, 8, 8, 101.5919676
+V12_U_00185, 8, 8, 85.7009448
+V12_U_00186, 8, 8, 69.8124726
+V12_U_00187, 8, 8, 69.8124726
+V12_U_00188, 8, 8, 54.6782913
+V12_U_00189, 8, 8, 39.5442081
+V12_U_00190, 8, 8, 24.4124793
+V12_U_00191, 8, 8, 24.4124793
+V12_U_00192, 8, 8, 24.4124793
+V12_U_00193, 8, 8, 165.1509576
+V12_U_00194, 8, 8, 69.8124726
+V12_U_00195, 8, 8, 69.8124726
+V12_U_00196, 8, 8, 24.4124793
+V12_U_00197, 8, 8, 149.2600329
+V12_U_00198, 8, 8, 133.3714626
+V12_U_00199, 8, 8, 117.4805379
+V12_U_00200, 8, 8, 101.5919676
+V12_U_00201, 8, 8, 85.7009448
+V12_U_00202, 8, 8, 69.8124726
+V12_U_00203, 8, 8, 69.8124726
+V12_U_00204, 8, 8, 54.6782913
+V12_U_00205, 8, 8, 39.5442081
+V12_U_00206, 8, 8, 24.4124793
+V12_U_00207, 8, 8, 24.4124793
+V12_U_00208, 8, 8, 24.4124793
+V12_U_00209, 8, 8, 165.1509576
+V12_U_00210, 8, 8, 69.8124726
+V12_U_00211, 8, 8, 69.8124726
+V12_U_00212, 8, 8, 24.4124793
+V12_U_00213, 8, 8, 149.2600329
+V12_U_00214, 8, 8, 133.3714626
+V12_U_00215, 8, 8, 117.4805379
+V12_U_00216, 8, 8, 101.5919676
+V12_U_00217, 8, 8, 85.7009448
+V12_U_00218, 8, 8, 69.8124726
+V12_U_00219, 8, 8, 69.8124726
+V12_U_00220, 8, 8, 54.6782913
+V12_U_00221, 8, 8, 39.5442081
+V12_U_00222, 8, 8, 24.4124793
+V12_U_00223, 8, 8, 24.4124793
+V12_U_00224, 8, 8, 24.4124793
+V12_U_00225, 8, 8, 165.1509576
+V12_U_00226, 8, 8, 69.8124726
+V12_U_00227, 8, 8, 69.8124726
+V12_U_00228, 8, 8, 24.4124793
+V12_U_00229, 8, 8, 149.2600329
+V12_U_00230, 8, 8, 133.3714626
+V12_U_00231, 8, 8, 117.4805379
+V12_U_00232, 8, 8, 101.5919676
+V12_U_00233, 8, 8, 85.7009448
+V12_U_00234, 8, 8, 69.8124726
+V12_U_00235, 8, 8, 69.8124726
+V12_U_00236, 8, 8, 54.6782913
+V12_U_00237, 8, 8, 39.5442081
+V12_U_00238, 8, 8, 24.4124793
+V12_U_00239, 8, 8, 24.4124793
+V12_U_00240, 8, 8, 24.4124793
+V12_U_00241, 8, 8, 165.1509576
+V12_U_00242, 8, 8, 69.8124726
+V12_U_00243, 8, 8, 69.8124726
+V12_U_00244, 8, 8, 24.4124793
+V12_U_00245, 8, 8, 149.2600329
+V12_U_00246, 8, 8, 133.3714626
+V12_U_00247, 8, 8, 117.4805379
+V12_U_00248, 8, 8, 101.5919676
+V12_U_00249, 8, 8, 85.7009448
+V12_U_00250, 8, 8, 69.8124726
+V12_U_00251, 8, 8, 69.8124726
+V12_U_00252, 8, 8, 54.6782913
+V12_U_00253, 8, 8, 39.5442081
+V12_U_00254, 8, 8, 24.4124793
+V12_U_00255, 8, 8, 24.4124793
+V12_U_00256, 8, 8, 24.4124793
+V12_U_00257, 8, 8, 165.1509576
+V12_U_00258, 8, 8, 69.8124726
+V12_U_00259, 8, 8, 69.8124726
+V12_U_00260, 8, 8, 24.4124793
+V12_U_00261, 8, 8, 149.2600329
+V12_U_00262, 8, 8, 133.3714626
+V12_U_00263, 8, 8, 117.4805379
+V12_U_00264, 8, 8, 101.5919676
+V12_U_00265, 8, 8, 85.7009448
+V12_U_00266, 8, 8, 69.8124726
+V12_U_00267, 8, 8, 69.8124726
+V12_U_00268, 8, 8, 54.6782913
+V12_U_00269, 8, 8, 39.5442081
+V12_U_00270, 8, 8, 24.4124793
+V12_U_00271, 8, 8, 24.4124793
+V12_U_00272, 8, 8, 24.4124793
+V12_U_00273, 8, 8, 165.1509576
+V12_U_00274, 8, 8, 69.8124726
+V12_U_00275, 8, 8, 69.8124726
+V12_U_00276, 8, 8, 24.4124793
+V12_U_00277, 8, 8, 149.2600329
+V12_U_00278, 8, 8, 133.3714626
+V12_U_00279, 8, 8, 117.4805379
+V12_U_00280, 8, 8, 101.5919676
+V12_U_00281, 8, 8, 85.7009448
+V12_U_00282, 8, 8, 69.8124726
+V12_U_00283, 8, 8, 69.8124726
+V12_U_00284, 8, 8, 54.6782913
+V12_U_00285, 8, 8, 39.5442081
+V12_U_00286, 8, 8, 24.4124793
+V12_U_00287, 8, 8, 24.4124793
+V12_U_00288, 8, 8, 24.4124793
+V12_U_00289, 8, 8, 165.1509576
+V12_U_00290, 8, 8, 69.8124726
+V12_U_00291, 8, 8, 69.8124726
+V12_U_00292, 8, 8, 24.4124793
+V12_U_00293, 8, 8, 149.2600329
+V12_U_00294, 8, 8, 133.3714626
+V12_U_00295, 8, 8, 117.4805379
+V12_U_00296, 8, 8, 101.5919676
+V12_U_00297, 8, 8, 85.7009448
+V12_U_00298, 8, 8, 69.8124726
+V12_U_00299, 8, 8, 69.8124726
+V12_U_00300, 8, 8, 54.6782913
+V12_U_00301, 8, 8, 39.5442081
+V12_U_00302, 8, 8, 24.4124793
+V12_U_00303, 8, 8, 24.4124793
+V12_U_00304, 8, 8, 24.4124793
+V12_U_00305, 8, 8, 165.1509576
+V12_U_00306, 8, 8, 69.8124726
+V12_U_00307, 8, 8, 69.8124726
+V12_U_00308, 8, 8, 24.4124793
+V12_U_00309, 8, 8, 149.2600329
+V12_U_00310, 8, 8, 133.3714626
+V12_U_00311, 8, 8, 117.4805379
+V12_U_00312, 8, 8, 101.5919676
+V12_U_00313, 8, 8, 85.7009448
+V12_U_00314, 8, 8, 69.8124726
+V12_U_00315, 8, 8, 69.8124726
+V12_U_00316, 8, 8, 54.6782913
+V12_U_00317, 8, 8, 39.5442081
+V12_U_00318, 8, 8, 24.4124793
+V12_U_00319, 8, 8, 24.4124793
+V12_U_00320, 8, 8, 24.4124793
+V12_U_00321, 8, 8, 165.1509576
+V12_U_00322, 8, 8, 69.8124726
+V12_U_00323, 8, 8, 69.8124726
+V12_U_00324, 8, 8, 24.4124793
+V12_U_00325, 8, 8, 149.2600329
+V12_U_00326, 8, 8, 133.3714626
+V12_U_00327, 8, 8, 117.4805379
+V12_U_00328, 8, 8, 101.5919676
+V12_U_00329, 8, 8, 85.7009448
+V12_U_00330, 8, 8, 69.8124726
+V12_U_00331, 8, 8, 69.8124726
+V12_U_00332, 8, 8, 54.6782913
+V12_U_00333, 8, 8, 39.5442081
+V12_U_00334, 8, 8, 24.4124793
+V12_U_00335, 8, 8, 24.4124793
+V12_U_00336, 8, 8, 24.4124793
+V12_U_00337, 8, 8, 165.1509576
+V12_U_00338, 8, 8, 69.8124726
+V12_U_00339, 8, 8, 69.8124726
+V12_U_00340, 8, 8, 24.4124793
+V12_U_00341, 8, 8, 149.2600329
+V12_U_00342, 8, 8, 133.3714626
+V12_U_00343, 8, 8, 117.4805379
+V12_U_00344, 8, 8, 101.5919676
+V12_U_00345, 8, 8, 85.7009448
+V12_U_00346, 8, 8, 69.8124726
+V12_U_00347, 8, 8, 69.8124726
+V12_U_00348, 8, 8, 54.6782913
+V12_U_00349, 8, 8, 39.5442081
+V12_U_00350, 8, 8, 24.4124793
+V12_U_00351, 8, 8, 24.4124793
+V12_U_00352, 8, 8, 24.4124793
+V12_U_00353, 8, 8, 165.1509576
+V12_U_00354, 8, 8, 69.8124726
+V12_U_00355, 8, 8, 69.8124726
+V12_U_00356, 8, 8, 24.4124793
+V12_U_00357, 8, 8, 149.2600329
+V12_U_00358, 8, 8, 133.3714626
+V12_U_00359, 8, 8, 117.4805379
+V12_U_00360, 8, 8, 101.5919676
+V12_U_00361, 8, 8, 85.7009448
+V12_U_00362, 8, 8, 69.8124726
+V12_U_00363, 8, 8, 69.8124726
+V12_U_00364, 8, 8, 54.6782913
+V12_U_00365, 8, 8, 39.5442081
+V12_U_00366, 8, 8, 24.4124793
+V12_U_00367, 8, 8, 24.4124793
+V12_U_00368, 8, 8, 24.4124793
+V12_U_00369, 8, 8, 165.1509576
+V12_U_00370, 8, 8, 69.8124726
+V12_U_00371, 8, 8, 69.8124726
+V12_U_00372, 8, 8, 24.4124793
+V12_U_00373, 8, 8, 149.2600329
+V12_U_00374, 8, 8, 133.3714626
+V12_U_00375, 8, 8, 117.4805379
+V12_U_00376, 8, 8, 101.5919676
+V12_U_00377, 8, 8, 85.7009448
+V12_U_00378, 8, 8, 69.8124726
+V12_U_00379, 8, 8, 69.8124726
+V12_U_00380, 8, 8, 54.6782913
+V12_U_00381, 8, 8, 39.5442081
+V12_U_00382, 8, 8, 24.4124793
+V12_U_00383, 8, 8, 24.4124793
+V12_U_00384, 8, 8, 24.4124793
+V12_U_00385, 8, 8, 165.1509576
+V12_U_00386, 8, 8, 69.8124726
+V12_U_00387, 8, 8, 69.8124726
+V12_U_00388, 8, 8, 24.4124793
+V12_U_00389, 8, 8, 149.2600329
+V12_U_00390, 8, 8, 133.3714626
+V12_U_00391, 8, 8, 117.4805379
+V12_U_00392, 8, 8, 101.5919676
+V12_U_00393, 8, 8, 85.7009448
+V12_U_00394, 8, 8, 69.8124726
+V12_U_00395, 8, 8, 69.8124726
+V12_U_00396, 8, 8, 54.6782913
+V12_U_00397, 8, 8, 39.5442081
+V12_U_00398, 8, 8, 24.4124793
+V12_U_00399, 8, 8, 24.4124793
+V12_U_00400, 8, 8, 24.4124793
+V12_U_00401, 8, 8, 165.1509576
+V12_U_00402, 8, 8, 69.8124726
+V12_U_00403, 8, 8, 69.8124726
+V12_U_00404, 8, 8, 24.4124793
+V12_U_00405, 8, 8, 149.2600329
+V12_U_00406, 8, 8, 133.3714626
+V12_U_00407, 8, 8, 117.4805379
+V12_U_00408, 8, 8, 101.5919676
+V12_U_00409, 8, 8, 85.7009448
+V12_U_00410, 8, 8, 69.8124726
+V12_U_00411, 8, 8, 69.8124726
+V12_U_00412, 8, 8, 54.6782913
+V12_U_00413, 8, 8, 39.5442081
+V12_U_00414, 8, 8, 24.4124793
+V12_U_00415, 8, 8, 24.4124793
+V12_U_00416, 8, 8, 24.4124793
+V12_U_00417, 8, 8, 165.1509576
+V12_U_00418, 8, 8, 69.8124726
+V12_U_00419, 8, 8, 69.8124726
+V12_U_00420, 8, 8, 24.4124793
+V12_U_00421, 8, 8, 149.2600329
+V12_U_00422, 8, 8, 133.3714626
+V12_U_00423, 8, 8, 117.4805379
+V12_U_00424, 8, 8, 101.5919676
+V12_U_00425, 8, 8, 85.7009448
+V12_U_00426, 8, 8, 69.8124726
+V12_U_00427, 8, 8, 69.8124726
+V12_U_00428, 8, 8, 54.6782913
+V12_U_00429, 8, 8, 39.5442081
+V12_U_00430, 8, 8, 24.4124793
+V12_U_00431, 8, 8, 24.4124793
+V12_U_00432, 8, 8, 24.4124793
+V12_U_00433, 8, 8, 165.1509576
+V12_U_00434, 8, 8, 69.8124726
+V12_U_00435, 8, 8, 69.8124726
+V12_U_00436, 8, 8, 24.4124793
+V12_U_00437, 8, 8, 149.2600329
+V12_U_00438, 8, 8, 133.3714626
+V12_U_00439, 8, 8, 117.4805379
+V12_U_00440, 8, 8, 101.5919676
+V12_U_00441, 8, 8, 85.7009448
+V12_U_00442, 8, 8, 69.8124726
+V12_U_00443, 8, 8, 69.8124726
+V12_U_00444, 8, 8, 54.6782913
+V12_U_00445, 8, 8, 39.5442081
+V12_U_00446, 8, 8, 24.4124793
+V12_U_00447, 8, 8, 24.4124793
+V12_U_00448, 8, 8, 24.4124793
+V12_U_00449, 8, 8, 165.1509576
+V12_U_00450, 8, 8, 69.8124726
+V12_U_00451, 8, 8, 69.8124726
+V12_U_00452, 8, 8, 24.4124793
+V12_U_00453, 8, 8, 149.2600329
+V12_U_00454, 8, 8, 133.3714626
+V12_U_00455, 8, 8, 117.4805379
+V12_U_00456, 8, 8, 101.5919676
+V12_U_00457, 8, 8, 85.7009448
+V12_U_00458, 8, 8, 69.8124726
+V12_U_00459, 8, 8, 69.8124726
+V12_U_00460, 8, 8, 54.6782913
+V12_U_00461, 8, 8, 39.5442081
+V12_U_00462, 8, 8, 24.4124793
+V12_U_00463, 8, 8, 24.4124793
+V12_U_00464, 8, 8, 24.4124793
+V12_U_00465, 8, 8, 165.1509576
+V12_U_00466, 8, 8, 69.8124726
+V12_U_00467, 8, 8, 69.8124726
+V12_U_00468, 8, 8, 24.4124793
+V12_U_00469, 8, 8, 149.2600329
+V12_U_00470, 8, 8, 133.3714626
+V12_U_00471, 8, 8, 117.4805379
+V12_U_00472, 8, 8, 101.5919676
+V12_U_00473, 8, 8, 85.7009448
+V12_U_00474, 8, 8, 69.8124726
+V12_U_00475, 8, 8, 69.8124726
+V12_U_00476, 8, 8, 54.6782913
+V12_U_00477, 8, 8, 39.5442081
+V12_U_00478, 8, 8, 24.4124793
+V12_U_00479, 8, 8, 24.4124793
+V12_U_00480, 8, 8, 24.4124793
+V12_U_00481, 8, 8, 165.1509576
+V12_U_00482, 8, 8, 69.8124726
+V12_U_00483, 8, 8, 69.8124726
+V12_U_00484, 8, 8, 24.4124793
+V12_U_00485, 8, 8, 149.2600329
+V12_U_00486, 8, 8, 133.3714626
+V12_U_00487, 8, 8, 117.4805379
+V12_U_00488, 8, 8, 101.5919676
+V12_U_00489, 8, 8, 85.7009448
+V12_U_00490, 8, 8, 69.8124726
+V12_U_00491, 8, 8, 69.8124726
+V12_U_00492, 8, 8, 54.6782913
+V12_U_00493, 8, 8, 39.5442081
+V12_U_00494, 8, 8, 24.4124793
+V12_U_00495, 8, 8, 24.4124793
+V12_U_00496, 8, 8, 24.4124793
+V12_U_00497, 8, 8, 165.1509576
+V12_U_00498, 8, 8, 69.8124726
+V12_U_00499, 8, 8, 69.8124726
+V12_U_00500, 8, 8, 24.4124793
+V12_U_00501, 8, 8, 149.2600329
+V12_U_00502, 8, 8, 133.3714626
+V12_U_00503, 8, 8, 117.4805379
+V12_U_00504, 8, 8, 101.5919676
+V12_U_00505, 8, 8, 85.7009448
+V12_U_00506, 8, 8, 69.8124726
+V12_U_00507, 8, 8, 69.8124726
+V12_U_00508, 8, 8, 54.6782913
+V12_U_00509, 8, 8, 39.5442081
+V12_U_00510, 8, 8, 24.4124793
+V12_U_00511, 8, 8, 24.4124793
+V12_U_00512, 8, 8, 24.4124793
+V12_U_00513, 8, 8, 165.1509576
+V12_U_00514, 8, 8, 69.8124726
+V12_U_00515, 8, 8, 69.8124726
+V12_U_00516, 8, 8, 24.4124793
+V12_U_00517, 8, 8, 149.2600329
+V12_U_00518, 8, 8, 133.3714626
+V12_U_00519, 8, 8, 117.4805379
+V12_U_00520, 8, 8, 101.5919676
+V12_U_00521, 8, 8, 85.7009448
+V12_U_00522, 8, 8, 69.8124726
+V12_U_00523, 8, 8, 69.8124726
+V12_U_00524, 8, 8, 54.6782913
+V12_U_00525, 8, 8, 39.5442081
+V12_U_00526, 8, 8, 24.4124793
+V12_U_00527, 8, 8, 24.4124793
+V12_U_00528, 8, 8, 24.4124793
+V12_U_00529, 8, 8, 165.1509576
+V12_U_00530, 8, 8, 69.8124726
+V12_U_00531, 8, 8, 69.8124726
+V12_U_00532, 8, 8, 24.4124793
+V12_U_00533, 8, 8, 149.2600329
+V12_U_00534, 8, 8, 133.3714626
+V12_U_00535, 8, 8, 117.4805379
+V12_U_00536, 8, 8, 101.5919676
+V12_U_00537, 8, 8, 85.7009448
+V12_U_00538, 8, 8, 69.8124726
+V12_U_00539, 8, 8, 69.8124726
+V12_U_00540, 8, 8, 54.6782913
+V12_U_00541, 8, 8, 39.5442081
+V12_U_00542, 8, 8, 24.4124793
+V12_U_00543, 8, 8, 24.4124793
+V12_U_00544, 8, 8, 24.4124793
+V12_U_00545, 8, 8, 165.1509576
+V12_U_00546, 8, 8, 69.8124726
+V12_U_00547, 8, 8, 69.8124726
+V12_U_00548, 8, 8, 24.4124793
+V12_U_00549, 8, 8, 149.2600329
+V12_U_00550, 8, 8, 133.3714626
+V12_U_00551, 8, 8, 117.4805379
+V12_U_00552, 8, 8, 101.5919676
+V12_U_00553, 8, 8, 85.7009448
+V12_U_00554, 8, 8, 69.8124726
+V12_U_00555, 8, 8, 69.8124726
+V12_U_00556, 8, 8, 54.6782913
+V12_U_00557, 8, 8, 39.5442081
+V12_U_00558, 8, 8, 24.4124793
+V12_U_00559, 8, 8, 24.4124793
+V12_U_00560, 8, 8, 24.4124793
+V12_U_00561, 8, 8, 165.1509576
+V12_U_00562, 8, 8, 69.8124726
+V12_U_00563, 8, 8, 69.8124726
+V12_U_00564, 8, 8, 24.4124793
+V12_U_00565, 8, 8, 149.2600329
+V12_U_00566, 8, 8, 133.3714626
+V12_U_00567, 8, 8, 117.4805379
+V12_U_00568, 8, 8, 101.5919676
+V12_U_00569, 8, 8, 85.7009448
+V12_U_00570, 8, 8, 69.8124726
+V12_U_00571, 8, 8, 69.8124726
+V12_U_00572, 8, 8, 54.6782913
+V12_U_00573, 8, 8, 39.5442081
+V12_U_00574, 8, 8, 24.4124793
+V12_U_00575, 8, 8, 24.4124793
+V12_U_00576, 8, 8, 24.4124793
+V12_U_00577, 8, 8, 165.1509576
+V12_U_00578, 8, 8, 69.8124726
+V12_U_00579, 8, 8, 69.8124726
+V12_U_00580, 8, 8, 24.4124793
+V12_U_00581, 8, 8, 149.2600329
+V12_U_00582, 8, 8, 133.3714626
+V12_U_00583, 8, 8, 117.4805379
+V12_U_00584, 8, 8, 101.5919676
+V12_U_00585, 8, 8, 85.7009448
+V12_U_00586, 8, 8, 69.8124726
+V12_U_00587, 8, 8, 69.8124726
+V12_U_00588, 8, 8, 54.6782913
+V12_U_00589, 8, 8, 39.5442081
+V12_U_00590, 8, 8, 24.4124793
+V12_U_00591, 8, 8, 24.4124793
+V12_U_00592, 8, 8, 24.4124793
+V12_U_00593, 8, 8, 165.1509576
+V12_U_00594, 8, 8, 69.8124726
+V12_U_00595, 8, 8, 69.8124726
+V12_U_00596, 8, 8, 24.4124793
+V12_U_00597, 8, 8, 149.2600329
+V12_U_00598, 8, 8, 133.3714626
+V12_U_00599, 8, 8, 117.4805379
+V12_U_00600, 8, 8, 101.5919676
+V12_U_00601, 8, 8, 85.7009448
+V12_U_00602, 8, 8, 69.8124726
+V12_U_00603, 8, 8, 69.8124726
+V12_U_00604, 8, 8, 54.6782913
+V12_U_00605, 8, 8, 39.5442081
+V12_U_00606, 8, 8, 24.4124793
+V12_U_00607, 8, 8, 24.4124793
+V12_U_00608, 8, 8, 24.4124793
+V12_U_00609, 8, 8, 165.1509576
+V12_U_00610, 8, 8, 69.8124726
+V12_U_00611, 8, 8, 69.8124726
+V12_U_00612, 8, 8, 24.4124793
+V12_U_00613, 8, 8, 149.2600329
+V12_U_00614, 8, 8, 133.3714626
+V12_U_00615, 8, 8, 117.4805379
+V12_U_00616, 8, 8, 101.5919676
+V12_U_00617, 8, 8, 85.7009448
+V12_U_00618, 8, 8, 69.8124726
+V12_U_00619, 8, 8, 69.8124726
+V12_U_00620, 8, 8, 54.6782913
+V12_U_00621, 8, 8, 39.5442081
+V12_U_00622, 8, 8, 24.4124793
+V12_U_00623, 8, 8, 24.4124793
+V12_U_00624, 8, 8, 24.4124793
+V12_U_00625, 8, 8, 165.1509576
+V12_U_00626, 8, 8, 69.8124726
+V12_U_00627, 8, 8, 69.8124726
+V12_U_00628, 8, 8, 24.4124793
+V12_U_00629, 8, 8, 149.2600329
+V12_U_00630, 8, 8, 133.3714626
+V12_U_00631, 8, 8, 117.4805379
+V12_U_00632, 8, 8, 101.5919676
+V12_U_00633, 8, 8, 85.7009448
+V12_U_00634, 8, 8, 69.8124726
+V12_U_00635, 8, 8, 69.8124726
+V12_U_00636, 8, 8, 54.6782913
+V12_U_00637, 8, 8, 39.5442081
+V12_U_00638, 8, 8, 24.4124793
+V12_U_00639, 8, 8, 24.4124793
+V12_U_00640, 8, 8, 24.4124793
+V12_U_00641, 8, 8, 165.1509576
+V12_U_00642, 8, 8, 69.8124726
+V12_U_00643, 8, 8, 69.8124726
+V12_U_00644, 8, 8, 24.4124793
+V12_U_00645, 8, 8, 149.2600329
+V12_U_00646, 8, 8, 133.3714626
+V12_U_00647, 8, 8, 117.4805379
+V12_U_00648, 8, 8, 101.5919676
+V12_U_00649, 8, 8, 85.7009448
+V12_U_00650, 8, 8, 69.8124726
+V12_U_00651, 8, 8, 69.8124726
+V12_U_00652, 8, 8, 54.6782913
+V12_U_00653, 8, 8, 39.5442081
+V12_U_00654, 8, 8, 24.4124793
+V12_U_00655, 8, 8, 24.4124793
+V12_U_00656, 8, 8, 24.4124793
+V12_U_00657, 8, 8, 165.1509576
+V12_U_00658, 8, 8, 69.8124726
+V12_U_00659, 8, 8, 69.8124726
+V12_U_00660, 8, 8, 24.4124793
+V12_U_00661, 8, 8, 149.2600329
+V12_U_00662, 8, 8, 133.3714626
+V12_U_00663, 8, 8, 117.4805379
+V12_U_00664, 8, 8, 101.5919676
+V12_U_00665, 8, 8, 85.7009448
+V12_U_00666, 8, 8, 69.8124726
+V12_U_00667, 8, 8, 69.8124726
+V12_U_00668, 8, 8, 54.6782913
+V12_U_00669, 8, 8, 39.5442081
+V12_U_00670, 8, 8, 24.4124793
+V12_U_00671, 8, 8, 24.4124793
+V12_U_00672, 8, 8, 24.4124793
+V12_U_00673, 8, 8, 165.1509576
+V12_U_00674, 8, 8, 69.8124726
+V12_U_00675, 8, 8, 69.8124726
+V12_U_00676, 8, 8, 24.4124793
+V12_U_00677, 8, 8, 149.2600329
+V12_U_00678, 8, 8, 133.3714626
+V12_U_00679, 8, 8, 117.4805379
+V12_U_00680, 8, 8, 101.5919676
+V12_U_00681, 8, 8, 85.7009448
+V12_U_00682, 8, 8, 69.8124726
+V12_U_00683, 8, 8, 69.8124726
+V12_U_00684, 8, 8, 54.6782913
+V12_U_00685, 8, 8, 39.5442081
+V12_U_00686, 8, 8, 24.4124793
+V12_U_00687, 8, 8, 24.4124793
+V12_U_00688, 8, 8, 24.4124793
+V12_U_00689, 8, 8, 165.1509576
+V12_U_00690, 8, 8, 69.8124726
+V12_U_00691, 8, 8, 69.8124726
+V12_U_00692, 8, 8, 24.4124793
+V12_U_00693, 8, 8, 149.2600329
+V12_U_00694, 8, 8, 133.3714626
+V12_U_00695, 8, 8, 117.4805379
+V12_U_00696, 8, 8, 101.5919676
+V12_U_00697, 8, 8, 85.7009448
+V12_U_00698, 8, 8, 69.8124726
+V12_U_00699, 8, 8, 69.8124726
+V12_U_00700, 8, 8, 54.6782913
+V12_U_00701, 8, 8, 39.5442081
+V12_U_00702, 8, 8, 24.4124793
+V12_U_00703, 8, 8, 24.4124793
+V12_U_00704, 8, 8, 24.4124793
+V12_U_00705, 8, 8, 165.1509576
+V12_U_00706, 8, 8, 69.8124726
+V12_U_00707, 8, 8, 69.8124726
+V12_U_00708, 8, 8, 24.4124793
+V12_U_00709, 8, 8, 149.2600329
+V12_U_00710, 8, 8, 133.3714626
+V12_U_00711, 8, 8, 117.4805379
+V12_U_00712, 8, 8, 101.5919676
+V12_U_00713, 8, 8, 85.7009448
+V12_U_00714, 8, 8, 69.8124726
+V12_U_00715, 8, 8, 69.8124726
+V12_U_00716, 8, 8, 54.6782913
+V12_U_00717, 8, 8, 39.5442081
+V12_U_00718, 8, 8, 24.4124793
+V12_U_00719, 8, 8, 24.4124793
+V12_U_00720, 8, 8, 24.4124793
+V12_U_00721, 8, 8, 165.1509576
+V12_U_00722, 8, 8, 69.8124726
+V12_U_00723, 8, 8, 69.8124726
+V12_U_00724, 8, 8, 24.4124793
+V12_U_00725, 8, 8, 149.2600329
+V12_U_00726, 8, 8, 133.3714626
+V12_U_00727, 8, 8, 117.4805379
+V12_U_00728, 8, 8, 101.5919676
+V12_U_00729, 8, 8, 85.7009448
+V12_U_00730, 8, 8, 69.8124726
+V12_U_00731, 8, 8, 69.8124726
+V12_U_00732, 8, 8, 54.6782913
+V12_U_00733, 8, 8, 39.5442081
+V12_U_00734, 8, 8, 24.4124793
+V12_U_00735, 8, 8, 24.4124793
+V12_U_00736, 8, 8, 24.4124793
+V12_U_00737, 8, 8, 165.1509576
+V12_U_00738, 8, 8, 69.8124726
+V12_U_00739, 8, 8, 69.8124726
+V12_U_00740, 8, 8, 24.4124793
+V12_U_00741, 8, 8, 149.2600329
+V12_U_00742, 8, 8, 133.3714626
+V12_U_00743, 8, 8, 117.4805379
+V12_U_00744, 8, 8, 101.5919676
+V12_U_00745, 8, 8, 85.7009448
+V12_U_00746, 8, 8, 69.8124726
+V12_U_00747, 8, 8, 69.8124726
+V12_U_00748, 8, 8, 54.6782913
+V12_U_00749, 8, 8, 39.5442081
+V12_U_00750, 8, 8, 24.4124793
+V12_U_00751, 8, 8, 24.4124793
+V12_U_00752, 8, 8, 24.4124793
+V12_U_00753, 8, 8, 165.1509576
+V12_U_00754, 8, 8, 69.8124726
+V12_U_00755, 8, 8, 69.8124726
+V12_U_00756, 8, 8, 24.4124793
+V12_U_00757, 8, 8, 149.2600329
+V12_U_00758, 8, 8, 133.3714626
+V12_U_00759, 8, 8, 117.4805379
+V12_U_00760, 8, 8, 101.5919676
+V12_U_00761, 8, 8, 85.7009448
+V12_U_00762, 8, 8, 69.8124726
+V12_U_00763, 8, 8, 69.8124726
+V12_U_00764, 8, 8, 54.6782913
+V12_U_00765, 8, 8, 39.5442081
+V12_U_00766, 8, 8, 24.4124793
+V12_U_00767, 8, 8, 24.4124793
+V12_U_00768, 8, 8, 24.4124793
+V12_U_00769, 8, 8, 165.1509576
+V12_U_00770, 8, 8, 69.8124726
+V12_U_00771, 8, 8, 69.8124726
+V12_U_00772, 8, 8, 24.4124793
+V12_U_00773, 8, 8, 149.2600329
+V12_U_00774, 8, 8, 133.3714626
+V12_U_00775, 8, 8, 117.4805379
+V12_U_00776, 8, 8, 101.5919676
+V12_U_00777, 8, 8, 85.7009448
+V12_U_00778, 8, 8, 69.8124726
+V12_U_00779, 8, 8, 69.8124726
+V12_U_00780, 8, 8, 54.6782913
+V12_U_00781, 8, 8, 39.5442081
+V12_U_00782, 8, 8, 24.4124793
+V12_U_00783, 8, 8, 24.4124793
+V12_U_00784, 8, 8, 24.4124793
+V12_U_00785, 8, 8, 165.1509576
+V12_U_00786, 8, 8, 69.8124726
+V12_U_00787, 8, 8, 69.8124726
+V12_U_00788, 8, 8, 24.4124793
+V12_U_00789, 8, 8, 149.2600329
+V12_U_00790, 8, 8, 133.3714626
+V12_U_00791, 8, 8, 117.4805379
+V12_U_00792, 8, 8, 101.5919676
+V12_U_00793, 8, 8, 85.7009448
+V12_U_00794, 8, 8, 69.8124726
+V12_U_00795, 8, 8, 69.8124726
+V12_U_00796, 8, 8, 54.6782913
+V12_U_00797, 8, 8, 39.5442081
+V12_U_00798, 8, 8, 24.4124793
+V12_U_00799, 8, 8, 24.4124793
+V12_U_00800, 8, 8, 24.4124793
+V12_U_00801, 8, 8, 165.1509576
+V12_U_00802, 8, 8, 69.8124726
+V12_U_00803, 8, 8, 69.8124726
+V12_U_00804, 8, 8, 24.4124793
+V12_U_00805, 8, 8, 149.2600329
+V12_U_00806, 8, 8, 133.3714626
+V12_U_00807, 8, 8, 117.4805379
+V12_U_00808, 8, 8, 101.5919676
+V12_U_00809, 8, 8, 85.7009448
+V12_U_00810, 8, 8, 69.8124726
+V12_U_00811, 8, 8, 69.8124726
+V12_U_00812, 8, 8, 54.6782913
+V12_U_00813, 8, 8, 39.5442081
+V12_U_00814, 8, 8, 24.4124793
+V12_U_00815, 8, 8, 24.4124793
+V12_U_00816, 8, 8, 24.4124793
+V12_U_00817, 8, 8, 165.1509576
+V12_U_00818, 8, 8, 69.8124726
+V12_U_00819, 8, 8, 69.8124726
+V12_U_00820, 8, 8, 24.4124793
+V12_U_00821, 8, 8, 149.2600329
+V12_U_00822, 8, 8, 133.3714626
+V12_U_00823, 8, 8, 117.4805379
+V12_U_00824, 8, 8, 101.5919676
+V12_U_00825, 8, 8, 85.7009448
+V12_U_00826, 8, 8, 69.8124726
+V12_U_00827, 8, 8, 69.8124726
+V12_U_00828, 8, 8, 54.6782913
+V12_U_00829, 8, 8, 39.5442081
+V12_U_00830, 8, 8, 24.4124793
+V12_U_00831, 8, 8, 24.4124793
+V12_U_00832, 8, 8, 24.4124793
+V12_U_00833, 8, 8, 165.1509576
+V12_U_00834, 8, 8, 69.8124726
+V12_U_00835, 8, 8, 69.8124726
+V12_U_00836, 8, 8, 24.4124793
+V12_U_00837, 8, 8, 149.2600329
+V12_U_00838, 8, 8, 133.3714626
+V12_U_00839, 8, 8, 117.4805379
+V12_U_00840, 8, 8, 101.5919676
+V12_U_00841, 8, 8, 85.7009448
+V12_U_00842, 8, 8, 69.8124726
+V12_U_00843, 8, 8, 69.8124726
+V12_U_00844, 8, 8, 54.6782913
+V12_U_00845, 8, 8, 39.5442081
+V12_U_00846, 8, 8, 24.4124793
+V12_U_00847, 8, 8, 24.4124793
+V12_U_00848, 8, 8, 24.4124793
+V12_U_00849, 8, 8, 165.1509576
+V12_U_00850, 8, 8, 69.8124726
+V12_U_00851, 8, 8, 69.8124726
+V12_U_00852, 8, 8, 24.4124793
+V12_U_00853, 8, 8, 149.2600329
+V12_U_00854, 8, 8, 133.3714626
+V12_U_00855, 8, 8, 117.4805379
+V12_U_00856, 8, 8, 101.5919676
+V12_U_00857, 8, 8, 85.7009448
+V12_U_00858, 8, 8, 69.8124726
+V12_U_00859, 8, 8, 69.8124726
+V12_U_00860, 8, 8, 54.6782913
+V12_U_00861, 8, 8, 39.5442081
+V12_U_00862, 8, 8, 24.4124793
+V12_U_00863, 8, 8, 24.4124793
+V12_U_00864, 8, 8, 24.4124793
+V12_U_00865, 8, 8, 165.1509576
+V12_U_00866, 8, 8, 69.8124726
+V12_U_00867, 8, 8, 69.8124726
+V12_U_00868, 8, 8, 24.4124793
+V12_U_00869, 8, 8, 149.2600329
+V12_U_00870, 8, 8, 133.3714626
+V12_U_00871, 8, 8, 117.4805379
+V12_U_00872, 8, 8, 101.5919676
+V12_U_00873, 8, 8, 85.7009448
+V12_U_00874, 8, 8, 69.8124726
+V12_U_00875, 8, 8, 69.8124726
+V12_U_00876, 8, 8, 54.6782913
+V12_U_00877, 8, 8, 39.5442081
+V12_U_00878, 8, 8, 24.4124793
+V12_U_00879, 8, 8, 24.4124793
+V12_U_00880, 8, 8, 24.4124793
+V12_U_00881, 8, 8, 165.1509576
+V12_U_00882, 8, 8, 69.8124726
+V12_U_00883, 8, 8, 69.8124726
+V12_U_00884, 8, 8, 24.4124793
+V12_U_00885, 8, 8, 149.2600329
+V12_U_00886, 8, 8, 133.3714626
+V12_U_00887, 8, 8, 117.4805379
+V12_U_00888, 8, 8, 101.5919676
+V12_U_00889, 8, 8, 85.7009448
+V12_U_00890, 8, 8, 69.8124726
+V12_U_00891, 8, 8, 69.8124726
+V12_U_00892, 8, 8, 54.6782913
+V12_U_00893, 8, 8, 39.5442081
+V12_U_00894, 8, 8, 24.4124793
+V12_U_00895, 8, 8, 24.4124793
+V12_U_00896, 8, 8, 24.4124793
+V12_U_00897, 8, 8, 165.1509576
+V12_U_00898, 8, 8, 69.8124726
+V12_U_00899, 8, 8, 69.8124726
+V12_U_00900, 8, 8, 24.4124793
+V12_U_00901, 8, 8, 149.2600329
+V12_U_00902, 8, 8, 133.3714626
+V12_U_00903, 8, 8, 117.4805379
+V12_U_00904, 8, 8, 101.5919676
+V12_U_00905, 8, 8, 85.7009448
+V12_U_00906, 8, 8, 69.8124726
+V12_U_00907, 8, 8, 69.8124726
+V12_U_00908, 8, 8, 54.6782913
+V12_U_00909, 8, 8, 39.5442081
+V12_U_00910, 8, 8, 24.4124793
+V12_U_00911, 8, 8, 24.4124793
+V12_U_00912, 8, 8, 24.4124793
+V12_U_00913, 8, 8, 165.1509576
+V12_U_00914, 8, 8, 69.8124726
+V12_U_00915, 8, 8, 69.8124726
+V12_U_00916, 8, 8, 24.4124793
+V12_U_00917, 8, 8, 149.2600329
+V12_U_00918, 8, 8, 133.3714626
+V12_U_00919, 8, 8, 117.4805379
+V12_U_00920, 8, 8, 101.5919676
+V12_U_00921, 8, 8, 85.7009448
+V12_U_00922, 8, 8, 69.8124726
+V12_U_00923, 8, 8, 69.8124726
+V12_U_00924, 8, 8, 54.6782913
+V12_U_00925, 8, 8, 39.5442081
+V12_U_00926, 8, 8, 24.4124793
+V12_U_00927, 8, 8, 24.4124793
+V12_U_00928, 8, 8, 24.4124793
+V12_U_00929, 8, 8, 165.1509576
+V12_U_00930, 8, 8, 69.8124726
+V12_U_00931, 8, 8, 69.8124726
+V12_U_00932, 8, 8, 24.4124793
+V12_U_00933, 8, 8, 149.2600329
+V12_U_00934, 8, 8, 133.3714626
+V12_U_00935, 8, 8, 117.4805379
+V12_U_00936, 8, 8, 101.5919676
+V12_U_00937, 8, 8, 85.7009448
+V12_U_00938, 8, 8, 69.8124726
+V12_U_00939, 8, 8, 69.8124726
+V12_U_00940, 8, 8, 54.6782913
+V12_U_00941, 8, 8, 39.5442081
+V12_U_00942, 8, 8, 24.4124793
+V12_U_00943, 8, 8, 24.4124793
+V12_U_00944, 8, 8, 24.4124793
+V12_U_00945, 8, 8, 165.1509576
+V12_U_00946, 8, 8, 69.8124726
+V12_U_00947, 8, 8, 69.8124726
+V12_U_00948, 8, 8, 24.4124793
+V12_U_00949, 8, 8, 149.2600329
+V12_U_00950, 8, 8, 133.3714626
+V12_U_00951, 8, 8, 117.4805379
+V12_U_00952, 8, 8, 101.5919676
+V12_U_00953, 8, 8, 85.7009448
+V12_U_00954, 8, 8, 69.8124726
+V12_U_00955, 8, 8, 69.8124726
+V12_U_00956, 8, 8, 54.6782913
+V12_U_00957, 8, 8, 39.5442081
+V12_U_00958, 8, 8, 24.4124793
+V12_U_00959, 8, 8, 24.4124793
+V12_U_00960, 8, 8, 24.4124793
+V12_U_00961, 8, 8, 165.1509576
+V12_U_00962, 8, 8, 69.8124726
+V12_U_00963, 8, 8, 69.8124726
+V12_U_00964, 8, 8, 24.4124793
+V12_U_00965, 8, 8, 149.2600329
+V12_U_00966, 8, 8, 133.3714626
+V12_U_00967, 8, 8, 117.4805379
+V12_U_00968, 8, 8, 101.5919676
+V12_U_00969, 8, 8, 85.7009448
+V12_U_00970, 8, 8, 69.8124726
+V12_U_00971, 8, 8, 69.8124726
+V12_U_00972, 8, 8, 54.6782913
+V12_U_00973, 8, 8, 39.5442081
+V12_U_00974, 8, 8, 24.4124793
+V12_U_00975, 8, 8, 24.4124793
+V12_U_00976, 8, 8, 24.4124793
+V12_U_00977, 8, 8, 165.1509576
+V12_U_00978, 8, 8, 69.8124726
+V12_U_00979, 8, 8, 69.8124726
+V12_U_00980, 8, 8, 24.4124793
+V12_U_00981, 8, 8, 149.2600329
+V12_U_00982, 8, 8, 133.3714626
+V12_U_00983, 8, 8, 117.4805379
+V12_U_00984, 8, 8, 101.5919676
+V12_U_00985, 8, 8, 85.7009448
+V12_U_00986, 8, 8, 69.8124726
+V12_U_00987, 8, 8, 69.8124726
+V12_U_00988, 8, 8, 54.6782913
+V12_U_00989, 8, 8, 39.5442081
+V12_U_00990, 8, 8, 24.4124793
+V12_U_00991, 8, 8, 24.4124793
+V12_U_00992, 8, 8, 24.4124793
+V12_U_00993, 8, 8, 165.1509576
+V12_U_00994, 8, 8, 69.8124726
+V12_U_00995, 8, 8, 69.8124726
+V12_U_00996, 8, 8, 24.4124793
+V12_U_00997, 8, 8, 149.2600329
+V12_U_00998, 8, 8, 133.3714626
+V12_U_00999, 8, 8, 117.4805379
+V12_U_01000, 8, 8, 101.5919676
+V12_U_01001, 8, 8, 85.7009448
+V12_U_01002, 8, 8, 69.8124726
+V12_U_01003, 8, 8, 69.8124726
+V12_U_01004, 8, 8, 54.6782913
+V12_U_01005, 8, 8, 39.5442081
+V12_U_01006, 8, 8, 24.4124793
+V12_U_01007, 8, 8, 24.4124793
+V12_U_01008, 8, 8, 24.4124793
+V12_U_01009, 8, 8, 165.1509576
+V12_U_01010, 8, 8, 69.8124726
+V12_U_01011, 8, 8, 69.8124726
+V12_U_01012, 8, 8, 24.4124793
+V12_U_01013, 8, 8, 149.2600329
+V12_U_01014, 8, 8, 133.3714626
+V12_U_01015, 8, 8, 117.4805379
+V12_U_01016, 8, 8, 101.5919676
+V12_U_01017, 8, 8, 85.7009448
+V12_U_01018, 8, 8, 69.8124726
+V12_U_01019, 8, 8, 69.8124726
+V12_U_01020, 8, 8, 54.6782913
+V12_U_01021, 8, 8, 39.5442081
+V12_U_01022, 8, 8, 24.4124793
+V12_U_01023, 8, 8, 24.4124793
+V12_U_01024, 8, 8, 24.4124793
+V12_U_01025, 8, 8, 165.1509576
+V12_U_01026, 8, 8, 69.8124726
+V12_U_01027, 8, 8, 69.8124726
+V12_U_01028, 8, 8, 24.4124793
+V12_U_01029, 8, 8, 149.2600329
+V12_U_01030, 8, 8, 133.3714626
+V12_U_01031, 8, 8, 117.4805379
+V12_U_01032, 8, 8, 101.5919676
+V12_U_01033, 8, 8, 85.7009448
+V12_U_01034, 8, 8, 69.8124726
+V12_U_01035, 8, 8, 69.8124726
+V12_U_01036, 8, 8, 54.6782913
+V12_U_01037, 8, 8, 39.5442081
+V12_U_01038, 8, 8, 24.4124793
+V12_U_01039, 8, 8, 24.4124793
+V12_U_01040, 8, 8, 24.4124793
+V12_U_01041, 8, 8, 165.1509576
+V12_U_01042, 8, 8, 69.8124726
+V12_U_01043, 8, 8, 69.8124726
+V12_U_01044, 8, 8, 24.4124793
+V12_U_01045, 8, 8, 149.2600329
+V12_U_01046, 8, 8, 133.3714626
+V12_U_01047, 8, 8, 117.4805379
+V12_U_01048, 8, 8, 101.5919676
+V12_U_01049, 8, 8, 85.7009448
+V12_U_01050, 8, 8, 69.8124726
+V12_U_01051, 8, 8, 69.8124726
+V12_U_01052, 8, 8, 54.6782913
+V12_U_01053, 8, 8, 39.5442081
+V12_U_01054, 8, 8, 24.4124793
+V12_U_01055, 8, 8, 24.4124793
+V12_U_01056, 8, 8, 24.4124793
+V12_U_01057, 8, 8, 165.1509576
+V12_U_01058, 8, 8, 69.8124726
+V12_U_01059, 8, 8, 69.8124726
+V12_U_01060, 8, 8, 24.4124793
+V12_U_01061, 8, 8, 149.2600329
+V12_U_01062, 8, 8, 133.3714626
+V12_U_01063, 8, 8, 117.4805379
+V12_U_01064, 8, 8, 101.5919676
+V12_U_01065, 8, 8, 85.7009448
+V12_U_01066, 8, 8, 69.8124726
+V12_U_01067, 8, 8, 69.8124726
+V12_U_01068, 8, 8, 54.6782913
+V12_U_01069, 8, 8, 39.5442081
+V12_U_01070, 8, 8, 24.4124793
+V12_U_01071, 8, 8, 24.4124793
+V12_U_01072, 8, 8, 24.4124793
+V12_U_01073, 8, 8, 165.1509576
+V12_U_01074, 8, 8, 69.8124726
+V12_U_01075, 8, 8, 69.8124726
+V12_U_01076, 8, 8, 24.4124793
+V12_U_01077, 8, 8, 149.2600329
+V12_U_01078, 8, 8, 133.3714626
+V12_U_01079, 8, 8, 117.4805379
+V12_U_01080, 8, 8, 101.5919676
+V12_U_01081, 8, 8, 85.7009448
+V12_U_01082, 8, 8, 69.8124726
+V12_U_01083, 8, 8, 69.8124726
+V12_U_01084, 8, 8, 54.6782913
+V12_U_01085, 8, 8, 39.5442081
+V12_U_01086, 8, 8, 24.4124793
+V12_U_01087, 8, 8, 24.4124793
+V12_U_01088, 8, 8, 24.4124793
+V12_U_01089, 8, 8, 165.1509576
+V12_U_01090, 8, 8, 69.8124726
+V12_U_01091, 8, 8, 69.8124726
+V12_U_01092, 8, 8, 24.4124793
+V12_U_01093, 8, 8, 149.2600329
+V12_U_01094, 8, 8, 133.3714626
+V12_U_01095, 8, 8, 117.4805379
+V12_U_01096, 8, 8, 101.5919676
+V12_U_01097, 8, 8, 85.7009448
+V12_U_01098, 8, 8, 69.8124726
+V12_U_01099, 8, 8, 69.8124726
+V12_U_01100, 8, 8, 54.6782913
+V12_U_01101, 8, 8, 39.5442081
+V12_U_01102, 8, 8, 24.4124793
+V12_U_01103, 8, 8, 24.4124793
+V12_U_01104, 8, 8, 24.4124793
+V12_U_01105, 8, 8, 165.1509576
+V12_U_01106, 8, 8, 69.8124726
+V12_U_01107, 8, 8, 69.8124726
+V12_U_01108, 8, 8, 24.4124793
+V12_U_01109, 8, 8, 149.2600329
+V12_U_01110, 8, 8, 133.3714626
+V12_U_01111, 8, 8, 117.4805379
+V12_U_01112, 8, 8, 101.5919676
+V12_U_01113, 8, 8, 85.7009448
+V12_U_01114, 8, 8, 69.8124726
+V12_U_01115, 8, 8, 69.8124726
+V12_U_01116, 8, 8, 54.6782913
+V12_U_01117, 8, 8, 39.5442081
+V12_U_01118, 8, 8, 24.4124793
+V12_U_01119, 8, 8, 24.4124793
+V12_U_01120, 8, 8, 24.4124793
+V12_U_01121, 8, 8, 165.1509576
+V12_U_01122, 8, 8, 69.8124726
+V12_U_01123, 8, 8, 69.8124726
+V12_U_01124, 8, 8, 24.4124793
+V12_U_01125, 8, 8, 149.2600329
+V12_U_01126, 8, 8, 133.3714626
+V12_U_01127, 8, 8, 117.4805379
+V12_U_01128, 8, 8, 101.5919676
+V12_U_01129, 8, 8, 85.7009448
+V12_U_01130, 8, 8, 69.8124726
+V12_U_01131, 8, 8, 69.8124726
+V12_U_01132, 8, 8, 54.6782913
+V12_U_01133, 8, 8, 39.5442081
+V12_U_01134, 8, 8, 24.4124793
+V12_U_01135, 8, 8, 24.4124793
+V12_U_01136, 8, 8, 24.4124793
+V12_U_01137, 8, 8, 165.1509576
+V12_U_01138, 8, 8, 69.8124726
+V12_U_01139, 8, 8, 69.8124726
+V12_U_01140, 8, 8, 24.4124793
+V12_U_01141, 8, 8, 149.2600329
+V12_U_01142, 8, 8, 133.3714626
+V12_U_01143, 8, 8, 117.4805379
+V12_U_01144, 8, 8, 101.5919676
+V12_U_01145, 8, 8, 85.7009448
+V12_U_01146, 8, 8, 69.8124726
+V12_U_01147, 8, 8, 69.8124726
+V12_U_01148, 8, 8, 54.6782913
+V12_U_01149, 8, 8, 39.5442081
+V12_U_01150, 8, 8, 24.4124793
+V12_U_01151, 8, 8, 24.4124793
+V12_U_01152, 8, 8, 24.4124793
+V12_U_01153, 8, 8, 165.1509576
+V12_U_01154, 8, 8, 69.8124726
+V12_U_01155, 8, 8, 69.8124726
+V12_U_01156, 8, 8, 24.4124793
+V12_U_01157, 8, 8, 149.2600329
+V12_U_01158, 8, 8, 133.3714626
+V12_U_01159, 8, 8, 117.4805379
+V12_U_01160, 8, 8, 101.5919676
+V12_U_01161, 8, 8, 85.7009448
+V12_U_01162, 8, 8, 69.8124726
+V12_U_01163, 8, 8, 69.8124726
+V12_U_01164, 8, 8, 54.6782913
+V12_U_01165, 8, 8, 39.5442081
+V12_U_01166, 8, 8, 24.4124793
+V12_U_01167, 8, 8, 24.4124793
+V12_U_01168, 8, 8, 24.4124793
+V12_U_01169, 8, 8, 165.1509576
+V12_U_01170, 8, 8, 69.8124726
+V12_U_01171, 8, 8, 69.8124726
+V12_U_01172, 8, 8, 24.4124793
+V12_U_01173, 8, 8, 149.2600329
+V12_U_01174, 8, 8, 133.3714626
+V12_U_01175, 8, 8, 117.4805379
+V12_U_01176, 8, 8, 101.5919676
+V12_U_01177, 8, 8, 85.7009448
+V12_U_01178, 8, 8, 69.8124726
+V12_U_01179, 8, 8, 69.8124726
+V12_U_01180, 8, 8, 54.6782913
+V12_U_01181, 8, 8, 39.5442081
+V12_U_01182, 8, 8, 24.4124793
+V12_U_01183, 8, 8, 24.4124793
+V12_U_01184, 8, 8, 24.4124793
+V12_U_01185, 8, 8, 165.1509576
+V12_U_01186, 8, 8, 69.8124726
+V12_U_01187, 8, 8, 69.8124726
+V12_U_01188, 8, 8, 24.4124793
+V12_U_01189, 8, 8, 149.2600329
+V12_U_01190, 8, 8, 133.3714626
+V12_U_01191, 8, 8, 117.4805379
+V12_U_01192, 8, 8, 101.5919676
+V12_U_01193, 8, 8, 85.7009448
+V12_U_01194, 8, 8, 69.8124726
+V12_U_01195, 8, 8, 69.8124726
+V12_U_01196, 8, 8, 54.6782913
+V12_U_01197, 8, 8, 39.5442081
+V12_U_01198, 8, 8, 24.4124793
+V12_U_01199, 8, 8, 24.4124793
+V12_D_00000, 8, 8, 0
+V12_D_00001, 8, 8, 0
+V12_D_00002, 8, 8, 0
+V12_D_00003, 8, 8, 0
+V12_D_00004, 8, 8, 0
+V12_D_00005, 8, 8, 0
+V12_D_00006, 8, 8, 0
+V12_D_00007, 8, 8, 0
+V12_D_00008, 8, 8, 0
+V12_D_00009, 8, 8, 0
+V12_D_00010, 8, 8, 0
+V12_D_00011, 8, 8, 0
+V12_D_00012, 8, 8, 0
+V12_D_00013, 8, 8, 0
+V12_D_00014, 8, 8, 0
+V12_D_00015, 8, 8, 0
+V12_D_00016, 8, 8, 0
+V12_D_00017, 8, 8, 0
+V12_D_00018, 8, 8, 0
+V12_D_00019, 8, 8, 0
+V12_D_00020, 8, 8, 0
+V12_D_00021, 8, 8, 0
+V12_D_00022, 8, 8, 0
+V12_D_00023, 8, 8, 0
+V12_D_00024, 8, 8, 0
+V12_D_00025, 8, 8, 0
+V12_D_00026, 8, 8, 0
+V12_D_00027, 8, 8, 0
+V12_D_00028, 8, 8, 0
+V12_D_00029, 8, 8, 0
+V12_D_00030, 8, 8, 0
+V12_D_00031, 8, 8, 0
+V12_D_00032, 8, 8, 0
+V12_D_00033, 8, 8, 0
+V12_D_00034, 8, 8, 0
+V12_D_00035, 8, 8, 0
+V12_D_00036, 8, 8, 0
+V12_D_00037, 8, 8, 0
+V12_D_00038, 8, 8, 0
+V12_D_00039, 8, 8, 0
+V12_D_00040, 8, 8, 0
+V12_D_00041, 8, 8, 0
+V12_D_00042, 8, 8, 0
+V12_D_00043, 8, 8, 0
+V12_D_00044, 8, 8, 0
+V12_D_00045, 8, 8, 0
+V12_D_00046, 8, 8, 0
+V12_D_00047, 8, 8, 0
+V12_D_00048, 8, 8, 0
+V12_D_00049, 8, 8, 0
+V12_D_00050, 8, 8, 0
+V12_D_00051, 8, 8, 0
+V12_D_00052, 8, 8, 0
+V12_D_00053, 8, 8, 0
+V12_D_00054, 8, 8, 0
+V12_D_00055, 8, 8, 0
+V12_D_00056, 8, 8, 0
+V12_D_00057, 8, 8, 0
+V12_D_00058, 8, 8, 0
+V12_D_00059, 8, 8, 0
+V12_D_00060, 8, 8, 0
+V12_D_00061, 8, 8, 0
+V12_D_00062, 8, 8, 0
+V12_D_00063, 8, 8, 0
+V12_D_00064, 8, 8, 0
+V12_D_00065, 8, 8, 0
+V12_D_00066, 8, 8, 0
+V12_D_00067, 8, 8, 0
+V12_D_00068, 8, 8, 0
+V12_D_00069, 8, 8, 0
+V12_D_00070, 8, 8, 0
+V12_D_00071, 8, 8, 0
+V12_D_00072, 8, 8, 0
+V12_D_00073, 8, 8, 0
+V12_D_00074, 8, 8, 0
+** V12 head boundary: p=9.81*max(H-z,0), pressure in kPa.
+*Restart, write, frequency=0
+**
+** FIELD OUTPUT: F-Output-1
+**
+*Output, field, variable=PRESELECT
+*Node Output
+POR, RF, U
+*Element Output, directions=YES
+FLVEL, POR, S
+**
+** HISTORY OUTPUT: H-Output-1
+**
 *Output, history, variable=PRESELECT
 *End Step

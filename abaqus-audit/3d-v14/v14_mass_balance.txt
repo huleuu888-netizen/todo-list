@@ -1,0 +1,8 @@
+V14 mass-balance audit
+status=UNRESOLVED
+S03_NORMAL_RESERVOIR: Qin=NOT_COMPUTED; Qout=NOT_COMPUTED; mass_balance_error=NOT_COMPUTED
+S04_DESIGN_FLOOD: Qin=NOT_COMPUTED; Qout=NOT_COMPUTED; mass_balance_error=NOT_COMPUTED
+S05_CHECK_FLOOD: Qin=NOT_COMPUTED; Qout=NOT_COMPUTED; mass_balance_error=NOT_COMPUTED
+S06_DRAWDOWN_DEADWATER: Qin=NOT_COMPUTED; Qout=NOT_COMPUTED; mass_balance_error=NOT_COMPUTED
+S07_NORMAL_RESERVOIR_SEISMIC_0P206G: Qin=NOT_COMPUTED; Qout=NOT_COMPUTED; mass_balance_error=NOT_COMPUTED
+reason=FLVEL/POR field output alone does not provide a validated boundary-integrated flux; no surface flux history was generated.

@@ -1,0 +1,6 @@
+step,boundary,Qin_m3_per_s,Qout_m3_per_s,mass_balance_error,status,formula,evidence
+S03_NORMAL_RESERVOIR,UPSTREAM/DOWNSTREAM,NOT_COMPUTED,NOT_COMPUTED,NOT_COMPUTED,UNRESOLVED,"abs(Qin-Qout)/max(abs(Qin),abs(Qout))",No validated boundary-integrated flux history/surface integral available
+S04_DESIGN_FLOOD,UPSTREAM/DOWNSTREAM,NOT_COMPUTED,NOT_COMPUTED,NOT_COMPUTED,UNRESOLVED,"abs(Qin-Qout)/max(abs(Qin),abs(Qout))",No validated boundary-integrated flux history/surface integral available
+S05_CHECK_FLOOD,UPSTREAM/DOWNSTREAM,NOT_COMPUTED,NOT_COMPUTED,NOT_COMPUTED,UNRESOLVED,"abs(Qin-Qout)/max(abs(Qin),abs(Qout))",No validated boundary-integrated flux history/surface integral available
+S06_DRAWDOWN_DEADWATER,UPSTREAM/DOWNSTREAM,NOT_COMPUTED,NOT_COMPUTED,NOT_COMPUTED,UNRESOLVED,"abs(Qin-Qout)/max(abs(Qin),abs(Qout))",No validated boundary-integrated flux history/surface integral available
+S07_NORMAL_RESERVOIR_SEISMIC_0P206G,UPSTREAM/DOWNSTREAM,NOT_COMPUTED,NOT_COMPUTED,NOT_COMPUTED,UNRESOLVED,"abs(Qin-Qout)/max(abs(Qin),abs(Qout))",No validated boundary-integrated flux history/surface integral available

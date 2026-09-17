@@ -1,0 +1,6 @@
+interface_name,source_mechanical_relation,POR_left,POR_right,POR_delta,continuity_status,bypass_status,evidence
+LEFT_RIVER_GEOLOGY,not found,NOT_EXTRACTED,NOT_EXTRACTED,NOT_COMPUTED,UNRESOLVED,UNRESOLVED,Mechanical tie is not hydraulic continuity; paired interface POR extraction was not completed
+RIVER_RIGHT_GEOLOGY,not found,NOT_EXTRACTED,NOT_EXTRACTED,NOT_COMPUTED,UNRESOLVED,UNRESOLVED,Mechanical tie is not hydraulic continuity; paired interface POR extraction was not completed
+DAM_RIVER_FOUNDATION,not found,NOT_EXTRACTED,NOT_EXTRACTED,NOT_COMPUTED,UNRESOLVED,UNRESOLVED,Mechanical tie is not hydraulic continuity; paired interface POR extraction was not completed
+GEOMEMBRANE_FILL,not found,NOT_EXTRACTED,NOT_EXTRACTED,NOT_COMPUTED,UNRESOLVED,UNRESOLVED,Mechanical tie is not hydraulic continuity; paired interface POR extraction was not completed
+GEOMEMBRANE_CUTOFF,not found,NOT_EXTRACTED,NOT_EXTRACTED,NOT_COMPUTED,UNRESOLVED,UNRESOLVED,Mechanical tie is not hydraulic continuity; paired interface POR extraction was not completed

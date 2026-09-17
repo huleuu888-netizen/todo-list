@@ -1,0 +1,15 @@
+job=v14_full
+steps=7
+step=S01_GEOLOGICAL_INITIAL_STRESS frames=2 last_frame_fields=E,POR,RF,S,SAT,U,VOIDR
+step=S02_CONSTRUCTION_AND_CLOSURE frames=2 last_frame_fields=E,POR,RF,S,SAT,U,VOIDR
+step=S03_NORMAL_RESERVOIR frames=24 last_frame_fields=E,FLVEL,POR,RF,S,SAT,U,VOIDR
+step=S04_DESIGN_FLOOD frames=0 last_frame_fields=
+step=S05_CHECK_FLOOD frames=0 last_frame_fields=
+step=S06_DRAWDOWN_DEADWATER frames=0 last_frame_fields=
+step=S07_NORMAL_RESERVOIR_SEISMIC_0P206G frames=0 last_frame_fields=
+POR_FIELD_PRESENT=YES
+FLVEL_FIELD_PRESENT=YES
+INTERFACE_POR_CONTINUITY=UNRESOLVED
+BOUNDARY_FLUX=UNRESOLVED
+MASS_BALANCE=UNRESOLVED
+NOTE=Field presence does not prove interface continuity or Qin/Qout balance.
