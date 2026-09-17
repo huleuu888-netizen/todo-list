@@ -1,0 +1,13 @@
+job=v13_final_geo2_full
+odb=D:\Backup\Documents\ChatGPT\多步水电站\todo-list\abaqus-audit\3d-v13\v13_final_geo2_full.odb
+steps=6
+step=S01_GEOLOGICAL_INITIAL_STRESS frames=2 last_frame_fields=E,POR,RF,S,SAT,U,VOIDR
+step=S02_CONSTRUCTION_AND_CLOSURE frames=2 last_frame_fields=E,POR,RF,S,SAT,U,VOIDR
+step=S03_NORMAL_RESERVOIR_3076M frames=57 last_frame_fields=E,FLVEL,POR,RF,S,SAT,U,VOIDR
+step=S04_DESIGN_FLOOD_3580CMS frames=16 last_frame_fields=E,FLVEL,POR,RF,S,SAT,U,VOIDR
+step=S05_CHECK_FLOOD_AND_SEISMIC frames=1 last_frame_fields=E,FLVEL,POR,RF,S,SAT,U,VOIDR
+step=S06_DRAWDOWN_TO_3074M frames=0 last_frame_fields=
+POR_FIELD_PRESENT=YES
+HYDRAULIC_INTERFACE_CONTINUITY=NOT_VERIFIED
+MASS_BALANCE=NOT_COMPUTED
+NOTE=Field presence is evidence of requested output only; it is not a continuity or mass-balance pass.

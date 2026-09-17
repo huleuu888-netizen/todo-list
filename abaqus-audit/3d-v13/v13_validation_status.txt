@@ -1,0 +1,20 @@
+VALIDATED=NO
+GATE_1=GATE_1_FAIL
+GATE_1_CORE_BASELINE=PASS
+GATE_1_REASON=All four appurtenant restoration groups reproduced numerical singularity without a verified mechanical support path.
+GATE_2=PASS_FOR_RETAINED_BASELINE
+GATE_2_REASON=S01/S02 geostatic baseline uses ALL_GEOLOGY gravity followed by V13 geostatic construction; see final .sta/.msg.
+CORE_DATACHECK=PASS
+FINAL_DATACHECK=PASS
+COMPLETED_STEPS_IN_FULL_ODB=S01,S02,S03,S04
+FAILED_STEP_IN_FULL_RUN=S05 increment 1; time-integration-accuracy cut-back termination
+GATE_3=GATE_3_FAIL
+GATE_3_REASON=Normal reservoir step completion=YES; POR interface continuity and integrated boundary mass balance remain not verified; see v13_hydraulic_interface_check.csv and v13_mass_balance.txt.
+FULL_RUN_COMPLETED=NO_S05_TIME_INTEGRATION_FAILURE
+FULL_RUN_NUMERICAL_SINGULARITY=NO_OBSERVED
+CORE_S01_NO_SINGULARITY=YES
+SUPPRESSED_APPURTENANT_INSTANCES=31
+GATE_1A_EVIDENCE_ROWS=192
+GATE_1A_AFFECTED_INSTANCES=30
+SOURCE_V12_SHA256=958776ad8efaaa0e6c534b7e11331c9bc658cc248d802e3289fa8735d371a411
+NOTE=Issue #5 remains open; this branch contains the auditable V13 result and does not close the issue.

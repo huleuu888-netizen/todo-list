@@ -1,0 +1,7 @@
+bc_name,step,scope,dofs_or_quantity,value,physical_basis,status
+BASE_FIX,all steps,LEFT_P2_QUARTZ_SANDSTONE_I;LEFT_FOUNDATION_GRANITE_I;RIVER_FRESH_GRANITE_I;RIGHT_FRESH_GRANITE_I,"U1,U2,U3",0,designated deep competent-rock/foundation support set retained from V12,RETAINED; conservative source-supported base support
+V12_U,S03_NORMAL_RESERVOIR_3076M,UPSTREAM,pore pressure,head=3076 m,task-required normal upstream reservoir head,PRESENT IN INPUT; hydraulic continuity not independently verified
+V12_D,S03_NORMAL_RESERVOIR_3076M,DOWNSTREAM,pore pressure,head=3055 m,task-required normal downstream tailwater head,PRESENT IN INPUT; hydraulic continuity not independently verified
+ALL_GEOLOGY_GRAVITY,S01_GEOLOGICAL_INITIAL_STRESS,ALL_GEOLOGY,gravity,9.81 m/s2 in -Z,natural geology/foundation initial stress only,V13 MODIFIED; separates natural geology from construction
+CONSTRUCTION_GEOSTATIC,S02_CONSTRUCTION_AND_CLOSURE,retained assembly,geostatic gravity buildup,"1.,1.,1e-05,1.",V13 staged geostatic construction strategy,V13 MODIFIED; completed in retained baseline run
+NO_APPURTENANT_NODAL_FIXES,all steps,suppressed appurtenances,none,none,avoids arbitrary rigid-body restraints,CONFIRMED; support must be real contact/tie/shared nodes
