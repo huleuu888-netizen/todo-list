@@ -1,0 +1,64 @@
+name: v13-v14 design correspondence audit
+
+on:
+  push:
+    branches: [abaqus-audit-task]
+    paths:
+      - '.github/workflows/v13-v14-design-audit.yml'
+      - 'abaqus-audit/audit_v13_design_correspondence.py'
+      - 'abaqus-audit/build_v14_design_alignment.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: abaqus-audit-task
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Measure v13 geometry
+        run: |
+          python abaqus-audit/audit_v13_design_correspondence.py \
+            abaqus-audit/3d-v13/doub_hydropower_part25_geometric_solids_v13_rigidbody_geostatic_fixed.inp \
+            abaqus-audit/3d-v13/design-correspondence
+      - name: Generate v14 tailwater-corrected input
+        run: |
+          mkdir -p abaqus-audit/3d-v14
+          python abaqus-audit/build_v14_design_alignment.py \
+            abaqus-audit/3d-v13/doub_hydropower_part25_geometric_solids_v13_rigidbody_geostatic_fixed.inp \
+            abaqus-audit/3d-v14/doub_hydropower_part25_geometric_solids_v14_design_aligned.inp \
+            abaqus-audit/3d-v14/v14_tailwater_bc_audit.csv
+      - name: Write v14 scope note
+        run: |
+          cat > abaqus-audit/3d-v14/V14_DESIGN_ALIGNMENT_SCOPE.md <<'EOF'
+          # v14 design alignment scope
+
+          v14 is generated from the converged v13 core baseline without overwriting v13.
+
+          Changes in this pure-Python generation pass are deliberately limited to source-supported downstream/tailwater heads:
+
+          - S03 normal: 3053.50 m
+          - S04 design flood: 3060.26 m
+          - S05 check flood: 3061.38 m
+          - S06 drawdown/dead water: 3053.50 m
+
+          Upstream heads are retained as S03=3076.00 m, S04=3076.00 m, S05=3077.35 m, S06=3074.00 m. The supplied project text contains an internal inconsistency for the design-flood upstream level; the explicit stability-condition pair is retained rather than silently selecting another narrative value.
+
+          Geometry is not numerically altered in this pass. `../3d-v13/design-correspondence/` contains direct mesh measurements. In particular, 3070.10 m is not automatically imposed as the main cutoff-wall top because the report defines the wall top by the concrete plinth/base underside and gives 49.10 m as a maximum wall depth, not as a universal wall height.
+
+          This workflow cannot create an Abaqus CAE database. The v14 INP must be imported/saved in Abaqus/CAE and re-run before v14 can be called solver-validated.
+          EOF
+      - name: Commit audit and v14 generated files
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add abaqus-audit/3d-v13/design-correspondence abaqus-audit/3d-v14
+          git commit -m 'Generate v13 design audit and v14 tailwater alignment [skip ci]'
+          git push origin HEAD:abaqus-audit-task
