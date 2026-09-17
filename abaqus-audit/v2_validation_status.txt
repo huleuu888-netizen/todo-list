@@ -1,0 +1,74 @@
+Abaqus corrected-model validation status
+=========================================
+Date: 2026-09-17 (Asia/Shanghai)
+Abaqus release: 2022
+Internal build reported by CAE: 2021_09_16-01.57.30 176069
+Branch: abaqus-audit-task
+
+SOURCE PRESERVATION
+-------------------
+Source:
+  D:\Backup\Documents\ChatGPT\多步水电站\Codex生成模型\outputs\doub_part25_2d_seepage_plastic_v1.cae
+Source SHA-256 before and after work:
+  E3FCFC71322137A00A678CA46FD1B307A8B3D1C3E7ECD6407CD2111C75775A84
+The source was copied to an ASCII-only temporary directory and was not saved or overwritten.
+
+Corrected workspace copy:
+  D:\Backup\Documents\ChatGPT\多步水电站\Codex生成模型\outputs\doub_part25_2d_seepage_plastic_v2_corrected.cae
+Corrected repository copy:
+  abaqus-audit\doub_part25_2d_seepage_plastic_v2_corrected.cae
+Corrected SHA-256 (both copies):
+  CD41A35B85BEE11080A2A6BA46C25F0BBF52AC53AFBBFDDA45A0BAE6ABAFC9DE
+
+EXACT COMMANDS
+--------------
+Model creation (run from the ASCII-only working directory):
+  C:\SIMULIA\Commands\abaqus.bat cae noGUI=modify_model_v2.py
+
+Input generation:
+  C:\SIMULIA\Commands\abaqus.bat cae noGUI=validate_model_v2.py
+
+Final data check:
+  C:\SIMULIA\Commands\abaqus.bat job=doub_part25_v2_datacheck_final input=doub_part25_v2_datacheck.inp datacheck interactive cpus=1
+
+Audit and no-mesh keyword export:
+  C:\SIMULIA\Commands\abaqus.bat cae noGUI=run_audit_v2.py
+
+Full-run attempt:
+  C:\SIMULIA\Commands\abaqus.bat job=doub_part25_v2_fullrun input=doub_part25_v2_datacheck.inp interactive cpus=1
+
+DATA CHECK
+----------
+Status: PASSED
+Completion message:
+  Abaqus JOB doub_part25_v2_datacheck_final COMPLETED
+
+Verified keyword settings:
+  *Geostatic, utol=0.01
+  1e-05, 1., 1e-10, 0.01
+  *Soils, consolidation, end=SS, utol=1000.0
+  0.0001, 1e+09, 1e-10, 1e+07, 1.0e-6
+
+The data-check DAT file reported 4 warnings:
+  1. Geostatic procedure uses a maximum displacement tolerance.
+  2. 19 elements are distorted.
+  3-4. FLVEL output is unavailable for element type CPE3.
+No data-check errors were reported.
+
+FULL-RUN ATTEMPT
+----------------
+Status: INCOMPLETE; convergence is NOT claimed.
+The analysis was manually terminated during the geostatic step after increment 137.
+At termination, step time was about 0.0511 of 1.0 and the current increment was about 4.520e-7.
+The seepage step was not reached. Repeated messages also reported zero volumetric flux during the geostatic initialization, which is expected before hydraulic loading but does not establish seepage convergence.
+
+ELEMENT-FORMULATION LIMITATION
+------------------------------
+Abaqus 2022 has no CPE3P element constant/type. All 41 CPE3 elements were audited and are in porous materials, but they remain CPE3 to avoid an invalid deck. The data-check FLVEL warnings confirm their lack of pore-pressure flow output. A supported correction requires remeshing these locations to a supported pore-pressure element (for example a higher-order triangular formulation) and was not silently substituted.
+
+HYDRAULIC-BOUNDARY CHECK
+------------------------
+Formula: p = 9810 * max(H - z, 0) Pa
+Upstream H=158.5 m: 90 nodes; maximum absolute input-rounding difference 5 Pa.
+Downstream H=135 m: 78 nodes; maximum absolute input-rounding difference 0.5 Pa.
+The head values were not changed.
