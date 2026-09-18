@@ -1,0 +1,20 @@
+instance,master_instance,min_gap_m,max_gap_m,mean_gap_m,gap_basis,status
+POWERHOUSE_UNIT_01_I,LEFT_L06_Q3AL_IV1_I,-0.5646262500004013,-0.5646262500004013,-0.5646262500004013,secondary base face center minus selected geology face-center elevation,UNRESOLVED
+POWERHOUSE_UNIT_02_I,LEFT_L06_Q3AL_IV1_I,-1.089887500000259,-1.089887500000259,-1.089887500000259,secondary base face center minus selected geology face-center elevation,UNRESOLVED
+POWERHOUSE_UNIT_03_I,LEFT_L06_Q3AL_IV1_I,1.073565208333548,1.073565208333548,1.073565208333548,secondary base face center minus selected geology face-center elevation,UNRESOLVED
+POWERHOUSE_UNIT_04_I,LEFT_L06_Q3AL_IV1_I,-1.089887500000259,-1.089887500000259,-1.089887500000259,secondary base face center minus selected geology face-center elevation,UNRESOLVED
+POWERHOUSE_INSTALLATION_BAY_I,LEFT_L01_Q4DEL_I,0.046463333333576884,0.046463333333576884,0.046463333333576884,secondary base face center minus selected geology face-center elevation,PASS
+TAILWATER_CHANNEL_I,LEFT_L06_Q3AL_IV1_I,7.932286249999379,15.98228624999956,11.95728624999947,secondary base face center minus selected geology face-center elevation,UNRESOLVED
+ECO_RELEASE_01_I,LEFT_L01_Q4DEL_I,-0.8661872916668472,7.133812708333153,0.25881270833315284,secondary base face center minus selected geology face-center elevation,UNRESOLVED
+ECO_RELEASE_02_I,LEFT_L01_Q4DEL_I,-0.2402950000000601,7.75970499999994,0.8847049999999399,secondary base face center minus selected geology face-center elevation,UNRESOLVED
+SPILLWAY_BAY_01_I,LEFT_L01_Q4DEL_I,-3.7202498958336037,-3.7202498958336037,-3.7202498958336037,secondary base face center minus selected geology face-center elevation,UNRESOLVED
+SPILLWAY_BAY_02_I,LEFT_L01_Q4DEL_I,-3.865330520833595,-3.865330520833595,-3.865330520833595,secondary base face center minus selected geology face-center elevation,UNRESOLVED
+SPILLWAY_BAY_03_I,LEFT_L01_Q4DEL_I,-3.6405407291663323,-3.6405407291663323,-3.6405407291663323,secondary base face center minus selected geology face-center elevation,UNRESOLVED
+SPILLWAY_BAY_04_I,LEFT_L01_Q4DEL_I,-3.3218021874999977,-3.3218021874999977,-3.3218021874999977,secondary base face center minus selected geology face-center elevation,UNRESOLVED
+SPILLWAY_BAY_05_I,LEFT_L01_Q4DEL_I,-4.826036562499667,-4.826036562499667,-4.826036562499667,secondary base face center minus selected geology face-center elevation,UNRESOLVED
+SPILLWAY_BAY_06_I,LEFT_L01_Q4DEL_I,-4.406488229166371,-4.406488229166371,-4.406488229166371,secondary base face center minus selected geology face-center elevation,UNRESOLVED
+SPILLWAY_BAY_07_I,LEFT_L01_Q4DEL_I,-4.364613229166935,-4.364613229166935,-4.364613229166935,secondary base face center minus selected geology face-center elevation,UNRESOLVED
+SPILLWAY_BAY_08_I,LEFT_L01_Q4DEL_I,-5.034413124999901,-5.034413124999901,-5.034413124999901,secondary base face center minus selected geology face-center elevation,UNRESOLVED
+SPILLWAY_LEFT_WALL_I,LEFT_L01_Q4DEL_I,0.399956111110896,0.399956111110896,0.399956111110896,secondary base face center minus selected geology face-center elevation,UNRESOLVED
+SPILLWAY_RIGHT_WALL_I,LEFT_L01_Q4DEL_I,-2.8368781249996573,-2.8368781249996573,-2.8368781249996573,secondary base face center minus selected geology face-center elevation,UNRESOLVED
+SPILLWAY_STILLING_BASIN_I,LEFT_L01_Q4DEL_I,0.6108140000001185,0.6108140000001185,0.6108140000001185,secondary base face center minus selected geology face-center elevation,UNRESOLVED

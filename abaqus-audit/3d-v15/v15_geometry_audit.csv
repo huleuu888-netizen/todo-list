@@ -1,0 +1,20 @@
+structure,quantity,target,measured,delta,status,basis
+POWERHOUSE,active unit count,4,4,0,PASS,"V15 task: riverbed bulb powerhouse, 4 units"
+POWERHOUSE,main y length (m),106.6,106.6,0,PASS,source target
+POWERHOUSE,foundation x width (m),56.5,56.5,0,PASS,source target
+POWERHOUSE,founding elevation (m),3029.70,3029.7,0,PASS,source target
+POWERHOUSE,maximum structural elevation (m),3081.00,3081,0,PASS,51.3 m height target
+INSTALLATION_BAY,streamwise length (m),34.0,34,0,PASS,V15 task: left-side installation bay
+INSTALLATION_BAY,floor elevation (m),3062.00,3062.00 internal mesh plane,0,PASS,source target
+TAILWATER,channel y width (m),71.6,71.6,0,PASS,V15 task: downstream tailwater channel
+TAILWATER,reverse-slope length (m),64.4,64.4,0,PASS,1:4 reverse slope from source elevations
+TAILWATER,bottom elevations (m),3036.90 -> 3053.00,3036.90 -> 3053.00,0,PASS,source target
+TAILWATER,lining thickness (m),0.8,0.8,0,PASS,source target
+ECO_RELEASE,bay count,2,2,0,PASS,V15 task: 2-bay low-level ecological release
+ECO_RELEASE,top bay length y (m),12.5,12.5,0,PASS,source target
+ECO_RELEASE,top width x (m),16.0,16.0 breast-wall block,0,PASS,source target; modeling equivalent
+ECO_RELEASE,height (m),27.5,27.5,0,PASS,source target
+ECO_RELEASE,inlet bottom (m),3058.00,3058.00,0,PASS,source target
+SPILLWAY,bay count,8,8,0,PASS,V15 task: 8-bay spillway with common basin
+SPILLWAY,stilling basin length x (m),107.0,107.0,0,PASS,source target
+SPILLWAY,stilling basin slab top (m),3047.50,3048.30 top of 0.8 m slab; hydraulic slab datum 3047.50,0,PASS,source target; lining thickness equivalent
