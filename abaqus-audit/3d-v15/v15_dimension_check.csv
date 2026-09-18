@@ -1,0 +1,31 @@
+structure,metric,target,measured,delta,status,basis
+POWERHOUSE,unit count,4,4,0.000,PASS,four active unit instances
+POWERHOUSE,total Y length (m),106.6,106.600,0.000,PASS,design target
+POWERHOUSE,flow-width X (m),56.5,56.500,0.000,PASS,design target
+POWERHOUSE,founding Z (m),3029.7,3029.700,0.000,PASS,design target
+POWERHOUSE,top Z (m),3081.0,3081.000,0.000,PASS,design target
+INSTALLATION_BAY,X length (m),34.0,34.000,0.000,PASS,design target
+INSTALLATION_BAY,floor plane Z (m),3062.0,3062.000,0.000,PASS,internal geometry plane
+INSTALLATION_BAY,Y alignment to powerhouse,same envelope,same envelope,0,PASS,shared Y range
+INSTALLATION_BAY,X adjacency to powerhouse,touch at -30.000,touch at -30.000,0,PASS,no overlap / no gap
+TAILWATER,Y width (m),71.6,71.600,0.000,PASS,design target
+TAILWATER,reverse slope X length (m),64.4,64.400,0.000,PASS,3036.90 to 3053.00 hydraulic datum
+TAILWATER,hydraulic bottom upstream Z (m),3036.9,3036.900,0.000,PASS,top surface of 0.8 m lining
+TAILWATER,hydraulic bottom downstream Z (m),3053.0,3053.000,0.000,PASS,top surface of 0.8 m lining
+TAILWATER,lining thickness (m),0.8,0.800,0.000,PASS,two-surface lining
+TAILWATER,X downstream extent (m),154.0,154.000,0.000,PASS,geometry envelope; includes level connection
+ECO_RELEASE,bay count,2,2,0.000,PASS,two active bay instances
+ECO_RELEASE,bay Y length (m),12.5,12.500 each,0,PASS,two 12.5 m bays
+ECO_RELEASE,inlet bottom Z (m),3058.0,3058.000,0.000,PASS,design target
+ECO_RELEASE,overall height (m),27.5,27.500,0.000,PASS,design target
+ECO_RELEASE,location between spillway and powerhouse,ordered,ordered,0,PASS,Y ranges are separated
+SPILLWAY,bay count,8,8,0.000,PASS,eight active bay instances
+SPILLWAY,stilling basin X length (m),107.0,107.000,0.000,PASS,common stilling basin
+SPILLWAY,slab datum Z (m),3047.5,3047.500,0.000,PASS,hydraulic datum
+SPILLWAY,slab top Z (m),3048.3,3048.300,0.000,PASS,0.8 m equivalent slab
+LAYOUT,right-to-left order,SPILLWAY > ECO > POWERHOUSE,SPILLWAY > ECO > POWERHOUSE,0,PASS,Y placement
+LAYOUT,tailwater connection,powerhouse downstream face,touch at X=26.500,0,PASS,shared X boundary
+LAYOUT,SPILLWAY vs ECO_RELEASE positive-volume overlap,none,none,0,PASS,AABB geometry check
+LAYOUT,ECO_RELEASE vs POWERHOUSE positive-volume overlap,none,none,0,PASS,AABB geometry check
+LAYOUT,INSTALLATION_BAY vs POWERHOUSE positive-volume overlap,none,none,0,PASS,AABB geometry check
+LAYOUT,POWERHOUSE vs TAILWATER positive-volume overlap,none,none,0,PASS,AABB geometry check
