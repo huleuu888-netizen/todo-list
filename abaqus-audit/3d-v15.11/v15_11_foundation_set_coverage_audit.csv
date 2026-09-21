@@ -1,0 +1,6 @@
+metric,value,status
+natural_geology_unclassified_elements,0,PASS
+duplicate_natural_geology_leaf_membership,0,PASS
+nonconforming_continuous_foundation_faces,0,PASS
+hanging_nodes,0,PASS
+engineered_backfill_cell_count,94,PASS

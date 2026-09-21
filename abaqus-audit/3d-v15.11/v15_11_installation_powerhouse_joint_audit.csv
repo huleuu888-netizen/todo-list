@@ -1,0 +1,2 @@
+interface,installation_section_xz,powerhouse_section_xz,minimum_face_distance_m,contact_area_m2,overlap_volume_m3,xz_overlap_extent,status
+installation_bay_powerhouse,"-64.000000,-122.000000,3056.465000;-7.500000,-122.000000,3079.000000","-30.000000,-122.000000,3029.700000;26.500000,-122.000000,3081.000000",0.000000,507.0375,0.000000,face-to-face at Y=-122; actual X/Z overlap,PASS

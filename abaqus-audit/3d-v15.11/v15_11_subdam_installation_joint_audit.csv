@@ -1,0 +1,2 @@
+interface,subdam_section_xz,installation_section_xz,minimum_face_distance_m,contact_area_m2,overlap_volume_m3,cutoff_wall_relative_offset_m,status
+subdam_installation_bay,"-70.850000,-156.000000,3059.000000;-56.000000,-156.000000,3079.000000","-64.000000,-156.000000,3056.465000;-7.500000,-156.000000,3079.000000",0.000000,160,0.000000,20,PASS

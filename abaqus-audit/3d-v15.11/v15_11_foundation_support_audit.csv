@@ -1,0 +1,2 @@
+region,total_base_area_m2,natural_excavated_supported_area_m2,compacted_backfill_supported_area_m2,unsupported_area_m2,supported_base_percentage,unsupported_base_percentage,minimum_structure_backfill_gap_m,backfill_geology_gap_m,overlap_volume_m3,nonconforming_faces,hanging_nodes,status,notes
+left_subdam_base,1345.5,29,1316.5,0.000000,100.000000,0.000000,0.000000,0.000000,0.000000,0,0,PASS,natural remainder is retained/excavated foundation; local C3D8P patch fills the documented low surface near installation

@@ -1,0 +1,4 @@
+region,element_type,node_count,element_count,actual_min_edge_m,actual_median_edge_m,actual_p95_edge_m,actual_max_edge_m,max_aspect_ratio,invalid_negative_volume_count,collapsed_element_count,global_remesh,status,notes
+left_subdam,C3D8R,3160,2280,1,1.912023199,2.4916667,2.5,2.4916667,0,0,NO,PASS,local V15.11 regeneration only
+fishway,C3D8R,13916,4164,0.24999999,1.000000001,2.5,2.50000003,8.00000032,0,0,NO,PASS,local V15.11 regeneration only
+compacted_backfill,C3D8P,2094,838,1.2425,1.45,2.5,2.5,2.012072435,0,0,NO,PASS,local V15.11 regeneration only

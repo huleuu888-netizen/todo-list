@@ -1,0 +1,2 @@
+region,material,element_type,mapping_source,basis,source_verification,cell_count,status,notes
+FOUNDATION_LEFT_COMPACTED_SAND_GRAVEL,Q3AL_III,C3D8P,existing V15.10 geology material/section definition,reused Q3AL_III sand/gravel-type material; no new parameters invented,BACKFILL_MATERIAL_MAPPING_UNRESOLVED,94,UNRESOLVED,explicit temporary mapping retained for later source/material review

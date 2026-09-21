@@ -1,0 +1,7 @@
+interface,minimum_surface_distance_m,overlap_volume_m3,contact_area_m2,face_count,node_count,status,notes
+subdam_compacted_backfill,0.000000,0.000000,37.5,local generated top faces,shared within backfill part,PASS,C3D8P top face at 3059.000 m where required
+installation_compacted_backfill,0.000000,0.000000,37.5,local generated top faces,shared within backfill part,PASS,C3D8P top face at 3056.465 m in local patch
+backfill_retained_geology,0.000000,0.000000,1885.5,cellwise coincident lower faces,0 hanging nodes in generated part,PASS,lower boundary follows retained-cell upper surface envelope
+fishway_retained_geology,0.000000,0.000000,0.000000,0 actual element-pair overlaps after local clearance removal,local excavation boundary,PASS,fishway route clearance checked against retained geology element boxes
+subdam_retained_geology,0.000000,0.000000,foundation envelope,0 actual element-pair overlaps,local foundation,PASS,structure interference cells removed locally
+fishway_subdam_opening,0.000000,0.000000,0.000000,opening envelope,continuous route,PASS,2.5 m x 7 m opening at interior subdam section
