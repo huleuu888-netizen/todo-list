@@ -1,0 +1,3 @@
+outlet,host_unit_pier_region,upstream_sill,downstream_sill,width,height,continuity_status,basis
+OUTLET_01,UNITS_01_02,3037.000,3043.000,2.500,2.000,PASS,real upstream/internal/downstream void corridors
+OUTLET_02,UNITS_03_04,3037.000,3043.000,2.500,2.000,PASS,real upstream/internal/downstream void corridors

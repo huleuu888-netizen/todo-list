@@ -1,0 +1,15 @@
+region,COARSE_seed,MEDIUM_seed,FINE_LOCAL_seed,working_level,status,basis
+right-bank dam,20.0,10.0,2.0,MEDIUM,PREPARED,no convergence run in geometry-only task
+geomembrane,20.0,10.0,2.0,MEDIUM,PREPARED,no convergence run in geometry-only task
+cutoff wall,4.0,2.0,2.0,MEDIUM,PREPARED,no convergence run in geometry-only task
+powerhouse,4.0,2.0,1.0,MEDIUM,PREPARED,no convergence run in geometry-only task
+powerhouse flushing outlets,4.0,2.0,0.75,MEDIUM,PREPARED,no convergence run in geometry-only task
+installation bay,4.0,2.0,2.0,MEDIUM,PREPARED,no convergence run in geometry-only task
+tailwater,4.0,2.0,2.0,MEDIUM,PREPARED,no convergence run in geometry-only task
+spillway,4.0,2.0,1.0,MEDIUM,PREPARED,no convergence run in geometry-only task
+ecological release,4.0,2.0,1.0,MEDIUM,PREPARED,no convergence run in geometry-only task
+stilling basin,4.0,2.0,2.0,MEDIUM,PREPARED,no convergence run in geometry-only task
+left-bank sub-dam,4.0,2.0,2.0,MEDIUM,PREPARED,no convergence run in geometry-only task
+fishway,4.0,2.0,1.0,MEDIUM,PREPARED,no convergence run in geometry-only task
+near-foundation geology,4.0,2.0,2.0,MEDIUM,PREPARED,no convergence run in geometry-only task
+far-field geology,20.0,10.0,2.0,MEDIUM,PREPARED,no convergence run in geometry-only task

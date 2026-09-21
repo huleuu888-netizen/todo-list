@@ -1,0 +1,10 @@
+check,target,measured,status,basis
+sub-dam centroid near installation bay,adjacent,x=-112..-64; y=-122..-15,PASS,fixed hub frame
+minimum installation-to-sub-dam distance,0 m interface,0.000 m,PASS,shared x=-64 interface
+powerhouse-side reference plane distance,reported,34.000 m to x=-30 plane; 0 m to installation plane x=-64,PASS,spatial relation
+dam-axis chain,continuous,installation/sub-dam touching closure,PASS,no far-turnaround relocation
+fishway returns to real sub-dam,yes,station 0+948..0+955 at x=-92..-99,PASS,fixed local sub-dam
+spillway terminal object,explicit abutment,right abutment y=97..133,PASS,no 36 m PIER object
+eco visible top,near 3079,3079.000,PASS,corrected vertical layout
+excavation active cutter overlap,none,no active cutter instances,PASS,orphan result parts only
+exact surveyed horizontal fishway alignment,source data,piecewise local-hub approximation,UNRESOLVED,plan survey unavailable

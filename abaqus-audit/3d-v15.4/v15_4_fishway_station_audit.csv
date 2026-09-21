@@ -1,0 +1,12 @@
+station_start,station_end,reach,length_target,length_modeled,bottom_start,bottom_end,status,basis
+0.000,15.000,x,15.000,15.000,3053.000,3053.000,PASS,fixed-hub piecewise route
+15.000,259.500,x,244.500,244.500,3053.000,3056.500,PASS,fixed-hub piecewise route
+259.500,320.810,y,61.310,61.310,3056.500,3057.500,PASS,fixed-hub piecewise route
+320.810,382.120,y,61.310,61.310,3057.500,3058.500,PASS,fixed-hub piecewise route
+382.120,416.000,y,33.880,33.880,3059.000,3059.000,PASS,fixed-hub piecewise route
+416.000,948.000,x,532.000,532.000,3059.000,3059.000,PASS,fixed-hub piecewise route
+948.000,955.000,x,7.000,7.000,3059.000,3060.000,PASS,fixed-hub piecewise route
+955.000,1250.000,y,295.000,295.000,3060.000,3072.500,PASS,fixed-hub piecewise route
+1250.000,1270.000,y,20.000,20.000,3072.500,3072.500,PASS,fixed-hub piecewise route
+1270.000,1370.000,y,100.000,100.000,3072.500,3073.500,PASS,fixed-hub piecewise route
+1370.000,1407.570,y,37.570,37.570,3073.500,3073.500,PASS,fixed-hub piecewise route

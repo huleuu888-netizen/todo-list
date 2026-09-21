@@ -1,0 +1,15 @@
+region,element_type,element_count,node_count,min_edge,max_edge,representative_edge,max_aspect_ratio,invalid_or_negative_volume,duplicate_elements,zero_or_collapsed_elements,status,reason
+powerhouse,C3D8R,37736,54624,0.983,2.000,1.173,1.286,0,0,NO,PASS,structured generated mesh or retained source mesh audit
+powerhouse flushing outlets,C3D8R,1432,3500,0.500,1.000,0.792,2.000,0,0,NO,PASS,structured generated mesh or retained source mesh audit
+installation bay,C3D8R,14094,20652,0.996,2.000,1.321,1.316,0,0,NO,PASS,structured generated mesh or retained source mesh audit
+tailwater,C3D8R,4194,8108,0.800,4.070,2.301,3.200,0,0,NO,PASS,structured generated mesh or retained source mesh audit
+spillway,C3D8R,62954,81535,0.990,2.489,1.309,1.991,0,0,NO,PASS,structured generated mesh or retained source mesh audit
+ecological release,C3D8R,10008,15140,0.500,2.000,1.031,2.000,0,0,NO,PASS,structured generated mesh or retained source mesh audit
+stilling basin,C3D8R,4042,6336,1.250,2.489,2.076,1.991,0,0,NO,PASS,structured generated mesh or retained source mesh audit
+left-bank sub-dam,C3D8R,29238,36573,0.833,2.000,1.950,1.200,0,0,NO,PASS,structured generated mesh or retained source mesh audit
+fishway,C3D8R,4487,13511,0.500,2.000,1.323,4.000,0,0,NO,PASS,structured generated mesh or retained source mesh audit
+right-bank dam,C3D6P;C3D8P,16428,27600,0.925,6.359,3.459,4.505,0,0,NO,PASS,structured generated mesh or retained source mesh audit
+geomembrane,C3D8P,80,198,1.000,29.500,12.545,29.500,0,0,NO,PASS,structured generated mesh or retained source mesh audit
+cutoff wall,C3D8P,1036,2250,0.944,3.987,2.912,4.225,0,0,NO,PASS,structured generated mesh or retained source mesh audit
+near-foundation geology,C3D8P;C3D8R,13937,24804,0.356,1724.406,51.611,842.798,0,0,NO,PASS,structured generated mesh or retained source mesh audit
+far-field geology,C3D8P;C3D8R,13937,24804,0.356,1724.406,51.611,842.798,0,0,NO,PASS,structured generated mesh or retained source mesh audit

@@ -1,0 +1,21 @@
+structure,metric,target,measured,delta,status,basis
+POWERHOUSE,unit count,4,4,0.000,PASS,fixed hub
+POWERHOUSE,total Y length,106.6,106.6,0.000,PASS,preserved
+INSTALLATION_BAY,X length,34.0,34.0,0.000,PASS,preserved
+TAILWATER,clear Y width,71.6,71.6,0.000,PASS,channel clear envelope
+TAILWATER,lining thickness,0.8,0.8,0.000,PASS,preserved
+SPILLWAY,open bay count,8,8,0.000,PASS,fixed arrangement
+SPILLWAY,clear bay width,7.0,7.0,0.000,PASS,source
+SPILLWAY,largest intermediate pier Y width,<= 10,3.0,0.000,PASS,7 explicit intermediate piers
+ECO_RELEASE,open bay count,2,2,0.000,PASS,source
+ECO_RELEASE,each opening,2.5 x 5.0,2.5 x 5.0,0.000,PASS,source
+ECO_RELEASE,visible crest Z,3079.0,3079.0,0.000,PASS,no 3085.5 inference
+ECO_RELEASE,foundation-to-crest maximum height,27.5 descriptor,27.5 inferred from 3051.5..3079,0.000,UNRESOLVED,foundation source datum unavailable
+STILLING_BASIN,length,107.0,107.0,0.000,PASS,source
+STILLING_BASIN,thickness,2.5,2.5,0.000,PASS,corrected
+LEFT_BANK_SUBDAM,crest Z,3079.0,3079.0,0.000,PASS,fixed local closure
+LEFT_BANK_SUBDAM,crossing opening,2.5 x 7.0,2.5 x 7.0,0.000,PASS,true void
+FISHWAY,total station length,1407.57,1407.57,0.000,PASS,piecewise route
+FISHWAY,clear width,2.0,2.0,0.000,PASS,section
+POWERHOUSE_FLUSHING,outlet count,2,2,0.000,PASS,two-unit sharing
+POWERHOUSE_FLUSHING,opening size,2.5 x 2.0,2.5 x 2.0,0.000,PASS,source
