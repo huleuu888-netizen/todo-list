@@ -1,0 +1,8 @@
+metric,v15_7,v15_8,delta,status
+node_count,641193,641193,0,PASS
+element_count,591794,591794,0,PASS
+node_coordinate_change_count,0,0,0,PASS
+element_connectivity_change_count,0,0,0,PASS
+bbox,"-600.000000,-1000.000000,2600.000000;900.000000,850.000000,3426.400000","-600.000000,-1000.000000,2600.000000;900.000000,850.000000,3426.400000",0,PASS
+nonconforming_geology_faces,0,0,0,PASS
+hanging_nodes,0,0,0,PASS
