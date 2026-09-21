@@ -1,0 +1,5 @@
+interface,region_a,region_b,region_a_p95,region_b_p95,p95_growth_ratio,target_ratio,status,notes
+M3-A_0-8m to M3-B_8-20m,M3-A_0-8m,M3-B_8-20m,10.7516839,10.6526392,1.00929767,<=1.5,PASS,distance bands; exact face conformity audited separately
+M3-B_8-20m to M3-C_20-40m,M3-B_8-20m,M3-C_20-40m,10.6526392,11.25,1.05607632,<=1.5,PASS,distance bands; exact face conformity audited separately
+M3-C_20-40m to M3-D_40-60m,M3-C_20-40m,M3-D_40-60m,11.25,21.3966265,1.90192236,<=1.5,UNRESOLVED,distance bands; exact face conformity audited separately
+M3-D_40-60m to M4_TRANSITION_GEOLOGY,M3-D_40-60m,M4_TRANSITION_GEOLOGY,21.3966265,25,1.16840849,<=1.5,PASS,distance bands; exact face conformity audited separately

@@ -1,0 +1,6 @@
+region,COARSE_seed,MEDIUM_seed,FINE_LOCAL_seed,working_level,status,basis
+M1 critical structural zones,1.5-2.0 m,0.5-1.0 m,0.35-0.75 m,MEDIUM,PREPARED,mesh plan only; no convergence analysis run
+M2 engineering structures,2.5-4 m,1.0-2.5 m,0.75-1.5 m,MEDIUM,PREPARED,mesh plan only; no convergence analysis run
+M3 foundation geology,3-10 m graded,1.5-9 m graded,1-6 m graded,MEDIUM,PREPARED,mesh plan only; no convergence analysis run
+M4 transition geology,15-30 m,8-20 m,8-20 m,MEDIUM,PREPARED,mesh plan only; no convergence analysis run
+M4 far field geology,15-30 m,8-20 m,8-20 m,MEDIUM,PREPARED,mesh plan only; no convergence analysis run

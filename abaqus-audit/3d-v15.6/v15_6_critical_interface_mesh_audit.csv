@@ -1,0 +1,12 @@
+interface,local_element_types,minimum_edge,median_edge,maximum_edge,elements_through_thickness,node_conformity,status,notes
+cutoff wall / foundation,C3D8P;C3D8R,0.17,3.03,75.00135,N/A,UNRESOLVED,UNRESOLVED,retained separate V15.5 structural part instance; no Tie/contact/MPC added
+geomembrane / cutoff connection,C3D8P;C3D8R,0.17,3.03,75.00135,N/A,UNRESOLVED,UNRESOLVED,retained separate V15.5 structural part instance; no Tie/contact/MPC added
+powerhouse / foundation,C3D8P;C3D8R,0.17,3.03,75.00135,N/A,UNRESOLVED,UNRESOLVED,retained separate V15.5 structural part instance; no Tie/contact/MPC added
+installation bay / foundation,C3D8P;C3D8R,0.17,3.03,75.00135,N/A,UNRESOLVED,UNRESOLVED,retained separate V15.5 structural part instance; no Tie/contact/MPC added
+spillway / foundation,C3D8P;C3D8R,0.17,3.03,75.00135,N/A,UNRESOLVED,UNRESOLVED,retained separate V15.5 structural part instance; no Tie/contact/MPC added
+ecological release / foundation,C3D8P;C3D8R,0.17,3.03,75.00135,N/A,UNRESOLVED,UNRESOLVED,retained separate V15.5 structural part instance; no Tie/contact/MPC added
+stilling basin / foundation,C3D8P;C3D8R,0.17,3.03,75.00135,N/A,UNRESOLVED,UNRESOLVED,retained separate V15.5 structural part instance; no Tie/contact/MPC added
+tailwater / foundation,C3D8P;C3D8R,0.17,3.03,75.00135,N/A,UNRESOLVED,UNRESOLVED,retained separate V15.5 structural part instance; no Tie/contact/MPC added
+sub-dam / foundation,C3D8P;C3D8R,0.17,3.03,75.00135,N/A,UNRESOLVED,UNRESOLVED,retained separate V15.5 structural part instance; no Tie/contact/MPC added
+fishway excavation / geology,C3D8P;C3D8R,0.17,3.03,75.00135,N/A,UNRESOLVED,UNRESOLVED,retained separate V15.5 structural part instance; no Tie/contact/MPC added
+all regenerated geology internal interfaces,C3D8P;C3D8R,0.17,3.03,75.00135,N/A,UNRESOLVED,UNRESOLVED,source-cell face coverage comparison; local/remote transition faces are explicit

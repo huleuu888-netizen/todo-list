@@ -1,0 +1,13 @@
+interface,side_a_face_nodes,side_b_face_nodes,exact_coordinate_matches,unmatched_a_nodes,unmatched_b_nodes,coincident_but_separate_node_pairs,shared_node_count,conformity_status,notes
+all regenerated geology internal interfaces,74439,74439,74439,1669,1669,0,74439,UNRESOLVED,source-cell face coverage comparison; local/remote transition faces are explicit
+M3/M4 regenerated geology,37648,37648,37648,0,0,0,37648,PASS,single V15_6_FOUNDATION_GEOLOGY part; shared generated nodes
+cutoff wall / foundation,48411,85781,0,48411,85781,0,0,UNRESOLVED,retained separate V15.5 structural part instance; no Tie/contact/MPC added
+geomembrane / cutoff connection,53461,85781,0,53461,85781,0,0,UNRESOLVED,retained separate V15.5 structural part instance; no Tie/contact/MPC added
+powerhouse / foundation,54624,85781,0,54624,85781,0,0,UNRESOLVED,retained separate V15.5 structural part instance; no Tie/contact/MPC added
+installation bay / foundation,20652,85781,0,20652,85781,0,0,UNRESOLVED,retained separate V15.5 structural part instance; no Tie/contact/MPC added
+spillway / foundation,82585,85781,0,82585,85781,0,0,UNRESOLVED,retained separate V15.5 structural part instance; no Tie/contact/MPC added
+ecological release / foundation,15140,85781,0,15140,85781,0,0,UNRESOLVED,retained separate V15.5 structural part instance; no Tie/contact/MPC added
+stilling basin / foundation,6336,85781,0,6336,85781,0,0,UNRESOLVED,retained separate V15.5 structural part instance; no Tie/contact/MPC added
+tailwater / foundation,8908,85781,0,8908,85781,0,0,UNRESOLVED,retained separate V15.5 structural part instance; no Tie/contact/MPC added
+sub-dam / foundation,36573,85781,0,36573,85781,0,0,UNRESOLVED,retained separate V15.5 structural part instance; no Tie/contact/MPC added
+fishway excavation / geology,13511,85781,0,13511,85781,0,0,UNRESOLVED,retained separate V15.5 structural part instance; no Tie/contact/MPC added

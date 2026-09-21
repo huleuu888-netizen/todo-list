@@ -1,0 +1,9 @@
+region,element_type,element_count,node_count,min_edge,median_edge,p90_edge,p95_edge,max_edge,max_aspect_ratio,advisory_aspect_limit,invalid_or_negative_volume,collapsed_elements,duplicate_elements,duplicate_nodes,nonmanifold_faces,disconnected_islands,worst_element_location,status,notes
+M3_FOUNDATION_GEOLOGY,C3D8P;C3D8R,278664,315811,0.17,3.03,10.0001378,11.25,75.00135,64.9991875,8,0,0,0,0,0,8,V15_6_FOUNDATION_GEOLOGY_I:328438,UNRESOLVED,actual connectivity; M3 acceptance criteria from V15.6 task
+M3-A_0-8m,C3D8P;C3D8R,80377,100783,0.17,2.91,10.00018,10.7516839,37.500675,52.08375,8,0,0,0,0,0,6,V15_6_FOUNDATION_GEOLOGY_I:215137,UNRESOLVED,actual connectivity; M3 acceptance criteria from V15.6 task
+M3-B_8-20m,C3D8P;C3D8R,86679,114513,0.18,3.02,9.375147,10.6526392,75.00135,52.08375,8,0,0,0,0,0,12,V15_6_FOUNDATION_GEOLOGY_I:215200,UNRESOLVED,actual connectivity; M3 acceptance criteria from V15.6 task
+M3-C_20-40m,C3D8P;C3D8R,88862,121586,0.17,3.125025,9.50010658,11.25,75.00135,64.9991875,8,0,0,0,0,0,11,V15_6_FOUNDATION_GEOLOGY_I:329124,UNRESOLVED,actual connectivity; M3 acceptance criteria from V15.6 task
+M3-D_40-60m,C3D8P;C3D8R,22746,36221,0.18,6.73,18.750213,21.3966265,75.00135,64.9991875,8,0,0,0,0,0,18,V15_6_FOUNDATION_GEOLOGY_I:328438,UNRESOLVED,actual connectivity; M3 acceptance criteria from V15.6 task
+M4_TRANSITION_GEOLOGY,C3D8P;C3D8R,41145,53415,0.36,7.8875,21.3698409,25,75.00135,130,8,0,0,0,0,0,8,V15_6_FOUNDATION_GEOLOGY_I:324902,UNRESOLVED,actual connectivity; M3 acceptance criteria from V15.6 task
+M4_FAR_FIELD_GEOLOGY,C3D8P;C3D8R,6625,12549,0.36,20.8577659,90.6697303,126.41,300.0054,447.764776,8,0,0,0,0,0,34,V15_6_FOUNDATION_GEOLOGY_I:213358,UNRESOLVED,actual connectivity; M3 acceptance criteria from V15.6 task
+M4_REMOTE_BOUNDARY,C3D8P;C3D8R,3605,6491,0.36,64.3797763,300.0024,300.0024,300.0054,833.34,8,0,0,0,0,0,4,V15_6_FOUNDATION_GEOLOGY_I:215929,UNRESOLVED,actual connectivity; M3 acceptance criteria from V15.6 task
