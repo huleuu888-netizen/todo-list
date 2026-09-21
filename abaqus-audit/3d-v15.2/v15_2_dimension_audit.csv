@@ -1,0 +1,21 @@
+structure,metric,target,measured,delta,status,basis
+POWERHOUSE,unit count,4,4,0.000,PASS,four refined units
+POWERHOUSE,total Y length (m),106.6,106.6,0.000,PASS,audited envelope
+POWERHOUSE,flow-width X (m),56.5,56.5,0.000,PASS,audited envelope
+POWERHOUSE,founding Z (m),3029.7,3029.7,0.000,PASS,audited elevation
+POWERHOUSE,top Z (m),3081.0,3081.0,0.000,PASS,audited elevation
+INSTALLATION_BAY,X length (m),34.0,34.0,0.000,PASS,audited envelope
+INSTALLATION_BAY,floor Z (m),3062.0,3062.0,0.000,PASS,explicit floor plane
+TAILWATER,Y width (m),71.6,71.6,0.000,PASS,audited channel
+TAILWATER,reverse slope X length (m),64.4,64.4,0.000,PASS,source target
+TAILWATER,upstream hydraulic bottom Z (m),3036.9,3036.9,0.000,PASS,lining datum
+TAILWATER,downstream hydraulic bottom Z (m),3053.0,3053.0,0.000,PASS,lining datum
+TAILWATER,lining thickness (m),0.8,0.8,0.000,PASS,explicit lining
+SPILLWAY,open bay count,8,8,0.000,PASS,eight opening corridors
+SPILLWAY,stilling basin X length (m),107.0,107.0,0.000,PASS,common basin
+ECO_RELEASE,open bay count,2,2,0.000,PASS,two opening corridors
+ECO_RELEASE,bay clear Y length (m),12.5,12.5,0.000,PASS,nominal clear width
+ECO_RELEASE,inlet bottom Z (m),3058.0,3058.0,0.000,PASS,source target
+LEFT_BANK_SUBDAM,fishway crossing opening (m),2.5 x 7.0,4.0 x 7.0,0.000,UNRESOLVED,approximate source target
+FISHWAY,clear passage width (m),2.0,2.0,0.000,PASS,nominal simplified route
+FISHWAY,wall/bottom thickness (m),0.5,0.5,0.000,PASS,nominal simplified route

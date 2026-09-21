@@ -1,0 +1,23 @@
+object_a,object_b,positive_volume_overlap,status,basis
+POWERHOUSE,INSTALLATION_BAY,NO,PASS,no positive-volume AABB overlap
+POWERHOUSE,TAILWATER,NO,PASS,no positive-volume AABB overlap
+POWERHOUSE,SPILLWAY,NO,PASS,no positive-volume AABB overlap
+POWERHOUSE,ECO_RELEASE,NO,PASS,no positive-volume AABB overlap
+POWERHOUSE,LEFT_BANK_SUBDAM,NO,PASS,no positive-volume AABB overlap
+POWERHOUSE,FISHWAY,NO,PASS,fishway entrance is an intentional route beside the powerhouse outlet
+INSTALLATION_BAY,TAILWATER,NO,PASS,no positive-volume AABB overlap
+INSTALLATION_BAY,SPILLWAY,NO,PASS,no positive-volume AABB overlap
+INSTALLATION_BAY,ECO_RELEASE,NO,PASS,no positive-volume AABB overlap
+INSTALLATION_BAY,LEFT_BANK_SUBDAM,NO,PASS,no positive-volume AABB overlap
+INSTALLATION_BAY,FISHWAY,NO,PASS,no positive-volume AABB overlap
+TAILWATER,SPILLWAY,NO,PASS,no positive-volume AABB overlap
+TAILWATER,ECO_RELEASE,NO,PASS,no positive-volume AABB overlap
+TAILWATER,LEFT_BANK_SUBDAM,NO,PASS,no positive-volume AABB overlap
+TAILWATER,FISHWAY,NO,PASS,fishway follows the left side of the tailwater route
+SPILLWAY,ECO_RELEASE,NO,PASS,no positive-volume AABB overlap
+SPILLWAY,LEFT_BANK_SUBDAM,NO,PASS,no positive-volume AABB overlap
+SPILLWAY,FISHWAY,NO,PASS,no positive-volume AABB overlap
+ECO_RELEASE,LEFT_BANK_SUBDAM,NO,PASS,no positive-volume AABB overlap
+ECO_RELEASE,FISHWAY,NO,PASS,no positive-volume AABB overlap
+LEFT_BANK_SUBDAM,FISHWAY,NO,PASS,fishway routed through reserved sub-dam void
+RETAINED_V14_LEFT_BANK_GEOLOGY,V15_2_LEFT_BANK_SUBDAM,SOURCE-DEPENDENT,UNRESOLVED,Boolean excavation cut not performed
