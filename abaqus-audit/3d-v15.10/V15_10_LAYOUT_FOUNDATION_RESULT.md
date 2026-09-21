@@ -28,7 +28,7 @@
 
 ## Local mesh quality
 
-- Corrected sub-dam actual mesh: nodes **682**, elements **292**, min/median/P95/max edge **0.6/4.148493703/7.615773106/9.219544457 m**, max aspect ratio **6.798692685**, invalid/negative volume **0**, collapsed **0**.
+- Corrected sub-dam actual mesh: nodes **3838**, elements **2756**, min/median/P95/max edge **1/1.902126627/2.4916667/2.5 m**, max aspect ratio **2.4916667**, invalid/negative volume **0**, collapsed **0**.
 - Only the corrected sub-dam, fishway crossing and directly affected local audit region were regenerated; global remesh **NO**.
 
 ## Status

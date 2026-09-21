@@ -93,6 +93,10 @@ def add_tapered_block(node_map, nodes, elements, y_levels, z_levels,
                       x_mins, x_maxs, next_element):
     ids = {}
 
+    max_width = max(abs(x_maxs[i] - x_mins[i])
+                    for i in range(len(x_mins)))
+    x_count = max(1, int(math.ceil(max_width / 2.0)))
+
     def node_id(point):
         key = tuple(round(float(value), 9) for value in point)
         if key not in node_map:
@@ -101,14 +105,14 @@ def add_tapered_block(node_map, nodes, elements, y_levels, z_levels,
         return node_map[key]
 
     for k, z in enumerate(z_levels):
-        x_levels = [x_mins[k],
-                    0.5 * (x_mins[k] + x_maxs[k]), x_maxs[k]]
+        x_levels = [x_mins[k] + (x_maxs[k] - x_mins[k]) * i / float(x_count)
+                    for i in range(x_count + 1)]
         for j, y in enumerate(y_levels):
             for i, x in enumerate(x_levels):
                 ids[(i, j, k)] = node_id((x, y, z))
     for k in range(len(z_levels) - 1):
         for j in range(len(y_levels) - 1):
-            for i in range(2):
+            for i in range(x_count):
                 row = (ids[(i, j, k)], ids[(i + 1, j, k)],
                        ids[(i + 1, j + 1, k)], ids[(i, j + 1, k)],
                        ids[(i, j, k + 1)], ids[(i + 1, j, k + 1)],
@@ -250,18 +254,18 @@ def subdam_blocks():
     zall = [3059.0, 3062.0, 3072.0, 3079.0]
     xminall = [-101.0, -101.0, -99.0, -99.0]
     xmaxall = [-89.5, -89.5, -86.0, -92.0]
-    zlow = [3059.0, 3062.0, 3066.0]
+    zlow = levels(3059.0, 3066.0, 2.0)
     xminlow = [interpolate(z, zall, xminall) for z in zlow]
     xmaxlow = [interpolate(z, zall, xmaxall) for z in zlow]
-    zupper = [3066.0, 3072.0, 3079.0]
+    zupper = levels(3066.0, 3079.0, 2.0)
     xminupper = [interpolate(z, zall, xminall) for z in zupper]
     xmaxupper = [interpolate(z, zall, xmaxall) for z in zupper]
     blocks = [
         # The opening is at the outer sub-dam face, so there is no lower
         # outside strip before oy0; the remaining body continues from oy1.
         tapered(oy1, sy1, zlow, xminlow, xmaxlow),
-        tapered(oy0, oy1, zlow, xminlow, [-99.0, -99.0, -99.0]),
-        tapered(oy0, oy1, zlow, [-92.0, -92.0, -92.0], xmaxlow),
+        tapered(oy0, oy1, zlow, xminlow, [-99.0] * len(zlow)),
+        tapered(oy0, oy1, zlow, [-92.0] * len(zlow), xmaxlow),
         tapered(sy0, sy1, zupper, xminupper, xmaxupper),
     ]
     return blocks
