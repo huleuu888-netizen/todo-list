@@ -1,0 +1,4 @@
+region,element_type,node_count,element_count,actual_min_edge_m,actual_median_edge_m,actual_p95_edge_m,actual_max_edge_m,max_aspect_ratio,invalid_negative_volume_count,collapsed_element_count,global_remesh,status,notes
+corrected_left_bank_subdam,C3D8R,682,292,0.6,4.148493703,7.615773106,9.219544457,6.798692685,0,0,NO,PASS,local tapered mesh; actual connectivity statistics
+fishway_through_dam_section,C3D8R,150,42,0.25,1.010152524,2.5,2.5,8,0,0,NO,PASS,local fishway crossing mesh at 0+948..0+955
+geology_local_foundation,C3D8P/C3D6P/C3D8R,0,0,n/a,n/a,n/a,n/a,n/a,0,0,NO,PASS,no local geology elements intersect corrected footprint

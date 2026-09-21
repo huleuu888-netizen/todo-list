@@ -1,0 +1,14 @@
+station_start,station_end,target_length_m,geometric_length_m,length_delta_m,status,notes
+0,15,15,15,0,PASS,stationed piecewise reach
+15,259.5,244.5,244.5250498,0.02504984152,UNRESOLVED,stationed piecewise reach
+259.5,320.81,61.31,61.31815473,0.008154734141,UNRESOLVED,stationed piecewise reach
+320.81,382.12,61.31,61.31815473,0.008154734141,UNRESOLVED,stationed piecewise reach
+382.12,416,33.88,33.88368929,0.003689291457,UNRESOLVED,stationed piecewise reach
+416,900,484,559.2508819,75.25088189,UNRESOLVED,diagonal relocation transition is source-survey unresolved
+900,948,48,4,-44,UNRESOLVED,stationed piecewise reach
+948,955,7,7.071067812,0.07106781187,UNRESOLVED,stationed piecewise reach
+955,966,11,11,0,PASS,stationed piecewise reach
+966,1250,284,295.2647117,11.26471174,UNRESOLVED,stationed piecewise reach
+1250,1270,20,20,0,PASS,stationed piecewise reach
+1270,1370,100,100.0049999,0.004999875006,UNRESOLVED,stationed piecewise reach
+1370,1407.57,37.57,37.57,0,PASS,stationed piecewise reach

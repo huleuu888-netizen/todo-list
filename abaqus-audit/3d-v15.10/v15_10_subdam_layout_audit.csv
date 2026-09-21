@@ -1,0 +1,2 @@
+old_y_extent,new_y_extent,total_crest_length_m,crest_width_m,installation_bay_interface_y,block_length_logic,source_length_reconciliation_unresolved_m,crest_elevation_m,slope_break_elevation_m,upstream_slope,downstream_slope,base_backfill_datum_m,fishway_opening,status,notes
+-147.700..-58.000,-245.700..-156.000,89.700,7.000,-156.000,42.600 + 15.000 + 15.000 + 15.000 = 87.600,2.100,3079.000,3072.000,1:0.2 below 3072,1:0.6 below 3072,3059.000,2.500 x 7.000; outer-edge opening Y=-245.700..-243.200,UNRESOLVED,governing 89.70 m retained; no fifth block and no silent stretch

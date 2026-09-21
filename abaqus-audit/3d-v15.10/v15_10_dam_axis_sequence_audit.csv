@@ -1,0 +1,4 @@
+interface,left_end_y_m,right_start_y_m,gap_m,overlap_m,status,notes
+subdam_right_to_installation_left,-156,-156,0,0,PASS,dam-axis envelope check; no artificial interface constraint
+installation_right_to_powerhouse_left,-122,-122,0,0,PASS,dam-axis envelope check; no artificial interface constraint
+unintended_dam_axis_overlap_total,n/a,n/a,n/a,0,PASS,subdam -> installation -> powerhouse sequence

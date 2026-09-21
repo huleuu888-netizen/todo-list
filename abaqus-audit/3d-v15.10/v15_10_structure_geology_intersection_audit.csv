@@ -1,0 +1,7 @@
+region,structure_bbox,geology_candidate_element_count_before,geology_candidate_element_count_after,actual_intersecting_geology_element_count_before,actual_intersecting_geology_element_count_after,estimated_intersection_volume_m3_before,estimated_intersection_volume_m3_after,removed_elements,restored_elements,overlap_after_repair,unintended_gap,topology_proof,status
+old_v15_9_subdam_footprint,"-101.000000,-147.700000,3059.000000;-86.000000,-58.000000,3079.000000",0,0,0,0,0,0,0,0,0.000000,0.000000,local installation cells repaired; nonlocal geology topology unchanged,PASS
+corrected_subdam,"-101.000000,-245.700000,3059.000000;-86.000000,-156.000000,3079.000000",0,0,0,0,0,0,0,0,0.000000,0.000000,local installation cells repaired; nonlocal geology topology unchanged,PASS
+installation_bay,"-64.000000,-156.000000,3056.465000;-7.500000,-122.000000,3079.000000",110,0,110,0,3365.38625,0,110,0,0.000000,0.000000,local installation cells repaired; nonlocal geology topology unchanged,PASS
+old_fishway_crossing,"-99.000000,-61.250000,3059.000000;-92.000000,-58.750000,3066.000000",0,0,0,0,0,0,0,0,0.000000,0.000000,local installation cells repaired; nonlocal geology topology unchanged,PASS
+corrected_fishway_crossing,"-99.000000,-245.700000,3059.000000;-92.000000,-243.200000,3066.000000",0,0,0,0,0,0,0,0,0.000000,0.000000,local installation cells repaired; nonlocal geology topology unchanged,PASS
+geology_topology_preservation,n/a,591794,591684,0,0,0.000000,0.000000,0,0,0.000000,n/a,nodes=IDENTICAL; local_C3D8P_removed=110; nonlocal_connectivity=IDENTICAL,PASS

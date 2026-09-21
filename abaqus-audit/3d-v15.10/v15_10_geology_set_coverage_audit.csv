@@ -1,0 +1,37 @@
+geology_leaf_set,v15_9_element_count,v15_10_element_count,material,section,missing_membership_count,duplicate_leaf_membership_count,unclassified_elements,nonconforming_faces,hanging_nodes,status,notes
+GEO_LEFT_P2_QUARTZ_SANDSTONE,6242,6242,P2_QUARTZITE,SEC_GEO_LEFT_P2_QUARTZ_SANDSTONE,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_LEFT_FOUNDATION_GRANITE,65912,65912,FRESH_GRANITE,SEC_GEO_LEFT_FOUNDATION_GRANITE,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_LEFT_L01_Q4DEL,35308,35198,Q4DEL,SEC_GEO_LEFT_L01_Q4DEL,0,0,0,0,0,PASS,V15.9 geology organization preserved; local installation foundation cells repaired
+GEO_LEFT_L03_Q4AL_SGR1,17809,17809,Q4AL_SGR1,SEC_GEO_LEFT_L03_Q4AL_SGR1,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_LEFT_L05_Q3AL_IV2,17689,17689,Q3AL_IV2,SEC_GEO_LEFT_L05_Q3AL_IV2,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_LEFT_L06_Q3AL_IV1,42476,42476,Q3AL_IV1,SEC_GEO_LEFT_L06_Q3AL_IV1,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_LEFT_L07_Q3AL_III,20102,20102,Q3AL_III,SEC_GEO_LEFT_L07_Q3AL_III,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_LEFT_L08_Q3AL_II,19932,19932,Q3AL_II,SEC_GEO_LEFT_L08_Q3AL_II,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_LEFT_L09_Q3AL_I,10923,10923,Q3AL_I,SEC_GEO_LEFT_L09_Q3AL_I,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_LEFT_L10_Q2FGL_V,19482,19482,Q2FGL_V,SEC_GEO_LEFT_L10_Q2FGL_V,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_LEFT_L11_Q2FGL_IV,18832,18832,Q2FGL_IV,SEC_GEO_LEFT_L11_Q2FGL_IV,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_LEFT_L12_Q2FGL_III,28248,28248,Q2FGL_III,SEC_GEO_LEFT_L12_Q2FGL_III,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_LEFT_L13_Q2FGL_II,18832,18832,Q2FGL_II,SEC_GEO_LEFT_L13_Q2FGL_II,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_LEFT_L14_Q2FGL_I,65912,65912,Q2FGL_I,SEC_GEO_LEFT_L14_Q2FGL_I,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_RIVER_R02_Q4AL_SGR2,4422,4422,Q4AL_SGR2,SEC_GEO_RIVER_R02_Q4AL_SGR2,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_RIVER_R05_Q3AL_IV2,4422,4422,Q3AL_IV2,SEC_GEO_RIVER_R05_Q3AL_IV2,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_RIVER_R06_Q3AL_IV1,8844,8844,Q3AL_IV1,SEC_GEO_RIVER_R06_Q3AL_IV1,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_RIVER_R07_Q3AL_III,4422,4422,Q3AL_III,SEC_GEO_RIVER_R07_Q3AL_III,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_RIVER_R08_Q3AL_II,4422,4422,Q3AL_II,SEC_GEO_RIVER_R08_Q3AL_II,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_RIVER_R09_Q3AL_I,4422,4422,Q3AL_I,SEC_GEO_RIVER_R09_Q3AL_I,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_RIVER_R10_Q2FGL_V,8696,8696,Q2FGL_V,SEC_GEO_RIVER_R10_Q2FGL_V,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_RIVER_R11_Q2FGL_IV,8480,8480,Q2FGL_IV,SEC_GEO_RIVER_R11_Q2FGL_IV,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_RIVER_R12_Q2FGL_III,8099,8099,Q2FGL_III,SEC_GEO_RIVER_R12_Q2FGL_III,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_RIVER_R13_Q2FGL_II,7498,7498,Q2FGL_II,SEC_GEO_RIVER_R13_Q2FGL_II,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_RIVER_R14_Q2FGL_I,10472,10472,Q2FGL_I,SEC_GEO_RIVER_R14_Q2FGL_I,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_RIVER_ROCK_STRONG_UNLOADED,12224,12224,ROCK_STRONG_UNLOADED,SEC_GEO_RIVER_ROCK_STRONG_UNLOADED,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_RIVER_ROCK_WEAK_UNLOADED,6068,6068,ROCK_WEAK_UNLOADED,SEC_GEO_RIVER_ROCK_WEAK_UNLOADED,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_RIVER_ROCK_DEEP_UNLOADED,24272,24272,ROCK_DEEP_UNLOADED,SEC_GEO_RIVER_ROCK_DEEP_UNLOADED,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_RIVER_FRESH_GRANITE,18204,18204,FRESH_GRANITE,SEC_GEO_RIVER_FRESH_GRANITE,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_RIGHT_Q4_COLLUVIAL,1848,1848,Q4DEL,SEC_GEO_RIGHT_Q4_COLLUVIAL,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_RIGHT_R04_Q3AL_V,3696,3696,Q3AL_V,SEC_GEO_RIGHT_R04_Q3AL_V,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_RIGHT_HIGH_TERRACE_COVER,392,392,Q3AL_V,SEC_GEO_RIGHT_HIGH_TERRACE_COVER,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_RIGHT_ROCK_STRONG_UNLOADED,7392,7392,ROCK_STRONG_UNLOADED,SEC_GEO_RIGHT_ROCK_STRONG_UNLOADED,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_RIGHT_ROCK_WEAK_UNLOADED,3816,3816,ROCK_WEAK_UNLOADED,SEC_GEO_RIGHT_ROCK_WEAK_UNLOADED,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_RIGHT_ROCK_DEEP_UNLOADED,26112,26112,ROCK_DEEP_UNLOADED,SEC_GEO_RIGHT_ROCK_DEEP_UNLOADED,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly
+GEO_RIGHT_FRESH_GRANITE,25872,25872,FRESH_GRANITE,SEC_GEO_RIGHT_FRESH_GRANITE,0,0,0,0,0,PASS,V15.9 geology Part/Assembly sets and Sections preserved exactly

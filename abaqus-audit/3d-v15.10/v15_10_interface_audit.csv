@@ -1,0 +1,6 @@
+interface,geometric_gap_m,overlap_volume_m3,nearest_surface_distance_m,mesh_size_ratio,status,notes
+subdam_installation_bay,22,0.000000,22,2.074246851,PASS,Y=-156 dam-axis joint; cross-section X envelopes remain source-defined
+fishway_subdam_opening,0.000000,0,0,1,PASS,opening envelope contains the fishway local mesh; no Tie/contact added
+subdam_local_geology,5.225,0.000000,5.225,n/a,PASS,element-level geology intersection audit found zero physical overlap
+installation_bay_local_geology,0,0.000000,0,n/a,PASS,element-level geology intersection audit found zero physical overlap
+left_cutoff_wall_alignment,retained_v15.9_transformed_instance,0.000000,outside_local_subdam_scope,n/a,PASS,cutoff wall instance and geometry unchanged; no local update required
