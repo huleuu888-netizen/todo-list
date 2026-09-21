@@ -1,0 +1,29 @@
+object_a,object_b,positive_volume_overlap,status,basis
+POWERHOUSE,INSTALLATION_BAY,NO,PASS,no positive-volume overlap
+POWERHOUSE,TAILWATER,NO,PASS,no positive-volume overlap
+POWERHOUSE,SPILLWAY,NO,PASS,no positive-volume overlap
+POWERHOUSE,ECO_RELEASE,NO,PASS,no positive-volume overlap
+POWERHOUSE,LEFT_BANK_SUBDAM,NO,PASS,no positive-volume overlap
+POWERHOUSE,FISHWAY,NO,PASS,no positive-volume overlap
+INSTALLATION_BAY,TAILWATER,NO,PASS,no positive-volume overlap
+INSTALLATION_BAY,SPILLWAY,NO,PASS,no positive-volume overlap
+INSTALLATION_BAY,ECO_RELEASE,NO,PASS,no positive-volume overlap
+INSTALLATION_BAY,LEFT_BANK_SUBDAM,NO,PASS,no positive-volume overlap
+INSTALLATION_BAY,FISHWAY,NO,PASS,no positive-volume overlap
+TAILWATER,SPILLWAY,NO,PASS,no positive-volume overlap
+TAILWATER,ECO_RELEASE,NO,PASS,no positive-volume overlap
+TAILWATER,LEFT_BANK_SUBDAM,NO,PASS,no positive-volume overlap
+TAILWATER,FISHWAY,YES,PASS,documented left-side route interface
+SPILLWAY,ECO_RELEASE,NO,PASS,no positive-volume overlap
+SPILLWAY,LEFT_BANK_SUBDAM,NO,PASS,no positive-volume overlap
+SPILLWAY,FISHWAY,NO,PASS,no positive-volume overlap
+ECO_RELEASE,LEFT_BANK_SUBDAM,NO,PASS,no positive-volume overlap
+ECO_RELEASE,FISHWAY,NO,PASS,no positive-volume overlap
+LEFT_BANK_SUBDAM,FISHWAY,YES,PASS,route passes through subtracted 2.5 x 7 m void
+RETAINED_LEFT_P2_QUARTZ_SANDSTONE,V15_3_CUTTER_LOCAL_EXCAVATION,NO after conservative cell removal,UNRESOLVED,native Boolean provenance not certified
+RETAINED_LEFT_L01_Q4DEL,V15_3_CUTTER_LOCAL_EXCAVATION,NO after conservative cell removal,UNRESOLVED,native Boolean provenance not certified
+RETAINED_LEFT_L03_Q4AL_SGR1,V15_3_CUTTER_LOCAL_EXCAVATION,NO after conservative cell removal,UNRESOLVED,native Boolean provenance not certified
+RETAINED_LEFT_L05_Q3AL_IV2,V15_3_CUTTER_LOCAL_EXCAVATION,NO after conservative cell removal,UNRESOLVED,native Boolean provenance not certified
+RETAINED_LEFT_L06_Q3AL_IV1,V15_3_CUTTER_LOCAL_EXCAVATION,NO after conservative cell removal,UNRESOLVED,native Boolean provenance not certified
+RETAINED_LEFT_L07_Q3AL_III,V15_3_CUTTER_LOCAL_EXCAVATION,NO after conservative cell removal,UNRESOLVED,native Boolean provenance not certified
+RETAINED_LEFT_L08_Q3AL_II,V15_3_CUTTER_LOCAL_EXCAVATION,NO after conservative cell removal,UNRESOLVED,native Boolean provenance not certified

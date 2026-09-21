@@ -1,0 +1,33 @@
+structure,metric,target,measured,delta,status,basis
+POWERHOUSE,unit count,4,4,0.000,PASS,four preserved v15.2 envelopes
+POWERHOUSE,total Y length (m),106.6,106.6,0.000,PASS,preserved major envelope
+POWERHOUSE,flow-width X (m),56.5,56.5,0.000,PASS,preserved major envelope
+INSTALLATION_BAY,X length (m),34.0,34.0,0.000,PASS,preserved major envelope
+TAILWATER,Y width (m),71.6,77.1,5.500,PASS,preserved channel
+TAILWATER,upstream bottom Z (m),3036.9,3036.9,0.000,PASS,source-supported datum
+TAILWATER,downstream bottom Z (m),3053.0,3053.0,0.000,PASS,source-supported datum
+TAILWATER,lining thickness (m),0.8,0.8,0.000,PASS,retained lining
+SPILLWAY,open bay count,8,8,0.000,PASS,eight 7 m corridors
+SPILLWAY,clear bay width (m),7.0,7.0,0.000,PASS,documented gate opening
+SPILLWAY,inspection opening height (m),7.73,7.73,0.000,PASS,documented opening height
+SPILLWAY,working gate opening height (m),5.2,5.2,0.000,PASS,documented radial-gate opening
+SPILLWAY,chamber streamwise length (m),30.0,30.0,0.000,PASS,x=-20..10
+SPILLWAY,crest Z (m),3079.0,3079.0,0.000,PASS,corrected crest
+ECO_RELEASE,open bay count,2,2,0.000,PASS,two actual voids
+ECO_RELEASE,each clear width (m),2.5,2.5,0.000,PASS,corrected dam-axis layout
+ECO_RELEASE,each clear height (m),5.0,5.0,0.000,PASS,3058..3063 void
+ECO_RELEASE,total dam-axis length (m),12.5,12.5,0.000,PASS,-15..-2.5
+ECO_RELEASE,pier thicknesses (m),3.0/2.5/2.0,3.0/2.5/2.0,0.000,PASS,left/center/right
+ECO_RELEASE,inlet bottom Z (m),3058.0,3058.0,0.000,PASS,source target
+ECO_RELEASE,chamber length (m),30.0,30.0,0.000,PASS,x=-35..-5
+ECO_RELEASE,maximum height (m),27.5,27.5,0.000,PASS,3058..3085.5
+STILLING_BASIN,length (m),107.0,107.0,0.000,PASS,x=38..145
+STILLING_BASIN,top Z (m),3047.5,3047.5,0.000,PASS,corrected slab top
+STILLING_BASIN,slab thickness (m),2.5,2.5,0.000,PASS,3045..3047.5
+LEFT_BANK_SUBDAM,crest Z (m),3079.0,3079.0,0.000,PASS,corrected stepped crest
+LEFT_BANK_SUBDAM,fishway opening (m),2.5 x 7.0,2.5 x 7.0,0.000,PASS,subtracted true void
+FISHWAY,total route length (m),1407.57,1407.57,0.000,PASS,station-based route
+FISHWAY,clear passage width (m),2.0,2.0,0.000,PASS,nominal section
+FISHWAY,wall/bottom thickness (m),0.5,0.5,0.000,PASS,nominal section
+GEOLOGY,native CAE Boolean certification,available,mesh-cell cut candidate,0.000,UNRESOLVED,source deck geology is orphan C3D8P mesh
+FULL_HUB,geometry completeness,all interfaces certified,terrain/slope details remain simplified,0.000,UNRESOLVED,exact surveyed plan and native Boolean provenance unavailable

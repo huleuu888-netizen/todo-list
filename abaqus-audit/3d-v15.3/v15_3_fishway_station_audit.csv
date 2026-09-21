@@ -1,0 +1,14 @@
+station_start,station_end,reach,length_target,length_modeled,bottom_start,bottom_end,status,basis
+0.000,15.000,x-axis,15.000,15.000,3053.000,3053.000,PASS,documented station route
+15.000,382.120,x-axis,367.120,367.120,3053.000,3058.500,PASS,documented station route
+382.120,416.000,y-axis,33.880,33.880,3059.000,3059.000,PASS,documented station route
+416.000,948.000,y-axis,532.000,532.000,3059.000,3059.000,PASS,documented station route
+948.000,955.000,x-axis,7.000,7.000,3059.000,3060.000,PASS,documented station route
+955.000,1250.000,y-axis,295.000,295.000,3060.000,3072.500,PASS,documented station route
+1250.000,1270.000,y-axis,20.000,20.000,3072.500,3072.500,PASS,documented station route
+1270.000,1370.000,y-axis,100.000,100.000,3072.500,3073.500,PASS,documented station route
+1370.000,1407.570,y-axis,37.570,37.570,3073.500,3073.500,PASS,documented station route
+0.000,0.000,entrance,0.000,0.000,3053.000,3053.000,PASS,source entrance datum
+382.120,416.000,road crossing,33.880,33.880,3059.000,3059.000,PASS,source road crossing
+1250.000,1270.000,outlet chamber,20.000,20.000,3072.500,3072.500,PASS,source outlet chamber datum
+1270.000,1370.000,upstream transition,100.000,100.000,3072.500,3073.500,PASS,source transition datum
