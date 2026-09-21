@@ -2,17 +2,17 @@ region,element_type,element_count,node_count,min_edge,median_edge,p95_edge,max_e
 right-bank dam,C3D8P;C3D8R,2202,3790,0.5,40.0003,150.001,300.002,600.005,15,0,0,0,0,0,9,RIGHT_Q4_COLLUVIAL_I:20,UNRESOLVED,element-connectivity metrics; advisory aspect only
 geomembrane critical zone,C3D8P,2400,5050,1,2.37853,2.95,2.95,2.95,5,0,0,0,0,0,1,V12_UPSTREAM_GEOMEMBRANE-1:178,PASS,element-connectivity metrics; advisory aspect only
 geomembrane far zone,NONE,0,0,0,0,0,0,0,15,0,0,0,0,0,0,,UNRESOLVED,element-connectivity metrics; advisory aspect only
-cutoff wall,C3D8P,31376,48411,0.4718,0.9917,0.996624,1,2.11954,5,0,0,0,0,0,2,P25_SOLID_CUTOFF_WALL_F13-1:1454,PASS,element-connectivity metrics; advisory aspect only
-cutoff-wall bottom zone,C3D8P,1060,1793,0.4718,0.9917,0.996622,1,2.11954,5,0,0,0,0,0,2,P25_SOLID_CUTOFF_WALL_F13-1:31558,PASS,element-connectivity metrics; advisory aspect only
-powerhouse,C3D8R,37736,54624,0.983,1,1.949,2,1.28645,5,0,0,0,592,0,40,V15_4_POWERHOUSE_UNIT_01_I:3186,PASS,element-connectivity metrics; advisory aspect only
-powerhouse flushing outlets,C3D8R,1432,3500,0.5,1,1,1,2,5,0,0,0,64,0,16,V15_4_POWERHOUSE_SEDIMENT_FLUSHING_OUTLET_01_I:129,PASS,element-connectivity metrics; advisory aspect only
-installation bay,C3D8R,14094,20652,0.996,1,2,2,1.31667,5,0,0,0,130,0,6,V15_4_POWERHOUSE_INSTALLATION_BAY_I:2767,PASS,element-connectivity metrics; advisory aspect only
-tailwater,C3D8R,4554,8908,0.8,2,5.00069,8,3.20056,5,0,0,0,0,0,4,V15_4_TAILWATER_CHANNEL_I:19,PASS,element-connectivity metrics; advisory aspect only
-spillway,C3D8R,59392,76249,0.99,1,2,5.004,1.992,5,0,0,0,0,0,19,V15_4_SPILLWAY_CHUTE_SLAB_I:277,PASS,element-connectivity metrics; advisory aspect only
-ecological release,C3D8R,10008,15140,0.5,1,1.786,2,2,5,0,0,0,0,0,10,V15_4_ECO_RELEASE_OUTLET_SLAB_I:1,PASS,element-connectivity metrics; advisory aspect only
+cutoff wall,C3D8P,31376,48411,0.4718,0.9917,0.996624,1,2.11954,5,0,0,0,0,0,2,P25_SOLID_CUTOFF_WALL_F13-1:1454,UNRESOLVED,element-connectivity metrics; advisory aspect only
+cutoff-wall bottom zone,C3D8P,1060,1793,0.4718,0.9917,0.996622,1,2.11954,5,0,0,0,0,0,2,P25_SOLID_CUTOFF_WALL_F13-1:31558,UNRESOLVED,element-connectivity metrics; advisory aspect only
+powerhouse,C3D8R,37736,54624,0.983,1,1.949,2,1.28645,5,0,0,0,592,0,40,V15_4_POWERHOUSE_UNIT_01_I:3186,UNRESOLVED,element-connectivity metrics; advisory aspect only
+powerhouse flushing outlets,C3D8R,1432,3500,0.5,1,1,1,2,5,0,0,0,64,0,16,V15_4_POWERHOUSE_SEDIMENT_FLUSHING_OUTLET_01_I:129,UNRESOLVED,element-connectivity metrics; advisory aspect only
+installation bay,C3D8R,14094,20652,0.996,1,2,2,1.31667,5,0,0,0,130,0,6,V15_4_POWERHOUSE_INSTALLATION_BAY_I:2767,UNRESOLVED,element-connectivity metrics; advisory aspect only
+tailwater,C3D8R,4554,8908,0.8,2,5.00069,8,3.20056,5,0,0,0,0,0,4,V15_4_TAILWATER_CHANNEL_I:19,UNRESOLVED,element-connectivity metrics; advisory aspect only
+spillway,C3D8R,59392,76249,0.99,1,2,5.004,1.992,5,0,0,0,0,0,19,V15_4_SPILLWAY_CHUTE_SLAB_I:277,UNRESOLVED,element-connectivity metrics; advisory aspect only
+ecological release,C3D8R,10008,15140,0.5,1,1.786,2,2,5,0,0,0,0,0,10,V15_4_ECO_RELEASE_OUTLET_SLAB_I:1,UNRESOLVED,element-connectivity metrics; advisory aspect only
 stilling basin,C3D8R,4042,6336,1.25,2.488,2.49,2.49,1.992,5,0,0,0,0,0,1,V15_4_SPILLWAY_STILLING_BASIN_I:990,PASS,element-connectivity metrics; advisory aspect only
-left-bank sub-dam,C3D8R,29238,36573,0.833,2,2,2,1.20048,5,0,0,0,2062,0,10,V15_4_LEFT_BANK_SUBDAM_I:22001,PASS,element-connectivity metrics; advisory aspect only
-fishway,C3D8R,4487,13511,0.5,1,2,2,4,5,0,0,0,1975,0,37,V15_4_FISHWAY_I:1,PASS,element-connectivity metrics; advisory aspect only
+left-bank sub-dam,C3D8R,29238,36573,0.833,2,2,2,1.20048,5,0,0,0,2062,0,10,V15_4_LEFT_BANK_SUBDAM_I:22001,UNRESOLVED,element-connectivity metrics; advisory aspect only
+fishway,C3D8R,4487,13511,0.5,1,2,2,4,5,0,0,0,1975,0,37,V15_4_FISHWAY_I:1,UNRESOLVED,element-connectivity metrics; advisory aspect only
 M3 near-foundation geology,C3D8P,6016,10727,0.17798,5.50009,42.9942,150.003,210.7,8,0,0,0,0,0,27,RIVER_R02_Q4AL_SGR2_I:500,UNRESOLVED,element-connectivity metrics; advisory aspect only
 M4 transition geology,C3D8P;C3D8R,11429,20920,0.177975,7.50011,45,300.005,210.7,15,0,0,0,0,0,73,RIVER_R02_Q4AL_SGR2_I:499,UNRESOLVED,element-connectivity metrics; advisory aspect only
 M4 far-field geology,C3D8P;C3D8R,10254,19011,0.35596,30.3724,300.002,300.005,842.798,15,0,0,0,0,0,56,RIVER_R02_Q4AL_SGR2_I:160,UNRESOLVED,element-connectivity metrics; advisory aspect only

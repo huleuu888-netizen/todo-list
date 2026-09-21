@@ -18,11 +18,11 @@ The frozen V15.4 deck was used as the sole geometry source. No engineering coord
 
 ## Mesh quality
 
-- Quality rows: 17; FAIL: 0; UNRESOLVED: 5.
+- Quality rows: 17; FAIL: 0; UNRESOLVED: 15.
 - Geometry coverage and element connectivity are checked element-by-element; zero/negative volume, collapsed, duplicate-element findings are FAIL.
 - Transition audit rows: 5; critical-interface rows: 10.
 
 ## Scope limits
 
 - Abaqus Data Check and S01-S07 were not run. No mesh convergence, structural, seepage, or stress validation is claimed.
-- Remaining UNRESOLVED items concern retained orphan-mesh conformity/native geometry limitations, not changed engineering geometry.
+- Remaining UNRESOLVED items concern retained orphan-mesh conformity/native geometry limitations and independent-part node/interface islands; no Tie or contact was added to hide them.

@@ -701,7 +701,9 @@ def make_quality_audit(density_rows, stats):
         status = row["status"]
         if s["invalid"] or s["collapsed"] or s["duplicates"]:
             status = "FAIL"
-        elif status == "PASS" and s["aspect"] > aspect_target:
+        elif status == "PASS" and (s["aspect"] > aspect_target or
+                                    s["duplicate_nodes"] or
+                                    s["nonmanifold"] or s["islands"] > 1):
             status = "UNRESOLVED"
         rows.append({"region": row["region"], "element_type": row["element_type"],
                      "element_count": s["element_count"], "node_count": s["node_count"],
@@ -888,7 +890,8 @@ def write_report(source_counts, final_counts, freeze, remesh, density, quality,
         handle.write("- Abaqus Data Check and S01-S07 were not run. No mesh convergence, structural, "
                      "seepage, or stress validation is claimed.\n")
         handle.write("- Remaining UNRESOLVED items concern retained orphan-mesh conformity/native "
-                     "geometry limitations, not changed engineering geometry.\n")
+                     "geometry limitations and independent-part node/interface islands; no Tie "
+                     "or contact was added to hide them.\n")
 
 
 def main():
