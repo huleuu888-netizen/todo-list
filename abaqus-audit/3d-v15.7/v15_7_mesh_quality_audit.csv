@@ -1,0 +1,9 @@
+region,element_type,element_count,node_count,min_edge,median_edge,p90_edge,p95_edge,max_edge,max_aspect_ratio,advisory_aspect_limit,invalid_or_negative_volume,collapsed_elements,duplicate_elements,duplicate_nodes,nonmanifold_faces,disconnected_components_in_region,worst_element_location,status,notes
+M3_FOUNDATION_GEOLOGY,C3D8P;C3D8R,173050,202157,0.17,6.6667675,9.50012508,10,13.6366091,52.08375,8,0,0,0,0,0,4,V15_7_FOUNDATION_GEOLOGY_I:391702,UNRESOLVED,actual element connectivity; no bbox-only metrics
+M3-A_0-8m,C3D8P;C3D8R,38003,49382,0.17,4.552,9,9.50018321,10.2859296,52.08375,8,0,0,0,0,0,8,V15_7_FOUNDATION_GEOLOGY_I:391711,UNRESOLVED,actual element connectivity; no bbox-only metrics
+M3-B_8-20m,C3D8P;C3D8R,41724,57941,0.18,5.0000625,9.37514352,9.875,13.6366091,52.08375,8,0,0,0,0,0,8,V15_7_FOUNDATION_GEOLOGY_I:391742,UNRESOLVED,actual element connectivity; no bbox-only metrics
+M3-C_20-40m,C3D8P;C3D8R,57307,82047,0.17,6.66673417,9.50013158,10,13.6366091,52.08375,8,0,0,0,0,0,6,V15_7_FOUNDATION_GEOLOGY_I:391704,UNRESOLVED,actual element connectivity; no bbox-only metrics
+M3-D_40-60m,C3D8P;C3D8R,36016,54595,0.18,8.00013225,9.87772466,10,13.6366091,52.08375,8,0,0,0,0,0,7,V15_7_FOUNDATION_GEOLOGY_I:391702,UNRESOLVED,actual element connectivity; no bbox-only metrics
+M4_TRANSITION_GEOLOGY,C3D8P;C3D8R,99192,122060,0.36,8.7500558,11.2993548,13.6365341,27.2731249,69.445,8,0,0,0,0,0,6,V15_7_FOUNDATION_GEOLOGY_I:391681,UNRESOLVED,actual element connectivity; no bbox-only metrics
+M4_FAR_FIELD_GEOLOGY,C3D8P;C3D8R,221196,254260,0.36,9.59899275,22.9518,27.2729455,150.0027,416.67,8,0,0,0,0,0,6,V15_7_FOUNDATION_GEOLOGY_I:391657,UNRESOLVED,actual element connectivity; no bbox-only metrics
+M4_REMOTE_BOUNDARY,C3D8P;C3D8R,98356,130886,0.36,11.598321,89.2733333,150.000694,150.48,416.67,8,0,0,0,0,0,4,V15_7_FOUNDATION_GEOLOGY_I:392120,UNRESOLVED,actual element connectivity; no bbox-only metrics

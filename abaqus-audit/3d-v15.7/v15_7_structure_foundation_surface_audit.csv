@@ -1,0 +1,10 @@
+interface,minimum_geometric_gap,maximum_geometric_gap,penetration_volume_or_count,structure_side_median_p95_edge,geology_side_median_p95_edge,local_mesh_size_ratio,status,notes
+cutoff wall / foundation,3166.42796,5404.60884,0,0.99;1,8.88889237;29.685,29.685,UNRESOLVED,independent part AABB/proximity screen; no Tie/contact/MPC; element penetration not claimed
+powerhouse / foundation,0,1437.25369,UNRESOLVED,1;1.949,8.88889237;29.685,15.2308876,UNRESOLVED,independent part AABB/proximity screen; no Tie/contact/MPC; element penetration not claimed
+installation bay / foundation,0,1458.8263,UNRESOLVED,1;2,8.88889237;29.685,14.8425,UNRESOLVED,independent part AABB/proximity screen; no Tie/contact/MPC; element penetration not claimed
+spillway / foundation,0,1545.10679,UNRESOLVED,1;2.488,8.88889237;29.685,11.9312701,UNRESOLVED,independent part AABB/proximity screen; no Tie/contact/MPC; element penetration not claimed
+ecological release / foundation,0,1461.47939,UNRESOLVED,1;1.786,8.88889237;29.685,16.6209406,UNRESOLVED,independent part AABB/proximity screen; no Tie/contact/MPC; element penetration not claimed
+stilling basin / foundation,0,1492.31004,UNRESOLVED,2.488;2.49,8.88889237;29.685,11.9216867,UNRESOLVED,independent part AABB/proximity screen; no Tie/contact/MPC; element penetration not claimed
+tailwater / foundation,0,1410.70954,UNRESOLVED,2;5.00063996,8.88889237;29.685,5.93624021,UNRESOLVED,independent part AABB/proximity screen; no Tie/contact/MPC; element penetration not claimed
+sub-dam / foundation,0,1491.24445,UNRESOLVED,2;2,8.88889237;29.685,14.8425,UNRESOLVED,independent part AABB/proximity screen; no Tie/contact/MPC; element penetration not claimed
+fishway excavation / geology,0,1781.04717,UNRESOLVED,1;2,8.88889237;29.685,14.8425,UNRESOLVED,independent part AABB/proximity screen; no Tie/contact/MPC; element penetration not claimed

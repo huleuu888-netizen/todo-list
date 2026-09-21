@@ -1,0 +1,4 @@
+interface,source_internal_faces,conforming_face_count,nonconforming_face_count,hanging_node_count,shared_node_face_count,status,notes
+continuous same-material geology,66519,66519,0,0,66519,PASS,actual source-face coverage; no Tie/contact/MPC
+material-boundary geology interfaces,9589,9589,0,0,9589,PASS,material sections retained; compatible boundary subdivision
+all regenerated geology internal interfaces,76108,76108,0,0,76108,PASS,one-to-one compatible source-face connectivity
