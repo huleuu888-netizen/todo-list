@@ -1,0 +1,2 @@
+region,candidate_material,source,density,elastic_parameters,permeability,porosity_void_ratio,constitutive_model,element_formulation,final_mapping_status,notes
+V15_11_LEFT_COMPACTED_SAND_GRAVEL,Q3AL_III,existing V15.11 INP material definition; V15.8 geology material map,"2.13,","52500., 0.27","8.49e-05, 0.",,DENSITY;ELASTIC;PERMEABILITY,C3D8P,UNRESOLVED,"Q3AL_III is an existing geology material, not a source-verified compacted sand/gravel calibration; no parameters invented and temporary V15.11 mapping retained"

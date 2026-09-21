@@ -1,0 +1,8 @@
+segment_name,global_start,global_end,thickness_m,top_elevation_m,bottom_elevation_m,adjacent_upstream_downstream_structure,next_anti_seepage_segment,minimum_gap_to_next_m,overlap_contact_length_or_area,source_basis,status
+left_subdam_cutoff_segment,"-36.000000000,70.000000000,3021.000000000","-35.000000000,150.000000000,3073.510000000",1.000000,3073.510000000,3021.000000000,left abutment / left-bank cutoff,riverbed_main_cutoff_wall,0.000000,80.000000 m endpoint continuation,source-supported approximate 80 m left-bank/subdam extension on the measured active x=-36..-35 axis; no unsupported offset invented,PASS
+installation_powerhouse_cutoff_segment,,,,,,,,UNRESOLVED,,task source requires segment but active V15.11 Assembly has no separately named wall,UNRESOLVED
+ecological_release_cutoff_connection,,,,,,,,UNRESOLVED,,task source requires segment but active V15.11 Assembly has no separately named wall,UNRESOLVED
+spillway_cutoff_segment,,,,,,,,UNRESOLVED,,task source requires segment but active V15.11 Assembly has no separately named wall,UNRESOLVED
+riverbed_main_cutoff_wall,"-36.000000000,150.000038331,3021.000000000","-35.000000000,445.000038997,3073.510003743",1.000000,3073.510003743,3021.000000000,main riverbed dam / geomembrane,main_cutoff_geomembrane_connection,0.000000,UNRESOLVED_FACE_AUDIT_REQUIRED,"V15.12 task source, active Assembly bbox",UNRESOLVED
+main_cutoff_geomembrane_connection,,,,,,,,UNRESOLVED,,task source requires segment but active V15.11 Assembly has no separately named wall,UNRESOLVED
+right_bank_cutoff_curtain,,,,,,,,UNRESOLVED,,task source requires segment but active V15.11 Assembly has no separately named wall,UNRESOLVED

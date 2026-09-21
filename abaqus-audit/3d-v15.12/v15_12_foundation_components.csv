@@ -1,0 +1,3 @@
+domain,element_count,component_count_by_exact_shared_faces,largest_component_elements,singleton_components,status,notes
+natural_geology,591301,5,380960,0,UNRESOLVED,same-part element graph from exact shared connectivity faces; disconnected regions may be intentional geology leaves
+engineered_backfill,838,12,148,0,UNRESOLVED,same-part element graph from exact shared connectivity faces; disconnected regions may be intentional geology leaves

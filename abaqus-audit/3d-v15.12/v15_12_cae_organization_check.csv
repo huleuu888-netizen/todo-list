@@ -1,0 +1,6 @@
+metric,value,status
+model_name,V15_12_REAL_ASSEMBLY_SEEPAGE_VALIDATION,PASS
+active_instance_count,60,PASS
+left_cutoff_instance,V15_12_LEFT_BANK_CUTOFF_WALL_I,PASS
+analysis_steps,Initial only,PASS
+analysis_jobs_submitted,NO,PASS

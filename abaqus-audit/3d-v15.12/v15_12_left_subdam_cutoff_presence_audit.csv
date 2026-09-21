@@ -1,0 +1,6 @@
+search_scope,instance,part,global_bbox,name_or_set_evidence,left_subdam_region_match,status,notes
+active Assembly instance,P25_SOLID_CUTOFF_WALL_F13-1,V15_5_REFINED_P25_SOLID_CUTOFF_WALL_F13_1,"-36.000000000,150.000038331,3021.000000000;-35.000000000,445.000038997,3073.510003743",CUTOFF/F13/ANTI_SEEP token in active instance/part name,NO,ACTIVE_CANDIDATE,candidate retained for actual-coordinate inspection
+active INP named keyword,,,,** V15.5 MESH-ONLY PART: CUTOFF_WALL_POWERHOUSE,NOT_APPLICABLE,EVIDENCE,active deck text search; geometry conclusion uses active instance coordinates
+active INP named keyword,,,,"*PART, NAME=V15_5_REFINED_P25_SOLID_CUTOFF_WALL_F13_1",NOT_APPLICABLE,EVIDENCE,active deck text search; geometry conclusion uses active instance coordinates
+active INP named keyword,,,,"*INSTANCE, NAME=P25_SOLID_CUTOFF_WALL_F13-1, PART=V15_5_REFINED_P25_SOLID_CUTOFF_WALL_F13_1",NOT_APPLICABLE,EVIDENCE,active deck text search; geometry conclusion uses active instance coordinates
+decision,,,,active Assembly candidates + actual global-coordinate left-subdam-region test,NO,CONFIRMED_MISSING,"No active left-subdam cutoff segment is present; only P25 F13-1 wall is active and its global bbox is y=150..445, outside the left-subdam/installation region."

@@ -1,0 +1,3 @@
+connection,instance_a,instance_b,minimum_real_gap_m,contact_area_or_length,thickness_mismatch,vertical_elevation_mismatch,bottom_elevation_mismatch,top_elevation_mismatch,overlap_interpenetration,continuity_status,notes
+left_bank_cutoff_to_main_cutoff,V15_12_LEFT_BANK_CUTOFF_WALL_I,P25_SOLID_CUTOFF_WALL_F13-1,0.000000000,52.509996257,0.000000000,0.000003743,0.000000000,0.000003743,0.000000000,PASS,actual boundary-face comparison; no bbox-only acceptance
+main_cutoff_to_geomembrane,P25_SOLID_CUTOFF_WALL_F13-1,V12_UPSTREAM_GEOMEMBRANE-1,0.000000000,147.585536057,54.000000000,0.000003743,34.000000000,0.000003743,0.000000000,PASS,actual boundary-face comparison; no bbox-only acceptance

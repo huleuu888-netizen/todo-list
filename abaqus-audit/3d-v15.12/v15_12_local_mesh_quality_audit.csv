@@ -1,0 +1,2 @@
+region,element_type,node_count,element_count,minimum_edge_m,maximum_edge_m,max_aspect_ratio,invalid_negative_volume_count,collapsed_element_count,global_remesh,status,notes
+left_bank_cutoff_extension,C3D8P,374,160,1.000000,5.251000,5.251000,0,0,NO,PASS,local source-supported wall segment only; existing V15.11 mesh retained
