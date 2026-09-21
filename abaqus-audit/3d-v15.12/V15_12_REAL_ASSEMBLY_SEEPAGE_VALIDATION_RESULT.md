@@ -43,5 +43,5 @@
 ## Final status
 
 - Overall: **UNRESOLVED**; this is a geometry/topology evidence package for the next separate Data Check task, not solver validation.
-- Unresolved items: 2 pore-pressure/interface rows; whole-foundation hanging/nonconforming geometric proof; backfill material mapping; anti-seepage transitions not represented as active named wall segments.
+- Unresolved items: 1 pore-pressure/interface rows; whole-foundation hanging/nonconforming geometric proof; backfill material mapping; anti-seepage transitions not represented as active named wall segments.
 - No Tie, contact, MPC, spring, Encastre or artificial kinematic constraint was added.

@@ -547,6 +547,8 @@ def centroid_bbox(bb):
 
 def classify_role(instance, part):
     upper = (instance + " " + part).upper()
+    if "SUBDAM" in upper and "FOUNDATION" not in upper:
+        return "structural_concrete"
     if "GEOLOGY" in upper or upper.startswith(("LEFT_", "RIVER_", "RIGHT_")):
         return "foundation_geology"
     if "BACKFILL" in upper or "COMPACTED_SAND_GRAVEL" in upper:
