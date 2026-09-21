@@ -1,0 +1,8 @@
+metric,value,status
+model_name,V15_9_FINAL_GEOMETRY,PASS
+active_part_count,58,PASS
+active_instance_count,58,PASS
+geology_part_set_count,43,PASS
+assembly_geology_set_count,43,PASS
+named_geology_section_count,36,PASS
+analysis_steps,Initial only,PASS

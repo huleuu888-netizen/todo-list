@@ -1,0 +1,3 @@
+outlet,unit_pair_served,upstream_width_m,upstream_height_m,upstream_sill_z_m,downstream_working_width_m,downstream_working_height_m,downstream_working_sill_z_m,maintenance_width_m,maintenance_height_m,passage_continuity,collision_with_main_unit_waterways,status,notes
+OUTLET_01,UNITS_01_02,2.500,2.000,3037.000,2.500,2.000,3043.000,2.500,3.000,YES,NO; pier-region corridor,PASS,X -30.000..-27.500; Z 3037.000..3039.000; X 18.500..21.000; Z 3043.000..3045.000; X 21.000..24.000; Z 3043.000..3046.000
+OUTLET_02,UNITS_03_04,2.500,2.000,3037.000,2.500,2.000,3043.000,2.500,3.000,YES,NO; pier-region corridor,PASS,X -30.000..-27.500; Z 3037.000..3039.000; X 18.500..21.000; Z 3043.000..3045.000; X 21.000..24.000; Z 3043.000..3046.000

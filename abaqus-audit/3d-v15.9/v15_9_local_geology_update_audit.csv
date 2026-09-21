@@ -1,0 +1,4 @@
+affected_geology_set,local_region,removed_elements,replacement_elements,material_preserved,conformity_status,hanging_node_count,overlap_count,status,notes
+GEO_FOUNDATION_ALL,INSTALLATION_SUBDAM_LOCAL,0,0,YES,PASS,0,0,PASS,frozen V15.8 conformal geology envelope fully covers corrected engineering footprint; no geology cell topology change required
+GEO_FOUNDATION_ALL,SEDIMENT_FLUSHING_LOCAL,0,0,YES,PASS,0,0,PASS,frozen V15.8 conformal geology envelope fully covers corrected engineering footprint; no geology cell topology change required
+GEO_FOUNDATION_ALL,ECO_SPILLWAY_LOCAL,0,0,YES,PASS,0,0,PASS,frozen V15.8 conformal geology envelope fully covers corrected engineering footprint; no geology cell topology change required

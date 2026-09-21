@@ -1,0 +1,7 @@
+quantity,target,measured,status,notes
+foundation X width,56.500 m,-64.000..-7.500 (56.500 m),PASS,lower/foundation envelope
+installation-bay Y length,34.000 m,-156.000..-122.000 (34.000 m),PASS,106.600 m not used
+upper-room X width,20.000 m,-47.500..-27.500 (20.000 m),PASS,separate upper usable room envelope
+installation floor elevation,3062.000 m,3062.000 m,PASS,explicit mesh plane
+powerhouse adjacency,direct at Y=-122.000,direct at Y=-122.000,PASS,no 106.6 m installation-bay reuse
+old 106.6 m installation-bay Y length,must not be reused,not present,PASS,source-first correction

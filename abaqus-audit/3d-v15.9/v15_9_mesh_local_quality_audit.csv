@@ -1,0 +1,6 @@
+region,element_type,min_target_edge_m,max_target_edge_m,node_count,element_count,nonconforming_faces,hanging_nodes,global_remesh,status,notes
+installation_bay,C3D8R,0.50,2.50,4500,3462,0,0,NO,PASS,local structured C3D8R
+left_bank_subdam,C3D8R,0.50,2.50,444,216,0,0,NO,PASS,local tapered structured C3D8R
+sediment_flushing,C3D8R,0.50,1.00,5148,3520,0,0,NO,PASS,two continuous local corridors
+eco_spillway_interface,C3D8R,0.50,2.50,71278,54345,0,0,NO,PASS,local flood-release refinement
+geology_elsewhere,C3D8P/C3D6P/C3D8R,2.00,10.00,641193,591794,0,0,NO,PASS,V15.8 conformal geology mesh frozen

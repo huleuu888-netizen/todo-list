@@ -1,0 +1,2 @@
+total_crest_length_m,crest_width_m,block_1_length_m,block_2_length_m,block_3_length_m,block_4_length_m,source_length_sum_m,unresolved_reconciliation_m,upstream_slope,downstream_slope,rectangular_datum,fishway_crossing_position,status,notes
+89.700,7.000,42.600,15.000,15.000,15.000,87.600,2.100,1:0.2 below 3072 m,1:0.6 below 3072 m,below 3062 m; local foundation/backfill 3059 m,X=-99..-92; Y=-61.25..-58.75; inside corrected envelope,UNRESOLVED,89.70 m governs; 2.10 m is explicitly SOURCE_LENGTH_RECONCILIATION_UNRESOLVED; no fifth block invented
