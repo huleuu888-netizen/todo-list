@@ -1,0 +1,18 @@
+region,element_type,min_edge,median_edge,p95_edge,max_edge,element_count,node_count,refinement_class,status
+right-bank dam,C3D8P;C3D8R,0.5,40.0003,150.001,300.002,2202,3790,M4,UNRESOLVED
+geomembrane critical zone,C3D8P,1,2.37853,2.95,2.95,2400,5050,M1,PASS
+geomembrane far zone,NONE,0,0,0,0,0,0,M4,UNRESOLVED
+cutoff wall,C3D8P,0.4718,0.9917,0.996624,1,31376,48411,M1,PASS
+cutoff-wall bottom zone,C3D8P,0.4718,0.9917,0.996622,1,1060,1793,M1,PASS
+powerhouse,C3D8R,0.983,1,1.949,2,37736,54624,M2/M1,PASS
+powerhouse flushing outlets,C3D8R,0.5,1,1,1,1432,3500,M2/M1,PASS
+installation bay,C3D8R,0.996,1,2,2,14094,20652,M2/M1,PASS
+tailwater,C3D8R,0.8,2,5.00069,8,4554,8908,M2/M1,PASS
+spillway,C3D8R,0.99,1,2,5.004,59392,76249,M2/M1,PASS
+ecological release,C3D8R,0.5,1,1.786,2,10008,15140,M2/M1,PASS
+stilling basin,C3D8R,1.25,2.488,2.49,2.49,4042,6336,M2/M1,PASS
+left-bank sub-dam,C3D8R,0.833,2,2,2,29238,36573,M2/M1,PASS
+fishway,C3D8R,0.5,1,2,2,4487,13511,M2/M1,PASS
+M3 near-foundation geology,C3D8P,0.17798,5.50009,42.9942,150.003,6016,10727,M3,UNRESOLVED
+M4 transition geology,C3D8P;C3D8R,0.177975,7.50011,45,300.005,11429,20920,M4,UNRESOLVED
+M4 far-field geology,C3D8P;C3D8R,0.35596,30.3724,300.002,300.005,10254,19011,M4,UNRESOLVED

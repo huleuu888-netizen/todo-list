@@ -1,0 +1,11 @@
+interface,local_element_types,minimum_edge,median_edge,maximum_edge,elements_through_thickness,node_conformity,status,notes
+cutoff wall top,C3D8P,0.4718,0.9917,1,2 target; retained/orphan dependent,shared source nodes; local orphan transitions documented,PASS,top band of retained cutoff part; connectivity-based audit; no Tie/contact added
+cutoff wall bottom,C3D8P,0.4718,0.9917,1,2 target; retained/orphan dependent,shared source nodes; local orphan transitions documented,PASS,bottom band of retained cutoff part; connectivity-based audit; no Tie/contact added
+cutoff-wall / foundation interface,C3D8P,0.17798,5.50009,150.003,2 target; retained/orphan dependent,shared source nodes; local orphan transitions documented,PASS,centroid-distance M3 band; orphan interface limitation retained; connectivity-based audit; no Tie/contact added
+cutoff-wall / geomembrane connection,C3D8P,1,2.37853,2.95,2 target; retained/orphan dependent,shared source nodes; local orphan transitions documented,PASS,local connection band; connectivity-based audit; no Tie/contact added
+geomembrane connection zone,C3D8P,1,2.37853,2.95,N/A,shared source nodes; local orphan transitions documented,PASS,local connection band; connectivity-based audit; no Tie/contact added
+powerhouse-foundation contact,C3D8R,0.983,1,2,N/A,shared source nodes; local orphan transitions documented,PASS,engineering mesh; connectivity-based audit; no Tie/contact added
+spillway-foundation contact,C3D8R,0.99,1,5.004,N/A,shared source nodes; local orphan transitions documented,PASS,engineering mesh; connectivity-based audit; no Tie/contact added
+ecological-release foundation,C3D8R,0.5,1,2,N/A,shared source nodes; local orphan transitions documented,PASS,engineering mesh; connectivity-based audit; no Tie/contact added
+sub-dam foundation,C3D8R,0.833,2,2,N/A,shared source nodes; local orphan transitions documented,PASS,engineering mesh; connectivity-based audit; no Tie/contact added
+fishway crossing through sub-dam,C3D8R,0.5,1,2,N/A,shared source nodes; local orphan transitions documented,PASS,fishway crossing region; connectivity-based audit; no Tie/contact added

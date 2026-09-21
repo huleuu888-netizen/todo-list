@@ -1,0 +1,6 @@
+interface,region_a,region_b,region_a_p95,region_b_p95,p95_growth_ratio,target_ratio,status,notes
+cutoff-wall to foundation,cutoff wall,M3 near-foundation geology,0.996624,42.9942,43.1398,<=1.5,UNRESOLVED,actual element P95 ratio; orphan boundary conformity separately audited
+powerhouse to geology,powerhouse,M3 near-foundation geology,1.949,42.9942,22.0596,<=1.5,UNRESOLVED,actual element P95 ratio; orphan boundary conformity separately audited
+spillway to geology,spillway,M3 near-foundation geology,2,42.9942,21.4971,<=1.5,UNRESOLVED,actual element P95 ratio; orphan boundary conformity separately audited
+sub-dam to geology,left-bank sub-dam,M3 near-foundation geology,2,42.9942,21.4971,<=1.5,UNRESOLVED,actual element P95 ratio; orphan boundary conformity separately audited
+tailwater to geology,tailwater,M3 near-foundation geology,5.00069,42.9942,8.59765,<=1.5,UNRESOLVED,actual element P95 ratio; orphan boundary conformity separately audited
