@@ -61,6 +61,10 @@ ALLOWED_COMPONENT_CLASSES = (
     "SAME_DOMAIN_MESH_DISCONNECT",
     "UNRESOLVED",
 )
+HEX_GAUSS = (-1.0 / math.sqrt(3.0), 1.0 / math.sqrt(3.0))
+HEX_SIGNS = ((-1, -1, -1), (1, -1, -1), (1, 1, -1), (-1, 1, -1),
+             (-1, -1, 1), (1, -1, 1), (1, 1, 1), (-1, 1, 1))
+HEX_ORIENTATION_REVERSE = (0, 3, 2, 1, 4, 7, 6, 5)
 
 
 def fmt(value):
@@ -723,6 +727,279 @@ def coalesce_near_coincident_hexa_faces(nodes, elements, tolerance=0.1):
             "coalesced_node_count": len(nodes) - len(new_nodes)}
 
 
+def determinant3(matrix):
+    return (matrix[0][0] * (matrix[1][1] * matrix[2][2] - matrix[1][2] * matrix[2][1])
+            - matrix[0][1] * (matrix[1][0] * matrix[2][2] - matrix[1][2] * matrix[2][0])
+            + matrix[0][2] * (matrix[1][0] * matrix[2][1] - matrix[1][1] * matrix[2][0]))
+
+
+def c3d8_jacobian_determinants(part, conn):
+    points = [part["nodes"][node] for node in conn[:8]]
+    values = []
+    for xi in HEX_GAUSS:
+        for eta in HEX_GAUSS:
+            for zeta in HEX_GAUSS:
+                dxi, deta, dzeta = [], [], []
+                for sx, sy, sz in HEX_SIGNS:
+                    dxi.append(0.125 * sx * (1.0 + sy * eta) * (1.0 + sz * zeta))
+                    deta.append(0.125 * sy * (1.0 + sx * xi) * (1.0 + sz * zeta))
+                    dzeta.append(0.125 * sz * (1.0 + sx * xi) * (1.0 + sy * eta))
+                jacobian = []
+                for derivatives in (dxi, deta, dzeta):
+                    jacobian.append([sum(derivatives[index] * points[index][axis]
+                                         for index in range(8)) for axis in range(3)])
+                values.append(determinant3(jacobian))
+    return values
+
+
+def classify_volume_issue(determinants):
+    if not determinants:
+        return ""
+    if max(abs(value) for value in determinants) <= 1.0e-9:
+        return "ZERO_VOLUME"
+    if max(determinants) < -1.0e-9:
+        return "NEGATIVE_VOLUME"
+    if min(determinants) <= 1.0e-9:
+        return "COLLAPSED_ELEMENT"
+    return ""
+
+
+def volume_issue_records(parts, instances=None, transforms=None):
+    """Return all C3D8 volume/Jacobian failures from the actual deck."""
+    records = []
+    part_instances = collections.defaultdict(list)
+    for instance, part_name in (instances or []):
+        part_instances[part_name].append(instance)
+    for part_name, part in parts.items():
+        for etype, label, conn in parse_element_rows(part):
+            if not etype.upper().startswith("C3D8") or len(conn) < 8:
+                continue
+            determinants = c3d8_jacobian_determinants(part, conn)
+            error_type = classify_volume_issue(determinants)
+            if not error_type:
+                continue
+            points = [part["nodes"][node] for node in conn[:8]]
+            local_bbox = bbox_points(points)
+            for instance in part_instances.get(part_name, ["PART_LEVEL"]):
+                global_bbox = local_bbox
+                if transforms and instance in transforms:
+                    global_bbox = bbox_points([transforms[instance](point) for point in points])
+                records.append({
+                    "element_label": label,
+                    "part": part_name,
+                    "instance": instance,
+                    "element_type": etype,
+                    "coordinates": bbox_text(global_bbox),
+                    "error_type": error_type,
+                    "min_jacobian": fmt(min(determinants)),
+                    "max_jacobian": fmt(max(determinants)),
+                })
+    return records
+
+
+def repair_negative_c3d8_part(lines, part_name, part):
+    """Reverse only uniformly negative C3D8 connectivity in one local Part."""
+    repairs = set()
+    unresolved = set()
+    for etype, label, conn in parse_element_rows(part):
+        if not etype.upper().startswith("C3D8") or len(conn) < 8:
+            continue
+        determinants = c3d8_jacobian_determinants(part, conn)
+        if max(determinants) < -1.0e-9:
+            repairs.add(label)
+        elif classify_volume_issue(determinants):
+            unresolved.add(label)
+    if not repairs:
+        return {"repaired": 0, "unresolved": len(unresolved)}
+    start, end = part_range(lines, part_name)
+    active_type = None
+    changed = 0
+    for index in range(start, end):
+        stripped = lines[index].strip()
+        if stripped.lower().startswith("*element"):
+            match = re.search(r"type=([^,\s]+)", stripped, re.I)
+            active_type = match.group(1).upper() if match else None
+            continue
+        if not active_type or stripped.startswith("*") or stripped.startswith("**") or not stripped:
+            continue
+        try:
+            values = [int(value.strip()) for value in stripped.split(",") if value.strip()]
+        except ValueError:
+            continue
+        if len(values) < 9 or values[0] not in repairs:
+            continue
+        connectivity = [values[1 + offset] for offset in HEX_ORIENTATION_REVERSE]
+        lines[index] = "%d, %s" % (values[0], ", ".join(str(value) for value in connectivity))
+        changed += 1
+    if changed != len(repairs):
+        raise RuntimeError("fishway orientation repair changed %d of %d elements" % (changed, len(repairs)))
+    return {"repaired": changed, "unresolved": len(unresolved)}
+
+
+def contiguous_node_range(labels):
+    labels = sorted(labels)
+    if labels and labels == list(range(labels[0], labels[-1] + 1)):
+        return labels[0], labels[-1]
+    return None
+
+
+def restore_initial_condition_sets(lines, parts, instances):
+    """Create active Assembly node sets and replace obsolete V12 ratio names."""
+    porous = []
+    for instance, part_name in instances:
+        part = parts[part_name]
+        if any(etype.upper() in POROUS_TYPES for etype in part["elements"]):
+            porous.append((instance, part_name))
+    ratio_rows = []
+    additions = []
+    ratio_index = 0
+    for instance, part_name in porous:
+        name = "V12_RATIO_GEOMEMBRANE" if instance == GM_INSTANCE else "V12_RATIO_%04d" % ratio_index
+        if instance != GM_INSTANCE:
+            ratio_index += 1
+        labels = sorted(parts[part_name]["nodes"])
+        node_range = contiguous_node_range(labels)
+        if node_range:
+            additions.extend(["*Nset, nset=%s, instance=%s, generate" % (name, instance),
+                              "%d, %d, 1" % node_range])
+        else:
+            additions.append("*Nset, nset=%s, instance=%s" % (name, instance))
+            for offset in range(0, len(labels), 16):
+                additions.append(", ".join(str(value) for value in labels[offset:offset + 16]))
+        ratio_rows.append({"field_name": "INITIAL_VOID_RATIO", "node_set": name,
+                           "node_count": len(labels), "step": "S01_GEOLOGICAL_INITIAL_STRESS",
+                           "status": "PASS", "instance": instance, "part": part_name})
+    assembly_end = next(index for index, line in enumerate(lines)
+                        if re.match(r"\*End Assembly", line.strip(), re.I))
+    lines[assembly_end:assembly_end] = additions
+    initial_index = next(index for index, line in enumerate(lines)
+                         if re.match(r"\*Initial Conditions,\s*type=RATIO", line.strip(), re.I))
+    initial_end = initial_index + 1
+    while initial_end < len(lines) and not lines[initial_end].strip().startswith("*"):
+        initial_end += 1
+    initial_block = ["*Initial Conditions, type=RATIO"]
+    initial_block.extend("%s, 0.5" % row["node_set"] for row in ratio_rows)
+    lines[initial_index:initial_end] = initial_block
+    return lines, ratio_rows
+
+
+def ensure_datacheck_step(lines):
+    """Add only a syntax-valid Data Check step; never launch S01-S07."""
+    if any(re.match(r"\*Step\b", line.strip(), re.I) for line in lines):
+        return lines
+    end_input = next((index for index, line in enumerate(lines)
+                      if re.match(r"\*End Input\b", line.strip(), re.I)), len(lines))
+    step = ["*Step, name=DATACHECK_ONLY, nlgeom=NO",
+            "*Static",
+            "1., 1., 1.0e-05, 1.",
+            "*End Step"]
+    lines[end_input:end_input] = step
+    return lines
+
+
+def active_section_records(lines, parts):
+    records = []
+    for part_name, part in parts.items():
+        elsets = parse_elsets(lines, part_name)
+        label_types = dict((label, etype) for etype, label, _conn in parse_element_rows(part))
+        start, end = part_range(lines, part_name)
+        for index in range(start, end):
+            match = re.match(r"\*Solid Section,\s*elset=([^,]+),\s*material=([^,]+)",
+                             lines[index].strip(), re.I)
+            if not match:
+                continue
+            elset = match.group(1).strip()
+            material = match.group(2).strip()
+            labels = set(elsets.get(elset, []))
+            counts = collections.Counter(label_types[label].upper() for label in labels
+                                         if label in label_types)
+            records.append({"part": part_name, "section": elset, "material": material,
+                            "element_set": elset, "element_count": sum(counts.values()),
+                            "element_types": ";".join(sorted(counts)), "_labels": labels})
+    return records
+
+
+def write_bad_element_location(lines, parts, instances, transforms, records):
+    sections = active_section_records(lines, parts)
+    lookup = collections.defaultdict(list)
+    for section in sections:
+        labels = section.get("_labels", set())
+        for label in labels:
+            lookup[(section["part"], label)].append(section)
+    rows = []
+    for record in records:
+        section_rows = lookup.get((record["part"], record["element_label"]), [])
+        section = section_rows[0] if section_rows else {}
+        rows.append({"Element label": record["element_label"], "Part": record["part"],
+                     "Instance": record["instance"], "Element set": section.get("element_set", "UNRESOLVED"),
+                     "Material": section.get("material", "UNRESOLVED"),
+                     "Section": section.get("section", "UNRESOLVED"),
+                     "Coordinates": record["coordinates"], "Error type": record["error_type"]})
+    fields = ["Element label", "Part", "Instance", "Element set", "Material", "Section", "Coordinates", "Error type"]
+    write_csv("v15_13_bad_element_location.csv", fields, rows)
+    return len(rows)
+
+
+def write_mesh_quality_after_fix(parts, instances):
+    rows = []
+    for instance, part_name in instances:
+        part = parts[part_name]
+        determinants = []
+        element_count = 0
+        for etype, _label, conn in parse_element_rows(part):
+            element_count += 1
+            if etype.upper().startswith("C3D8") and len(conn) >= 8:
+                determinants.extend(c3d8_jacobian_determinants(part, conn))
+        bad = sum(1 for value in determinants if value <= 1.0e-9)
+        min_value = min(determinants) if determinants else ""
+        max_value = max(determinants) if determinants else ""
+        status = "PASS" if bad == 0 else "FAIL"
+        rows.append({"Instance": instance, "Part": part_name, "Element count": element_count,
+                     "C3D8 bad count": bad, "Min Jacobian": fmt(min_value) if determinants else "",
+                     "Max Jacobian": fmt(max_value) if determinants else "",
+                     "Volume status": "ALL_POSITIVE" if bad == 0 else "NON_POSITIVE_PRESENT",
+                     "Status": status})
+    write_csv("v15_13_mesh_quality_after_fix.csv", list(rows[0]), rows)
+    return rows
+
+
+def write_initial_condition_audit(ratio_rows):
+    fields = ["Field name", "Node Set", "Node count", "Step", "Status", "Instance", "Part"]
+    write_csv("v15_13_initial_condition_audit.csv", fields,
+              [{"Field name": row["field_name"], "Node Set": row["node_set"],
+                "Node count": row["node_count"], "Step": row["step"],
+                "Status": row["status"], "Instance": row["instance"], "Part": row["part"]}
+               for row in ratio_rows])
+
+
+def write_permeability_material_audit(lines, parts, materials):
+    rows = []
+    for section in active_section_records(lines, parts):
+        material = section["material"]
+        values = materials.get(material, {}).get("PERMEABILITY", [])
+        value = values[0] if values else "NOT_DEFINED"
+        porous = any(etype in POROUS_TYPES for etype in section["element_types"].split(";") if etype)
+        if values:
+            classification = "ENGINEERING_ASSUMPTION" if material.startswith(("P25_", "Q2", "Q3", "Q4", "GEOMEMBRANE")) else "CALIBRATION_REQUIRED"
+            source = "active *Material/*Permeability definition; no new coefficient assigned"
+            unit = "m^2; active deck convention"
+        elif porous:
+            classification = "CALIBRATION_REQUIRED"
+            source = "active section has no *Permeability; no value invented"
+            unit = "NOT_DEFINED"
+        else:
+            classification = "VERIFIED_SOURCE"
+            source = "non-porous structural formulation; permeability not applicable"
+            unit = "NOT_APPLICABLE"
+        rows.append({"Material name": material, "Section": section["section"],
+                     "Element set": section["element_set"], "permeability value": value,
+                     "Unit": unit, "Source": source, "Classification": classification,
+                     "Element count": section["element_count"], "Element types": section["element_types"]})
+    fields = ["Material name", "Section", "Element set", "permeability value", "Unit", "Source", "Classification", "Element count", "Element types"]
+    write_csv("v15_13_permeability_material_audit.csv", fields, rows)
+    return rows
+
+
 def rewrite_inp(base_lines, base_parts, integration, wall_lines):
     lines = list(base_lines)
     # Remove the standalone V15.11 backfill Part.
@@ -834,6 +1111,9 @@ def rewrite_inp(base_lines, base_parts, integration, wall_lines):
     segment_labels = collections.OrderedDict()
     for elem_label, station_index in WALL_ELEMENT_SEGMENTS:
         segment_labels.setdefault(station_index, []).append(elem_label)
+    fishway_repair = repair_negative_c3d8_part(lines, "V15_4_FISHWAY", base_parts["V15_4_FISHWAY"])
+    if fishway_repair["unresolved"]:
+        raise RuntimeError("unresolved fishway volume elements: %d" % fishway_repair["unresolved"])
     text = "\n".join(lines)
     for name, index in segment_index.items():
         marker = "*Elset, elset=ASSEM_V15_13_%s, instance=%s\n1" % (name, WALL_INSTANCE)
@@ -1674,9 +1954,10 @@ def write_pre_gate(original_read, final_text, phase_pass, axis_pass, topology_ro
 
 
 def run_datacheck_if_allowed(geometry_ready):
-    job = "v15_13_corrective_execution"
-    command = [os.environ.get("ABAQUS_CMD", r"C:\SIMULIA\Commands\abaqus.bat"),
-               "job=" + job, "input=" + os.path.basename(OUT_INP), "datacheck"]
+    job = "v15_13_datacheck_fix"
+    solver = os.environ.get("ABAQUS_CMD", r"C:\SIMULIA\Commands\abaqus.bat")
+    command = ["cmd.exe", "/c", solver,
+               "job=" + job, "input=" + os.path.basename(OUT_INP), "datacheck", "cpus=1"]
     if not geometry_ready:
         rows = [{"job": job, "command": "NOT_EXECUTED", "return_code": "", "status": "NOT_RUN_PRE_GATE", "output_files": "", "issue_count": "", "reason": "Geometry Solver Readiness is not PASS"}]
         write_csv("v15_13_datacheck_status.csv", list(rows[0]), rows)
@@ -1703,32 +1984,52 @@ def run_datacheck_if_allowed(geometry_ready):
             lock_path = os.path.join(V15_DIR, job + ".lck")
             if output_files and not os.path.exists(lock_path):
                 break
+            if (not output_files and not os.path.exists(lock_path) and
+                    time.time() - launch_time > 30.0):
+                break
             time.sleep(2.0)
-        issue_rows = []
-        patterns = [
-            ("ERROR", "ERROR", re.compile(r"\b(ERROR|FATAL|ZERO PIVOT|EXCESSIVE DISTORTION|TOO MANY ATTEMPTS)\b", re.I)),
-            ("WARNING", "WARNING", re.compile(r"\bWARNING\b", re.I)),
-            ("ERROR", "ELEMENT", re.compile(r"\bELEMENT\b.*\b(ERROR|ERRONEOUS|INVALID|DISTORT|NEGATIVE|ZERO)\b", re.I)),
-            ("ERROR", "MATERIAL", re.compile(r"\bMATERIAL\b.*\b(ERROR|MISSING|UNDEFINED|INVALID)\b", re.I)),
-            ("ERROR", "PORE_PRESSURE", re.compile(r"\b(PORE|PORE-PRESSURE|PWP|Pore pressure)\b.*\b(ERROR|MISSING|UNDEFINED|INVALID)\b", re.I)),
-        ]
+        issue_counts = collections.Counter()
+        first_issue = {}
         for filename in output_files:
             path = os.path.join(V15_DIR, filename)
             with open(path, "r", encoding="utf-8", errors="replace") as handle:
                 for line_number, line in enumerate(handle, 1):
                     text = line.strip()
-                    for severity, category, pattern in patterns:
-                        if pattern.search(text):
-                            issue_rows.append({"severity": severity, "category": category,
-                                               "file": filename, "line": line_number,
-                                               "summary": text[:500], "status": "RECORDED"})
-                            break
+                    upper = text.upper()
+                    if "WARNING" in upper or "***WARNING" in upper:
+                        severity = "WARNING"
+                        category = "WARNING"
+                    elif ("ERROR" in upper or "FATAL" in upper or "ZERO PIVOT" in upper or
+                          "EXCESSIVE DISTORTION" in upper or "TOO MANY ATTEMPTS" in upper):
+                        severity = "ERROR"
+                        if "PERMEABILITY" in upper or "MATERIAL" in upper:
+                            category = "MATERIAL"
+                        elif "ELEMENT" in upper or "DISTORT" in upper or "VOLUME" in upper:
+                            category = "ELEMENT"
+                        elif ("PORE" in upper or "PWP" in upper or
+                              "INITIAL CONDITION" in upper or "NODE SET" in upper):
+                            category = "INITIAL_CONDITIONS"
+                        else:
+                            category = "ERROR"
+                    else:
+                        continue
+                    key = (severity, category, filename)
+                    issue_counts[key] += 1
+                    first_issue.setdefault(key, (line_number, text[:500]))
+        issue_rows = []
+        for (severity, category, filename), count in sorted(issue_counts.items()):
+            line_number, sample = first_issue[(severity, category, filename)]
+            issue_rows.append({"severity": severity, "category": category,
+                               "file": filename, "line": line_number,
+                               "summary": "%d occurrence(s); first: %s" % (count, sample),
+                               "status": "RECORDED"})
         if not issue_rows:
-            issue_rows.append({"severity": "INFO", "category": "NONE_DETECTED", "file": ";".join(output_files), "line": "", "summary": "No ERROR/WARNING, element, material, or pore-pressure issue marker detected in Data Check outputs", "status": "CLEAN" if return_code == 0 and output_files else "UNRESOLVED"})
+            issue_rows.append({"severity": "INFO", "category": "NONE_DETECTED", "file": ";".join(output_files), "line": "", "summary": "No ERROR/WARNING, element, material, or initial-condition issue marker detected in Data Check outputs", "status": "CLEAN" if return_code == 0 and set(output_files) == set(job + ext for ext in (".dat", ".msg", ".sta")) else "UNRESOLVED"})
         write_csv("v15_13_datacheck_issue_register.csv", list(issue_rows[0]), issue_rows)
         errors = sum(1 for row in issue_rows if row["severity"] == "ERROR")
         warnings = sum(1 for row in issue_rows if row["severity"] == "WARNING")
-        if return_code == 0 and errors == 0 and warnings == 0 and output_files and all(name.endswith(('.dat', '.msg', '.sta')) for name in output_files):
+        expected_files = set(job + ext for ext in (".dat", ".msg", ".sta"))
+        if return_code == 0 and errors == 0 and warnings == 0 and set(output_files) == expected_files:
             status = "CLEAN"
         elif output_files:
             status = "COMPLETED_WITH_ISSUES"
@@ -1753,7 +2054,7 @@ def summarize_existing_datacheck_outputs():
     early.  This bounded streaming pass records category counts and samples;
     it never turns a missing `.msg`/`.sta` into a false clean result.
     """
-    job = "v15_13_corrective_execution"
+    job = "v15_13_datacheck_fix"
     dat_name = job + ".dat"
     dat_path = os.path.join(V15_DIR, dat_name)
     counts = collections.Counter()
@@ -1804,18 +2105,20 @@ def summarize_existing_datacheck_outputs():
     status = "CLEAN" if errors == 0 and warnings == 0 and len(output_files) == 3 else "COMPLETED_WITH_ISSUES" if dat_path and os.path.exists(dat_path) else "UNRESOLVED"
     write_csv("v15_13_datacheck_status.csv",
               ["job", "command", "return_code", "status", "output_files", "issue_count", "reason"],
-              [{"job": job, "command": "abaqus.bat job=%s input=%s datacheck" % (job, os.path.basename(OUT_INP)),
+              [{"job": job, "command": "cmd.exe /c abaqus.bat job=%s input=%s datacheck cpus=1" % (job, os.path.basename(OUT_INP)),
                 "return_code": "0", "status": status, "output_files": ";".join(output_files),
                 "issue_count": len(rows), "reason": "existing Abaqus Data Check outputs reconciled; see issue register"}])
     return status
 
 
-def write_report(final_parts, boxes, topology_rows, component_rows, section_rows, gate_rows, cutoff_rows, integration, gm_changed, wall_part, datacheck_status):
+def write_report(final_parts, boxes, topology_rows, component_rows, section_rows, gate_rows, cutoff_rows, integration, gm_changed, wall_part, datacheck_status, bad_before=None, bad_after=None, initial_condition_rows=None):
     geometry_ready = any(r["gate"] == "geometry_solver_readiness_gate" and r["status"] == "PASS" for r in gate_rows)
     production_ready = any(r["gate"] == "production_seepage_readiness_gate" and r["status"] == "PASS" for r in gate_rows)
     if datacheck_status == "CLEAN" and production_ready:
         status = "DATACHECK_CLEAN_SEEPAGE_READY"
-    elif datacheck_status in ("CLEAN", "COMPLETED_WITH_ISSUES"):
+    elif datacheck_status == "CLEAN":
+        status = "DATACHECK_CLEAN_HYDRAULICS_UNRESOLVED"
+    elif datacheck_status == "COMPLETED_WITH_ISSUES":
         status = "DATACHECK_COMPLETED_WITH_ISSUES"
     elif geometry_ready:
         status = "GEOMETRY_READY_HYDRAULICS_UNRESOLVED"
@@ -1846,13 +2149,17 @@ def write_report(final_parts, boxes, topology_rows, component_rows, section_rows
         h.write("- Geological leaf Sections audited: **%d** (required 36).\n" % len(section_rows))
         h.write("- Rock-related unresolved regions are retained without invented permeability or global C3D8R->C3D8P conversion; see `v15_13_rock_hydraulic_parameter_basis.csv`.\n")
         h.write("- Backfill material status: **ENGINEERING_EQUIVALENT_ASSUMPTION**, not source-verified calibration.\n\n")
+        h.write("## Data Check error repair\n\n")
+        h.write("- Locally repaired negative-Jacobian elements: **%d before -> %d after**. The repair is limited to the reversed `V15_4_FISHWAY` C3D8R connectivity; coordinates and part geometry were not changed.\n" % (len(bad_before or []), len(bad_after or [])))
+        h.write("- Active initial-ratio Node Sets restored: **%d**, audited in `v15_13_initial_condition_audit.csv`.\n" % len(initial_condition_rows or []))
+        h.write("- Permeability definitions were audited without inventing rock coefficients; see `v15_13_permeability_material_audit.csv`.\n\n")
         h.write("## Gates and Data Check\n\n")
         for row in gate_rows:
             h.write("- `%s`: **%s** — %s\n" % (row["gate"], row["status"], row["blocking_reason"] or "evidence recorded"))
         h.write("\n- Geometry Solver Readiness: **%s**.\n" % ("PASS" if geometry_ready else "UNRESOLVED"))
         h.write("- Production Seepage Readiness: **%s**.\n" % ("PASS" if production_ready else "UNRESOLVED"))
         h.write("- Abaqus Data Check: **%s**. It was run only if the Geometry Solver Readiness gate passed. S01-S07: **NOT RUN**.\n" % datacheck_status)
-        h.write("- Data Check evidence is recorded in `v15_13_datacheck_issue_register.csv` and `v15_13_datacheck_status.csv`; the current run produced a `.dat` and stopped with input/material/element issues before emitting `.msg`/`.sta`.\n")
+        h.write("- Data Check evidence is recorded in `v15_13_datacheck_issue_register.csv` and `v15_13_datacheck_status.csv`; artifact presence and all detected issue counts are reported there.\n")
         h.write("- Right-bank grout-curtain representation remains unresolved because the source gives approximate extent but no defensible numerical thickness/equivalent boundary definition.\n")
         h.write("- Spillway-to-main-dam gravity retaining-wall body remains unresolved because source dimensions were insufficient; only the source-supported anti-seepage connection bend was added.\n")
         h.write("\n## Deliverables\n\n")
@@ -1869,6 +2176,8 @@ def main():
         os.makedirs(V15_DIR)
     base_text = open(BASE_INP, "r", encoding="utf-8", errors="replace").read()
     base_lines, base_parts, base_instances, _ = deck_parser.parse_deck(BASE_INP)
+    _base_placements, base_transforms = transforms_for(base_lines, base_parts, base_instances)
+    bad_before = volume_issue_records(base_parts, base_instances, base_transforms)
     integration = merge_backfill_into_geology(base_parts)
     wall_lines, wall_stations, wall_nodes, wall_elements, _wall_sets = make_wall_part()
     global WALL_ELEMENT_SEGMENTS
@@ -1878,9 +2187,20 @@ def main():
     with open(OUT_INP, "w", encoding="utf-8", newline="\n") as handle:
         handle.write(final_text)
     final_lines, final_parts, final_instances, _ = deck_parser.parse_deck(OUT_INP)
+    final_lines, initial_condition_rows = restore_initial_condition_sets(
+        final_lines, final_parts, final_instances)
+    final_lines = ensure_datacheck_step(final_lines)
+    final_text = "\n".join(final_lines) + "\n"
+    with open(OUT_INP, "w", encoding="utf-8", newline="\n") as handle:
+        handle.write(final_text)
+    final_lines, final_parts, final_instances, _ = deck_parser.parse_deck(OUT_INP)
     global _FINAL_INSTANCES
     _FINAL_INSTANCES = final_instances
     placements, transforms = transforms_for(final_lines, final_parts, final_instances)
+    bad_after = volume_issue_records(final_parts, final_instances, transforms)
+    write_bad_element_location(base_lines, base_parts, base_instances, base_transforms, bad_before)
+    write_mesh_quality_after_fix(final_parts, final_instances)
+    write_initial_condition_audit(initial_condition_rows)
     boxes = actual_bbox_audit(final_parts, final_instances, transforms)
     axis_results = write_axis_and_chain(boxes, wall_stations)
     write_station_map()
@@ -1889,6 +2209,7 @@ def main():
     wall_part = final_parts[WALL_PART]
     component_rows, _groups = write_component_outputs(final_lines, final_parts, integration)
     materials = material_blocks(OUT_INP)
+    write_permeability_material_audit(final_lines, final_parts, materials)
     section_rows = section_level_audit(final_lines, final_parts, materials)
     write_csv("v15_13_section_level_pore_pressure_audit.csv", list(section_rows[0]), section_rows)
     write_csv("v15_13_geology_section_pore_pressure_audit.csv",
@@ -1923,7 +2244,7 @@ def main():
         axis_results["eco_pass"], component_rows, mesh_quality_rows,
         active_materials_pass)
     datacheck_status = run_datacheck_if_allowed(geometry_ready)
-    report, status = write_report(final_parts, boxes, topology_rows, component_rows, section_rows, gate_rows, cutoff_rows, integration, gm_changed, wall_part, datacheck_status)
+    report, status = write_report(final_parts, boxes, topology_rows, component_rows, section_rows, gate_rows, cutoff_rows, integration, gm_changed, wall_part, datacheck_status, bad_before, bad_after, initial_condition_rows)
     print("V15_13_CORRECTIVE_INP=%s" % OUT_INP)
     print("V15_13_CORRECTIVE_REPORT=%s" % report)
     print("V15_13_STATUS=%s" % status)

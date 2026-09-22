@@ -1,0 +1,96 @@
+Material name,Section,Element set,permeability value,Unit,Source,Classification,Element count,Element types
+P25_BAKESHALI,V15_5_ALL,V15_5_ALL,"0.000295,0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,4292,C3D6P;C3D8P
+P25_BAKESHALI,V15_5_ALL,V15_5_ALL,"0.000295,0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,1702,C3D6P;C3D8P
+P25_BAKESHALI,V15_5_ALL,V15_5_ALL,"0.000295,0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,1628,C3D6P;C3D8P
+P25_PAISHUITI,V15_5_ALL,V15_5_ALL,"0.0225,0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,518,C3D8P
+P25_PAISHUITI,V15_5_ALL,V15_5_ALL,"0.0225,0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,1184,C3D8P
+P25_FANLV,V15_5_ALL,V15_5_ALL,"4.47e-05,0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,1480,C3D6P;C3D8P
+P25_BIQILIAO,V15_5_ALL,V15_5_ALL,"5.1e-07,0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,1110,C3D6P;C3D8P
+P25_WEIYANJITI,V15_5_ALL,V15_5_ALL,"0.00051,0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,1998,C3D6P;C3D8P
+P25_WEIYANJITI,V15_5_ALL,V15_5_ALL,"0.00051,0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,444,C3D6P;C3D8P
+P25_WEIYANSHALI,V15_5_ALL,V15_5_ALL,"0.000295,0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,1036,C3D6P;C3D8P
+CONCRETE,V15_5_ALL,V15_5_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,9434,C3D8R
+CONCRETE,V15_5_ALL,V15_5_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,9434,C3D8R
+CONCRETE,V15_5_ALL,V15_5_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,9434,C3D8R
+CONCRETE,V15_5_ALL,V15_5_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,9434,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,3462,C3D8R
+CONCRETE,V15_5_ALL,V15_5_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,1798,C3D8R
+DAM_ROCKFILL,V15_5_ALL,V15_5_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,702,C3D8R
+CONCRETE,V15_5_ALL,V15_5_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,1694,C3D8R
+DAM_ROCKFILL,V15_5_ALL,V15_5_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,360,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,960,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,720,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,720,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,720,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,720,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,720,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,720,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,1280,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,2240,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,1260,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,1260,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,1260,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,1260,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,1260,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,1260,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,1260,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,1260,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,2730,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,8385,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,9360,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,1820,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,2520,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,2100,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,2100,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,1600,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,1600,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,572,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,2080,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,338,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,260,C3D8R
+CONCRETE,V15_10_ALL,V15_10_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,2280,C3D8R
+CONCRETE,V15_10_ALL,V15_10_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,4164,C3D8R
+CONCRETE,V15_10_ALL,V15_10_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,400,C3D8R
+CONCRETE,V15_10_ALL,V15_10_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,760,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,1760,C3D8R
+CONCRETE,V15_ALL,V15_ALL,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,1760,C3D8R
+P25_FANGSHENQIANG,V15_5_ALL,V15_5_ALL,"1e-08,0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,31376,C3D8P
+GEOMEMBRANE,V15_5_ALL,V15_5_ALL,"4.5e-11, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,2400,C3D8P
+Q3AL_III,FOUNDATION_LEFT_COMPACTED_SAND_GRAVEL,FOUNDATION_LEFT_COMPACTED_SAND_GRAVEL,"8.49e-05, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,0,
+P2_QUARTZITE,GEO_LEFT_P2_QUARTZ_SANDSTONE,GEO_LEFT_P2_QUARTZ_SANDSTONE,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,6242,C3D8R
+FRESH_GRANITE,GEO_LEFT_FOUNDATION_GRANITE,GEO_LEFT_FOUNDATION_GRANITE,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,65912,C3D8R
+Q4DEL,GEO_LEFT_L01_Q4DEL,GEO_LEFT_L01_Q4DEL,"2.33e-05, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,34832,C3D8P
+Q4AL_SGR1,GEO_LEFT_L03_Q4AL_SGR1,GEO_LEFT_L03_Q4AL_SGR1,"5.8e-05, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,17792,C3D8P
+Q3AL_IV2,GEO_LEFT_L05_Q3AL_IV2,GEO_LEFT_L05_Q3AL_IV2,"2.35e-06, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,17689,C3D8P
+Q3AL_IV1,GEO_LEFT_L06_Q3AL_IV1,GEO_LEFT_L06_Q3AL_IV1,"5.48e-06, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,42476,C3D8P
+Q3AL_III,GEO_LEFT_L07_Q3AL_III,GEO_LEFT_L07_Q3AL_III,"8.49e-05, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,20102,C3D8P
+Q3AL_II,GEO_LEFT_L08_Q3AL_II,GEO_LEFT_L08_Q3AL_II,"5.89e-07, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,19932,C3D8P
+Q3AL_I,GEO_LEFT_L09_Q3AL_I,GEO_LEFT_L09_Q3AL_I,"1.14e-05, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,10923,C3D8P
+Q2FGL_V,GEO_LEFT_L10_Q2FGL_V,GEO_LEFT_L10_Q2FGL_V,"1.14e-05, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,19482,C3D8P
+Q2FGL_IV,GEO_LEFT_L11_Q2FGL_IV,GEO_LEFT_L11_Q2FGL_IV,"1.7e-06, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,18832,C3D8P
+Q2FGL_III,GEO_LEFT_L12_Q2FGL_III,GEO_LEFT_L12_Q2FGL_III,"3.26e-07, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,28248,C3D8P
+Q2FGL_II,GEO_LEFT_L13_Q2FGL_II,GEO_LEFT_L13_Q2FGL_II,"8.35e-07, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,18832,C3D8P
+Q2FGL_I,GEO_LEFT_L14_Q2FGL_I,GEO_LEFT_L14_Q2FGL_I,"2.5e-07, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,65912,C3D8P
+Q4AL_SGR2,GEO_RIVER_R02_Q4AL_SGR2,GEO_RIVER_R02_Q4AL_SGR2,"0.000233, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,4422,C3D8P
+Q3AL_IV2,GEO_RIVER_R05_Q3AL_IV2,GEO_RIVER_R05_Q3AL_IV2,"2.35e-06, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,4422,C3D8P
+Q3AL_IV1,GEO_RIVER_R06_Q3AL_IV1,GEO_RIVER_R06_Q3AL_IV1,"5.48e-06, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,8844,C3D8P
+Q3AL_III,GEO_RIVER_R07_Q3AL_III,GEO_RIVER_R07_Q3AL_III,"8.49e-05, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,4422,C3D8P
+Q3AL_II,GEO_RIVER_R08_Q3AL_II,GEO_RIVER_R08_Q3AL_II,"5.89e-07, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,4422,C3D8P
+Q3AL_I,GEO_RIVER_R09_Q3AL_I,GEO_RIVER_R09_Q3AL_I,"1.14e-05, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,4422,C3D8P
+Q2FGL_V,GEO_RIVER_R10_Q2FGL_V,GEO_RIVER_R10_Q2FGL_V,"1.14e-05, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,8696,C3D8P
+Q2FGL_IV,GEO_RIVER_R11_Q2FGL_IV,GEO_RIVER_R11_Q2FGL_IV,"1.7e-06, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,8480,C3D8P
+Q2FGL_III,GEO_RIVER_R12_Q2FGL_III,GEO_RIVER_R12_Q2FGL_III,"3.26e-07, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,8099,C3D8P
+Q2FGL_II,GEO_RIVER_R13_Q2FGL_II,GEO_RIVER_R13_Q2FGL_II,"8.35e-07, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,7498,C3D8P
+Q2FGL_I,GEO_RIVER_R14_Q2FGL_I,GEO_RIVER_R14_Q2FGL_I,"2.5e-07, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,10472,C3D8P
+ROCK_STRONG_UNLOADED,GEO_RIVER_ROCK_STRONG_UNLOADED,GEO_RIVER_ROCK_STRONG_UNLOADED,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,12224,C3D8R
+ROCK_WEAK_UNLOADED,GEO_RIVER_ROCK_WEAK_UNLOADED,GEO_RIVER_ROCK_WEAK_UNLOADED,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,6068,C3D8R
+ROCK_DEEP_UNLOADED,GEO_RIVER_ROCK_DEEP_UNLOADED,GEO_RIVER_ROCK_DEEP_UNLOADED,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,24272,C3D8R
+FRESH_GRANITE,GEO_RIVER_FRESH_GRANITE,GEO_RIVER_FRESH_GRANITE,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,18204,C3D8R
+Q4DEL,GEO_RIGHT_Q4_COLLUVIAL,GEO_RIGHT_Q4_COLLUVIAL,"2.33e-05, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,1848,C3D8P
+Q3AL_V,GEO_RIGHT_R04_Q3AL_V,GEO_RIGHT_R04_Q3AL_V,"4.46e-06, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,3696,C3D8P
+Q3AL_V,GEO_RIGHT_HIGH_TERRACE_COVER,GEO_RIGHT_HIGH_TERRACE_COVER,"4.46e-06, 0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,392,C3D8P
+ROCK_STRONG_UNLOADED,GEO_RIGHT_ROCK_STRONG_UNLOADED,GEO_RIGHT_ROCK_STRONG_UNLOADED,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,7392,C3D8R
+ROCK_WEAK_UNLOADED,GEO_RIGHT_ROCK_WEAK_UNLOADED,GEO_RIGHT_ROCK_WEAK_UNLOADED,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,3816,C3D8R
+ROCK_DEEP_UNLOADED,GEO_RIGHT_ROCK_DEEP_UNLOADED,GEO_RIGHT_ROCK_DEEP_UNLOADED,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,26112,C3D8R
+FRESH_GRANITE,GEO_RIGHT_FRESH_GRANITE,GEO_RIGHT_FRESH_GRANITE,NOT_DEFINED,NOT_APPLICABLE,non-porous structural formulation; permeability not applicable,VERIFIED_SOURCE,25872,C3D8R
+P25_FANGSHENQIANG,V15_13_ANTI_SEEPAGE_ALL,V15_13_ANTI_SEEPAGE_ALL,"1e-08,0.",m^2; active deck convention,active *Material/*Permeability definition; no new coefficient assigned,ENGINEERING_ASSUMPTION,10,C3D8P

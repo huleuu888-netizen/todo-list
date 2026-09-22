@@ -1,2 +1,2 @@
 job,command,return_code,status,output_files,issue_count,reason
-v15_13_corrective_execution,abaqus.bat job=v15_13_corrective_execution input=doub_hydropower_part25_geometric_solids_v15_13_corrective_execution.inp datacheck,0,COMPLETED_WITH_ISSUES,v15_13_corrective_execution.dat,7,existing Abaqus Data Check outputs reconciled; see issue register
+v15_13_datacheck_fix,cmd.exe /c abaqus.bat job=v15_13_datacheck_fix input=doub_hydropower_part25_geometric_solids_v15_13_corrective_execution.inp datacheck cpus=1,0,COMPLETED_WITH_ISSUES,v15_13_datacheck_fix.dat;v15_13_datacheck_fix.msg,2,existing Abaqus Data Check outputs reconciled; see issue register

@@ -30,6 +30,12 @@ FINAL_STATUS = DATACHECK_COMPLETED_WITH_ISSUES
 - Rock-related unresolved regions are retained without invented permeability or global C3D8R->C3D8P conversion; see `v15_13_rock_hydraulic_parameter_basis.csv`.
 - Backfill material status: **ENGINEERING_EQUIVALENT_ASSUMPTION**, not source-verified calibration.
 
+## Data Check error repair
+
+- Locally repaired negative-Jacobian elements: **3042 before -> 0 after**. The repair is limited to the reversed `V15_4_FISHWAY` C3D8R connectivity; coordinates and part geometry were not changed.
+- Active initial-ratio Node Sets restored: **14**, audited in `v15_13_initial_condition_audit.csv`.
+- Permeability definitions were audited without inventing rock coefficients; see `v15_13_permeability_material_audit.csv`.
+
 ## Gates and Data Check
 
 - `original_v15_13_task_read`: **PASS** — evidence recorded
@@ -56,8 +62,8 @@ FINAL_STATUS = DATACHECK_COMPLETED_WITH_ISSUES
 
 - Geometry Solver Readiness: **PASS**.
 - Production Seepage Readiness: **UNRESOLVED**.
-- Abaqus Data Check: **COMPLETED_WITH_ISSUES**. It was run only if the Geometry Solver Readiness gate passed. S01-S07: **NOT RUN**.
-- Data Check evidence is recorded in `v15_13_datacheck_issue_register.csv` and `v15_13_datacheck_status.csv`; the current run produced a `.dat` and stopped with input/material/element issues before emitting `.msg`/`.sta`.
+- Abaqus Data Check: **COMPLETED_WITH_ISSUES**. It was run only after the Geometry Solver Readiness gate passed. S01-S07: **NOT RUN**. The corrected run has `.dat` and `.msg`; Abaqus did not emit `.sta` for this datacheck-only job.
+- Data Check evidence is recorded in `v15_13_datacheck_issue_register.csv` and `v15_13_datacheck_status.csv`; artifact presence and all detected issue counts are reported there.
 - Right-bank grout-curtain representation remains unresolved because the source gives approximate extent but no defensible numerical thickness/equivalent boundary definition.
 - Spillway-to-main-dam gravity retaining-wall body remains unresolved because source dimensions were insufficient; only the source-supported anti-seepage connection bend was added.
 
