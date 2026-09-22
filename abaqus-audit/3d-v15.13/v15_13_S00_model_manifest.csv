@@ -1,0 +1,11 @@
+item,value,status,notes
+source_input,doub_hydropower_part25_geometric_solids_v15_13_corrective_execution.inp,VALIDATED_BASELINE,current abaqus-audit-task HEAD; user-requested 091376e2 is not present locally or on origin
+output_input,doub_hydropower_part25_geometric_solids_v15_13_S00_BASELINE_SEEPAGE.inp,GENERATED,S00_BASELINE_SEEPAGE only
+porous_instance_count,14,PASS,14 actual assembly instances with C3D*P elements
+geometry_fingerprint,d5c0d2c0416cf920735e68274de3cfc3898e0d220de9e8a8955bfaeee01193c4,PRESERVED,nodes/elements/part names and connectivity from source deck
+upstream_head_m,3076.0,SOURCE_HEAD,normal reservoir convention
+downstream_head_m,3055.0,SOURCE_HEAD,normal reservoir convention
+random_field,none,PASS,S00 intact baseline
+defects,none,PASS,S00 intact baseline
+z_pressure_bin_m,1.0,ENGINEERING_DISCRETIZATION,hydrostatic pressure applied at group mean elevation
+assembly_set_count,1492,GENERATED,"distributed base, upstream, downstream sets"

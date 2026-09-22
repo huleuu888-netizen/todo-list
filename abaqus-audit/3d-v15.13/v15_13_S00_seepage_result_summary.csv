@@ -1,0 +1,9 @@
+Metric,Value,Units,Source,Status,Notes
+analysis_job,v15_13_S00_BASELINE_SEEPAGE_SMP4,,v15_13_S00_BASELINE_SEEPAGE_SMP4.odb,PARTIAL_UNRESOLVED,actual Abaqus ODB
+min_pore_pressure,0.0,kPa,ODB final frame POR,PARTIAL_ODB_NOT_VALID_RESULT,partial ODB frame only; not a completed S00 result
+max_pore_pressure,0.0,kPa,ODB final frame POR,PARTIAL_ODB_NOT_VALID_RESULT,partial ODB frame only; not a completed S00 result
+max_seepage_velocity,0.0,m/s,ODB final frame FLVEL,PARTIAL_ODB_NOT_VALID_RESULT,partial ODB frame only; not a completed S00 result
+max_hydraulic_gradient,NOT_COMPUTED,-,ODB,UNRESOLVED,no reliable gradient field was requested
+phreatic_surface,NOT_IDENTIFIED,m,ODB,NOT_APPLICABLE,fully saturated coupled-domain baseline; no free-surface criterion was defined
+total_seepage_discharge,0.0,m^3/s,ODB final frame FLVEL,PARTIAL_ODB_NOT_VALID_RESULT,partial ODB frame only; discharge is not a completed S00 result
+frames_in_S00,1,count,ODB,PARTIAL_ODB_NOT_VALID_RESULT,step frame count

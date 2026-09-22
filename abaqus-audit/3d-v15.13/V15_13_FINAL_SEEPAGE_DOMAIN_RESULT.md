@@ -67,6 +67,16 @@ FINAL_STATUS = DATACHECK_COMPLETED_WITH_ISSUES
 - Right-bank grout-curtain representation remains unresolved because the source gives approximate extent but no defensible numerical thickness/equivalent boundary definition.
 - Spillway-to-main-dam gravity retaining-wall body remains unresolved because source dimensions were insufficient; only the source-supported anti-seepage connection bend was added.
 
+## S00 baseline seepage validation
+
+- Case: **S00_BASELINE_SEEPAGE**; intact anti-seepage system, no defects, no degradation, and no random field.
+- Generated input: `doub_hydropower_part25_geometric_solids_v15_13_S00_BASELINE_SEEPAGE.inp`. Its node/element geometry fingerprint is recorded in `v15_13_S00_model_manifest.csv` and matches the corrective source deck.
+- Boundary audit: `v15_13_S00_boundary_condition_audit.csv`. Upstream head is 3076 m and downstream head is 3055 m using transformed Assembly-coordinate node sets. Component pressure boundaries are explicitly marked engineering assumptions; no Tie, spring, Encastre, or point-pinning constraint was added.
+- Data Check: **COMPLETED_WITH_ISSUES** for `v15_13_S00_BASELINE_SEEPAGE`; no input `***ERROR`, no negative/zero-volume error, and no initial-condition/permeability error. The Data Check reported 5,395 `.dat` warnings, one `.msg` warning, and 99 unconnected regions.
+- Full S00 Standard run: **UNRESOLVED / ABORTED** for `v15_13_S00_BASELINE_SEEPAGE_SMP4`. Abaqus reported zero pivots in DOF 3 of `V15_7_FOUNDATION_GEOLOGY_I`, a 99-region disconnect warning, and an excessive displacement/pressure correction. The run was stopped after the real failure evidence appeared; no artificial constraint was introduced to hide it.
+- S00 result summary: `v15_13_S00_seepage_result_summary.csv`. Total discharge, hydraulic gradient, and engineering validation are **NOT_COMPUTED/UNRESOLVED** because the solver did not produce a completed `.sta` result. The partial ODB is retained locally but is not treated as a valid baseline result.
+- S00 issue register: `v15_13_S00_solver_issue_register.csv`. S01-S07 were **NOT RUN**.
+
 ## Deliverables
 
 - Corrective INP: `D:\Backup\Documents\ChatGPT\多步水电站\todo-list\abaqus-audit\3d-v15.13\doub_hydropower_part25_geometric_solids_v15_13_corrective_execution.inp`

@@ -1,0 +1,4 @@
+source,severity,issue,status,evidence
+v15_13_S00_BASELINE_SEEPAGE_SMP4.msg,WARNING,unconnected regions,UNRESOLVED,99 unconnected regions reported by Abaqus
+v15_13_S00_BASELINE_SEEPAGE_SMP4.msg,ERROR,zero pivot / insufficient mechanical constraint,UNRESOLVED,WarnNodeSolvProbZeroPiv and foundation geology DOF 3
+v15_13_S00_BASELINE_SEEPAGE_SMP4.sta,ERROR,status file missing,UNRESOLVED,No completed-analysis .sta file

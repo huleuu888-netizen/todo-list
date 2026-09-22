@@ -1,0 +1,9 @@
+issue,severity,source,count,status,evidence
+input_errors,ERROR,v15_13_S00_BASELINE_SEEPAGE.dat,0,PASS,No ***ERROR entries found in the Data Check dat file
+volume_errors,ERROR,v15_13_S00_BASELINE_SEEPAGE.dat,0,PASS,No zero-volume or negative-volume Data Check error found
+initial_condition_errors,ERROR,v15_13_S00_BASELINE_SEEPAGE.dat,0,PASS,Existing 14 V12_RATIO sets accepted by Data Check
+permeability_errors,ERROR,v15_13_S00_BASELINE_SEEPAGE.dat,0,PASS,Existing active *Permeability definitions accepted by Data Check
+dat_warnings,WARNING,v15_13_S00_BASELINE_SEEPAGE.dat,5395,COMPLETED_WITH_ISSUES,Data Check summary reports 5395 warning messages
+msg_warnings,WARNING,v15_13_S00_BASELINE_SEEPAGE.msg,1,COMPLETED_WITH_ISSUES,99 unconnected regions warning
+full_solver_zero_pivot,ERROR,v15_13_S00_BASELINE_SEEPAGE_SMP4.msg,4,UNRESOLVED,Zero pivot warnings in foundation geology DOF 3
+full_solver_status,ERROR,v15_13_S00_BASELINE_SEEPAGE_SMP4.sta,0,UNRESOLVED,No completed-analysis status file was produced
