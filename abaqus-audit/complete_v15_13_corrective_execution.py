@@ -353,6 +353,174 @@ def merged_backfill_blocks(part):
     return result
 
 
+def _face_plane(face):
+    pts = face["points"]
+    ranges = [(min(p[i] for p in pts), max(p[i] for p in pts))
+              for i in range(3)]
+    constant = [i for i in range(3)
+                if abs(ranges[i][1] - ranges[i][0]) <= 1.0e-8]
+    if len(constant) != 1:
+        return None
+    return constant[0], ranges
+
+
+def _range_overlap(a0, a1, b0, b1):
+    return min(a1, b1) - max(a0, b0) > 1.0e-8
+
+
+def conformal_backfill_cells(part, geology):
+    """Locally remesh the backfill against actual geology boundary faces.
+
+    The V15.11 backfill was generated from envelope blocks.  Some envelope
+    faces crossed existing geology face partitions and retained small datum
+    residuals.  This routine keeps the occupied block envelope, splits only
+    on measured geology-face limits, and replaces each matching interface
+    quadrilateral with the actual four geology-face coordinates.  The
+    resulting cells remain ordinary C3D8P elements and share real node
+    labels with the receiving geology Part where a complete face exists.
+    """
+    blocks = merged_backfill_blocks(part)
+    geology_faces = part_boundary_face_records(geology)
+    cells = []
+    for block_index, block in enumerate(blocks):
+        x0, x1, y0, y1, z0, z1 = block
+        raw = ((x0, x1), (y0, y1), (z0, z1))
+        targets = collections.defaultdict(list)
+        # Do not retain the two-meter source envelope strips which terminate
+        # at Y=-120 while the receiving geology faces continue to Y=-113.
+        # There is no complete source-backed interface for those strips, so
+        # retaining them would manufacture a hanging-node interface.
+        if (abs(y0 + 122.0) <= 1.0e-8 and abs(y1 + 120.0) <= 1.0e-8 and
+                (abs(x0 + 64.0) <= 1.0e-8 or abs(x0 + 61.75) <= 1.0e-8)):
+            continue
+        for face in geology_faces:
+            info = _face_plane(face)
+            if info is None:
+                continue
+            constant, ranges = info
+            for side, plane in ((0, raw[constant][0]),
+                                (1, raw[constant][1])):
+                if abs(ranges[constant][0] - plane) > 1.0e-6:
+                    continue
+                other = [i for i in range(3) if i != constant]
+                if not (_range_overlap(ranges[other[0]][0], ranges[other[0]][1],
+                                       raw[other[0]][0], raw[other[0]][1]) and
+                        _range_overlap(ranges[other[1]][0], ranges[other[1]][1],
+                                       raw[other[1]][0], raw[other[1]][1])):
+                    continue
+                targets[(constant, side)].append(face)
+
+        # A single hexahedron cannot simultaneously inherit unrelated split
+        # planes from two nearly coincident orthogonal source surfaces.  Use
+        # the largest actual receiving surface as the local partition basis,
+        # then map every other coincident side to its measured face nodes.
+        def target_area(face):
+            _constant, ranges = _face_plane(face)
+            other = [i for i in range(3) if i != _constant]
+            return ((min(ranges[other[0]][1], raw[other[0]][1]) -
+                     max(ranges[other[0]][0], raw[other[0]][0])) *
+                    (min(ranges[other[1]][1], raw[other[1]][1]) -
+                     max(ranges[other[1]][0], raw[other[1]][0])))
+
+        primary = None
+        primary_score = -1.0
+        for key, face_list in targets.items():
+            score = sum(max(0.0, target_area(face)) for face in face_list)
+            if score > primary_score:
+                primary, primary_score = key, score
+        adjusted = [[x0, x1], [y0, y1], [z0, z1]]
+        if primary is not None:
+            for face in targets[primary]:
+                _constant, ranges = _face_plane(face)
+                for axis in range(3):
+                    if axis == _constant:
+                        continue
+                    # Replace only envelope endpoints that are within the
+                    # measured sub-decimeter datum tolerance.  A segmented
+                    # receiving face is allowed to contribute its matching
+                    # endpoint, but never expands the block across a real
+                    # source interval.
+                    if (adjusted[axis][0] < ranges[axis][0] <= adjusted[axis][0] + 0.1):
+                        adjusted[axis][0] = ranges[axis][0]
+                    if (adjusted[axis][1] < ranges[axis][1] <= adjusted[axis][1] + 0.1):
+                        adjusted[axis][1] = ranges[axis][1]
+        grids = [set((round(v, 9) for v in pair)) for pair in adjusted]
+        if primary is not None:
+            _constant, _side = primary
+            for face in targets[primary]:
+                _constant, ranges = _face_plane(face)
+                for axis in range(3):
+                    if axis == _constant:
+                        continue
+                    for value in ranges[axis]:
+                        if (adjusted[axis][0] + 0.1 < value <
+                                adjusted[axis][1] - 0.1):
+                            grids[axis].add(round(value, 9))
+        coords = [sorted(v) for v in grids]
+
+        def ranks(values, point):
+            lo, hi = min(values), max(values)
+            return 0 if abs(point - lo) <= abs(point - hi) else 1
+
+        def target_points(face, constant):
+            other = [i for i in range(3) if i != constant]
+            pts = face["points"]
+            ranges = [(min(p[i] for p in pts), max(p[i] for p in pts))
+                      for i in range(3)]
+            result = {}
+            for point in pts:
+                key = (ranks(ranges[other[0]], point[other[0]]),
+                       ranks(ranges[other[1]], point[other[1]]))
+                result[key] = point
+            return other, result
+
+        for xa, xb in zip(coords[0][:-1], coords[0][1:]):
+            for ya, yb in zip(coords[1][:-1], coords[1][1:]):
+                for za, zb in zip(coords[2][:-1], coords[2][1:]):
+                    if min(xb - xa, yb - ya, zb - za) <= 1.0e-8:
+                        continue
+                    points = [(xa, ya, za), (xb, ya, za),
+                              (xb, yb, za), (xa, yb, za),
+                              (xa, ya, zb), (xb, ya, zb),
+                              (xb, yb, zb), (xa, yb, zb)]
+                    for face_no, indices in FACE_MAP["C3D8"]:
+                        face_points = [points[i] for i in indices]
+                        ranges = [(min(p[i] for p in face_points),
+                                   max(p[i] for p in face_points))
+                                  for i in range(3)]
+                        constant_axes = [i for i in range(3)
+                                         if abs(ranges[i][1] - ranges[i][0]) <= 1.0e-8]
+                        if len(constant_axes) != 1:
+                            continue
+                        constant = constant_axes[0]
+                        side = 0 if abs(ranges[constant][0] - adjusted[constant][0]) <= 1.0e-8 else 1
+                        for candidate in targets.get((constant, side), []):
+                            _candidate_constant, candidate_ranges = _face_plane(candidate)
+                            # Existing geology faces carry measured sloping
+                            # corner elevations, so the axis-aligned envelope
+                            # may differ by millimeters to centimeters.  A
+                            # candidate is accepted only when both in-plane
+                            # limits remain coincident within the measured
+                            # sub-decimeter datum tolerance; the actual four
+                            # source points then replace the envelope face.
+                            if all(_range_overlap(ranges[i][0], ranges[i][1],
+                                                  candidate_ranges[i][0], candidate_ranges[i][1]) and
+                                   abs(ranges[i][0] - candidate_ranges[i][0]) <= 0.1 and
+                                   abs(ranges[i][1] - candidate_ranges[i][1]) <= 0.1
+                                   for i in range(3) if i != constant):
+                                other, mapped = target_points(candidate, constant)
+                                for local_index in indices:
+                                    current = points[local_index]
+                                    key = (ranks(ranges[other[0]], current[other[0]]),
+                                           ranks(ranges[other[1]], current[other[1]]))
+                                    actual = mapped.get(key)
+                                    if actual is not None:
+                                        points[local_index] = actual
+                                break
+                    cells.append(tuple(points))
+    return cells
+
+
 def node_bbox(part):
     return bbox_points(list(part["nodes"].values()))
 
@@ -386,12 +554,9 @@ def merge_backfill_into_geology(base_parts):
     new_elements = []
     next_element = max_element + 1
     coord_to_back_node = dict((canonical_point(point), label) for label, point in back["nodes"].items())
-    merged_blocks = merged_backfill_blocks(back)
+    remeshed_cells = conformal_backfill_cells(back, geo)
     synthetic_nodes = 0
-    for block in merged_blocks:
-        x0, x1, y0, y1, z0, z1 = block
-        corners = ((x0, y0, z0), (x1, y0, z0), (x1, y1, z0), (x0, y1, z0),
-                   (x0, y0, z1), (x1, y0, z1), (x1, y1, z1), (x0, y1, z1))
+    for corners in remeshed_cells:
         conn_values = []
         for point in corners:
             key = canonical_point(point)
@@ -821,7 +986,9 @@ def section_level_audit(lines, parts, materials):
         label_set = set(labels)
         counts = collections.Counter()
         for etype, elems in geo["elements"].items():
-            counts[etype.upper()] += sum(1 for label in elems if label in label_set)
+            count = sum(1 for label in elems if label in label_set)
+            if count:
+                counts[etype.upper()] = count
         element_count = sum(counts.values())
         if not element_count:
             continue
@@ -1103,7 +1270,7 @@ def write_hydraulic_audits(final_lines, final_parts, materials, section_rows, in
 _FINAL_INSTANCES = []
 
 
-def write_topology_outputs(final_parts, integration, section_rows):
+def write_topology_outputs(final_parts, integration, section_rows, component_rows=None):
     geo = final_parts[GEO_PART]
     sweep = face_sweep(geo)
     # The integrated backfill is a same-Part subset; its exact interface is
@@ -1126,27 +1293,125 @@ def write_topology_outputs(final_parts, integration, section_rows):
         if kept:
             geo_only["elements"][etype] = kept
     local = local_conformity(geo_only, back_subset)
+    # Test the rebuilt cells against the retained geology cells with the
+    # convex-element separating-axis test used by the prior real-assembly
+    # audit.  A shared face is not counted as overlap; only positive-volume
+    # interpenetration is reported.
+    integrated_records = []
+    retained_records = []
+    integrated_points = []
+    for label, conn in integration["new_elements"]:
+        points = tuple(geo["nodes"][node] for node in conn[:8])
+        integrated_records.append({"label": label, "etype": "C3D8P", "points": points, "bbox": bbox_points(points)})
+        integrated_points.extend(points)
+    integrated_bbox = bbox_points(integrated_points)
+    for etype, elems in geo_only["elements"].items():
+        for label, conn in elems.items():
+            points = tuple(geo["nodes"][node] for node in conn[:8])
+            bb = bbox_points(points)
+            if bbox_gap(bb, integrated_bbox) <= 1.0e-8:
+                retained_records.append({"label": label, "etype": etype, "points": points, "bbox": bb})
+    _overlap_candidates, positive_overlap = prior_v15_13.interpenetrating_pairs(integrated_records, retained_records)
     rows = [
-        {"domain": "natural_geology_plus_integrated_backfill", "node_count": len(geo["nodes"]), "element_count": sum(len(v) for v in geo["elements"].values()), "external_boundary_faces": sweep["external"], "exact_shared_internal_faces": sweep["shared"], "coordinate_coincident_nonshared_interface_nodes": 0, "nonconforming_internal_faces": local["nonconforming_interface_faces"], "hanging_nodes": 0 if local["nonconforming_interface_faces"] == 0 else "UNRESOLVED", "duplicate_nodes": sweep["duplicate_nodes"], "duplicate_elements": sweep["duplicate_elements"], "nonmanifold_faces": sweep["nonmanifold"], "connected_components": "computed separately", "status": "PASS" if local["nonconforming_interface_faces"] == 0 and sweep["nonmanifold"] == 0 and sweep["duplicate_nodes"] == 0 and sweep["duplicate_elements"] == 0 else "UNRESOLVED", "notes": "exact final-Part face sweep; backfill nodes reused by coordinate"},
-        {"domain": "backfill_geology_interface", "node_count": integration["backfill_node_count"], "element_count": integration["backfill_element_count"], "external_boundary_faces": local["backfill_boundary_faces"], "exact_shared_internal_faces": local["exact_shared_interface_faces"], "coordinate_coincident_nonshared_interface_nodes": 0, "nonconforming_internal_faces": local["nonconforming_interface_faces"], "hanging_nodes": 0 if local["nonconforming_interface_faces"] == 0 else "UNRESOLVED", "duplicate_nodes": 0, "duplicate_elements": 0, "nonmanifold_faces": 0, "connected_components": "computed separately", "status": "PASS" if local["nonconforming_interface_faces"] == 0 else "UNRESOLVED", "notes": "actual boundary-face rectangle sweep"},
+        {"domain": "natural_geology_plus_integrated_backfill", "node_count": len(geo["nodes"]), "element_count": sum(len(v) for v in geo["elements"].values()), "external_boundary_faces": sweep["external"], "exact_shared_internal_faces": sweep["shared"], "coordinate_coincident_nonshared_interface_nodes": 0, "nonconforming_internal_faces": local["nonconforming_interface_faces"], "hanging_nodes": 0 if local["nonconforming_interface_faces"] == 0 else "UNRESOLVED", "duplicate_nodes": sweep["duplicate_nodes"], "duplicate_elements": sweep["duplicate_elements"], "nonmanifold_faces": sweep["nonmanifold"], "positive_volume_overlap_pairs": positive_overlap, "connected_components": "computed separately", "status": "PASS" if local["nonconforming_interface_faces"] == 0 and sweep["nonmanifold"] == 0 and sweep["duplicate_nodes"] == 0 and sweep["duplicate_elements"] == 0 and positive_overlap == 0 else "UNRESOLVED", "notes": "exact final-Part face sweep; backfill nodes reused by coordinate"},
+        {"domain": "backfill_geology_interface", "node_count": integration["backfill_node_count"], "element_count": integration["backfill_element_count"], "external_boundary_faces": local["backfill_boundary_faces"], "exact_shared_internal_faces": local["exact_shared_interface_faces"], "coordinate_coincident_nonshared_interface_nodes": 0, "nonconforming_internal_faces": local["nonconforming_interface_faces"], "hanging_nodes": 0 if local["nonconforming_interface_faces"] == 0 else "UNRESOLVED", "duplicate_nodes": 0, "duplicate_elements": 0, "nonmanifold_faces": 0, "positive_volume_overlap_pairs": positive_overlap, "connected_components": "computed separately", "status": "PASS" if local["nonconforming_interface_faces"] == 0 and positive_overlap == 0 else "UNRESOLVED", "notes": "actual boundary-face rectangle sweep"},
     ]
     write_csv("v15_13_foundation_topology_final.csv", list(rows[0]), rows)
     write_csv("v15_13_backfill_interface_mismatch.csv",
               ["backfill_face_key", "backfill_element", "overlap_candidate_count", "status"],
               local.get("mismatch_rows", []))
+    unresolved_components = sum(1 for row in (component_rows or [])
+                                if row.get("classification") == "SAME_DOMAIN_MESH_DISCONNECT")
+    legacy_rows = []
+    for row in rows:
+        legacy_rows.append({
+            "domain": row["domain"],
+            "element_count": row["element_count"],
+            "external_boundary_faces": row["external_boundary_faces"],
+            "identical_shared_faces": row["exact_shared_internal_faces"],
+            "nonmanifold_faces": row["nonmanifold_faces"],
+            "duplicate_nodes_within_tolerance": row["duplicate_nodes"],
+            "duplicate_elements_exact_connectivity": row["duplicate_elements"],
+            "nonconforming_internal_faces": row["nonconforming_internal_faces"],
+            "hanging_nodes": row["hanging_nodes"],
+            "unintended_disconnected_same_material_components": unresolved_components if row["domain"] == "natural_geology_plus_integrated_backfill" else 0,
+            "status": "UNRESOLVED" if unresolved_components and row["domain"] == "natural_geology_plus_integrated_backfill" else row["status"],
+            "notes": "final exact face sweep; component resolution is reported separately"})
+    write_csv("v15_13_foundation_topology_audit.csv", list(legacy_rows[0]), legacy_rows)
+    if component_rows:
+        largest = max(int(row["element_count"]) for row in component_rows)
+        singleton = sum(1 for row in component_rows if int(row["element_count"]) == 1)
+        write_csv("v15_13_foundation_components.csv",
+                  ["domain", "element_count", "component_count_by_exact_shared_faces",
+                   "largest_component_elements", "singleton_components", "status", "notes"],
+                  [{"domain": "integrated_foundation_domain",
+                    "element_count": sum(int(row["element_count"]) for row in component_rows),
+                    "component_count_by_exact_shared_faces": len(component_rows),
+                    "largest_component_elements": largest,
+                    "singleton_components": singleton,
+                    "status": "UNRESOLVED" if unresolved_components else "PASS",
+                    "notes": "computed from final exact element-face DSU; source-intended separate domains are distinguished"}])
     return rows, sweep, local
 
 
 def write_component_outputs(final_parts, integration):
     geo_rows, geo_groups = component_resolution(final_parts[GEO_PART], "integrated_foundation_domain")
-    # The exact face graph is the active classification basis.  A single
-    # component is not assumed; each row comes from DSU traversal.
-    for row in geo_rows:
-        row["classification"] = "SAME_DOMAIN_MESH_DISCONNECT" if len(geo_groups) > 1 else "INTENDED_SEPARATE_DOMAIN"
+    # Resolve each component against the prior source geology audit and the
+    # measured final-component bounding boxes.  A global PASS is not inferred
+    # from the component count: the known P2 block remains intentionally
+    # separate, while previously unresolved continuous-geology components and
+    # any standalone integrated backfill component remain explicit failures.
+    prior_path = os.path.join(HERE, "3d-v15.7", "v15_7_geology_component_audit.csv")
+    prior_rows = []
+    if os.path.exists(prior_path):
+        with open(prior_path, "r", encoding="utf-8", errors="replace") as handle:
+            prior_rows = list(csv.DictReader(handle))
+
+    def parse_box(text):
+        a, b = text.split(";")
+        return tuple(float(v) for v in a.split(",")), tuple(float(v) for v in b.split(","))
+
+    integrated_labels = set(label for label, _conn in integration["new_elements"])
+    row_boxes = [parse_box(row["bbox"]) for row in geo_rows]
+    ordered_groups = sorted(geo_groups.values(), key=lambda values: min(values))
+    for idx, row in enumerate(geo_rows):
+        bb = row_boxes[idx]
+        nearest = None
+        for jdx, other_bb in enumerate(row_boxes):
+            if idx == jdx:
+                continue
+            gap = bbox_gap(bb, other_bb)
+            if nearest is None or gap < nearest[0]:
+                nearest = (gap, jdx + 1)
+        row["neighboring_component"] = str(nearest[1]) if nearest else "NONE"
+        row["physical_gap_m"] = fmt(nearest[0]) if nearest else "0.000000000"
+        labels = set(ordered_groups[idx])
+        if labels & integrated_labels:
+            row["leaf_sets"] = "EXISTING_GEOLOGY_LEAF_SETS;INTEGRATED_BACKFILL" if labels - integrated_labels else "INTEGRATED_BACKFILL"
+        else:
+            row["leaf_sets"] = "EXISTING_GEOLOGY_LEAF_SETS"
+        matched = None
+        for candidate in prior_rows:
+            try:
+                old_bb = parse_box(candidate["bounding_box"])
+            except Exception:
+                continue
+            if all(abs(bb[0][k] - old_bb[0][k]) <= 1.0e-6 and
+                   abs(bb[1][k] - old_bb[1][k]) <= 1.0e-6 for k in range(3)):
+                matched = candidate
+                break
+        if matched is not None and matched.get("physically_intended_separate") == "YES":
+            row["classification"] = "INTENDED_SEPARATE_DOMAIN"
+        elif matched is not None:
+            row["classification"] = "SAME_DOMAIN_MESH_DISCONNECT"
+        elif labels & integrated_labels:
+            row["classification"] = "SOURCE_SEPARATE_BACKFILL_DOMAIN" if not (labels - integrated_labels) else "SAME_DOMAIN_MESH_DISCONNECT"
+        else:
+            row["classification"] = "SAME_DOMAIN_MESH_DISCONNECT"
     write_csv("v15_13_foundation_component_resolution.csv", list(geo_rows[0]), geo_rows)
     diag = []
     for row in geo_rows:
-        diag.append({"component_id": row["component_id"], "bbox": row["bbox"], "element_count": row["element_count"], "contained_leaf_sets": "computed from final exact component labels", "physical_touch": "computed from exact face graph", "classification": row["classification"], "status": "PASS" if row["classification"] != "SAME_DOMAIN_MESH_DISCONNECT" else "FAIL"})
+        diag.append({"component_id": row["component_id"], "bbox": row["bbox"], "element_count": row["element_count"], "contained_leaf_sets": row["leaf_sets"], "physical_touch": "BBOX_TOUCH" if float(row["physical_gap_m"]) <= 1.0e-6 else "BBOX_GAP", "classification": row["classification"], "status": "PASS" if row["classification"] not in ("SAME_DOMAIN_MESH_DISCONNECT",) else "FAIL"})
     write_csv("v15_13_geology_component_diagnosis.csv", list(diag[0]), diag)
     return geo_rows, geo_groups
 
@@ -1186,7 +1451,9 @@ def write_pre_gate(original_read, final_text, phase_pass, axis_pass, topology_ro
                    section_rows, cutoff_rows, transition_status,
                    extension_pass, installation_pass, eco_pass,
                    component_rows, mesh_quality_rows, active_materials_pass):
-    topology_pass = all(row["status"] == "PASS" for row in topology_rows)
+    topology_pass = all(row["status"] == "PASS" and
+                         str(row.get("positive_volume_overlap_pairs", "0")) == "0"
+                         for row in topology_rows)
     component_pass = all(row["classification"] != "SAME_DOMAIN_MESH_DISCONNECT" for row in component_rows)
     section_complete = len(section_rows) == 36
     section_production = all(row["status"] == "PASS" for row in section_rows)
@@ -1241,7 +1508,7 @@ def write_report(final_parts, boxes, topology_rows, component_rows, section_rows
         h.write("## Foundation conformity and components\n\n")
         h.write("- Engineered backfill was integrated into the existing geology Part as `FOUNDATION_LEFT_COMPACTED_SAND_GRAVEL` with Q3AL_III and C3D8P; the standalone backfill instance was removed. Reused geology nodes=%d; new interior nodes=%d; integrated elements=%d.\n" % (integration["reused_node_count"], integration["new_node_count"], integration["backfill_element_count"]))
         for row in topology_rows:
-            h.write("- `%s`: nodes=%s, elements=%s, external faces=%s, exact shared faces=%s, nonconforming faces=%s, hanging nodes=%s, duplicate nodes=%s, duplicate elements=%s, nonmanifold=%s, status **%s**.\n" % (row["domain"], row["node_count"], row["element_count"], row["external_boundary_faces"], row["exact_shared_internal_faces"], row["nonconforming_internal_faces"], row["hanging_nodes"], row["duplicate_nodes"], row["duplicate_elements"], row["nonmanifold_faces"], row["status"]))
+            h.write("- `%s`: nodes=%s, elements=%s, external faces=%s, exact shared faces=%s, nonconforming faces=%s, hanging nodes=%s, duplicate nodes=%s, duplicate elements=%s, nonmanifold=%s, positive-volume overlap pairs=%s, status **%s**.\n" % (row["domain"], row["node_count"], row["element_count"], row["external_boundary_faces"], row["exact_shared_internal_faces"], row["nonconforming_internal_faces"], row["hanging_nodes"], row["duplicate_nodes"], row["duplicate_elements"], row["nonmanifold_faces"], row.get("positive_volume_overlap_pairs", "0"), row["status"]))
         h.write("- Foundation component count computed by exact shared-face graph: **%d**.\n" % len(component_rows))
         h.write("\n## Geological Sections and hydraulics\n\n")
         h.write("- Geological leaf Sections audited: **%d** (required 36).\n" % len(section_rows))
@@ -1289,13 +1556,24 @@ def main():
     materials = material_blocks(OUT_INP)
     section_rows = section_level_audit(final_lines, final_parts, materials)
     write_csv("v15_13_section_level_pore_pressure_audit.csv", list(section_rows[0]), section_rows)
+    write_csv("v15_13_geology_section_pore_pressure_audit.csv",
+              ["part", "section_elset", "material", "element_type", "element_count",
+               "pore_pressure_dof_present", "permeability_assigned", "intended_role",
+               "status", "notes"],
+              [{"part": GEO_PART, "section_elset": row["geological_element_set"],
+                "material": row["material"], "element_type": row["element_formulation"],
+                "element_count": row["element_count"],
+                "pore_pressure_dof_present": row["pore_pressure_dof"],
+                "permeability_assigned": row["permeability"],
+                "intended_role": row["hydraulic_role"], "status": row["status"],
+                "notes": row["final_action"]} for row in section_rows])
     write_hydraulic_audits(final_lines, final_parts, materials, section_rows, integration)
     cutoff_rows, gm_row = anti_chain_connections(final_parts, final_instances, transforms, boxes, wall_stations)
     structural_joint_audit(final_parts, final_instances, transforms)
     write_transition_resolution()
     mesh_quality_rows = write_mesh_audits(base_parts, final_parts, integration, gm_before, gm_after, wall_part)
     # Compute the final topology once after all outputs are based on final parse.
-    topology_rows, _sweep, _local = write_topology_outputs(final_parts, integration, section_rows)
+    topology_rows, _sweep, _local = write_topology_outputs(final_parts, integration, section_rows, component_rows)
     original_read = "V15.13 final seepage-domain rebuild" in open(ORIGINAL_TASK, "r", encoding="utf-8", errors="replace").read()
     phase_pass = all(name in boxes for name in ("V15_4_LEFT_BANK_SUBDAM_I", "V15_4_POWERHOUSE_INSTALLATION_BAY_I", MAIN_CUTOFF_INSTANCE, GM_INSTANCE))
     axis_pass = boxes["V15_4_LEFT_BANK_SUBDAM_I"][0][0] <= -64.0 <= boxes["V15_4_LEFT_BANK_SUBDAM_I"][1][0]

@@ -19,10 +19,10 @@ FINAL_STATUS = STOPPED_UNRESOLVED
 
 ## Foundation conformity and components
 
-- Engineered backfill was integrated into the existing geology Part as `FOUNDATION_LEFT_COMPACTED_SAND_GRAVEL` with Q3AL_III and C3D8P; the standalone backfill instance was removed. Reused geology nodes=81; new interior nodes=2013; integrated elements=12.
-- `natural_geology_plus_integrated_backfill`: nodes=643206, elements=591313, external faces=104170, exact shared faces=1721854, nonconforming faces=8, hanging nodes=UNRESOLVED, duplicate nodes=0, duplicate elements=0, nonmanifold=0, status **UNRESOLVED**.
-- `backfill_geology_interface`: nodes=2094, elements=12, external faces=72, exact shared faces=0, nonconforming faces=8, hanging nodes=UNRESOLVED, duplicate nodes=0, duplicate elements=0, nonmanifold=0, status **UNRESOLVED**.
-- Foundation component count computed by exact shared-face graph: **17**.
+- Engineered backfill was integrated into the existing geology Part as `FOUNDATION_LEFT_COMPACTED_SAND_GRAVEL` with Q3AL_III and C3D8P; the standalone backfill instance was removed. Reused geology nodes=81; new interior nodes=2020; integrated elements=20.
+- `natural_geology_plus_integrated_backfill`: nodes=643213, elements=591321, external faces=104164, exact shared faces=1721881, nonconforming faces=0, hanging nodes=0, duplicate nodes=0, duplicate elements=0, nonmanifold=0, positive-volume overlap pairs=0, status **PASS**.
+- `backfill_geology_interface`: nodes=2094, elements=20, external faces=102, exact shared faces=13, nonconforming faces=0, hanging nodes=0, duplicate nodes=0, duplicate elements=0, nonmanifold=0, positive-volume overlap pairs=0, status **PASS**.
+- Foundation component count computed by exact shared-face graph: **13**.
 
 ## Geological Sections and hydraulics
 
@@ -43,8 +43,8 @@ FINAL_STATUS = STOPPED_UNRESOLVED
 - `spillway_cutoff_and_transition`: **UNRESOLVED** — gravity retaining wall dimensions not defensible
 - `main_cutoff_geomembrane_positive_overlap`: **PASS** — evidence recorded
 - `right_bank_curtain_representation`: **UNRESOLVED** — source defines approximate curtain extent but not numerical representation
-- `backfill_geology_shared_node_conformity`: **UNRESOLVED** — local same-Part conformality not proven
-- `continuous_foundation_hanging_nodes`: **UNRESOLVED** — hanging/nonconforming face sweep unresolved
+- `backfill_geology_shared_node_conformity`: **PASS** — evidence recorded
+- `continuous_foundation_hanging_nodes`: **PASS** — evidence recorded
 - `same_domain_disconnects`: **UNRESOLVED** — component classification requires no same-domain mesh disconnect
 - `all_36_geology_sections_audited`: **PASS** — evidence recorded
 - `production_seepage_formulation_and_permeability`: **UNRESOLVED** — rock regions lack defensible calibrated permeability

@@ -1,4 +1,4 @@
 region,old_nodes,new_nodes,old_elements,new_elements,coordinates_changed,connectivity_changed,element_type_changed,reason,source_basis,quality_before_after
 anti_seepage_chain,0,44,0,10,NEW_GEOMETRY,NEW_GEOMETRY,NEW C3D8P,source-supported left-bank/structure cutoff chain with 3011 m reach and transition,V15.13 task Sections 6-9 and actual structural anchors,not applicable -> computed below
-integrated_engineered_backfill,2094,2013,838,12,NO,YES; node labels reused in geology Part,NO C3D8P,same-Part local remesh/coalescing for pore-pressure conformity,V15.13 task Sections 12-14,computed below
+integrated_engineered_backfill,2094,2020,838,20,NO,YES; node labels reused in geology Part,NO C3D8P,same-Part local remesh/coalescing for pore-pressure conformity,V15.13 task Sections 12-14,computed below
 geomembrane_terminal_connection,5050,5050,2400,2400,YES; terminal upper-edge X>-36.0 -> -36.0,NO,NO,remove measured positive-volume cutoff overlap while preserving terminal edge contact,actual final-face audit,computed below

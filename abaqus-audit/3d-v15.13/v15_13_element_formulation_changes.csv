@@ -1,2 +1,2 @@
 element_set,old_formulation,new_formulation,element_count,coordinates_changed,connectivity_changed,basis,status
-FOUNDATION_LEFT_COMPACTED_SAND_GRAVEL,C3D8P,C3D8P,12,NO,YES; same-Part node reuse and appended labels,local conformal integration; no formulation conversion,PASS
+FOUNDATION_LEFT_COMPACTED_SAND_GRAVEL,C3D8P,C3D8P,20,NO,YES; same-Part node reuse and appended labels,local conformal integration; no formulation conversion,PASS

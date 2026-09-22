@@ -1,3 +1,2 @@
 domain,element_count,component_count_by_exact_shared_faces,largest_component_elements,singleton_components,status,notes
-natural_geology,591301,NOT_COMPUTED,NOT_COMPUTED,NOT_COMPUTED,UNRESOLVED,component graph is not copied from V15.12; full mixed C3D8P/C3D8R geometric sweep is a blocking item
-engineered_backfill,838,NOT_COMPUTED,NOT_COMPUTED,NOT_COMPUTED,UNRESOLVED,component graph is not inferred from a bounding box; explicit connectivity/geometry sweep remains required
+integrated_foundation_domain,591321,13,380972,8,UNRESOLVED,computed from final exact element-face DSU; source-intended separate domains are distinguished

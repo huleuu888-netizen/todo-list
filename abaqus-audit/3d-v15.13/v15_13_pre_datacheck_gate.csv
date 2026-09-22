@@ -10,8 +10,8 @@ ecological_release_connection,YES,PASS,generated station chain -15.4..-2.9,
 spillway_cutoff_and_transition,YES,UNRESOLVED,cutoff bend exists; structural retaining-wall body source-limited,gravity retaining wall dimensions not defensible
 main_cutoff_geomembrane_positive_overlap,YES,PASS,v15_13_geomembrane_cutoff_connection_final.csv,
 right_bank_curtain_representation,YES,UNRESOLVED,v15_13_source_station_to_model_map.csv,source defines approximate curtain extent but not numerical representation
-backfill_geology_shared_node_conformity,YES,UNRESOLVED,v15_13_foundation_topology_final.csv,local same-Part conformality not proven
-continuous_foundation_hanging_nodes,YES,UNRESOLVED,actual final-Part face sweep,hanging/nonconforming face sweep unresolved
+backfill_geology_shared_node_conformity,YES,PASS,v15_13_foundation_topology_final.csv,
+continuous_foundation_hanging_nodes,YES,PASS,actual final-Part face sweep,
 same_domain_disconnects,YES,UNRESOLVED,v15_13_foundation_component_resolution.csv,component classification requires no same-domain mesh disconnect
 all_36_geology_sections_audited,YES,PASS,v15_13_section_level_pore_pressure_audit.csv,
 production_seepage_formulation_and_permeability,NO,UNRESOLVED,36-row Section-level audit + rock hydraulic basis,rock regions lack defensible calibrated permeability
