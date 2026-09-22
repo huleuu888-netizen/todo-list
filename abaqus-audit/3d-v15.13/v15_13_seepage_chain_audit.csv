@@ -1,0 +1,9 @@
+segment_name,instance,global_start,global_end,thickness_m,top_elevation_m,bottom_elevation_m,next_anti_seepage_segment,minimum_real_gap_to_next_m,real_contact_area_or_length,source_basis,status
+left_bank_abutment_extension,,,,,,,,UNRESOLVED,UNRESOLVED,required source segment not represented as an active named instance,UNRESOLVED
+left_subdam_cutoff_segment,,,,,,,,UNRESOLVED,UNRESOLVED,required source segment not represented as an active named instance,UNRESOLVED
+installation_powerhouse_cutoff_segment,,,,,,,,UNRESOLVED,UNRESOLVED,required source segment not represented as an active named instance,UNRESOLVED
+ecological_release_cutoff_connection,,,,,,,,UNRESOLVED,UNRESOLVED,required source segment not represented as an active named instance,UNRESOLVED
+spillway_cutoff_segment,,,,,,,,UNRESOLVED,UNRESOLVED,required source segment not represented as an active named instance,UNRESOLVED
+riverbed_main_cutoff_wall,P25_SOLID_CUTOFF_WALL_F13-1,"-36.000000000,150.000038331,3021.000000000","-35.000000000,445.000038997,3073.510003743",1.000000000,3073.510003743,3021.000000000,composite_geomembrane_connection,UNRESOLVED,UNRESOLVED,actual transformed node coordinates from V15.11 active Assembly,UNRESOLVED
+composite_geomembrane_connection,V12_UPSTREAM_GEOMEMBRANE-1,"-90.500000000,150.000000000,3055.000000000","-35.500000000,445.000000000,3073.510000000",,3073.510000000,3055.000000000,,UNRESOLVED,UNRESOLVED,actual transformed node coordinates from V15.11 active Assembly,UNRESOLVED
+right_bank_cutoff_curtain,,,,,,,,UNRESOLVED,UNRESOLVED,required source segment not represented as an active named instance,UNRESOLVED

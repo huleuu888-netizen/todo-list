@@ -1,0 +1,10 @@
+gate,critical,status,evidence,blocking_reason
+Phase_A_coordinate_chain,YES,PASS,v15_13_instance_transform_audit.csv + v15_13_phase_a_coordinate_chain.csv,
+V15_12_Y70_to_Y150_extension_excluded,YES,PASS,v15_13_seepage_rebuild_decision.csv,
+real_left_bank_interfaces,YES,FAIL,v15_13_real_interface_audit.csv + v15_13_left_bank_interface_detail.csv,contact/support/penetration evidence is incomplete
+foundation_geometric_conformity,YES,FAIL,v15_13_foundation_topology_audit.csv + v15_13_foundation_components.csv,"geometric nonconforming-face, hanging-node, and component sweep is unresolved"
+geology_section_pore_pressure_coverage,YES,FAIL,v15_13_geology_section_pore_pressure_audit.csv,structural-only or no-permeability geology sections remain in the seepage domain
+backfill_material_resolution,YES,FAIL,v15_13_backfill_material_resolution.csv,Q3AL_III remains a temporary unresolved mapping
+anti_seepage_chain_continuity,YES,FAIL,v15_13_seepage_chain_audit.csv + v15_13_cutoff_connection_detail.csv,required left-bank/structure transition segments are not represented and proven
+geomembrane_cutoff_connection,YES,FAIL,v15_13_geomembrane_cutoff_connection.csv,real connection face check did not pass
+Pre_Data_Check_Gate,YES,FAIL,all preceding critical gate rows,at least one critical gate is not PASS; Abaqus Data Check must not run

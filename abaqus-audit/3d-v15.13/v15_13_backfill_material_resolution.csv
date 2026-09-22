@@ -1,0 +1,2 @@
+candidate_material,source,density,elastic_parameters,permeability,porosity_void_ratio,constitutive_model,element_formulation,final_mapping_status,notes
+Q3AL_III,V15.11 active section mapping; no source-verified compacted sand/gravel calibration found,"2.13,","52500., 0.27","8.49e-05, 0.",,DENSITY;ELASTIC;PERMEABILITY,C3D8P,UNRESOLVED_TEMPORARY_MAPPING,"parameters are reported, not reinterpreted or invented as compacted-backfill calibration"

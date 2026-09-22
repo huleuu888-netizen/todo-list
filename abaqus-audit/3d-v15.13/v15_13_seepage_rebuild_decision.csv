@@ -1,0 +1,2 @@
+item,baseline_inp,v15_12_y70_to_y150_extension_inherited,new_left_bank_wall_added,reason,status
+anti_seepage_geometry_rebuild,doub_hydropower_part25_geometric_solids_v15_11_interface_backfill_fishway.inp,NO,NO,"active left-bank wall is not present, but source evidence does not fix a global Assembly line; adding one would invent geometry",UNRESOLVED
