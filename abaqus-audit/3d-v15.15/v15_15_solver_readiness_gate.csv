@@ -1,0 +1,10 @@
+gate,criterion,result,evidence
+geometry_solver_readiness,active mesh passes Data Check without input/volume errors,PASS,v15_15_S00_SOLVER_CLOSURE_DC5.dat
+geometry_solver_readiness,zero pivot / numerical singularity in Data Check,PASS,v15_15_S00_SOLVER_CLOSURE_DC5.msg
+geometry_solver_readiness,prohibited artificial stabilization,PASS,"no Tie, spring, MPC, Encastre, or point-pinning keywords"
+s00_solver_readiness,Abaqus full S00 completed,PASS,v15_15_S00_SOLVER_CLOSURE_RUN5.sta
+s00_solver_readiness,readable ODB with completed frame,PASS,v15_15_S00_SOLVER_CLOSURE_RUN5.odb
+s00_solver_readiness,analysis numerical warnings,WARNING,4 solver-problem warning records
+production_seepage_readiness,S01-S07 production cases,UNRESOLVED,not run by task scope
+production_seepage_readiness,right-bank curtain / rock calibration,UNRESOLVED,v15.13 engineering assumptions remain
+foundation_topology,source local backfill interface,UNRESOLVED,8 isolated elements excluded from S00 active domain; see Foundation_Connectivity_Report.csv

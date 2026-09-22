@@ -1,0 +1,18 @@
+quantity,value,status,basis
+analysis_job,v15_15_S00_SOLVER_CLOSURE_RUN5,PASS,final V15.15 S00 run
+odb_status,VALID_READABLE,PASS,Abaqus ODB opened successfully
+step,S00_BASELINE_SEEPAGE,PASS,requested baseline step present
+frame_count,2,PASS,initial plus completed S00 frame expected
+final_time,1.0,PASS,final ODB frame
+field_outputs,E;EVOL;FLVEL;POR;RF;S;SAT;U;VOIDR,PASS,final ODB frame field keys
+pore_pressure_min,-3282.876220703125,PASS,final ODB POR field
+pore_pressure_max,3286.01904296875,PASS,final ODB POR field
+displacement_norm_max,0.4568873446778193,PASS,final ODB U field
+seepage_velocity_norm_max,0.06434000313151428,PASS,final ODB FLVEL field
+sta_status,COMPLETED_SUCCESSFULLY,PASS,final .sta text
+zero_pivot_count,0,PASS,final .msg text
+solver_problem_warning_count,4,WARNING,final .msg text
+error_count,0,PASS,final .dat/.msg text
+dat_warning_count,5351,WARNING,final Data Check .dat
+active_unconnected_regions,14,WARNING,expected separate hydraulic instances; no unsupported C3D8R bodies active
+s00_status,COMPLETED_WITH_NUMERICAL_WARNINGS,PASS,combined .sta/.msg/.odb audit

@@ -1,0 +1,14 @@
+item,value,basis
+baseline_source,doub_hydropower_part25_geometric_solids_v15_13_S00_BASELINE_SEEPAGE.inp,V15.13 S00 input
+active_instance_count,14,instances with pore-pressure element types
+excluded_structural_instance_count,45,C3D8R-only instances excluded from active S00 Assembly
+porous_element_types,"C3D8P,C3D6P,C3D4P,C3D10P",selection criterion; no element conversion
+geometry_action,none,part definitions and active porous mesh retained
+isolated_local_backfill_elements,8,excluded from active S00 because face/coordinate audit found no complete host interface
+material_action,none,permeability/material definitions copied unchanged
+boundary_action,none beyond retained S00 sets,physical base and transformed hydrostatic pressure sets retained
+initial_pore_pressure_action,hydrostatic midpoint head 3065.5 m,actual transformed active pore nodes binned at 5 m; no fixed mechanical node
+solver_pressure_increment_control,utol=10000,source RUN3 log: maximum non-prescribed pore-pressure increment 8643; force equilibrium accepted before cutback
+solver_time_control,end=PERIOD; initial=period=1.0,finite normalized S00 closure step; avoids inheriting source 1e9 pseudo-time
+constraint_action,none,"no Tie, spring, MPC, Encastre, or point pinning"
+source_unconnected_regions,99,V15.13 SMP4 message
