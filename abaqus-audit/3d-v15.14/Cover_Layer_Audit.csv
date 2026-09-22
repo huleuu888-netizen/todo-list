@@ -1,0 +1,10 @@
+Engineering_Layer,Model_Material_Families,Geometry_Exists,Material_Exists,Permeability_Exists,Parameter_Basis,Status,Required_Action
+Q4del,Q4DEL,YES,YES,YES,Active model value; source closure not demonstrated,PASS,Confirm density and source test basis
+Q4al-Sgr2,Q4AL_SGR2,YES,YES,YES,Active model value; source closure not demonstrated,PASS,Confirm density and source test basis
+Q3al-V,Q3AL_V,YES,YES,YES,Active model value; source closure not demonstrated,PASS,Confirm density and source test basis
+Q3al-IV,Q3AL_IV1;Q3AL_IV2,YES,YES,YES,Two tracked hydraulic variants; mapping requires confirmation,CHECK,Confirm layer-to-variant mapping
+Q3al-III,Q3AL_III,YES,YES,YES,Engineering-equivalent assumption,CHECK,Confirm compacted-backfill and natural-layer basis
+Q3al-II,Q3AL_II,YES,YES,YES,Active model value; source closure not demonstrated,PASS,Confirm density and source test basis
+Q3al-I,Q3AL_I,YES,YES,YES,Active model value; source closure not demonstrated,PASS,Confirm density and source test basis
+Q2fgl,Q2FGL_V;Q2FGL_IV;Q2FGL_III;Q2FGL_II;Q2FGL_I,YES,YES,YES,Five tracked hydraulic variants,CHECK,Confirm source layer-to-variant mapping
+

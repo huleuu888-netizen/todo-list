@@ -71,3 +71,14 @@ FINAL_STATUS = DATACHECK_COMPLETED_WITH_ISSUES
 
 - Corrective INP: `D:\Backup\Documents\ChatGPT\多步水电站\todo-list\abaqus-audit\3d-v15.13\doub_hydropower_part25_geometric_solids_v15_13_corrective_execution.inp`
 - Corrective CAE: `D:\Backup\Documents\ChatGPT\多步水电站\todo-list\abaqus-audit\3d-v15.13\doub_hydropower_part25_geometric_solids_v15_13_corrective_execution.cae`
+
+## V15.14 Pending Items
+
+V15.14 adds an engineering-closure audit layer without changing the V15.13 CAE/INP geometry or inventing unresolved hydraulic inputs.
+
+1. Curtain grouting permeability calibration.
+2. Right-bank curtain geometry verification.
+3. Q3AL_III parameter confirmation for natural and engineered-backfill use.
+4. Rock permeability inversion/calibration for the tracked Lu-category regions.
+
+The V15.14 closure audit status remains `IN PROGRESS`; Production Seepage Readiness remains `UNRESOLVED` and S01-S07 remain not run. See `3d-v15.14/V15_14_ENGINEERING_CLOSURE_REPORT.md` and `3d-v15.14/V15_14_ENGINEERING_MODEL_CORRESPONDENCE.md`.

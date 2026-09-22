@@ -1,0 +1,14 @@
+Material,Engineering_Name,Model_Name,Density,Permeability,Permeability_Unit,Source,Source_Basis,Status,Required_Action
+Q4del,滑坡堆积块碎石土层,Q4DEL,NOT_CLOSED,2.33e-05,active deck convention,V15.13 permeability audit,Active model value; engineering source closure not demonstrated,CHECK,Confirm density and source test basis
+Q4al-Sgr2,冲积含漂石砂卵砾石层,Q4AL_SGR2,NOT_CLOSED,2.33e-04,active deck convention,V15.13 permeability audit,Active model value; engineering source closure not demonstrated,CHECK,Confirm density and source test basis
+Q3al-V,含砾砂层,Q3AL_V,NOT_CLOSED,4.46e-06,active deck convention,V15.13 permeability audit,Active model value; engineering source closure not demonstrated,CHECK,Confirm density and source test basis
+Q3al-IV,中细砂/粉细砂层,Q3AL_IV1;Q3AL_IV2,NOT_CLOSED,5.48e-06;2.35e-06,active deck convention,V15.13 permeability audit,Two tracked model variants; source-to-variant closure required,CHECK,Confirm layer-to-variant mapping
+Q3al-III,含块石砂卵砾石层,Q3AL_III,2.13,8.49e-05,active deck convention,V15.13 backfill material basis,Engineering-equivalent assumption; not source-verified calibration,UNRESOLVED_TEMPORARY_MAPPING,Confirm compacted-backfill density and permeability
+Q3al-II,中细砂层,Q3AL_II,NOT_CLOSED,5.89e-07,active deck convention,V15.13 permeability audit,Active model value; engineering source closure not demonstrated,CHECK,Confirm density and source test basis
+Q3al-I,含块石砂卵砾石层,Q3AL_I,NOT_CLOSED,1.14e-05,active deck convention,V15.13 permeability audit,Active model value; engineering source closure not demonstrated,CHECK,Confirm density and source test basis
+Q2fgl,冰水积碎石砾石层,Q2FGL_V;Q2FGL_IV;Q2FGL_III;Q2FGL_II;Q2FGL_I,NOT_CLOSED,1.14e-05;1.70e-06;3.26e-07;8.35e-07;2.50e-07,active deck convention,V15.13 permeability audit,Tracked family has five hydraulic variants,CHECK,Confirm source layer-to-variant mapping
+Engineered backfill,左岸/安装区压实砂砾石回填,FOUNDATION_LEFT_COMPACTED_SAND_GRAVEL,2.13,8.49e-05,active deck convention,V15.13 backfill material final basis,Engineering-equivalent assumption,UNRESOLVED_TEMPORARY_MAPPING,Obtain dedicated compacted-backfill calibration
+Cutoff wall,混凝土防渗墙,P25_FANGSHENQIANG,NOT_CLOSED,1.00e-08,active deck convention,V15.13 permeability audit,Active model coefficient; not reinterpreted as a design value,CHECK,Confirm concrete/barrier hydraulic basis
+Geomembrane,上游复合土工膜,GEOMEMBRANE,NOT_CLOSED,4.50e-11,active deck convention,V15.13 permeability audit,Active model coefficient; not reinterpreted as a design value,CHECK,Confirm product/test basis
+Rock foundation,岩体及花岗岩,FRESH_GRANITE;ROCK_STRONG_UNLOADED;ROCK_WEAK_UNLOADED;ROCK_DEEP_UNLOADED,NOT_CLOSED,NOT_DEFINED,NOT_DEFINED,V15.13 rock hydraulic parameter basis,No defensible Lu-to-permeability conversion in tracked source,HYDRAULIC_CALIBRATION_REQUIRED,Calibrate against field hydraulic observations
+
