@@ -1,0 +1,4 @@
+candidate_axis_x_m,source_basis,residual_installation_m,residual_left_subdam_m,physically_inside_both,confidence,status
+-64.000..-63.000,installation-bay actual min-X face; left-subdam actual X interval,0.000000000,0.000000000,YES,VERIFIED,SELECTED
+-36.000..-35.000,active P25 main cutoff wall,28.000000000,0.000000000,NO,VERIFIED_FOR_MAIN_ONLY,REJECTED_FOR_LEFT_STRUCTURE
+-30.000..-29.000,powerhouse Unit 01 actual min-X face,34.000000000,26.000000000,NO,VERIFIED_FOR_POWERHOUSE,TRANSITION_ANCHOR

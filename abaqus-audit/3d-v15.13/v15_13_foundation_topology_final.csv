@@ -1,0 +1,3 @@
+domain,node_count,element_count,external_boundary_faces,exact_shared_internal_faces,coordinate_coincident_nonshared_interface_nodes,nonconforming_internal_faces,hanging_nodes,duplicate_nodes,duplicate_elements,nonmanifold_faces,connected_components,status,notes
+natural_geology_plus_integrated_backfill,643206,591313,104170,1721854,0,8,UNRESOLVED,0,0,0,computed separately,UNRESOLVED,exact final-Part face sweep; backfill nodes reused by coordinate
+backfill_geology_interface,2094,12,72,0,0,8,UNRESOLVED,0,0,0,computed separately,UNRESOLVED,actual boundary-face rectangle sweep

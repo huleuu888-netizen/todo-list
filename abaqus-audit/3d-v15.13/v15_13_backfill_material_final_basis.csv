@@ -1,0 +1,2 @@
+region,source_description,candidate_material,density,elastic_parameters,permeability,porosity_void_ratio,relative_density_requirement,source_location,status
+left-subdam/installation engineered backfill,compacted sand/gravel supported by report wording; no dedicated calibrated coefficient found,Q3AL_III,2.13,"52500., 0.27",8.49e-05,not separately source-verified,not found,active V15.11 section mapping; report compacted sand/gravel description,ENGINEERING_EQUIVALENT_ASSUMPTION

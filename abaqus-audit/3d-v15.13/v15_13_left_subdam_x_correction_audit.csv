@@ -1,0 +1,2 @@
+item,old_bbox,new_bbox,x_changed,preserved_y_extent,preserved_crest_width_m,preserved_slopes,preserved_fishway_route,status,basis
+left_subdam_geometry,"-70.850000000,-245.700000000,3059.000000000;-56.000000000,-156.000000000,3079.000000000","-70.850000000,-245.700000000,3059.000000000;-56.000000000,-156.000000000,3079.000000000",NO,YES (-245.700..-156.000),7.000,YES,YES; no move required because selected axis is inside existing section,NO_CHANGE_REQUIRED,selected -64..-63 axis is physically inside the measured existing subdam cross-section

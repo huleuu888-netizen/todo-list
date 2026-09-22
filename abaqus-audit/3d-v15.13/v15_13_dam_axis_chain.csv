@@ -1,0 +1,10 @@
+order,chain_item,end_y_first_m,start_y_next_m,actual_gap_m,source_expects_structure_in_gap,status,basis
+1,left_bank_outer_region,-245.700000000,-245.700000000,0.000000000,NO,PASS,source 80 m extension endpoint
+2,left_bank_subdam,-156.000000000,-156.000000000,0.000000000,NO,PASS,actual subdam bbox
+3,installation_bay,-122.000000000,-122.000000000,0.000000000,NO,PASS,actual installation bbox
+4,powerhouse,-15.400000000,-15.400000000,0.000000000,NO,PASS,actual powerhouse Unit 01..04 chain
+5,ecological_release,-2.900000000,-2.900000000,0.000000000,NO,PASS,actual eco base bbox
+6,spillway,93.600000000,93.600000000,0.000000000,NO,PASS,actual spillway abutments
+7,spillway_main_dam_transition,150.000000000,150.000038331,0.000038331,YES,UNRESOLVED,"source retaining-wall interval; cutoff bend represented, structural body source-limited"
+8,main_sand_gravel_dam,445.000038997,445.000038997,0.000000000,NO,PASS,actual P25 cutoff bbox
+9,right_bank_curtain_region,545.000000000,,,NO,UNRESOLVED,source approximately 100 m grout-curtain extension; no numerical curtain thickness in model

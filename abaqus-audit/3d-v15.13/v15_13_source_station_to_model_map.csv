@@ -1,0 +1,7 @@
+source_station_notation,source_structure,source_upstream_downstream_offset,mapped_model_structure,mapped_x,mapped_y_range,anchor_evidence,residual_error_m,confidence,status
+坝上 0-009.50,left-subdam,source passage 1,left-subdam/installation,-64..-63,-245.700..-156.000,installation min-X face and subdam bbox,0.000000000,DERIVED_FROM_GEOMETRY,PASS
+坝上 0-014.50,left-subdam,detailed left-subdam passage,left-subdam/installation,-64..-63,-245.700..-156.000,same actual structural anchor,5.000000000 source discrepancy,SOURCE_DISCREPANCY_RECORDED,UNRESOLVED
+powerhouse/installation central deep reach,installation + powerhouse,actual min-X anchors -64 and -30,V15_13 wall transition,-64..-30,-156.000..-122.000,actual installation/powerhouse joint geometry,0.000000000,VERIFIED,PASS
+powerhouse deep-wall reach,powerhouse,3011 m bottom; 1:1 transitions,V15_13 wall,-30..-29,-146.000..-25.400,powerhouse Unit 01 min-X face,0.000000000,DERIVED,PASS
+spillway/right-retaining-wall bend,spillway transition,source bend statement; structural dimensions not complete,cutoff bend,-20..-19 to -36..-35,93.600..150.000,spillway right bbox + P25 wall face,0.000000000 at anchors,GEOMETRY_SUPPORTED_STRUCTURAL_LIMIT,PASS
+dam-right 0+244.37 to 0+295.00,right-bank grout curtain,approximately 100 m into right bank,not represented as solid,UNRESOLVED,445..545 nominal,source gives no curtain thickness/equivalent boundary definition,UNRESOLVED,UNRESOLVED,UNRESOLVED

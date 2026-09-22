@@ -1,0 +1,2 @@
+region,y_range_m,source_geometry_search,gravity_retaining_wall,cutoff_bend,dam_fill,status,basis
+spillway_main_dam_transition,93.600..150.000,active repository and source task excerpts,NOT_REPRESENTED; dimensions insufficient,REPRESENTED by V15_13_ANTI_SEEPAGE_CHAIN,not added without source dimensions,UNRESOLVED,source explicitly requires retaining walls; only cutoff connection is defensible

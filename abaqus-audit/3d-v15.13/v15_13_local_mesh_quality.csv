@@ -1,0 +1,4 @@
+region,element_type,node_count,element_count,min_edge_m,median_edge_m,p95_edge_m,max_edge_m,max_aspect_ratio,invalid_negative_volume_count,collapsed_element_count,duplicate_element_count,status
+anti_seepage_chain,C3D8P,44,10,1.000000000,35.465000000,96.605175845,98.398424784,98.398424784,0,0,0,PASS
+integrated_engineered_backfill,C3D8P,643206,12,1.350000000,31.488579279,89.742144503,89.776959739,66.501451659,0,0,0,PASS
+geomembrane_terminal_connection,C3D8P,5050,2400,0.500000000,2.950000000,4.456220372,4.457959174,8.915918349,0,0,0,PASS

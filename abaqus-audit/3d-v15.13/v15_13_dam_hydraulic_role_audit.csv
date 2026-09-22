@@ -1,0 +1,12 @@
+instance,role,material,element_types,permeability,pore_pressure_dof,intended_hydraulic_role,status
+P25_SOLID_DRAINAGE_BODY_F00-1,drainage body,P25_PAISHUITI,C3D8P,YES,YES,structural context with hydraulic material,PASS
+P25_SOLID_FILTER_LAYER_F01-1,filter,P25_FANLV,C3D6P;C3D8P,YES,YES,hydraulic filter,PASS
+P25_SOLID_DAM_SHELL_GRAVEL_F02-1,gravel dam shell,P25_BAKESHALI,C3D6P;C3D8P,YES,YES,seepage domain,PASS
+P25_SOLID_DAM_SHELL_GRAVEL_F06-1,gravel dam shell,P25_BAKESHALI,C3D6P;C3D8P,YES,YES,seepage domain,PASS
+P25_SOLID_DAM_SHELL_GRAVEL_F08-1,gravel dam shell,P25_BAKESHALI,C3D6P;C3D8P,YES,YES,seepage domain,PASS
+P25_SOLID_MAIN_ROCKFILL_F09-1,main rockfill,P25_WEIYANJITI,C3D6P;C3D8P,YES,YES,seepage domain,PASS
+P25_SOLID_UPSTREAM_GRAVEL_FILL_F10-1,upstream gravel fill,P25_WEIYANSHALI,C3D6P;C3D8P,YES,YES,seepage domain,PASS
+P25_SOLID_MAIN_ROCKFILL_F11-1,main rockfill,P25_WEIYANJITI,C3D6P;C3D8P,YES,YES,seepage domain,PASS
+P25_SOLID_IMPERMEABLE_FILL_F12-1,impermeable fill,P25_BIQILIAO,C3D6P;C3D8P,YES,YES,barrier/context,PASS
+P25_SOLID_CUTOFF_WALL_F13-1,cutoff wall,P25_FANGSHENQIANG,C3D8P,YES,YES,impermeable barrier,PASS
+V12_UPSTREAM_GEOMEMBRANE-1,geomembrane representation,GEOMEMBRANE,C3D8P,YES,YES,impermeable barrier,PASS

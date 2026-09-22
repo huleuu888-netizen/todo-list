@@ -1,10 +1,20 @@
 gate,critical,status,evidence,blocking_reason
-Phase_A_coordinate_chain,YES,PASS,v15_13_instance_transform_audit.csv + v15_13_phase_a_coordinate_chain.csv,
-V15_12_Y70_to_Y150_extension_excluded,YES,PASS,v15_13_seepage_rebuild_decision.csv,
-real_left_bank_interfaces,YES,FAIL,v15_13_real_interface_audit.csv + v15_13_left_bank_interface_detail.csv,contact/support/penetration evidence is incomplete
-foundation_geometric_conformity,YES,FAIL,v15_13_foundation_topology_audit.csv + v15_13_foundation_components.csv,"geometric nonconforming-face, hanging-node, and component sweep is unresolved"
-geology_section_pore_pressure_coverage,YES,FAIL,v15_13_geology_section_pore_pressure_audit.csv,structural-only or no-permeability geology sections remain in the seepage domain
-backfill_material_resolution,YES,FAIL,v15_13_backfill_material_resolution.csv,Q3AL_III remains a temporary unresolved mapping
-anti_seepage_chain_continuity,YES,FAIL,v15_13_seepage_chain_audit.csv + v15_13_cutoff_connection_detail.csv,required left-bank/structure transition segments are not represented and proven
-geomembrane_cutoff_connection,YES,FAIL,v15_13_geomembrane_cutoff_connection.csv,real connection face check did not pass
-Pre_Data_Check_Gate,YES,FAIL,all preceding critical gate rows,at least one critical gate is not PASS; Abaqus Data Check must not run
+original_v15_13_task_read,YES,PASS,task file exists and contains governing contract,
+no_copy_only_completion,YES,PASS,final INP hash/text differs from V15.11 baseline,
+coordinate_convention_and_left_right_direction,YES,PASS,final transformed instance bboxes and chain CSV,
+left_structure_cutoff_axis_solved,YES,PASS,v15_13_left_structure_cutoff_axis_solution.csv,
+V15_12_misplaced_wall_absent,YES,PASS,final Assembly text,
+left_bank_80m_extension_direction,YES,PASS,wall stations -325.7 to -245.7,
+installation_powerhouse_geometry,YES,PASS,generated wall anchors at actual installation/powerhouse min-X faces,
+ecological_release_connection,YES,PASS,generated station chain -15.4..-2.9,
+spillway_cutoff_and_transition,YES,UNRESOLVED,cutoff bend exists; structural retaining-wall body source-limited,gravity retaining wall dimensions not defensible
+main_cutoff_geomembrane_positive_overlap,YES,PASS,v15_13_geomembrane_cutoff_connection_final.csv,
+right_bank_curtain_representation,YES,UNRESOLVED,v15_13_source_station_to_model_map.csv,source defines approximate curtain extent but not numerical representation
+backfill_geology_shared_node_conformity,YES,UNRESOLVED,v15_13_foundation_topology_final.csv,local same-Part conformality not proven
+continuous_foundation_hanging_nodes,YES,UNRESOLVED,actual final-Part face sweep,hanging/nonconforming face sweep unresolved
+same_domain_disconnects,YES,UNRESOLVED,v15_13_foundation_component_resolution.csv,component classification requires no same-domain mesh disconnect
+all_36_geology_sections_audited,YES,PASS,v15_13_section_level_pore_pressure_audit.csv,
+production_seepage_formulation_and_permeability,NO,UNRESOLVED,36-row Section-level audit + rock hydraulic basis,rock regions lack defensible calibrated permeability
+no_invalid_collapsed_elements,YES,PASS,v15_13_local_mesh_quality.csv,
+active_continuum_sections_materials,YES,PASS,final INP active Part/Section blocks,
+geometry_solver_readiness_gate,YES,UNRESOLVED,all critical geometry/topology rows,one or more critical geometry/topology items unresolved
