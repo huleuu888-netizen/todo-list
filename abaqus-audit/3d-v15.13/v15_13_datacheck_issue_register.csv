@@ -1,0 +1,8 @@
+severity,category,file,line,summary,status
+ERROR,ELEMENT,v15_13_corrective_execution.dat,5333725,"1 occurrence(s); first: ***ERROR: The volume of 3042 elements is zero, small, or negative. Check",RECORDED
+ERROR,ERROR,v15_13_corrective_execution.dat,100,"38 occurrence(s); first: ***ERROR: in keyword *INITIALCONDITIONS, file",RECORDED
+ERROR,INITIAL_CONDITIONS,v15_13_corrective_execution.dat,911,38 occurrence(s); first: ***ERROR: AN INITIAL CONDITION HAS BEEN SPECIFIED ON NODE SET,RECORDED
+ERROR,MATERIAL,v15_13_corrective_execution.dat,1064,1333156 occurrence(s); first: ***ERROR: PERMEABILITY IS SPECIFIED FOR ELEMENT 1037 INSTANCE,RECORDED
+WARNING,WARNING,v15_13_corrective_execution.dat,66,8 occurrence(s); first: ***WARNING: The following entries for set      ASSEM_GEO_COVER_ALL  are not,RECORDED
+INFO,OUTPUT_ARTIFACT,v15_13_corrective_execution.msg,,Abaqus did not emit this artifact before input/data-check termination,MISSING
+INFO,OUTPUT_ARTIFACT,v15_13_corrective_execution.sta,,Abaqus did not emit this artifact before input/data-check termination,MISSING

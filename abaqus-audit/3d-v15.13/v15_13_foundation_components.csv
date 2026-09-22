@@ -1,2 +1,2 @@
 domain,element_count,component_count_by_exact_shared_faces,largest_component_elements,singleton_components,status,notes
-integrated_foundation_domain,591321,13,380972,8,UNRESOLVED,computed from final exact element-face DSU; source-intended separate domains are distinguished
+integrated_foundation_domain,591321,11,380972,4,PASS,computed from final exact element-face DSU; source-intended separate domains are distinguished

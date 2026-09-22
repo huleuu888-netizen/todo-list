@@ -1,6 +1,6 @@
-material,source_hydraulic_category,explicit_permeability_in_active_deck,conversion_action,status,basis
-FRESH_GRANITE,source Lu category only; no direct Abaqus k coefficient found,NO,KEEP_EXISTING_FORMULATION,HYDRAULIC_CALIBRATION_REQUIRED,V15.13 corrective task Section 16; no arbitrary Lu-to-m/s conversion
-P2_QUARTZITE,source Lu category only; no direct Abaqus k coefficient found,NO,KEEP_EXISTING_FORMULATION,HYDRAULIC_CALIBRATION_REQUIRED,V15.13 corrective task Section 16; no arbitrary Lu-to-m/s conversion
-ROCK_DEEP_UNLOADED,source Lu category only; no direct Abaqus k coefficient found,NO,KEEP_EXISTING_FORMULATION,HYDRAULIC_CALIBRATION_REQUIRED,V15.13 corrective task Section 16; no arbitrary Lu-to-m/s conversion
-ROCK_STRONG_UNLOADED,source Lu category only; no direct Abaqus k coefficient found,NO,KEEP_EXISTING_FORMULATION,HYDRAULIC_CALIBRATION_REQUIRED,V15.13 corrective task Section 16; no arbitrary Lu-to-m/s conversion
-ROCK_WEAK_UNLOADED,source Lu category only; no direct Abaqus k coefficient found,NO,KEEP_EXISTING_FORMULATION,HYDRAULIC_CALIBRATION_REQUIRED,V15.13 corrective task Section 16; no arbitrary Lu-to-m/s conversion
+material,source_hydraulic_category,explicit_permeability_in_active_deck,conversion_action,classification,status,basis
+FRESH_GRANITE,source Lu category only; no direct Abaqus k coefficient found,NO,KEEP_EXISTING_FORMULATION,CALIBRATION_REQUIRED,HYDRAULIC_CALIBRATION_REQUIRED,V15.13 corrective task Section 16; no arbitrary Lu-to-m/s conversion
+P2_QUARTZITE,source Lu category only; no direct Abaqus k coefficient found,NO,KEEP_EXISTING_FORMULATION,CALIBRATION_REQUIRED,HYDRAULIC_CALIBRATION_REQUIRED,V15.13 corrective task Section 16; no arbitrary Lu-to-m/s conversion
+ROCK_DEEP_UNLOADED,source Lu category only; no direct Abaqus k coefficient found,NO,KEEP_EXISTING_FORMULATION,CALIBRATION_REQUIRED,HYDRAULIC_CALIBRATION_REQUIRED,V15.13 corrective task Section 16; no arbitrary Lu-to-m/s conversion
+ROCK_STRONG_UNLOADED,source Lu category only; no direct Abaqus k coefficient found,NO,KEEP_EXISTING_FORMULATION,CALIBRATION_REQUIRED,HYDRAULIC_CALIBRATION_REQUIRED,V15.13 corrective task Section 16; no arbitrary Lu-to-m/s conversion
+ROCK_WEAK_UNLOADED,source Lu category only; no direct Abaqus k coefficient found,NO,KEEP_EXISTING_FORMULATION,CALIBRATION_REQUIRED,HYDRAULIC_CALIBRATION_REQUIRED,V15.13 corrective task Section 16; no arbitrary Lu-to-m/s conversion

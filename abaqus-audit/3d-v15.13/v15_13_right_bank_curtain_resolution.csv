@@ -1,0 +1,2 @@
+region,source_extent,equivalent_low_permeability_region,boundary_condition,solid_wall,current_model_entry,status,basis
+right_bank_grout_curtain,approximately 100 m downstream/right-bank curtain stated in source audit,NOT_ENTERED,NOT_ENTERED,NOT_CREATED,NO,UNRESOLVED,"source gives approximate extent but no defensible global axis, thickness, or equivalent hydraulic coefficient"

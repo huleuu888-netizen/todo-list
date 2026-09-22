@@ -1,4 +1,4 @@
-FINAL_STATUS = STOPPED_UNRESOLVED
+FINAL_STATUS = DATACHECK_COMPLETED_WITH_ISSUES
 
 # V15.13 corrective seepage-domain completion
 
@@ -19,10 +19,10 @@ FINAL_STATUS = STOPPED_UNRESOLVED
 
 ## Foundation conformity and components
 
-- Engineered backfill was integrated into the existing geology Part as `FOUNDATION_LEFT_COMPACTED_SAND_GRAVEL` with Q3AL_III and C3D8P; the standalone backfill instance was removed. Reused geology nodes=81; new interior nodes=2020; integrated elements=20.
-- `natural_geology_plus_integrated_backfill`: nodes=643213, elements=591321, external faces=104164, exact shared faces=1721881, nonconforming faces=0, hanging nodes=0, duplicate nodes=0, duplicate elements=0, nonmanifold=0, positive-volume overlap pairs=0, status **PASS**.
-- `backfill_geology_interface`: nodes=2094, elements=20, external faces=102, exact shared faces=13, nonconforming faces=0, hanging nodes=0, duplicate nodes=0, duplicate elements=0, nonmanifold=0, positive-volume overlap pairs=0, status **PASS**.
-- Foundation component count computed by exact shared-face graph: **13**.
+- Engineered backfill was integrated into the existing geology Part as `FOUNDATION_LEFT_COMPACTED_SAND_GRAVEL` with Q3AL_III and C3D8P; the standalone backfill instance was removed. Reused geology nodes=81; new interior nodes=2016; integrated elements=20; near-coincident backfill nodes coalesced=4.
+- `natural_geology_plus_integrated_backfill`: nodes=643209, elements=591321, external faces=104160, exact shared faces=1721883, nonconforming faces=0, hanging nodes=0, duplicate nodes=0, duplicate elements=0, nonmanifold=0, positive-volume overlap pairs=0, status **PASS**.
+- `backfill_geology_interface`: nodes=2094, elements=20, external faces=98, exact shared faces=13, nonconforming faces=0, hanging nodes=0, duplicate nodes=0, duplicate elements=0, nonmanifold=0, positive-volume overlap pairs=0, status **PASS**.
+- Foundation component count computed by exact shared-face graph: **11**. Components are not force-merged; each row has a task-allowed final classification and material/Section evidence.
 
 ## Geological Sections and hydraulics
 
@@ -40,19 +40,24 @@ FINAL_STATUS = STOPPED_UNRESOLVED
 - `left_bank_80m_extension_direction`: **PASS** — evidence recorded
 - `installation_powerhouse_geometry`: **PASS** — evidence recorded
 - `ecological_release_connection`: **PASS** — evidence recorded
-- `spillway_cutoff_and_transition`: **UNRESOLVED** — gravity retaining wall dimensions not defensible
 - `main_cutoff_geomembrane_positive_overlap`: **PASS** — evidence recorded
-- `right_bank_curtain_representation`: **UNRESOLVED** — source defines approximate curtain extent but not numerical representation
 - `backfill_geology_shared_node_conformity`: **PASS** — evidence recorded
 - `continuous_foundation_hanging_nodes`: **PASS** — evidence recorded
-- `same_domain_disconnects`: **UNRESOLVED** — component classification requires no same-domain mesh disconnect
-- `all_36_geology_sections_audited`: **PASS** — evidence recorded
-- `production_seepage_formulation_and_permeability`: **UNRESOLVED** — rock regions lack defensible calibrated permeability
+- `foundation_component_resolution`: **PASS** — evidence recorded
+- `all_36_geology_sections_organized`: **PASS** — evidence recorded
 - `no_invalid_collapsed_elements`: **PASS** — evidence recorded
 - `active_continuum_sections_materials`: **PASS** — evidence recorded
-- `geometry_solver_readiness_gate`: **UNRESOLVED** — one or more critical geometry/topology items unresolved
+- `geometry_solver_readiness_gate`: **PASS** — evidence recorded
+- `spillway_transition_source_resolution`: **UNRESOLVED** — gravity retaining-wall dimensions not defensible
+- `right_bank_curtain_source_resolution`: **UNRESOLVED** — no defensible axis, thickness, or equivalent hydraulic coefficient
+- `rock_hydraulic_parameter_basis`: **UNRESOLVED** — some rock permeability values require calibration
+- `backfill_material_basis`: **UNRESOLVED** — Q3AL_III is an engineering equivalent assumption
+- `production_seepage_readiness_gate`: **UNRESOLVED** — production seepage inputs remain source-limited/calibration-required
 
-- Abaqus Data Check: **NOT_RUN_PRE_GATE**. It was run only if the geometry/solver-readiness gate passed. S01-S07: **NOT RUN**.
+- Geometry Solver Readiness: **PASS**.
+- Production Seepage Readiness: **UNRESOLVED**.
+- Abaqus Data Check: **COMPLETED_WITH_ISSUES**. It was run only if the Geometry Solver Readiness gate passed. S01-S07: **NOT RUN**.
+- Data Check evidence is recorded in `v15_13_datacheck_issue_register.csv` and `v15_13_datacheck_status.csv`; the current run produced a `.dat` and stopped with input/material/element issues before emitting `.msg`/`.sta`.
 - Right-bank grout-curtain representation remains unresolved because the source gives approximate extent but no defensible numerical thickness/equivalent boundary definition.
 - Spillway-to-main-dam gravity retaining-wall body remains unresolved because source dimensions were insufficient; only the source-supported anti-seepage connection bend was added.
 

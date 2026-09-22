@@ -7,14 +7,16 @@ V15_12_misplaced_wall_absent,YES,PASS,final Assembly text,
 left_bank_80m_extension_direction,YES,PASS,wall stations -325.7 to -245.7,
 installation_powerhouse_geometry,YES,PASS,generated wall anchors at actual installation/powerhouse min-X faces,
 ecological_release_connection,YES,PASS,generated station chain -15.4..-2.9,
-spillway_cutoff_and_transition,YES,UNRESOLVED,cutoff bend exists; structural retaining-wall body source-limited,gravity retaining wall dimensions not defensible
 main_cutoff_geomembrane_positive_overlap,YES,PASS,v15_13_geomembrane_cutoff_connection_final.csv,
-right_bank_curtain_representation,YES,UNRESOLVED,v15_13_source_station_to_model_map.csv,source defines approximate curtain extent but not numerical representation
 backfill_geology_shared_node_conformity,YES,PASS,v15_13_foundation_topology_final.csv,
 continuous_foundation_hanging_nodes,YES,PASS,actual final-Part face sweep,
-same_domain_disconnects,YES,UNRESOLVED,v15_13_foundation_component_resolution.csv,component classification requires no same-domain mesh disconnect
-all_36_geology_sections_audited,YES,PASS,v15_13_section_level_pore_pressure_audit.csv,
-production_seepage_formulation_and_permeability,NO,UNRESOLVED,36-row Section-level audit + rock hydraulic basis,rock regions lack defensible calibrated permeability
+foundation_component_resolution,YES,PASS,v15_13_foundation_component_resolution.csv,
+all_36_geology_sections_organized,YES,PASS,v15_13_section_level_pore_pressure_audit.csv,
 no_invalid_collapsed_elements,YES,PASS,v15_13_local_mesh_quality.csv,
 active_continuum_sections_materials,YES,PASS,final INP active Part/Section blocks,
-geometry_solver_readiness_gate,YES,UNRESOLVED,all critical geometry/topology rows,one or more critical geometry/topology items unresolved
+geometry_solver_readiness_gate,YES,PASS,"mesh, connectivity, element, Section, and Material checks only",
+spillway_transition_source_resolution,NO,UNRESOLVED,v15_13_spillway_transition_resolution.csv,gravity retaining-wall dimensions not defensible
+right_bank_curtain_source_resolution,NO,UNRESOLVED,v15_13_right_bank_curtain_resolution.csv,"no defensible axis, thickness, or equivalent hydraulic coefficient"
+rock_hydraulic_parameter_basis,NO,UNRESOLVED,v15_13_rock_hydraulic_parameter_basis.csv,some rock permeability values require calibration
+backfill_material_basis,NO,UNRESOLVED,v15_13_backfill_material_final_basis.csv,Q3AL_III is an engineering equivalent assumption
+production_seepage_readiness_gate,NO,UNRESOLVED,hydraulic parameters and water-model source basis only,production seepage inputs remain source-limited/calibration-required

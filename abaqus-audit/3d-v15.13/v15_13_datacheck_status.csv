@@ -1,2 +1,2 @@
-job,command,status,reason
-v15_13_corrective_execution,NOT_EXECUTED,NOT_RUN,geometry/solver-readiness gate is not PASS
+job,command,return_code,status,output_files,issue_count,reason
+v15_13_corrective_execution,abaqus.bat job=v15_13_corrective_execution input=doub_hydropower_part25_geometric_solids_v15_13_corrective_execution.inp datacheck,0,COMPLETED_WITH_ISSUES,v15_13_corrective_execution.dat,7,existing Abaqus Data Check outputs reconciled; see issue register
