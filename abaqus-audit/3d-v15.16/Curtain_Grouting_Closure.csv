@@ -1,0 +1,3 @@
+Region,Geometry_Status,Material_Status,Permeability_Status,Remark
+Right_Bank_Curtain,CHECK,CHECK,UNRESOLVED,Need engineering confirmation
+Foundation_Curtain,CHECK,CHECK,CHECK,Existing parameter definition requires verification
