@@ -91,6 +91,40 @@ These files complete the evidence framework, not the missing engineering
 source approvals. No value is promoted to `PASS` merely because it appears in
 the existing model input.
 
+## Final parameter closure before S01-S07
+
+The final closure records have now been added:
+
+- `v15_20_right_bank_curtain_final_closure.md` explicitly records missing
+  spatial coordinates, start/end range, thickness, continuity, and permeability.
+  The selected treatment is `SENSITIVITY_ANALYSIS_VARIABLE`; no equivalent
+  region is entered into the baseline model. Result: `UNRESOLVED`.
+- `v15_20_rock_permeability_final_closure.md` classifies current information as
+  `VERIFIED` only for model-treatment traceability, `ASSUMED` for existing
+  porous-geology coefficients, and `CALIBRATION_REQUIRED` for hydraulic rock
+  parameters. No Lu-to-k conversion is used. Result: `CALIBRATION_REQUIRED`.
+- `v15_20_Q3AL_III_final_parameter_basis.md` records density `2.13` as
+  `ASSUMED` and permeability `8.49e-05` as `CALIBRATION_REQUIRED`, with the
+  two existing mappings and their scope. Overall result:
+  `CALIBRATION_REQUIRED`.
+- `v15_20_S00_warning_disposition.csv` now contains the required Warning_ID,
+  Warning_Type, Location, Cause, Influence_on_Seepage, and Disposition fields
+  for all four retained S00 numerical warnings.
+
+The final parameter closure is therefore documented but not released. The
+missing engineering sources and warning approval cannot be replaced by a
+material edit, fixed node, spring, Tie, or other artificial constraint.
+
+## Final A-E re-evaluation
+
+| Gate | Result | Final reason |
+|---|---|---|
+| A. Numerical stability | CHECK | Data Check, zero pivot, ODB, and STA pass; four numerical warnings remain and are not yet approved for production interpretation. |
+| B. Geometry completeness | UNRESOLVED | Right-bank curtain spatial definition, extent, thickness, and continuity are not source-backed. |
+| C. Material closure | UNRESOLVED | Rock k is calibration-required; Q3AL_III is assumed/calibration-required. |
+| D. Anti-seepage closure | UNRESOLVED | The retained components pass by inheritance, but the global system remains open at the right bank. |
+| E. Parameter-source closure | UNRESOLVED | Final curtain, rock, and Q3AL_III source approvals are absent. |
+
 ## Gate decision
 
 The numerical solver prerequisites are present, but the engineering release
