@@ -1,0 +1,24 @@
+quantity,value,status,basis
+analysis_job,v15_21_S01_BASELINE_SEEPAGE,PASS,V15.21 S01 job
+odb_status,VALID_READABLE,PASS,Abaqus ODB opened successfully
+step_name_in_odb,S00_BASELINE_SEEPAGE,PASS,frozen input step name retained without editing
+frame_count,2,PASS,initial plus completed frame
+final_step_time,1.0,PASS,final ODB frame
+field_outputs,E;EVOL;FLVEL;POR;RF;S;SAT;U;VOIDR,PASS,final ODB frame keys
+pore_pressure_min,-3282.876220703125,PASS,final ODB POR field
+pore_pressure_max,3286.01904296875,PASS,final ODB POR field
+por_field_locations,INTEGRATION_POINT;NODAL,PASS,final ODB POR field locations
+displacement_norm_max,0.4568873446778193,PASS,final ODB U field
+seepage_velocity_norm_max,0.06434000313151428,PASS,final ODB FLVEL field
+flvel_field_locations,INTEGRATION_POINT,PASS,final ODB FLVEL field locations
+history_output_count,25,PASS,ODB history regions
+history_output_keys,Assembly ASSEMBLY:ALLAE;Assembly ASSEMBLY:ALLCCDW;Assembly ASSEMBLY:ALLCCE;Assembly ASSEMBLY:ALLCCEN;Assembly ASSEMBLY:ALLCCET;Assembly ASSEMBLY:ALLCCSD;Assembly ASSEMBLY:ALLCCSDN;Assembly ASSEMBLY:ALLCCSDT;Assembly ASSEMBLY:ALLCD;Assembly ASSEMBLY:ALLDMD;Assembly ASSEMBLY:ALLDTI;Assembly ASSEMBLY:ALLEE;Assembly ASSEMBLY:ALLFD;Assembly ASSEMBLY:ALLIE;Assembly ASSEMBLY:ALLJD;Assembly ASSEMBLY:ALLKE;Assembly ASSEMBLY:ALLKL;Assembly ASSEMBLY:ALLPD;Assembly ASSEMBLY:ALLQB;Assembly ASSEMBLY:ALLSD;Assembly ASSEMBLY:ALLSE;Assembly ASSEMBLY:ALLVD;Assembly ASSEMBLY:ALLWK;Assembly ASSEMBLY:CRPTIME;Assembly ASSEMBLY:ETOTAL,PASS,ODB history regions
+total_seepage_discharge_Q,NOT_COMPUTED,UNRESOLVED,frozen input requested field output has no flow-rate history or named discharge surface
+maximum_hydraulic_gradient,NOT_COMPUTED,UNRESOLVED,frozen input has POR and FLVEL but no hydraulic-gradient output; no post-processing convention was added
+maximum_water_head,NOT_COMPUTED,UNRESOLVED,model unit convention does not expose a direct head field in the frozen output request
+sta_status,COMPLETED_SUCCESSFULLY,PASS,final .sta
+zero_pivot_count,0,PASS,final .msg
+error_count,0,PASS,final .dat/.msg
+analysis_warning_count,5,WARNING,final .msg
+numerical_warning_count,4,WARNING,final .msg
+s01_status,COMPLETED_WITH_NUMERICAL_WARNINGS,PASS,combined .sta/.msg/.odb audit
