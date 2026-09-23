@@ -1,0 +1,6 @@
+metric,value,status,unit,basis,required_output
+maximum_water_head,NOT_COMPUTED,UNRESOLVED,NOT_AVAILABLE,No direct HEAD/HYDRAULIC_HEAD/PH field; POR-to-head conversion is not uniquely defined by the frozen output evidence,Add a direct hydraulic-head field or provide a documented unit convention and nodal POR/elevation post-processing basis
+pore_pressure_min,-3282.876220703125,EXTRACTED,model pressure units,Final-frame POR field,None for POR range
+pore_pressure_max,3286.01904296875,EXTRACTED,model pressure units,Final-frame POR field,None for POR range
+POR_field_positions,INTEGRATION_POINT;NODAL,EXTRACTED,n/a,Final-frame ODB field metadata,Add a direct hydraulic-head field or provide a documented unit convention and nodal POR/elevation post-processing basis
+head_field_present,NO,EXTRACTED,n/a,Final-frame ODB field key audit,Add a direct hydraulic-head field or provide a documented unit convention and nodal POR/elevation post-processing basis

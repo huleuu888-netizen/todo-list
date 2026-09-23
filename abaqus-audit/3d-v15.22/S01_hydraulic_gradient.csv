@@ -1,0 +1,5 @@
+metric,value,status,unit,basis,required_output
+maximum_hydraulic_gradient,NOT_COMPUTED,UNRESOLVED,NOT_AVAILABLE,No hydraulic-gradient field was present; FLVEL is velocity and is not hydraulic gradient,"Add a hydraulic-gradient field (for example HFL where supported) or provide nodal POR, coordinates, and an agreed numerical gradient method"
+gradient_field_present,NO,EXTRACTED,n/a,Final-frame ODB field key audit,"Add a hydraulic-gradient field (for example HFL where supported) or provide nodal POR, coordinates, and an agreed numerical gradient method"
+available_FLVEL_norm_max,0.06434000313151428,EXTRACTED,model velocity units,Final-frame FLVEL field; not a gradient,None for FLVEL
+field_output_names,E;EVOL;FLVEL;POR;RF;S;SAT;U;VOIDR,EXTRACTED,n/a,Final-frame ODB field keys,Add gradient output for the requested metric

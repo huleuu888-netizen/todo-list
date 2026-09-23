@@ -1,0 +1,6 @@
+metric,value,status,unit,basis,required_output
+total_seepage_discharge_Q,NOT_COMPUTED,UNRESOLVED,NOT_AVAILABLE,"No flow-rate history output, HFL/FLUX field, or named discharge surface was present in S01 ODB",Add a flow-rate history output or define a downstream integration surface with an agreed flux extraction method
+maximum_FLVEL_norm,0.06434000313151428,EXTRACTED,model velocity units,"Final-frame FLVEL field; this is velocity, not integrated discharge Q",None for this field
+FLVEL_field_positions,INTEGRATION_POINT,EXTRACTED,n/a,Final-frame ODB field metadata,None for this field
+history_output_count,25,EXTRACTED,records,Final baseline step history regions,A flow-rate history record is still required for Q
+field_output_names,E;EVOL;FLVEL;POR;RF;S;SAT;U;VOIDR,EXTRACTED,n/a,Final-frame ODB field keys,Q-related output is absent
