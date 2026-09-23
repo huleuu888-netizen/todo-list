@@ -1,0 +1,3 @@
+Region,Geometry_Status,Material_Status,Permeability_Status,Source,Verification
+Right_Bank_Curtain,CHECK,CHECK,UNRESOLVED,Engineering documentation required,PENDING
+Foundation_Curtain,CHECK,CHECK,CHECK,Model definition,VERIFIED
