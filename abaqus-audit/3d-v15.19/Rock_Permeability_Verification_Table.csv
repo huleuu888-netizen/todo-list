@@ -1,0 +1,10 @@
+Region,Rock_Type,Current_k,Source,Calibration_Status,Final_Status
+GEO_LEFT_FOUNDATION_GRANITE,FRESH_GRANITE,NOT_DEFINED,"v15_13_rock_hydraulic_parameter_basis.csv; V15.15 active input uses structural-only treatment without *Permeability",CALIBRATION_REQUIRED,UNRESOLVED
+GEO_LEFT_P2_QUARTZ_SANDSTONE,P2_QUARTZITE,NOT_DEFINED,"v15_13_rock_hydraulic_parameter_basis.csv; V15.15 active input uses structural-only treatment without *Permeability",CALIBRATION_REQUIRED,UNRESOLVED
+GEO_RIVER_ROCK_DEEP_UNLOADED,ROCK_DEEP_UNLOADED,NOT_DEFINED,"v15_13_rock_hydraulic_parameter_basis.csv; V15.15 active input uses structural-only treatment without *Permeability",CALIBRATION_REQUIRED,UNRESOLVED
+GEO_RIVER_ROCK_STRONG_UNLOADED,ROCK_STRONG_UNLOADED,NOT_DEFINED,"v15_13_rock_hydraulic_parameter_basis.csv; V15.15 active input uses structural-only treatment without *Permeability",CALIBRATION_REQUIRED,UNRESOLVED
+GEO_RIVER_ROCK_WEAK_UNLOADED,ROCK_WEAK_UNLOADED,NOT_DEFINED,"v15_13_rock_hydraulic_parameter_basis.csv; V15.15 active input uses structural-only treatment without *Permeability",CALIBRATION_REQUIRED,UNRESOLVED
+GEO_RIGHT_FRESH_GRANITE,FRESH_GRANITE,NOT_DEFINED,"v15_13_rock_hydraulic_parameter_basis.csv; V15.15 active input uses structural-only treatment without *Permeability",CALIBRATION_REQUIRED,UNRESOLVED
+GEO_RIGHT_ROCK_DEEP_UNLOADED,ROCK_DEEP_UNLOADED,NOT_DEFINED,"v15_13_rock_hydraulic_parameter_basis.csv; V15.15 active input uses structural-only treatment without *Permeability",CALIBRATION_REQUIRED,UNRESOLVED
+GEO_RIGHT_ROCK_STRONG_UNLOADED,ROCK_STRONG_UNLOADED,NOT_DEFINED,"v15_13_rock_hydraulic_parameter_basis.csv; V15.15 active input uses structural-only treatment without *Permeability",CALIBRATION_REQUIRED,UNRESOLVED
+GEO_RIGHT_ROCK_WEAK_UNLOADED,ROCK_WEAK_UNLOADED,NOT_DEFINED,"v15_13_rock_hydraulic_parameter_basis.csv; V15.15 active input uses structural-only treatment without *Permeability",CALIBRATION_REQUIRED,UNRESOLVED
