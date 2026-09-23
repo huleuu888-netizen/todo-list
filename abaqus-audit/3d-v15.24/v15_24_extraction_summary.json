@@ -1,0 +1,31 @@
+{
+  "odb": "S01/v15_24_S01_BASELINE.odb",
+  "step": "S00_BASELINE_SEEPAGE",
+  "frame_value": 1.0,
+  "field_names": ["E", "EVOL", "FLVEL", "POR", "RF", "RVF", "S", "SAT", "U", "VOIDR"],
+  "required_field_presence": {
+    "POR": true,
+    "RVF": true,
+    "FLDVEL": false,
+    "COORD": false,
+    "FLVEL": true
+  },
+  "rvf_count": 23861,
+  "unique_rvf_nodes": 23861,
+  "rvf_duplicates_ignored": 0,
+  "total_Q_signed": 265.859330922,
+  "total_Q_magnitude": 265.859330922,
+  "sum_abs_RVF": 299.364351607,
+  "pore_pressure_min": -1855.14794922,
+  "pore_pressure_max": 3286.01904297,
+  "por_values_missing_element_label": 515170,
+  "gamma_w": 9.81,
+  "element_count_with_por": 444378,
+  "head_rows": 3545249,
+  "gradient_count": 440350,
+  "unresolved_gradient_count": 4027,
+  "max_gradient": 353225.749549,
+  "head_min": 2568.56210844,
+  "head_max": 3412.0875296,
+  "gradient_method": "weighted least squares over shared-node element neighbors"
+}

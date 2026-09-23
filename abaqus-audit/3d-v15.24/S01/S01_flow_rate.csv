@@ -1,0 +1,22 @@
+metric,value,unit,status,basis
+total_Q_signed,265.859330922,model volume/time units,COMPUTED,sum of unique nodal RVF values on 734 scoped downstream S00_D_* sets
+total_Q_magnitude,265.859330922,model volume/time units,COMPUTED,absolute value of total signed RVF; sign follows Abaqus nodal RVF convention
+sum_abs_RVF,299.364351607,model volume/time units,COMPUTED,sum of absolute unique nodal RVF values; diagnostic only
+RVF_value_count,23861,values,EXTRACTED,final-frame RVF field
+unique_RVF_boundary_nodes,23861,nodes,EXTRACTED,deduplicated by instance and node label
+duplicate_RVF_values_ignored,0,values,EXTRACTED,duplicate instance/node pairs were excluded from the total
+RVF_field_position,NODAL,n/a,EXTRACTED,ODB field metadata
+Q_by_instance_P25_SOLID_CUTOFF_WALL_F13-1,-0.416310791839,model volume/time units,COMPUTED,signed RVF subtotal
+Q_by_instance_P25_SOLID_DAM_SHELL_GRAVEL_F02-1,1.9619454994e-06,model volume/time units,COMPUTED,signed RVF subtotal
+Q_by_instance_P25_SOLID_DAM_SHELL_GRAVEL_F06-1,0.000763482638831,model volume/time units,COMPUTED,signed RVF subtotal
+Q_by_instance_P25_SOLID_DAM_SHELL_GRAVEL_F08-1,-2.65430853119e-06,model volume/time units,COMPUTED,signed RVF subtotal
+Q_by_instance_P25_SOLID_DRAINAGE_BODY_F00-1,-8.80518482625,model volume/time units,COMPUTED,signed RVF subtotal
+Q_by_instance_P25_SOLID_DRAINAGE_BODY_F03-1,-0.204489468248,model volume/time units,COMPUTED,signed RVF subtotal
+Q_by_instance_P25_SOLID_FILTER_LAYER_F01-1,2.19801012488e-07,model volume/time units,COMPUTED,signed RVF subtotal
+Q_by_instance_P25_SOLID_IMPERMEABLE_FILL_F12-1,0.0735000221466,model volume/time units,COMPUTED,signed RVF subtotal
+Q_by_instance_P25_SOLID_MAIN_ROCKFILL_F09-1,-0.00114791429513,model volume/time units,COMPUTED,signed RVF subtotal
+Q_by_instance_P25_SOLID_MAIN_ROCKFILL_F11-1,0.00111434228177,model volume/time units,COMPUTED,signed RVF subtotal
+Q_by_instance_P25_SOLID_UPSTREAM_GRAVEL_FILL_F10-1,-0.000361691879917,model volume/time units,COMPUTED,signed RVF subtotal
+Q_by_instance_V12_UPSTREAM_GEOMEMBRANE-1,-4.60005520786e-07,model volume/time units,COMPUTED,signed RVF subtotal
+Q_by_instance_V15_13_ANTI_SEEPAGE_CHAIN_I,0.00231613847427,model volume/time units,COMPUTED,signed RVF subtotal
+Q_by_instance_V15_7_FOUNDATION_GEOLOGY_I,275.209132561,model volume/time units,COMPUTED,signed RVF subtotal
