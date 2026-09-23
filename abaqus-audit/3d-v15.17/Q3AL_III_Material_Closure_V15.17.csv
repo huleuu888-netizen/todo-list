@@ -1,0 +1,3 @@
+Engineering_Name,Model_Name,Density,Permeability,Source,Status
+Compacted sand/gravel engineered backfill,Q3AL_III,2.13,8.49e-05,"v15_13_backfill_material_final_basis.csv; existing V15.15 active input deck; no dedicated source-verified coefficient",ENGINEERING_EQUIVALENT_ASSUMPTION; CALIBRATION_REQUIRED
+Q3AL_III alluvial geology layer,Q3AL_III,2.13,8.49e-05,"v15_13_permeability_material_audit.csv; existing V15.15 active input deck; active-deck coefficient only",ENGINEERING_ASSUMPTION; CALIBRATION_REQUIRED

@@ -1,0 +1,9 @@
+Region,Geometry_Status,Material_Status,Permeability_Status,Verification
+Right_Bank_Curtain,UNRESOLVED,UNRESOLVED,UNRESOLVED,No reliable geometry and hydraulic parameter basis is present in V15.15/V15.16; keep unresolved
+Left_Bank_80m_Extension,VERIFIED_IN_V15.15,ENGINEERING_ASSUMPTION,ENGINEERING_ASSUMPTION,Geometry preserved from validated anti-seepage system; hydraulic parameters require engineering verification
+Left_Subdam_Curtain,VERIFIED_IN_V15.15,ENGINEERING_ASSUMPTION,ENGINEERING_ASSUMPTION,Geometry and connection retained; no independent permeability calibration in current evidence
+Powerhouse_Installation_Curtain,VERIFIED_IN_V15.15,ENGINEERING_ASSUMPTION,ENGINEERING_ASSUMPTION,Geometry and connection retained; no independent permeability calibration in current evidence
+Ecological_Release_Connection,VERIFIED_IN_V15.15,ENGINEERING_ASSUMPTION,ENGINEERING_ASSUMPTION,Connection retained; hydraulic parameter basis remains engineering-assumption status
+Spillway_Main_Transition,VERIFIED_IN_V15.15,ENGINEERING_ASSUMPTION,ENGINEERING_ASSUMPTION,Transition retained; no new dimension or material value introduced in V15.17
+Main_Cutoff_Wall,VERIFIED_IN_V15.15,ENGINEERING_ASSUMPTION,ENGINEERING_ASSUMPTION,Main cutoff retained; independent grouting/permeability verification remains required
+Geomembrane_Connection,VERIFIED_IN_V15.15,ENGINEERING_ASSUMPTION,ENGINEERING_ASSUMPTION,Connection retained; existing GEOMEMBRANE coefficient is recorded, not recalibrated here
