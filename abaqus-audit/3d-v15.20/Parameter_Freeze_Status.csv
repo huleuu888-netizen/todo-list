@@ -1,0 +1,13 @@
+Parameter,Current_Value,Source,Verification_Status,Can_Run_S01_S07
+S00_Data_Check,PASS,"v15_15_solver_readiness_gate.csv and v15_15_S00_result_summary.csv",PASS,YES
+S00_zero_pivot,0,"v15_15_S00_result_summary.csv",PASS,YES
+S00_ODB,VALID_READABLE,"v15_15_S00_result_summary.csv",PASS,YES
+S00_STA,COMPLETED_SUCCESSFULLY,"v15_15_S00_result_summary.csv",PASS,YES
+S00_numerical_warnings,4,"v15_15_S00_result_summary.csv and V15.17_WARNING_ROOT_CAUSE_ANALYSIS.md",CHECK_WITH_WARNINGS,NO
+Existing_anti_seepage_system,RETAINED_VALIDATED,"V15.19 Curtain_Grouting_Final_Verification_Report.md",PASS_INHERITED,YES
+Right_Bank_Curtain_Geometry,CHECK,"V15.19 Curtain_Grouting_Final_Verification_Report.md",UNRESOLVED,NO
+Right_Bank_Curtain_Material,CHECK,"V15.18 Curtain_Grouting_Final_Parameter_Table.csv and V15.19 verification report",UNRESOLVED,NO
+Right_Bank_Curtain_Permeability,UNRESOLVED,"V15.18 Curtain_Grouting_Final_Parameter_Table.csv and V15.19 verification report",UNRESOLVED,NO
+Rock_Permeability,NOT_DEFINED_FOR_STRUCTURAL_ROCK,"V15.19 Rock_Permeability_Verification_Table.csv and v15_13_rock_hydraulic_parameter_basis.csv",UNRESOLVED,NO
+Q3AL_III_Density,2.13,"V15.15 active input deck; V15.19 Q3AL_III_Final_Parameter_Table.csv",UNRESOLVED,NO
+Q3AL_III_Permeability,8.49e-05,"V15.15 active input deck; V15.19 Q3AL_III_Final_Parameter_Table.csv",UNRESOLVED,NO
