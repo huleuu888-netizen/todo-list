@@ -1,0 +1,5 @@
+Warning,Category,Impact,Action
+warning_1,Numerical,Low,Monitor during subsequent analysis
+warning_2,Mesh_or_element_quality,Low,Review if affecting results
+warning_3,Material_parameter,Medium,Verify engineering basis
+warning_4,Boundary_or_interface,Medium,Check before final interpretation
