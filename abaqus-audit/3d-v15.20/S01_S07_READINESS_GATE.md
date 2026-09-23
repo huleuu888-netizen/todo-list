@@ -69,6 +69,28 @@ remains unresolved.
 | Q3AL_III | UNRESOLVED | Current 2.13 and `8.49e-05` are model values, not frozen source-verified values |
 | S00 warning disposition | CHECK | Four numerical warnings require approved engineering interpretation |
 
+## V15.20 parameter-closure update
+
+The release-task closure artifacts are now recorded:
+
+- `v15_20_right_bank_curtain_closure.md` documents the spatial, continuity,
+  hydraulic-role, material, and permeability evidence gap, with a candidate
+  equivalent-treatment and source-backed sensitivity plan. It remains
+  `UNRESOLVED` and is not entered into the input deck.
+- `v15_20_rock_permeability_closure.md` separates current model-captured
+  coefficients from verified parameters, prohibits undocumented Lu-to-k
+  conversion, and records the required calibration and uncertainty workflow.
+  It remains `UNRESOLVED`.
+- `v15_20_Q3AL_III_parameter_closure.md` records density `2.13` and
+  permeability `8.49e-05` for the two existing mappings, but keeps the
+  source/equivalence decision `UNRESOLVED`.
+- `v15_20_S00_warning_disposition.csv` preserves all four numerical warning
+  records and documents their engineering interpretation and seepage influence.
+
+These files complete the evidence framework, not the missing engineering
+source approvals. No value is promoted to `PASS` merely because it appears in
+the existing model input.
+
 ## Gate decision
 
 The numerical solver prerequisites are present, but the engineering release
