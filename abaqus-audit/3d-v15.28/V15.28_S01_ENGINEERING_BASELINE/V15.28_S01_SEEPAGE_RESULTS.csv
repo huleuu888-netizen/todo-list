@@ -1,0 +1,27 @@
+metric,value,unit,basis,status
+increment,1,increments,final .sta summary,EXTRACTED
+cutback,0,cutbacks,final .sta summary,EXTRACTED
+error_count,0,messages,.msg entries matching ***ERROR:,EXTRACTED
+warning_count,5,messages,.msg entries matching ***WARNING:,EXTRACTED
+input_warning_count,3039,messages,.msg analysis summary: WARNING MESSAGES DURING USER INPUT PROCESSING,EXTRACTED
+analysis_warning_count,5,messages,.msg analysis summary: WARNING MESSAGES DURING ANALYSIS,EXTRACTED
+unconnected_region_count,14,regions,.msg warning text,EXTRACTED
+Q_in,462.683028732275,model volume/time units,absolute signed sum of unique final-frame RVF values on all S00_U_* node sets,COMPUTED
+Q_out,298.175316444726,model volume/time units,absolute signed sum of unique final-frame RVF values on all S00_D_* node sets,COMPUTED
+Q0,298.175316444726,model volume/time units,"engineering baseline total downstream seepage, same as Q_out",COMPUTED
+mass_balance_relative_error_eta,0.355551645666128,fraction,abs(Q_in-Q_out)/Q_in,COMPUTED
+total_downstream_seepage_all_S00_D_magnitude,298.175316444726,model volume/time units,absolute signed sum of unique final-frame RVF values on all S00_D_* node sets,COMPUTED
+total_downstream_seepage_all_S00_D_signed,298.175316444726,model volume/time units,signed Abaqus RVF sum on all S00_D_* node sets,COMPUTED
+foundation_downstream_S00_D_12_magnitude,307.494268005771,model volume/time units,absolute signed RVF sum on the x=900 foundation downstream boundary,COMPUTED
+riverbed_seepage_S00_D_12_y_150_to_445_magnitude,4.67169259526418,model volume/time units,S00_D_12 nodes with 150 <= global y < 445; coordinate partition,COMPUTED
+left_bank_bypass_S00_D_12_y_lt_150_magnitude,270.528150584159,model volume/time units,S00_D_12 nodes with global y < 150; coordinate partition,COMPUTED
+right_bank_bypass_S00_D_12_y_ge_curtain_start_magnitude,32.2944248263476,model volume/time units,S00_D_12 nodes with global y >= curtain start y=445; unique instance/node pairs,COMPUTED
+Q_right_0,32.2944248263476,model volume/time units,"engineering baseline right-bank bypass flow, same as right_bank_bypass row",COMPUTED
+right_bank_bypass_fraction_of_all_downstream,0.108306835090872,fraction,right-bank magnitude divided by all S00_D magnitude,COMPUTED
+maximum_hydraulic_head,3412.08756243349,model head units,maximum of element-centroid h=p/9.81+z over right-bank seepage groups,COMPUTED
+maximum_gradient_norm,8.89923252112728,head/length,maximum right-bank shared-node least-squares gradient norm,COMPUTED
+gradient_P95_norm,1.05984346098638,head/length,95th percentile of right-bank gradient norms,COMPUTED
+gradient_P99_norm,1.56290199526148,head/length,99th percentile of right-bank gradient norms,COMPUTED
+RVF_field_values,47918,values,final ODB frame,EXTRACTED
+RVF_unique_values,47918,instance/node pairs,duplicates removed before summation,EXTRACTED
+RVF_duplicates_ignored,0,values,duplicate instance/node pairs,DIAGNOSTIC
